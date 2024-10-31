@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* the styles inside the block should be included in the base layer. */
+@layer base {
+  html,
+  body {
+    @apply dark:bg-trueGray-900;
+  }
+}
