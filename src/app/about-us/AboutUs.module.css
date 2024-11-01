@@ -1,0 +1,82 @@
+.boxWrapper {
+  background-color: #fff;
+  border-radius: 25px;
+  display: grid;
+  flex-basis: 440px;
+  flex-shrink: 0;
+  gap: 23px;
+  grid-template-rows: auto 5fr;
+  height: 100%;
+  min-height: 240px;
+  padding: 18px 17px 27px 18px;
+  width: 100%;
+  margin-right: 23px;
+}
+
+.boxContainer {
+  align-items: center;
+  display: grid;
+  gap: 17px;
+  grid-template-columns: repeat(2, auto);
+  justify-content: flex-start;
+}
+
+.boxContainer img {
+  border-radius: 50%;
+  /* height: 60px;
+  width: 60px; */
+  max-width: 100%;
+  display: block;
+  /* vertical-align: middle; */
+}
+
+.boxTitle {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 113%;
+  margin-bottom: 5px;
+}
+
+.boxSubtitle {
+  color: #686a6c;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113%;
+  text-align: center;
+}
+
+.boxDescription {
+  align-items: center;
+  color: #000;
+  display: flex;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+/*---------*/
+.aboutUsWrapper {
+  padding: 20px 100px;
+}
+.companyWrapper h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.companyWrapper p {
+  line-height: 3;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.companyWrapper p:last-child {
+  text-align: center;
+}
+.personsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  margin: 80px 0 60px;
+}

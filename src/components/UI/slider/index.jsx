@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 
-import styles from "./HeroSlider.module.css";
+import styles from "./Slider.module.css";
 
 const HeroSlider = ({ imagePaths }) => {
   const swiperRef = useRef(null);
@@ -30,16 +30,22 @@ const HeroSlider = ({ imagePaths }) => {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 4000 }}
         effect="fade" // Enable fade effect
         fadeEffect={{ crossFade: true }} // Optional: for better fade effect
-        speed={1000} // Set transition duration to 1000ms (1 second)
+        speed={4000} // transition duration
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
         {imagePaths.map((path, index) => (
           <SwiperSlide key={index}>
-            <img src={path} alt={`Slide ${index}`} />
+            <img
+              src={path}
+              alt={`Slide ${index}`}
+              className="w-full"
+              // className="w-full h-full object-cover"
+              style={{ height: "500px" }}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -49,7 +55,7 @@ const HeroSlider = ({ imagePaths }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#ff0000" // #3563a3
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -62,7 +68,7 @@ const HeroSlider = ({ imagePaths }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#ff0000" // #3563a3
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -1,70 +1,37 @@
 "use client";
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import heroImg from "../../public/img/hero.png";
+import heroImg from "../../../public/img/main-hero-fa.jpg";
 
-import { faConstants } from "../../public/locales/fa/common";
-import HeroSlider from "./home/HeroSlider";
-
-// const imagePaths = [
-//   "/img/hero/hero1.webp",
-//   "/img/hero/hero2.webp",
-//   "/img/hero/hero3.webp",
-//   "/img/hero/hero4.webp",
-//   "/img/hero/hero5.webp",
-//   "/img/hero/hero6.webp",
-//   "/img/hero/hero7.webp",
-//   "/img/hero/hero8.webp",
-// ];
-
-const imagePaths = [
-  "/img/hero2/hero1.jpg",
-  "/img/hero2/hero2.jpg",
-  "/img/hero2/hero3.jpg",
-  "/img/hero2/hero4.jpg",
-  "/img/hero2/hero5.jpg",
-];
+import { faConstants } from "../../../public/locales/fa/common";
+import styles from "./Hero.module.css";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
     <>
-      <Container className="flex flex-wrap ">
-        {/* photo */}
-        <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="">
-            <Image
-              src={heroImg}
-              width="616"
-              height="617"
-              className={"object-cover"}
-              alt="Hero Illustration"
-              loading="eager"
-              placeholder="blur"
-            />
-          </div>
-        </div>
+      <div className={styles.heroWrapper}>
         {/* description */}
-        <div className="flex items-center w-full lg:w-1/2">
-          <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+        <div
+          className={`flex items-center flex-grow-1 flex-shrink-1 flex-auto w-full lg:w-1/3 bg-transparent relative z-10 ${styles["ml-negative-10"]} ${styles.descriptionWrapper}`}
+        >
+          <div className={`max-w-2xl ${styles.descriptionContent}`}>
+            <h1 className="leading-snug tracking-tight text-pureWhiteColor lg:leading-tight xl:leading-tight">
               {faConstants.companyName}
             </h1>
-            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+            <h2 className="py-5 text-lightBeigeColor">
               {faConstants.companyDescription}
-            </p>
-            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+            </h2>
+            <p className="py-5 text-creamyWhiteColor">
               {faConstants.companyProud}
             </p>
 
-            <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
-              <a
-                href="https://web3templates.com/templates/nextly-landing-page-template-for-startups"
-                target="_blank"
-                rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
-              >
-                {faConstants.viewProducts}
-              </a>
+            <div className="flex flex-col items-start mt-2 space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
+              <div className={styles.viewProducts}>
+                <Link href="#products-section" target="_self">
+                  {faConstants.viewProducts}
+                </Link>
+              </div>
               <a
                 href="https://github.com/web3templates/nextly-template/"
                 target="_blank"
@@ -88,10 +55,17 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-      </Container>
-
-      <div>
-        <HeroSlider imagePaths={imagePaths} />
+        {/* photo */}
+        <div className="flex items-center justify-center flex-grow-1 flex-shrink-1 flex-auto w-full lg:w-2/3 h-full">
+          <div className={styles.heroImage}>
+            <Image
+              src={heroImg}
+              alt="Hero Illustration"
+              loading="eager"
+              placeholder="blur"
+            />
+          </div>
+        </div>
       </div>
 
       <Container>
@@ -120,6 +94,14 @@ export const Hero = () => {
           </div>
         </div>
       </Container>
+
+      <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+        <defs>
+          <clipPath id="pology-clip-left" clipPathUnits="objectBoundingBox">
+            <path d="M1,0 L0.1,0 C1 0, 0.04 0, 0.04 0 C-0.1 0.5, 0.22 0.5, 0.04 1 C0.04 1, 1 1, 1 1 z"></path>
+          </clipPath>
+        </defs>
+      </svg>
     </>
   );
 };

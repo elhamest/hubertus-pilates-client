@@ -1,0 +1,143 @@
+.heroWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 600px;
+  margin: 0 0 40px;
+}
+
+.heroImage {
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.heroImage img {
+  object-fit: cover;
+  height: 600px;
+}
+
+.descriptionWrapper {
+  height: 100%;
+}
+.descriptionContent {
+  background-image: linear-gradient(
+    135deg,
+    var(--creamy-white-color) 0%,
+    var(--light-tan-color) 5%,
+    var(--light-brown-color) 10%,
+    var(--medium-brown-color) 40%,
+    #a37535 100%
+  );
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 25px;
+  padding-left: 40px;
+}
+
+/* .descriptionContent h1,
+.descriptionContent h2,
+.descriptionContent p { */
+/* background: linear-gradient(
+    135deg,
+    #352611 0%,
+    #7e5b29 30%,
+    #918069 50%,
+    #675f54 50%,
+    var(--pure-white-color) 100%
+  );
+  background-clip: text;
+  color: transparent; */
+/* color: var(--pure-white-color); */
+/* } */
+
+.descriptionContent h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.descriptionContent h2 {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.descriptionContent p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.viewProducts a {
+  display: inline-block;
+  background-color: var(--pure-white-color);
+  color: var(--secondary-color);
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+.viewProducts a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .descriptionContent {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ml-negative-10 {
+    margin-left: -10%;
+  }
+}
+
+/* Large screen */
+@media (min-width: 1024px) {
+  .descriptionWrapper {
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%); */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
+    clip-path: url(#pology-clip-left);
+  }
+
+  .descriptionContent h1 {
+    font-size: 36px;
+  }
+  .descriptionContent h2 {
+    font-size: 18px;
+  }
+}
+
+/* Extra large screen */
+@media (min-width: 1280px) {
+  .descriptionContent h1 {
+    font-size: 60px;
+  }
+  .descriptionContent h2 {
+    font-size: 20px;
+  }
+}
+
+/* it is not work check */
+@media (prefers-color-scheme: dark) {
+  /* .descriptionContent {
+    background-image: linear-gradient(
+      135deg,
+      #a37535 0%,
+      var(--medium-brown-color) 5%,
+      var(--light-brown-color) 10%,
+      var(--light-tan-color) 40%,
+      var(--creamy-white-color) 100%
+    );
+  } */
+
+  /* .descriptionContent h1,
+  .descriptionContent h2,
+  .descriptionContent p {
+    color: var(--primary-text-color) !important;
+  } */
+}

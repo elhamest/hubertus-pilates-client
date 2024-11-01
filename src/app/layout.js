@@ -1,15 +1,21 @@
-// import localFont from "next/font/local";
-// import "./globals.css";
-// import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import "./globals.css";
 
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget } from "@/components/PopupWidget";
 
 import { faConstants } from "../../public/locales/fa/common";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: faConstants.pageTitle,
+  description: faConstants.companyDescription,
+};
+
+// import localFont from "next/font/local";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -21,13 +27,6 @@ import { faConstants } from "../../public/locales/fa/common";
 //   variable: "--font-geist-mono",
 //   weight: "100 900",
 // });
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: faConstants.companyName,
-  description: faConstants.companyDescription,
-};
 
 // export default function RootLayout({ children }) {
 //   return (
@@ -42,7 +41,7 @@ export const metadata = {
 // }
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class">
           <Navbar />

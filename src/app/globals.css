@@ -9,20 +9,24 @@
   }
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+:root {
+  --primary-color: #a37535; /* (Warm Brown) - This will be your main accent color. for attentionm to highlight important buttons, links, icons, or other interactive elements */
+  --dark-primary-color: #745325;
+  --primary-text-color: #1e1915; /* (Deep Black) - This will be your secondary accent or text color. */
+  --secondary-color: #3563a3;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --light-tan-color: #d4b794; /* (Light Tan) - A lighter shade of the warm brown, providing a softer contrast. */
+  --creamy-white-color: #e8d7c2; /* (Creamy White) - A slightly warmer white that can be used for text or accents. */
+  --Light-beige-color: #f5f1e9; /* (Light Beige) - as a background or base color*/
+
+  --medium-brown-color: #8c6b4a; /* (Medium Brown) - A darker shade of the warm brown, useful for borders or subtle accents ( without drawing too much attention). */
+  --light-brown-color: #c4a484; /* (Light Brown) - Another lighter shade of the warm brown, good for subtle highlights. */
+  --pure-white-color: #ffffff; /* (Pure White) - For crisp, clean elements like buttons or icons. */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* var(--Light-beige-color);*/
+}

@@ -1,0 +1,17 @@
+.navbarWrapper {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.6s;
+  /* z-index: 100; */
+  padding: 30px 70px;
+}
+
+/* .navbarWrapper span {
+  @apply text-pureWhiteColor dark:text-secondaryColor;
+} */
