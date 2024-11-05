@@ -27,4 +27,13 @@ export const enConstants = {
       image: "/img/persons/shahin-zarei.webp",
     },
   ],
+  benefits: {
+    preTitle: "",
+    title: "Specifications and Benefits of Hubertus Pellet Machines",
+    items: [
+      "In compliance with global standards and competitive quality with top brands",
+      "One year warranty on all parts",
+      "Three years of after-sales service",
+    ],
+  },
 };
