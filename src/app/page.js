@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/home/Hero";
-import { SectionTitle } from "@/components/SectionTitle";
+import { SectionTitle } from "@/components/UI/slider/section-title";
 import { Products } from "@/components/Products";
 import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
@@ -11,6 +11,7 @@ import { productOne, productTwo } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
 import { faConstants } from "../../public/locales/fa/common";
 import Benefits from "@/components/home/Benefits";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   // const imagePaths = [

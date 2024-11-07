@@ -24,10 +24,9 @@ export const Navbar = () => {
             <span className="ml-2">
               <Image
                 src="/img/logo-fa.jpg"
-                width="32"
                 alt={faConstants.hubertus}
+                width="32"
                 height="32"
-                className="w-8"
               />
             </span>
             <span className="text-primaryColor dark:text-darkPrimaryColor">
@@ -36,17 +35,8 @@ export const Navbar = () => {
           </span>
         </Link>
 
-        {/* get started  */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
           <ThemeChanger />
-          {/* <div className="hidden mr-3 lg:flex nav__item">
-            <Link
-              href="/"
-              className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
-            >
-              Get Started
-            </Link>
-          </div> */}
         </div>
 
         {/* Mobile menu button */}
@@ -56,7 +46,7 @@ export const Navbar = () => {
           onClick={toggleMenu}
         >
           <svg
-            className="w-6 h-6 fill-current"
+            className="w-6 h-6 fill-secondaryColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -77,22 +67,16 @@ export const Navbar = () => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="flex flex-wrap w-full my-5 lg:hidden">
-            {navigation.map((item, index) => (
+          <div className="flex flex-wrap w-full mt-5 lg:hidden">
+            {navigations?.map((item, index) => (
               <Link
                 key={index}
-                href="/"
-                className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                href={item?.path}
+                className="w-full px-4 py-2 -ml-4 rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none"
               >
-                {item}
+                {item?.title}
               </Link>
             ))}
-            <Link
-              href="/"
-              className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-            >
-              Get Started
-            </Link>
           </div>
         )}
 
@@ -103,7 +87,7 @@ export const Navbar = () => {
               <li className="mr-3 nav__item" key={index}>
                 <Link
                   href={menu?.path}
-                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-primaryColor  dark:hover:text-primaryColor focus:outline-none focus:text-primaryColor text-primaryTextColor dark:text-pureWhiteColor"
+                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none"
                 >
                   {menu?.title}
                 </Link>

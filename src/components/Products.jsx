@@ -15,7 +15,7 @@ export const Products = (props) => {
           <Image
             src={data.image}
             width={521}
-            height={521}
+            height="auto" // 521
             alt="Products"
             className={"object-cover"}
             placeholder="blur"

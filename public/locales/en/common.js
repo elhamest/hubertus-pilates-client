@@ -28,11 +28,13 @@ export const enConstants = {
     },
   ],
   benefits: {
-    preTitle: "",
+    preTitle: "Features and benefits",
     title: "Specifications and Benefits of Hubertus Pellet Machines",
     items: [
-      "In compliance with global standards and competitive quality with top brands",
-      "One year warranty on all parts",
+      "In accordance with global standards and competitive quality with top global brands",
+      "Durable and robust part design",
+      "Interchangeable parts and easy access to main components",
+      "One-year warranty on all parts",
       "Three years of after-sales service",
     ],
   },

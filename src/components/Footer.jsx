@@ -23,7 +23,6 @@ export function Footer() {
                   alt={faConstants.hubertus}
                   width="32"
                   height="32"
-                  className="w-8"
                 />
                 <span>{faConstants.hubertus}</span>
               </Link>
@@ -52,7 +51,7 @@ export function Footer() {
 
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
+              {navigation?.map((item, index) => (
                 <Link
                   key={index}
                   href="/"

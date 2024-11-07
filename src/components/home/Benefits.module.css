@@ -2,5 +2,16 @@
   width: 1em;
   height: 1em;
   vertical-align: middle;
-  margin-right: 0.5em;
+  flex: 0 0 auto;
+}
+
+.benefitContainer {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 640px) {
+  .benefitContainer {
+    text-align: right; /* check in english should be left*/
+  }
 }
