@@ -1,14 +1,18 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/home/Hero";
-import { SectionTitle } from "@/components/SectionTitle";
-import { Benefits } from "@/components/Benefits";
+import { SectionTitle } from "@/components/UI/slider/section-title";
+import { Products } from "@/components/Products";
 import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
-import { benefitOne, benefitTwo } from "@/components/data";
+// import { productOne, productTwo } from "@/components/data";
+import { productsPersian } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
+import { faConstants } from "../../public/locales/fa/common";
+import Benefits from "@/components/home/Benefits";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   // const imagePaths = [
@@ -36,19 +40,13 @@ export default function Home() {
       <HomeSlider imagePaths={imagePaths} />
 
       <Container>
-        <SectionTitle
-          preTitle="Nextly Benefits"
-          title=" Why should you use this landing page"
-        >
-          Nextly is a free landing page & marketing website template for
-          startups and indie projects. Its built with Next.js & TailwindCSS. And
-          its completely open-source.
-        </SectionTitle>
+        <Benefits />
 
-        <Benefits data={benefitOne} />
-        <Benefits imgPos="right" data={benefitTwo} />
+        <Products data={productsPersian} />
+        {/* <Products data={productOne} />
+        <Products imgPos="right" data={productTwo} /> */}
 
-        <SectionTitle
+        {/* <SectionTitle
           preTitle="Watch a video"
           title="Learn how to fullfil your needs"
         >
@@ -74,8 +72,9 @@ export default function Home() {
           conversion rate as well as support or chat requests.
         </SectionTitle>
 
-        <Faq />
-        <Cta />
+        <Faq /> */}
+
+        {/* <Cta /> */}
       </Container>
     </>
   );

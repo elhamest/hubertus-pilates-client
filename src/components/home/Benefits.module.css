@@ -1,0 +1,17 @@
+.checkSvgImage {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
+.benefitContainer {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 640px) {
+  .benefitContainer {
+    text-align: right; /* check in english should be left*/
+  }
+}

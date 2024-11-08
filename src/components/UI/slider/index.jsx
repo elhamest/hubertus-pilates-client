@@ -31,11 +31,11 @@ const HeroSlider = ({ imagePaths }) => {
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 4000 }}
-        effect="fade" // Enable fade effect
+        effect="fade"
         fadeEffect={{ crossFade: true }} // Optional: for better fade effect
         speed={4000} // transition duration
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         {imagePaths.map((path, index) => (
           <SwiperSlide key={index}>
@@ -44,7 +44,7 @@ const HeroSlider = ({ imagePaths }) => {
               alt={`Slide ${index}`}
               className="w-full"
               // className="w-full h-full object-cover"
-              style={{ height: "500px" }}
+              style={{ height: "auto" }}
             />
           </SwiperSlide>
         ))}
