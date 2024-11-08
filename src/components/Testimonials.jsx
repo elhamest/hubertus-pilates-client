@@ -41,8 +41,8 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I've
-              seen. I would use this for anything.
+              This is an <Mark>awesome</Mark> landing page template I have seen.
+              I would use this for anything.
             </p>
 
             <Avatar
