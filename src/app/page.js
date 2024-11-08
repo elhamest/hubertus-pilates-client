@@ -7,7 +7,8 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
-import { productOne, productTwo } from "@/components/data";
+// import { productOne, productTwo } from "@/components/data";
+import { productsPersian } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
 import { faConstants } from "../../public/locales/fa/common";
 import Benefits from "@/components/home/Benefits";
@@ -41,10 +42,11 @@ export default function Home() {
       <Container>
         <Benefits />
 
-        <Products data={productOne} />
-        <Products imgPos="right" data={productTwo} />
+        <Products data={productsPersian} />
+        {/* <Products data={productOne} />
+        <Products imgPos="right" data={productTwo} /> */}
 
-        <SectionTitle
+        {/* <SectionTitle
           preTitle="Watch a video"
           title="Learn how to fullfil your needs"
         >
@@ -70,8 +72,9 @@ export default function Home() {
           conversion rate as well as support or chat requests.
         </SectionTitle>
 
-        <Faq />
-        <Cta />
+        <Faq /> */}
+
+        {/* <Cta /> */}
       </Container>
     </>
   );

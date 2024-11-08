@@ -20,6 +20,7 @@ const config = {
         creamyWhiteColor: "#e8d7c2",
         primaryColor: "#a37535",
         darkPrimaryColor: "#745325",
+        lightGrayColor: "#333333",
       },
     },
     fontFamily: {

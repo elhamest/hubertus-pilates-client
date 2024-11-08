@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 100%;
-  flex-direction: column-reverse;
 }
 .imageWrapper {
   width: 100%;
@@ -75,15 +74,15 @@
   color: var(--primary-color);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .heroWrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 990px) {
   .heroWrapper {
-    height: 600px;
+    height: 500px;
   }
   .descriptionWrapper {
     width: 33.333333%; /* 1/3 */
@@ -100,7 +99,7 @@
     height: 100%;
   }
   .imageContainer img {
-    height: 600px;
+    height: 500px;
   }
   .ml-negative-10 {
     margin-left: -10%;

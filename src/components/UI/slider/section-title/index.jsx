@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import styles from "./SectionTitle.module.css";
 import Logo from "@/components/Logo";
 
-export const SectionTitle = (props) => {
+export function SectionTitle(props) {
   return (
     <Container
       className={`flex w-full flex-col mt-4 ${styles.sectionTitleContainer} ${
@@ -11,9 +11,10 @@ export const SectionTitle = (props) => {
       }`}
     >
       {props.preTitle && (
-        // <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-        <Logo text={props.preTitle} />
-        // </div>
+        <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+          {/* <Logo text={props.preTitle} /> */}
+          {props.preTitle}
+        </div>
       )}
 
       {props.title && (
@@ -29,4 +30,4 @@ export const SectionTitle = (props) => {
       )}
     </Container>
   );
-};
+}

@@ -2,18 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
-import { faConstants } from "../../public/locales/fa/common";
+import { faConstants } from "../../../public/locales/fa/common";
 
 export function Footer() {
   const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
-    <div className="relative">
+    <div className="relative bg-lightGrayColor dark:bg-pureWhiteColor text-pureWhitecolor">
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
-              {" "}
               <Link
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"

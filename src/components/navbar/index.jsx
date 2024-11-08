@@ -7,7 +7,7 @@ import { useState } from "react";
 import { faConstants } from "../../../public/locales/fa/common";
 import styles from "./Navbar.module.css";
 
-export const Navbar = () => {
+export function Navbar() {
   const navigations = faConstants.navigations;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -98,4 +98,4 @@ export const Navbar = () => {
       </nav>
     </div>
   );
-};
+}
