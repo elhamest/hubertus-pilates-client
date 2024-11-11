@@ -6,7 +6,7 @@ export const Products = (props) => {
   const { data } = props;
 
   return data?.map((product, index) => {
-    const imgPos = index % 2 === 0 ? "left" : "right";
+    const imgPos = index % 2 === 0 ? "right" : "left";
 
     return (
       <Container

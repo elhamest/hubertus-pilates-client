@@ -23,10 +23,10 @@ export function Navbar() {
           <span className="flex items-center text-2xl font-medium">
             <span className="ml-2">
               <Image
-                src="/img/logo-fa.jpg"
+                src="/img/logo.svg"
                 alt={faConstants.hubertus}
-                width="32"
-                height="32"
+                width="80"
+                height="80"
               />
             </span>
             <span className="text-primaryColor dark:text-darkPrimaryColor">

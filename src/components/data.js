@@ -9,7 +9,9 @@ import {
 
 import classicReformerImg from "../../public/img/products/classic-reformer.jpg";
 import cadillacImg from "../../public/img/products/cadillac.jpg";
-
+import spineCorrectorImg from "../../public/img/products/spine-corrector.jpg";
+import wundaChairImg from "../../public/img/products/wunda-chair.jpg";
+import Icon1 from "../../public/img/icons/p1.svg";
 const productsPersian = [
   {
     title: "ریفورمر کلاسیک (Classic Reformer)",
@@ -77,6 +79,52 @@ const productsPersian = [
       },
     ],
   },
+  {
+    title: "اسپین کورکتور (Spine Corrector)",
+    desc: "Spine Corrector یک ابزار حرفه‌ای در دنیای پیلاتس است. طراحی ارگونومیک این ابزار باعث می شود که منحنی‌های طبیعی استخوان فقرات را شبیه‌سازی کند و  به وسیله‌ی تقویت ترازی صحیح استخوان فقرات و بهبود قدرت پایه، کارایی شما را در پیلاتس افزایش ‌دهد. این وسیله می‌تواند در طیف گسترده‌ای از تمرینات پیلاتس از سطح مبتدی تا پیشرفته استفاده شود.",
+    image: spineCorrectorImg,
+    bullets: [
+      {
+        desc: "سایز استاندارد اسپین مناسب با قوس کمر, جهت جلوگیری از آسیب دیدگی ورزشکاران",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "استفاده از چوب ویژه با چگالی بالا به منظور تحمل فشار بیشتر",
+        icon: <AdjustmentsHorizontalIcon />,
+      },
+      {
+        desc: "استفاده از رنگ نانو , ضد خش و ضد آب",
+        icon: <SunIcon />,
+      },
+    ],
+  },
+  {
+    title: "وندا چیر(Wunda Chair)",
+    desc: "صندلی ووندا، یک وسیله متفاوت و چالش‌برانگیز در تمرین‌های پیلاتس است. این صندلی توسط جوزف پیلاتس اختراع شده است. صرف‌نظر از اینکه شما مبتدی یا پیشرفته هستید، صندلی ووندا می‌تواند به شما در دستیابی به قدرت عضلانی، به ویژه در پاها، هسته و بازوها، انعطاف‌پذیری و کنترل بیشتر بدن کمک کند.",
+    image: wundaChairImg,
+    bullets: [
+      {
+        desc: "ایستایی و استحکام بالا جهت انجام حرکات تخصصی پیلاتس",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "فنرهای قابل تنظیم در دو ارتفاع",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "بازوهای قابل تنظیم در 5 ارتفاع",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "طراحی سه بعدی نرم افزاری و بهینه سازی وزن دستگاه برای افزایش بازده دستگاه",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "امکان جابه جایی راحت دستگاه با تایر های مخصوص",
+        icon: <DevicePhoneMobileIcon />,
+      },
+    ],
+  },
 ];
 export { productsPersian };
 
@@ -127,3 +175,18 @@ export { productsPersian };
 // };
 
 // export { productOne, productTwo };
+
+const image = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    class="size-6"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z"
+      clip-rule="evenodd"
+    />
+  </svg>
+);
