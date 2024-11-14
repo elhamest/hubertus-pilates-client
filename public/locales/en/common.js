@@ -6,6 +6,7 @@ export const enConstants = {
   companyProud:
     "We are proud to produce high-quality products by Iranian engineers in accordance with global standards",
   viewProducts: "View Products",
+  products: "Products",
   navigations: [
     { title: "Products", path: "/products" },
     { title: "About Hubertus", path: "/about-us" },

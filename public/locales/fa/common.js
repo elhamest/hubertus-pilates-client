@@ -6,6 +6,7 @@ export const faConstants = {
   companyProud:
     "مفتخریم به تولید محصولات با کیفیت به دست مهندسان ایرانی مطابق استانداردهای روز دنیا",
   viewProducts: "مشاهده محصولات",
+  products: "محصولات",
   navigations: [
     { title: "محصولات", path: "/products" },
     { title: "درباره هوبرتوس", path: "/about-us" },

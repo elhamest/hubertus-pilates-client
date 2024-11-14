@@ -7,12 +7,14 @@ import {
   SunIcon,
 } from "@heroicons/react/24/solid";
 
-import classicReformerImg from "../../public/img/products/classic-reformer.jpg";
-import cadillacImg from "../../public/img/products/cadillac.jpg";
-import spineCorrectorImg from "../../public/img/products/spine-corrector.jpg";
-import wundaChairImg from "../../public/img/products/wunda-chair.jpg";
-import Icon1 from "../../public/img/icons/p1.svg";
-const productsPersian = [
+import classicReformerImg from "../../public/img/products/classic-reformer.webp";
+import cadillacImg from "../../public/img/products/cadillac.webp";
+import spineCorrectorImg from "../../public/img/products/spine-corrector.webp";
+import wundaChairImg from "../../public/img/products/wunda-chair.webp";
+import armChairImg from "../../public/img/products/arm-chair.webp";
+import wallUnitImg from "../../public/img/products/wall-unit.webp";
+
+const faProducts = [
   {
     title: "ریفورمر کلاسیک (Classic Reformer)",
     desc: "سطح تمرینات پیلاتس خود با استفاده از ریفورمر کالسیک بالا ببرید. این دستگاه یکی از اصلی‌ترین وسایل تمرینی پیلاتس است که به شما در تقویت عضلات مرکزی، بهبود تعادل و انعطاف پذیری کمک می‌کند.",
@@ -125,8 +127,43 @@ const productsPersian = [
       },
     ],
   },
+  {
+    title: "آرم چیر(Arm Chair)",
+    desc: "دستگاه آرم چیر برای انجام حرکات نشسته طراحی شده است و بر روی حرکات ملایم و کنترل شده تمرکز دارد. این دستگاه قدرت، انعطاف‌پذیری و تعادل را بدون ایجاد فشار غیرضروری بر بدن بهبود می‌بخشد. به همین دلیل برای افراد مسن و افراد با تحرک محدود، خواه به دلیل آسیب، بیماری یا معلولیت، راهی امن و مؤثر برای  فعال ماندن و بهبود عملکرد فیزیکی است. بدین صورت که گروه‌های عضلانی کلیدی، از جمله هسته، بازوها و پاها را هدف قرار می‌دهد و با حرکات کنترل شده و تکنیک‌های تنفس عمیق با هم اثر آرامش‌بخشی ایجاد می‌کنند.",
+    image: armChairImg,
+    bullets: [
+      {
+        desc: "دستگاه آرم چیر دارای چهار فنر است",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "قسمت پشتی و صندلی دستگاه با چرم درجه یک و نرمی استاندارد طراحی شده تا ورزشکار در حرکات دست و بازو دچار آسیب دیدگی نشود",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "این دستگاه برای استفاده در منازل , باشگاه ها و مراکز توانبخشی مناسب است",
+        icon: <DevicePhoneMobileIcon />,
+      },
+    ],
+  },
+  {
+    title: "وال یونیت (Wall Unit)",
+    desc: `این دستگاه با اتصالات مختلف و باندهای مقاومتی قابل تنظیم، محدوده وسیعی از تمرین‌ها را برای همه سطوح تناسب اندام فراهم می‌کند و برای سالن‌های ورزشی خانگی و فضاهای محدود ایده‌آل می باشد.
+دستگاه وال یونیت متشکل از دو قسمت تشک میله دار و قسمت وال یا دیواره است که قسمت دیواره همان دیواره در دستگاه کادیلاک بوده که دارای میله پوش بار است.`,
+    image: wallUnitImg,
+    bullets: [
+      {
+        desc: "دستگاه وال یونیت دارای شش فنر است",
+        icon: <DevicePhoneMobileIcon />,
+      },
+      {
+        desc: "قسمت مون باکس (Moon Box) به صورت سفارشی روی دستگاه قابل ارائه است",
+        icon: <DevicePhoneMobileIcon />,
+      },
+    ],
+  },
 ];
-export { productsPersian };
+export { faProducts };
 
 // const productOne = {
 //   title: "Highlight your benefits",

@@ -12,7 +12,6 @@ export function SectionTitle(props) {
     >
       {props.preTitle && (
         <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-          {/* <Logo text={props.preTitle} /> */}
           {props.preTitle}
         </div>
       )}

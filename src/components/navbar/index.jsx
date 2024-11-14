@@ -25,8 +25,9 @@ export function Navbar() {
               <Image
                 src="/img/logo.svg"
                 alt={faConstants.hubertus}
-                width="80"
-                height="80"
+                width={80}
+                height={80}
+                style={{ height: "auto" }}
               />
             </span>
             <span className="text-primaryColor dark:text-darkPrimaryColor">

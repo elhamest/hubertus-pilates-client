@@ -44,7 +44,7 @@ const HeroSlider = ({ imagePaths }) => {
               alt={`Slide ${index}`}
               className="w-full"
               // className="w-full h-full object-cover"
-              style={{ height: "auto" }}
+              style={{ height: "auto", maxHeight: "500px" }}
             />
           </SwiperSlide>
         ))}

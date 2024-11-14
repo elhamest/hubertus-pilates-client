@@ -1,14 +1,14 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/home/Hero";
 import { SectionTitle } from "@/components/UI/slider/section-title";
-import { Products } from "@/components/Products";
+import { Products } from "@/components/products/Products";
 import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
 // import { productOne, productTwo } from "@/components/data";
-import { productsPersian } from "@/components/data";
+import { faProducts } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
 import { faConstants } from "../../public/locales/fa/common";
 import Benefits from "@/components/home/Benefits";
@@ -16,22 +16,22 @@ import Logo from "@/components/Logo";
 
 export default function Home() {
   // const imagePaths = [
-  //   "/img/hero/hero1.webp",
-  //   "/img/hero/hero2.webp",
-  //   "/img/hero/hero3.webp",
-  //   "/img/hero/hero4.webp",
-  //   "/img/hero/hero5.webp",
-  //   "/img/hero/hero6.webp",
-  //   "/img/hero/hero7.webp",
-  //   "/img/hero/hero8.webp",
+  //   "/img/slider/s1.webp",
+  //   "/img/slider/s2.webp",
+  //   "/img/slider/s3.webp",
+  //   "/img/slider/s4.webp",
+  //   "/img/slider/s5.webp",
+  //   "/img/slider/s6.webp",
+  //   "/img/slider/s7.webp",
+  //   "/img/slider/s8.webp",
   // ];
 
   const imagePaths = [
-    "/img/hero2/hero1.jpg",
-    "/img/hero2/hero2.jpg",
-    "/img/hero2/hero3.jpg",
-    "/img/hero2/hero4.jpg",
-    "/img/hero2/hero5.jpg",
+    "/img/slider2/s1.jpg",
+    "/img/slider2/s2.jpg",
+    "/img/slider2/s3.jpg",
+    "/img/slider2/s4.jpg",
+    "/img/slider2/s5.jpg",
   ];
 
   return (
@@ -42,7 +42,7 @@ export default function Home() {
       <Container>
         <Benefits />
 
-        <Products data={productsPersian} />
+        <Products data={faProducts} />
         {/* <Products data={productOne} />
         <Products imgPos="right" data={productTwo} /> */}
 
