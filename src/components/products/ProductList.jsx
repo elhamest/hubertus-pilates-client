@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/UI/container/Container";
 
 function ProductList({ data }) {
   return (
@@ -38,7 +38,7 @@ function ProductList({ data }) {
             >
               <div>
                 <div className="flex flex-col w-full mt-4">
-                  <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+                  <h3 className="max-w-2xl mt-3 text-2xl font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                     {product.title}
                   </h3>
 

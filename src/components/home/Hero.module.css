@@ -71,7 +71,7 @@
   letter-spacing: 1px;
 }
 .viewProducts a:hover {
-  color: var(--primary-color);
+  color: var(--third-color);
 }
 
 @media (max-width: 768px) {

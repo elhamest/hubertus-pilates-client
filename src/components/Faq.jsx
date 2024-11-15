@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/UI/container/Container";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export const Faq = () => {

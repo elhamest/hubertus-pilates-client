@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="496.000000pt" height="302.000000pt" viewBox="0 0 496.000000 302.000000"
+ width="496.000000pt" height="200.000000pt" viewBox="0 0 496.000000 200.000000"
  preserveAspectRatio="xMidYMid meet">
 <g transform="translate(0.000000,302.000000) scale(0.100000,-0.100000)"
 fill="#905A98" stroke="none">
@@ -47,3 +47,5 @@ fill="#905A98" stroke="none">
 -320 120 -63 9 -154 25 -203 34 -48 10 -89 15 -92 13z"/>
 </g>
 </svg>
+
+<!-- old: height in both 302 -->

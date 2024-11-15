@@ -8,6 +8,7 @@
   padding: 30px 70px;
 }
 
-/* .navbarWrapper span {
-  @apply text-pureWhiteColor dark:text-secondaryColor;
-} */
+.navItem a {
+  width: 100%;
+  min-width: 170px;
+}

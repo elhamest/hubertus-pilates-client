@@ -10,7 +10,7 @@ export const Products = (props) => {
       <div
         className={`flex w-full flex-col mt-4 items-center justify-center text-center ${styles.sectionTitleContainer}`}
       >
-        <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+        <div className="text-sm font-medium tracking-wider text-indigo-600 uppercase">
           {faConstants?.products}
         </div>
       </div>

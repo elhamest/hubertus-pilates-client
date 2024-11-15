@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/UI/container/Container";
 import Image from "next/image";
 import styles from "./AboutUs.module.css";
 import { faConstants } from "../../../public/locales/fa/common";

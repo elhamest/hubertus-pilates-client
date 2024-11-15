@@ -1,0 +1,12 @@
+.fillSvgAnimattion:hover svg {
+  animation: fill-gradient 1s ease-in-out forwards;
+}
+
+@keyframes fill-gradient {
+  0% {
+    fill: currentColor;
+  }
+  100% {
+    fill: var(--third-color);
+  }
+}

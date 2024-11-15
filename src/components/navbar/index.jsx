@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import ThemeChanger from "../DarkSwitch";
+import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -30,13 +30,13 @@ export function Navbar() {
                 style={{ height: "auto" }}
               />
             </span>
-            <span className="text-primaryColor dark:text-darkPrimaryColor">
+            <span className="text-thirdColor dark:text-ligthGrayColor">
               {faConstants.hubertus}
             </span>
           </span>
         </Link>
 
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        <div className="gap-3 mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
           <ThemeChanger />
         </div>
 
@@ -73,7 +73,7 @@ export function Navbar() {
               <Link
                 key={index}
                 href={item?.path}
-                className="w-full px-4 py-2 -ml-4 rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none"
+                className="w-full px-4 py-2 -ml-4 rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
               >
                 {item?.title}
               </Link>
@@ -85,10 +85,10 @@ export function Navbar() {
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigations?.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
+              <li className={styles.navItem} key={index}>
                 <Link
                   href={menu?.path}
-                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none"
+                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-thirdColor dark:hover:text-thirdColor focus:text-thirdColor focus:outline-none transition-all duration-300 hover:tracking-wide"
                 >
                   {menu?.title}
                 </Link>

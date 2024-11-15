@@ -13,6 +13,9 @@ import spineCorrectorImg from "../../public/img/products/spine-corrector.webp";
 import wundaChairImg from "../../public/img/products/wunda-chair.webp";
 import armChairImg from "../../public/img/products/arm-chair.webp";
 import wallUnitImg from "../../public/img/products/wall-unit.webp";
+import reformerComboImg from "../../public/img/products/reformer-combo.webp";
+import ladderBarrelImg from "../../public/img/products/ladder-barrel.webp";
+import reformerWithTowerImg from "../../public/img/products/reformer-with-tower.webp";
 
 const faProducts = [
   {
@@ -22,11 +25,11 @@ const faProducts = [
     bullets: [
       {
         desc: "استفاده از ایده آل ترین نوع چوب آلمانی از نظر مرغوبیت و سنگینی و زیبایی طرح",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "استفاده از رنگ نانوتکنولوژی با حداکثر مقاومت دربرابر سایش، خراش و نفوذ آب برای قسمت های چوبی دستگاه",
-        icon: <ChartBarSquareIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "استفاده از جنس خاص برای تایرها و ریل ها که باعث نرمی ، بی صدایی ، روان بودن در حرکت دستگاه می شود",
@@ -34,27 +37,27 @@ const faProducts = [
       },
       {
         desc: "باکس و جامپینگ بورد بر روی دستگاه به صورت استاندارد موجود می باشد",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "امکان تنظیم ارتفاع قرقره ها جهت تغییر زاویه اعمال نیرو بر عضلات بدن",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "سیستم قفل یکسو در کریج, برای قفل کردن طناب و تنظیم دستگاه برای قد استفاده کننده و همچنین انجام حرکت های اختصاصی",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "قابلیت تنظیم در سه حالت برای محل قرار گرفتن سر",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "دارای هفت فنر با سختی های مختلف که با رنگ های مختلف مشخص شده اند",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "قابلیت تنظیم فوت بار در 5 زاویه مختلف برای انجام حرکات متفاوت",
-        icon: <FaceSmileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
     ],
   },
@@ -65,11 +68,11 @@ const faProducts = [
     bullets: [
       {
         desc: "ضخامت تشک استاندارد به منظور استفاده بهتر ورزشکاران",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "دارای ده فنر با فشار های مختلف",
-        icon: <AdjustmentsHorizontalIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "همراه با دو عدد فوزی (Fuzzie)",
@@ -77,7 +80,7 @@ const faProducts = [
       },
       {
         desc: "در صورت تمایل باکس به صورت سفارشی روی این دستگاه عرضه می شود",
-        icon: <FaceSmileIcon />,
+        icon: <SunIcon />,
       },
     ],
   },
@@ -88,15 +91,15 @@ const faProducts = [
     bullets: [
       {
         desc: "سایز استاندارد اسپین مناسب با قوس کمر, جهت جلوگیری از آسیب دیدگی ورزشکاران",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "استفاده از چوب ویژه با چگالی بالا به منظور تحمل فشار بیشتر",
-        icon: <AdjustmentsHorizontalIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "استفاده از رنگ نانو , ضد خش و ضد آب",
-        icon: <SunIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
     ],
   },
@@ -107,23 +110,23 @@ const faProducts = [
     bullets: [
       {
         desc: "ایستایی و استحکام بالا جهت انجام حرکات تخصصی پیلاتس",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "فنرهای قابل تنظیم در دو ارتفاع",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "بازوهای قابل تنظیم در 5 ارتفاع",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "طراحی سه بعدی نرم افزاری و بهینه سازی وزن دستگاه برای افزایش بازده دستگاه",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "امکان جابه جایی راحت دستگاه با تایر های مخصوص",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
     ],
   },
@@ -134,15 +137,15 @@ const faProducts = [
     bullets: [
       {
         desc: "دستگاه آرم چیر دارای چهار فنر است",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "قسمت پشتی و صندلی دستگاه با چرم درجه یک و نرمی استاندارد طراحی شده تا ورزشکار در حرکات دست و بازو دچار آسیب دیدگی نشود",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
       {
         desc: "این دستگاه برای استفاده در منازل , باشگاه ها و مراکز توانبخشی مناسب است",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <CursorArrowRaysIcon />,
       },
     ],
   },
@@ -154,11 +157,68 @@ const faProducts = [
     bullets: [
       {
         desc: "دستگاه وال یونیت دارای شش فنر است",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
       },
       {
         desc: "قسمت مون باکس (Moon Box) به صورت سفارشی روی دستگاه قابل ارائه است",
-        icon: <DevicePhoneMobileIcon />,
+        icon: <SunIcon />,
+      },
+    ],
+  },
+  {
+    title: "کادیلاک – ریفورمر (Reformer-Combo)",
+    desc: "دستگاه کادیلاک ریفورمر دو دستگاه ریفورمر و کادیلاک می باشد که در یک دستگاه ادغام شده اند.  این دستگاه اجازه می‌دهد تا محدوده وسیعی از تمرین‌ها را انجام دهید و گروه‌های عضلانی مختلف را هدف قرار می‌دهند و می توان آن را بر اساس سطح تناسب اندام و اهداف هر فرد تنظیم کرد. برای سالن‌های ورزشی خانگی و حرفه‌ای مناسب هستند. بخصوص برای کسانی که مشکل فضای کار دارند توصیه می شود. چرا که به راحتی با جدا کردن قسمت کامبو(Combo)، دستگاه تبدیل به ریفورمر شده و امکان ادامه حرکات بر روی آن فراهم می شود.",
+    image: reformerComboImg,
+    bullets: [
+      {
+        desc: "قابلیت جداسازی قسمت جای شانه ها از روی کریج دستگاه به منظور تبدیل به دستگاه مدل کادیلاک",
+        icon: <CursorArrowRaysIcon />,
+      },
+      {
+        desc: "دارای جامپینگ برد و باکس",
+        icon: <CursorArrowRaysIcon />,
+      },
+    ],
+  },
+  {
+    title: "لدربرل (Ladder Barrel)",
+    desc: "لدر برل، یکی از وسایل پیلاتس پرکاربرد است که به بهبود انعطاف‌پذیری، قدرت و محوریت مهره‌های پشتی کمک می‌کند. این وسیله امکان انجام تمرینات مختلفی را برای مهره‌های پشتی، شانه‌ها و باسن فراهم می‌آورد و به بهبود وضعیت پوزیشن و کاهش درد پشت کمک می‌کند. براکت پلکان برای افراد مبتدی و پیشرفته بسیار مناسب است و به عمق تمرینات پیلاتس آن‌ها کمک می‌کند.",
+    image: ladderBarrelImg,
+    bullets: [
+      {
+        desc: "قابلیت جابجایی قسمت برل(Barrel) دستگاه به سمت داخل و بیرون",
+        icon: <SunIcon />,
+      },
+      {
+        desc: "شاسی مستحکم دستگاه قابلیت انجام انواع حرکت های مختلف را فراهم آورده",
+        icon: <SunIcon />,
+      },
+      {
+        desc: "طراحی تشک مخصوص زیرین در قسمت (Ladder)باعث شده تا حرکت های خاص روی آن امکان پذیر باشد",
+        icon: <SunIcon />,
+      },
+    ],
+  },
+  {
+    title: "ریفورمر با تاور یا وال (Reformer WithTower)",
+    desc: "دستگاه ریفورمر با تاور از جمله دستگاه های پرکاربرد در ورزش پیلاتس به حساب می آید این دستگاه درواقع ادغام دو دستگاه ریفورمر و وال یونیت (Wall Unit) می باشد که تمامی مشخصات و ویژگی های نام برده شده برای دستگاه ریفورمر در این دستگاه موجود می باشد. این دستگاه برای افراد مبتدی و پیشرفته مناسب است و به بهبود وضعیت پوزیشن، انعطاف‌پذیری، قدرت هسته و لاغری کلی کمک می کند.",
+    image: reformerWithTowerImg,
+    bullets: [
+      {
+        desc: "امکان تبدیل به تخت کامل و انجام حرکات بر روی دستگاه ریفرمر(مطابق شکل)",
+        icon: <CursorArrowRaysIcon />,
+      },
+      {
+        desc: "دارای چهار فنر در قسمت وال علاوه بر پنج فنر روی دستگاه ریفورمر",
+        icon: <CursorArrowRaysIcon />,
+      },
+      {
+        desc: "داری پوش بار",
+        icon: <CursorArrowRaysIcon />,
+      },
+      {
+        desc: "باکس بر روی دستگاه به صورت استاندارد موجود است",
+        icon: <CursorArrowRaysIcon />,
       },
     ],
   },

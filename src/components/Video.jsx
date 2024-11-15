@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/UI/container/Container";
 
 export function Video({ videoId }) {
   const [playVideo, setPlayVideo] = useState(false);

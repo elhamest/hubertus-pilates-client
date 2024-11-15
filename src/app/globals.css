@@ -12,9 +12,17 @@
 :root {
   --primary-color: #a37535; /* (Warm Brown) - This will be your main accent color. for attentionm to highlight important buttons, links, icons, or other interactive elements */
   --dark-primary-color: #745325;
-  --primary-text-color: #1e1915; /* (Deep Black) - This will be your secondary accent or text color. */
-  --light-gray-color: #333333;
   --secondary-color: #3563a3;
+  --third-color: #905a98;
+  --primary-text-color: #1e1915; /* (Deep Black) - This will be your secondary accent or text color. */
+  --medium-gray-color: #333333;
+  --ligth-gray-color: #eaeaea;
+  --c400: #818cf8;
+  --c500: #6366f1;
+  --c600: #4f46e5;
+  --c700: #4338ca;
+  --c800: #3730a3;
+  --c900: #312e81;
 
   --light-tan-color: #d4b794; /* (Light Tan) - A lighter shade of the warm brown, providing a softer contrast. */
   --creamy-white-color: #e8d7c2; /* (Creamy White) - A slightly warmer white that can be used for text or accents. */

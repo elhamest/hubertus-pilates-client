@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/UI/container/Container";
 import styles from "./SectionTitle.module.css";
 import Logo from "@/components/Logo";
 
@@ -11,13 +11,13 @@ export function SectionTitle(props) {
       }`}
     >
       {props.preTitle && (
-        <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+        <div className="text-sm font-semibold tracking-wider text-indigo-600 uppercase">
           {props.preTitle}
         </div>
       )}
 
       {props.title && (
-        <h2 className="max-w-2xl mt-3 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+        <h2 className="max-w-2xl mt-3 text-2xl font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
           {props.title}
         </h2>
       )}
