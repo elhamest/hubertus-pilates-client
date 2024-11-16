@@ -1,4 +1,10 @@
-.fillSvgAnimattion:hover svg {
+.socialLinks {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.socialLinks a svg:hover {
   animation: fill-gradient 1s ease-in-out forwards;
 }
 

@@ -51,7 +51,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
+            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0 ">
               {navigations?.map((item, index) => (
                 <Link
                   key={index}
@@ -79,19 +79,33 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="mt-5 text-gray-500 dark:text-gray-500">
-              <a
-                href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
-                target="_blank"
-                rel="noopener"
-                className={`flex items-center ${styles.fillSvgAnimattion}`}
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-                <span className="mx-2 hover:text-gray-600 transition-all duration-400 focus:text-thirdColor">
-                  {faConstants.followUs}
-                </span>
-              </a>
+            <div className="text-gray-500 dark:text-gray-500 flex gap-5 flex-col">
+              <div className="hover:text-gray-600 transition-all duration-400">
+                {faConstants.followUs}
+              </div>
+              <div className={styles.socialLinks}>
+                <a
+                  href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Instagram />
+                  <span className="sr-only">Instagram</span>
+                </a>
+                <a
+                  href="https://wa.me/+989149191831"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <WhatsApp />
+                  <span className="sr-only">WhatsApp</span>
+                </a>
+              </div>
+              <div className="hover:text-gray-600 transition-all duration-400">
+                {faConstants.contactUs}
+              </div>
+              <PhoneCallIcon />
+              <span>+98 914 9191 831-2</span>
             </div>
           </div>
         </div>
@@ -138,11 +152,21 @@ const WhatsApp = ({ size = 24 }) => (
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
-    viewBox="0 0 24 24"
+    viewBox="0 0 464 488"
     fill="currentColor"
   >
-    <path d="M19.4 4.2c-2.5-2.5-6.6-2.5-9.1 0l-9.1 9.1c-2.5 2.5-2.5 6.6 0 9.1 2.5 2.5 6.6 2.5 9.1 0l9.1-9.1c2.5-2.5 2.5-6.6 0-9.1zm-1.4 7.7c-.1.3-.3.6-.6.8l-1.4 1.4c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l1.4-1.4c.2-.2.4-.3.7-.3.3 0 .5.1.7.3.2.2.3.4.3.7zm-2.8-2.8c-.1.3-.3.6-.6.8l-1.4 1.4c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l1.4-1.4c.2-.2.4-.3.7-.3.3 0 .5.1.7.3.2.2.3.4.3.7zm-2.8-2.8c-.1.3-.3.6-.6.8l-1.4 1.4c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l1.4-1.4c.2-.2.4-.3.7-.3.3 0 .5.1.7.3.2.2.3.4.3.7z" />
+    <path d="M462 228q0 93-66 159t-160 66q-56 0-109-28L2 464l40-120q-32-54-32-116q0-93 66-158.5T236 4t160 65.5T462 228zM236 39q-79 0-134.5 55.5T46 228q0 62 36 111l-24 70l74-23q49 31 104 31q79 0 134.5-55.5T426 228T370.5 94.5T236 39zm114 241q-1-1-10-7q-3-1-19-8.5t-19-8.5q-9-3-13 2q-1 3-4.5 7.5t-7.5 9t-5 5.5q-4 6-12 1q-34-17-45-27q-7-7-13.5-15t-12-15t-5.5-8q-3-7 3-11q4-6 8-10l6-9q2-5-1-10q-4-13-17-41q-3-9-12-9h-11q-9 0-15 7q-19 19-19 45q0 24 22 57l2 3q2 3 4.5 6.5t7 9t9 10.5t10.5 11.5t13 12.5t14.5 11.5t16.5 10t18 8.5q16 6 27.5 10t18 5t9.5 1t7-1t5-1q9-1 21.5-9t15.5-17q8-21 3-26z"></path>
   </svg>
 );
 
-// https://wa.me/+989149191831
+const PhoneCallIcon = ({ size = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+);

@@ -9,7 +9,8 @@ export const enConstants = {
     "We take pride in producing high-quality Pilates equipment by Iranian engineers, adhering to international standards and utilizing modern technologies. This has led to our products being well-regarded in global markets.",
   viewProducts: "View Products",
   products: "Products",
-  followUs: "Follow us On Instagram",
+  followUs: "Follow us",
+  contactUs: "Contact us",
   navigations: [
     { title: "Products", path: "/products" },
     { title: "About Hubertus", path: "/about-us" },
