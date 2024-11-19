@@ -71,9 +71,9 @@
   text-align: justify;
 }
 
-.companyWrapper p:last-child {
+/* .companyWrapper p:last-child {
   text-align: center;
-}
+} */
 .personsWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

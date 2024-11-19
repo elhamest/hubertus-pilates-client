@@ -12,9 +12,9 @@ export const faConstants = {
   followUs: "ما را دنبال کنید",
   contactUs: "با ما تماس بگیرید",
   navigations: [
-    { title: "محصولات", path: "/products" },
+    { title: "محصولات", path: "#products" },
     { title: "درباره هوبرتوس", path: "/about-us" },
-    { title: "تماس با هوبرتوس", path: "/contact-us" },
+    { title: "تماس با هوبرتوس", path: "#contact-us" },
   ],
   persons: [
     {
