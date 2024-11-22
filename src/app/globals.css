@@ -14,9 +14,13 @@
   --dark-primary-color: #745325;
   --secondary-color: #3563a3;
   --third-color: #905a98;
+  --third-color-dark: #794c80;
+
   --primary-text-color: #1e1915; /* (Deep Black) - This will be your secondary accent or text color. */
   --medium-gray-color: #333333;
   --ligth-gray-color: #eaeaea;
+  --off-white-color: #f9f9f9; /* rgb(249, 249, 249) :background-color in light mode */
+  --dark-gray-color: #171717; /* rgb(23, 23, 23) : backgrounc-color in dark mode */
   --c400: #818cf8;
   --c500: #6366f1;
   --c600: #4f46e5;
@@ -37,5 +41,5 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9; /* var(--Light-beige-color);*/
+  background-color: var(--off-white-color);
 }

@@ -4,11 +4,41 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  transition: 0.6s;
+  transition: padding 2s, box-shadow 2s;
   padding: 30px 70px;
+  position: relative;
+}
+
+.navbarWrapper.scrolled {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarWrapper.scrolledLight {
+  background-color: rgba(249, 249, 249, 0.95);
+}
+.navbarWrapper.scrolledDark {
+  background-color: rgba(43, 43, 43, 0.95);
+}
+
+.scrolledLogo {
+  font-size: 1.5rem;
+}
+
+.dark .navbarWrapper.scrolled {
+  background-color: rgba(0, 0, 0, 0.95); /* Black with 0.95 transparency */
 }
 
 .navItem a {
   width: 100%;
   min-width: 170px;
+}
+
+.active {
+  background-color: yellow;
 }

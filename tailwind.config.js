@@ -18,6 +18,7 @@ const config = {
         primaryColor: "#a37535",
         secondaryColor: "#3563a3",
         thirdColor: "#905a98",
+        thirdColorDark: "#794c80",
         lightBeigeColor: "#f5f1e9",
         creamyWhiteColor: "#e8d7c2",
         darkPrimaryColor: "#745325",

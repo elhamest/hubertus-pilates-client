@@ -16,7 +16,7 @@ export function Footer() {
             <div>
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-thirdColor dark:text-gray-100"
+                className="flex items-center space-x-2 text-2xl font-medium text-thirdColor dark:text-gray-200"
               >
                 <Image
                   src="/img/logo.svg"
@@ -29,7 +29,7 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400 text-justify">
+            <div className="max-w-md mt-6 text-gray-500 dark:text-gray-400 text-justify leading-7 pl-2">
               {faConstants.footerSlug}
             </div>
 
@@ -50,18 +50,16 @@ export function Footer() {
             </div> */}
           </div>
 
-          <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0 ">
-              {navigations?.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item?.path}
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 dark:hover:text-thirdColor  hover:text-thirdColor hover:tracking-wide transition-all duration-300 focus:text-thirdColor focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
-                >
-                  {item?.title}
-                </Link>
-              ))}
-            </div>
+          <div className="flex flex-wrap w-full mt-2 lg:ml-0">
+            {navigations?.map((item, index) => (
+              <Link
+                key={index}
+                href={item?.path}
+                className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-400 dark:hover:text-thirdColor hover:text-thirdColor hover:tracking-wide transition-all duration-300 focus:text-thirdColor focus:bg-text-thirdColor focus:outline-none dark:focus:bg-trueGray-700"
+              >
+                {item?.title}
+              </Link>
+            ))}
           </div>
 
           <div>
@@ -103,8 +101,12 @@ export function Footer() {
               </div>
               <div className="text-gray-500 hover:text-gray-600 transition-all duration-400 flex gap-2 flex-col">
                 {faConstants.contactUs}
-                <div>+989149191831</div>
-                <div>+989149191832</div>
+                <div className="text-right" style={{ direction: "ltr" }}>
+                  +989149191831
+                </div>
+                <div className="text-right" style={{ direction: "ltr" }}>
+                  +989149191832
+                </div>
               </div>
             </div>
           </div>

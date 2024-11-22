@@ -9,8 +9,13 @@ function Benefits() {
       preTitle={faConstants.benefits?.preTitle}
       title={faConstants.benefits?.title}
     >
+      <div id="products"></div>
       {faConstants.benefits?.items?.map((item, index) => (
-        <div key={index} className={styles.benefitContainer}>
+        <div
+          key={index}
+          className={styles.benefitContainer}
+          // style={{ animationDelay: `${index * 0.2}s` }}
+        >
           <svg
             className={styles.checkSvgImage}
             xmlns="http://www.w3.org/2000/svg"

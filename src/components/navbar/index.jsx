@@ -1,27 +1,55 @@
 "use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import Image from "next/image";
-import { useState } from "react";
-
+// import NavLink from "../UI/nav-link/NavLink";
 import { faConstants } from "../../../public/locales/fa/common";
 import styles from "./Navbar.module.css";
 
 export function Navbar() {
   const navigations = faConstants.navigations;
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles.navbarWrapper}>
+    <div
+      className={`${styles.navbarWrapper} ${
+        isScrolled ? styles.scrolled : ""
+      } ${isScrolled && theme === "light" ? styles.scrolledLight : ""} ${
+        isScrolled && theme === "dark" ? styles.scrolledDark : ""
+      }`}
+    >
       <nav className="container relative flex flex-wrap items-center justify-between mx-auto lg:justify-between">
         {/* Logo  */}
         <Link href="/">
-          <span className="flex items-center text-2xl font-medium">
-            <span className="ml-2">
+          <span
+            className={`flex items-center text-2xl font-medium ${
+              isScrolled ? styles.scrolledLogo : ""
+            }`}
+          >
+            <span>
               <Image
                 src="/img/logo.svg"
                 alt={faConstants.hubertus}
@@ -36,7 +64,11 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="gap-3 mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        <div
+          className={`gap-3 mr-5 lg:flex ml-auto lg:ml-0 lg:order-2 ${
+            isScrolled ? styles.scrolledThemeChanger : ""
+          }`}
+        >
           <ThemeChanger />
         </div>
 
@@ -47,7 +79,7 @@ export function Navbar() {
           onClick={toggleMenu}
         >
           <svg
-            className="w-6 h-6 fill-secondaryColor"
+            className="w-6 h-6 fill-thirdColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -82,11 +114,16 @@ export function Navbar() {
         )}
 
         {/* menu  */}
-        <div className="hidden text-center lg:flex lg:items-center">
+        <div
+          className={`hidden text-center lg:flex lg:items-center ${
+            isScrolled ? styles.scrolledMenu : ""
+          }`}
+        >
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigations?.map((menu, index) => (
               <li className={styles.navItem} key={index}>
                 <Link
+                  key={index}
                   href={menu?.path}
                   className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-thirdColor dark:hover:text-thirdColor focus:text-thirdColor focus:outline-none transition-all duration-300 hover:tracking-wide"
                 >

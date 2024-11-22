@@ -1,9 +1,8 @@
 import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
-
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { PopupWidget } from "@/components/PopupWidget";
+import { PopupWidget } from "@/components/popup-widget";
 
 import { faConstants } from "../../public/locales/fa/common";
 import "./globals.css";
