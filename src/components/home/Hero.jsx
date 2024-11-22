@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { Container } from "@/components/UI/container/Container";
 import heroImg from "../../../public/img/main-hero-fa.jpg";
-
 import { faConstants } from "../../../public/locales/fa/common";
 import styles from "./Hero.module.css";
 import Link from "next/link";
