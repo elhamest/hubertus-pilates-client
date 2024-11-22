@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // Add a basePath here, corresponding to your project name
+  basePath: "/hubertus-pilates-client",
 
+  // Retain or adjust other settings, such as output: 'export'
+  output: "export",
   images: {
-    unoptimized: true, // Disables image optimization for compatibility with static hosting
+    unoptimized: true, // Required for static sites or GitHub Pages
   },
 };
 
