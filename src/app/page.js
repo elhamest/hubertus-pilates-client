@@ -27,11 +27,16 @@ export default function Home() {
   // ];
 
   const imagePaths = [
-    "/img/slider2/s1.jpg",
-    "/img/slider2/s2.jpg",
-    "/img/slider2/s3.jpg",
-    "/img/slider2/s4.jpg",
-    "/img/slider2/s5.jpg",
+    "../../img/slider2/s1.jpg",
+    "../../img/slider2/s2.jpg",
+    "../../img/slider2/s3.jpg",
+    "../../img/slider2/s4.jpg",
+    "../../img/slider2/s5.jpg",
+    // "/img/slider2/s1.jpg",
+    // "/img/slider2/s2.jpg",
+    // "/img/slider2/s3.jpg",
+    // "/img/slider2/s4.jpg",
+    // "/img/slider2/s5.jpg",
   ];
 
   return (
