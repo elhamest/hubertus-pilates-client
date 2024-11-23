@@ -1,18 +1,18 @@
 import { Container } from "@/components/UI/container/Container";
 import { Hero } from "@/components/home/Hero";
-import { SectionTitle } from "@/components/UI/slider/section-title";
+// import { SectionTitle } from "@/components/UI/slider/section-title";
 import { Products } from "@/components/products/Products";
-import { Video } from "@/components/Video";
-import { Testimonials } from "@/components/Testimonials";
-import { Faq } from "@/components/Faq";
-import { Cta } from "@/components/Cta";
+// import { Video } from "@/components/Video";
+// import { Testimonials } from "@/components/Testimonials";
+// import { Faq } from "@/components/Faq";
+// import { Cta } from "@/components/Cta";
 
 // import { productOne, productTwo } from "@/components/data";
 import { faProducts } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
-import { faConstants } from "../../public/locales/fa/common";
+// import { faConstants } from "../../public/locales/fa/common";
 import Benefits from "@/components/home/Benefits";
-import Logo from "@/components/Logo";
+// import Logo from "@/components/Logo";
 
 export default function Home() {
   // const imagePaths = [
