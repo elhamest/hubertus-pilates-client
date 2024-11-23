@@ -6,6 +6,7 @@ import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import Image from "next/image";
 // import NavLink from "../UI/nav-link/NavLink";
 import { faConstants } from "../../../public/locales/fa/common";
+import logoImage from "../../../public/img/logo.svg";
 import styles from "./Navbar.module.css";
 
 export function Navbar() {
@@ -51,7 +52,8 @@ export function Navbar() {
           >
             <span>
               <Image
-                src="/img/logo.svg"
+                // src="/img/logo.svg"
+                src={logoImage}
                 alt={faConstants.hubertus}
                 width={80}
                 height={80}

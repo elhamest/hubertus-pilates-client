@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/UI/container/Container";
 import { faConstants } from "../../../public/locales/fa/common";
+import logoImage from "../../../public/img/logo.svg";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -19,7 +20,8 @@ export function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-thirdColor dark:text-gray-200"
               >
                 <Image
-                  src="/img/logo.svg"
+                  // src="/img/logo.svg"
+                  src={logoImage}
                   alt={faConstants.hubertus}
                   width={80}
                   height={80}
