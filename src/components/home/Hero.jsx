@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Container } from "@/components/UI/container/Container";
-import heroImg from "../../../public/img/main-hero-fa.jpg";
-
+// import heroImg from "../../../public/img/main-hero-fa.jpg";
 import { faConstants } from "../../../public/locales/fa/common";
 import styles from "./Hero.module.css";
 import Link from "next/link";
@@ -42,7 +41,8 @@ export const Hero = () => {
         >
           <div className={styles.imageContainer}>
             <Image
-              src={heroImg}
+              //src={heroImg}
+              src="/img/main-hero-fa.jpg" // Use a relative path
               alt="Hero Illustration"
               loading="eager"
               placeholder="blur"
