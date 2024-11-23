@@ -123,8 +123,8 @@ export function Footer() {
             className="hover:text-thirdColor transition-all duration-300 focus:text-thirdColor"
           >
             Hubertus Pilates.
-          </a>{" "}
-          Designed by{" "}
+          </a>
+          {/* Designed by{" "}
           <a
             href="https://github.com/elhamest/"
             target="_blank"
@@ -132,7 +132,7 @@ export function Footer() {
             className="hover:text-thirdColor transition-all duration-300 focus:text-thirdColor"
           >
             Elham Estedlali
-          </a>
+          </a> */}
         </div>
       </Container>
     </div>
