@@ -108,6 +108,7 @@ export function Navbar() {
                 key={index}
                 href={item?.path}
                 className="w-full px-4 py-2 -ml-4 rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
+                onClick={() => setIsOpen(!open)}
               >
                 {item?.title}
               </Link>

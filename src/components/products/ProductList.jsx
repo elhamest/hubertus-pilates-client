@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/UI/container/Container";
+import styles from "./ProductList.module.css";
 
 function ProductList({ data }) {
   return (
@@ -34,7 +35,7 @@ function ProductList({ data }) {
             <div
               className={`flex flex-wrap items-center w-full lg:w-1/2 ${
                 imgPos === "right" ? "lg:justify-end" : ""
-              }`}
+              } ${styles.productDescriptin}`}
             >
               <div>
                 <div className="flex flex-col w-full mt-4">

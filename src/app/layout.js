@@ -21,6 +21,9 @@ const vazirMatn = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
+      {/* <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head> */}
       <body className={vazirMatn.className}>
         <ThemeProvider attribute="class">
           <Navbar />

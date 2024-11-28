@@ -7,12 +7,9 @@ import { Products } from "@/components/products/Products";
 // import { Faq } from "@/components/Faq";
 // import { Cta } from "@/components/Cta";
 
-// import { productOne, productTwo } from "@/components/data";
 import { faProducts } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
-// import { faConstants } from "../../public/locales/fa/common";
 import Benefits from "@/components/home/Benefits";
-// import Logo from "@/components/Logo";
 
 export default function Home() {
   // const imagePaths = [
@@ -43,8 +40,6 @@ export default function Home() {
         <Benefits />
 
         <Products data={faProducts} />
-        {/* <Products data={productOne} />
-        <Products imgPos="right" data={productTwo} /> */}
 
         {/* <SectionTitle
           preTitle="Watch a video"

@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "@/components/UI/container/Container";
 import styles from "./SectionTitle.module.css";
-import Logo from "@/components/Logo";
 
 export function SectionTitle(props) {
   return (
@@ -17,7 +16,9 @@ export function SectionTitle(props) {
       )}
 
       {props.title && (
-        <h2 className="max-w-2xl mt-3 text-2xl font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+        <h2
+          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white ${styles.title}`}
+        >
           {props.title}
         </h2>
       )}

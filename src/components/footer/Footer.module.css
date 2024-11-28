@@ -1,3 +1,9 @@
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .socialLinks {
   display: flex;
   gap: 20px;
@@ -6,6 +12,13 @@
 
 .socialLinks a svg:hover {
   animation: fill-gradient 1s ease-in-out forwards;
+}
+
+@media (min-width: 1024px) {
+  .footerContainer {
+    gap: 2.5rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }
 
 @keyframes fill-gradient {

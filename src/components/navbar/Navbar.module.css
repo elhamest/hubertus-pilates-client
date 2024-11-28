@@ -5,7 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
   transition: padding 2s, box-shadow 2s;
-  padding: 30px 70px;
+  padding: 30px 40px;
   position: relative;
 }
 
@@ -42,3 +42,9 @@
 /* .active {
   background-color: yellow;
 } */
+
+@media (min-width: 1200px) {
+  .navbarWrapper {
+    padding: 30px 70px;
+  }
+}

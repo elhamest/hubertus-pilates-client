@@ -12,7 +12,9 @@ export function Footer() {
   return (
     <div className="relative" id="contact-us">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 lg:grid-cols-5">
+        <div
+          className={`max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 lg:grid-cols-5 ${styles.footerContainer}`}
+        >
           <div className="lg:col-span-2">
             <div>
               <Link
@@ -57,7 +59,7 @@ export function Footer() {
               <Link
                 key={index}
                 href={item?.path}
-                className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-400 dark:hover:text-thirdColor hover:text-thirdColor hover:tracking-wide transition-all duration-300 focus:text-thirdColor focus:bg-text-thirdColor focus:outline-none dark:focus:bg-trueGray-700"
+                className="w-full px-0 lg:px-4 py-2 text-gray-500 rounded-md dark:text-gray-400 dark:hover:text-thirdColor hover:text-thirdColor hover:tracking-wide transition-all duration-300 focus:text-thirdColor focus:bg-text-thirdColor focus:outline-none dark:focus:bg-trueGray-700"
               >
                 {item?.title}
               </Link>
@@ -78,37 +80,35 @@ export function Footer() {
             </div> */}
           </div>
 
-          <div>
-            <div className="text-gray-500 dark:text-gray-500 flex gap-5 flex-col">
-              <div className="hover:text-gray-600 transition-all duration-400">
-                {faConstants.followUs}
+          <div className="text-gray-500 dark:text-gray-500 flex gap-5 flex-col">
+            <div className="hover:text-gray-600 transition-all duration-400">
+              {faConstants.followUs}
+            </div>
+            <div className={styles.socialLinks}>
+              <a
+                href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
+                target="_blank"
+                rel="noopener"
+              >
+                <Instagram />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://wa.me/+989149191831"
+                target="_blank"
+                rel="noopener"
+              >
+                <WhatsApp />
+                <span className="sr-only">WhatsApp</span>
+              </a>
+            </div>
+            <div className="text-gray-500 hover:text-gray-600 transition-all duration-400 flex gap-2 flex-col">
+              {faConstants.contactUs}
+              <div className="text-right" style={{ direction: "ltr" }}>
+                +989149191831
               </div>
-              <div className={styles.socialLinks}>
-                <a
-                  href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Instagram />
-                  <span className="sr-only">Instagram</span>
-                </a>
-                <a
-                  href="https://wa.me/+989149191831"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <WhatsApp />
-                  <span className="sr-only">WhatsApp</span>
-                </a>
-              </div>
-              <div className="text-gray-500 hover:text-gray-600 transition-all duration-400 flex gap-2 flex-col">
-                {faConstants.contactUs}
-                <div className="text-right" style={{ direction: "ltr" }}>
-                  +989149191831
-                </div>
-                <div className="text-right" style={{ direction: "ltr" }}>
-                  +989149191832
-                </div>
+              <div className="text-right" style={{ direction: "ltr" }}>
+                +989149191832
               </div>
             </div>
           </div>
