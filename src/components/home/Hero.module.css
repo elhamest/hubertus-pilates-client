@@ -55,6 +55,10 @@
 .descriptionContainer p {
   font-size: 20px;
   font-weight: 500;
+  text-align: justify;
+}
+.viewProducts {
+  width: 100%;
 }
 
 .viewProducts a {
@@ -69,6 +73,7 @@
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   letter-spacing: 1px;
+  width: 100%;
 }
 .viewProducts a:hover {
   color: var(--third-color);
@@ -80,6 +85,11 @@
   }
 }
 
+@media (min-width: 426px) {
+  .viewProducts {
+    width: fit-content;
+  }
+}
 @media (min-width: 990px) {
   .heroWrapper {
     height: 500px;
@@ -91,6 +101,9 @@
     padding-top: 0;
     padding-bottom: 0;
     max-width: 42rem; /* 672px */
+  }
+  .descriptionContainer p {
+    text-align: inherit;
   }
   .imageWrapper {
     width: 66.666667%; /* 2/3 */

@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>
-          <Footer />
           <PopupWidget />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
