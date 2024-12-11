@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "@/components/UI/container/Container";
 import styles from "./SectionTitle.module.css";
 
@@ -17,7 +16,7 @@ export function SectionTitle(props) {
 
       {props.title && (
         <h2
-          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white ${styles.title}`}
+          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white ${styles.title} sectionTitle`}
         >
           {props.title}
         </h2>

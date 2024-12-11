@@ -1,4 +1,6 @@
+"use client";
 import { Container } from "@/components/UI/container/Container";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Hero } from "@/components/home/Hero";
 // import { SectionTitle } from "@/components/UI/slider/section-title";
 import { Products } from "@/components/products/Products";
@@ -30,6 +32,9 @@ export default function Home() {
     "img/slider2/s4.jpg",
     "img/slider2/s5.jpg",
   ];
+
+  // Use the custom hook for scroll animation
+  useScrollAnimation(".sectionTitle", 0.1); // Trigger when 10% of the element is visible
 
   return (
     <>
