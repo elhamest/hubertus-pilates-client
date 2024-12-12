@@ -60,7 +60,9 @@ export function Navbar() {
                 style={{ height: "auto" }}
               />
             </span>
-            <span className="text-thirdColor dark:text-ligthGrayColor">
+            <span
+              className={`text-thirdColor dark:text-ligthGrayColor ${styles.logoText}`}
+            >
               {faConstants.hubertus}
             </span>
           </span>

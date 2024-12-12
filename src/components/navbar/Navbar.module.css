@@ -29,6 +29,9 @@
   font-size: 1.5rem;
 }
 
+.logoText {
+  display: none;
+}
 /* .dark .navbarWrapper.scrolled {
   background-color: rgba(0, 0, 0, 0.95); 
 } */
@@ -47,5 +50,11 @@
 @media (min-width: 768px) {
   .navbarWrapper {
     padding: 30px 50px;
+  }
+}
+
+@media (min-width: 425px) {
+  .logoText {
+    display: block;
   }
 }
