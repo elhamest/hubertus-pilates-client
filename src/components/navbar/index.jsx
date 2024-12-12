@@ -66,39 +66,41 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div
-          className={`gap-3 mr-5 lg:flex ml-auto lg:ml-0 lg:order-2 ${
-            isScrolled ? styles.scrolledThemeChanger : ""
-          }`}
-        >
-          <ThemeChanger />
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          aria-label="Toggle Menu"
-          className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
-          onClick={toggleMenu}
-        >
-          <svg
-            className="w-6 h-6 fill-thirdColor"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
+        <div className="flex items-center lg:order-2">
+          <div
+            className={`gap-3 ml-5 lg:ml-0 lg:flex mr-auto lg:mr-0 lg:order-2 ${
+              isScrolled ? styles.scrolledThemeChanger : ""
+            }`}
           >
-            {isOpen ? (
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-              />
-            ) : (
-              <path
-                fillRule="evenodd"
-                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-              />
-            )}
-          </svg>
-        </button>
+            <ThemeChanger />
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            aria-label="Toggle Menu"
+            className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+            onClick={toggleMenu}
+          >
+            <svg
+              className="w-6 h-6 fill-thirdColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              {isOpen ? (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
+              ) : (
+                <path
+                  fillRule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
 
         {/* Mobile menu */}
         {isOpen && (

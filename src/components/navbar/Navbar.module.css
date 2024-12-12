@@ -15,7 +15,6 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,10 +38,6 @@
   min-width: 170px;
 }
 
-/* .active {
-  background-color: yellow;
-} */
-
 @media (min-width: 1200px) {
   .navbarWrapper {
     padding: 30px 70px;
@@ -51,9 +46,6 @@
 
 @media (min-width: 768px) {
   .navbarWrapper {
-    padding: 30px 40px;
-  }
-  .navbarWrapper.scrolled {
-    padding: 10px 40px;
+    padding: 30px 50px;
   }
 }
