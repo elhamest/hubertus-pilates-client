@@ -16,7 +16,7 @@ export function SectionTitle(props) {
 
       {props.title && (
         <h2
-          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white ${styles.title} sectionTitle`}
+          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white ${styles.title} animateFadeInUp`}
         >
           {props.title}
         </h2>

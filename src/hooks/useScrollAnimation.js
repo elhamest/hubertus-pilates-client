@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 export function useScrollAnimation(selector, threshold = 0.1) {
   useEffect(() => {
-    const element = document.querySelector(selector);
+    const elements = document.querySelectorAll(selector);
 
-    if (!element) return; // Exit if the element is not found
+    if (!elements.length) return; // Exit if the element is not found
 
     // Function to animate the element
-    function animateElement() {
+    function animateElement(element) {
       element.classList.add("animate");
     }
 
@@ -18,7 +18,7 @@ export function useScrollAnimation(selector, threshold = 0.1) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            animateElement(); // Trigger the animation when the element is in the viewport
+            animateElement(entry.target); // Trigger the animation for the intersecting element
           }
         });
       },
@@ -28,11 +28,11 @@ export function useScrollAnimation(selector, threshold = 0.1) {
     );
 
     // Start observing the element
-    observer.observe(element);
+    elements.forEach((element) => observer.observe(element));
 
     // Cleanup the observer on component unmount
     return () => {
-      observer.unobserve(element);
+      elements.forEach((element) => observer.unobserve(element));
     };
   }, [selector, threshold]); // Dependencies for the useEffect
 }

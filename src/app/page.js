@@ -34,7 +34,7 @@ export default function Home() {
   ];
 
   // Use the custom hook for scroll animation
-  useScrollAnimation(".sectionTitle", 0.1); // Trigger when 10% of the element is visible
+  useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible
 
   return (
     <>
