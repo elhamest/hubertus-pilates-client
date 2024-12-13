@@ -4,7 +4,7 @@ export const enConstants = {
   engineeringDepartment: "Engineering Group",
   companyDescription: "Manufacturer of Pilates Devices",
   companyProud:
-    "We are proud to produce high-quality products by Iranian engineers in accordance with global standards",
+    "Design and manufacturing of high-quality Pilates equipment based on global standards",
   footerSlug:
     "We take pride in producing high-quality Pilates equipment by Iranian engineers, adhering to international standards and utilizing modern technologies. This has led to our products being well-regarded in global markets.",
   viewProducts: "View Products",
