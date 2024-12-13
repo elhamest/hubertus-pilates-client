@@ -54,16 +54,16 @@ export function Navbar() {
               <Image
                 // src="/img/logo.svg"
                 src={logoImage}
-                alt={faConstants.hubertus}
+                alt={faConstants.companyName}
                 width={80}
                 height={80}
                 style={{ height: "auto" }}
               />
             </span>
             <span
-              className={`text-thirdColor dark:text-ligthGrayColor ${styles.logoText}`}
+              className={`text-primaryColor dark:text-pureWhiteColor ${styles.logoText}`}
             >
-              {faConstants.hubertus}
+              {faConstants.companyName}
             </span>
           </span>
         </Link>
@@ -80,11 +80,11 @@ export function Navbar() {
           {/* Mobile menu button */}
           <button
             aria-label="Toggle Menu"
-            className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+            className="px-2 py-1 text-accentColorBlue rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-accentColorGary dark:focus:bg-trueGray-700"
             onClick={toggleMenu}
           >
             <svg
-              className="w-6 h-6 fill-thirdColor"
+              className="w-6 h-6 fill-primaryColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -108,10 +108,11 @@ export function Navbar() {
         {isOpen && (
           <div className="flex flex-wrap w-full mt-5 lg:hidden">
             {navigations?.map((item, index) => (
+              //  text-accentColorBlue
               <Link
                 key={index}
                 href={item?.path}
-                className="w-full px-4 py-2 -ml-4 rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
+                className="w-full px-4 py-2 -ml-4 rounded-md dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
                 onClick={() => setIsOpen(!open)}
               >
                 {item?.title}
@@ -129,10 +130,11 @@ export function Navbar() {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigations?.map((menu, index) => (
               <li className={styles.navItem} key={index}>
+                {/* text-accentColorBlue */}
                 <Link
                   key={index}
                   href={menu?.path}
-                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md text-primaryTextColor dark:text-pureWhiteColor hover:text-thirdColor dark:hover:text-thirdColor focus:text-thirdColor focus:outline-none transition-all duration-300 hover:tracking-wide"
+                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none transition-all duration-300 hover:tracking-wide"
                 >
                   {menu?.title}
                 </Link>

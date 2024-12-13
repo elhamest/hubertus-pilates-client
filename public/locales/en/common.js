@@ -1,7 +1,7 @@
 export const enConstants = {
   pageTitle: "Hubertus Pilates",
-  hubertus: "Hubertus",
-  companyName: "Hubertus Engineering Group",
+  companyName: "Hubertus",
+  engineeringDepartment: "Engineering Group",
   companyDescription: "Manufacturer of Pilates Devices",
   companyProud:
     "We are proud to produce high-quality products by Iranian engineers in accordance with global standards",

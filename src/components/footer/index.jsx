@@ -17,23 +17,24 @@ export function Footer() {
         >
           <div className="lg:col-span-2">
             <div>
+              {/* text-primaryColor */}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-thirdColor dark:text-gray-200"
+                className="flex items-center space-x-2 text-2xl font-medium dark:text-accentColorGary"
               >
                 <Image
                   // src="/img/logo.svg"
                   src={logoImage}
-                  alt={faConstants.hubertus}
+                  alt={faConstants.companyName}
                   width={80}
                   height={80}
                   style={{ height: "auto" }}
                 />
-                <span>{faConstants.hubertus}</span>
+                <span>{faConstants.companyName}</span>
               </Link>
             </div>
 
-            <div className="max-w-md mt-6 text-gray-500 dark:text-gray-400 text-justify leading-7 pl-2">
+            <div className="max-w-md mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7 pl-2">
               {faConstants.footerSlug}
             </div>
 
@@ -56,10 +57,11 @@ export function Footer() {
 
           <div className="flex flex-wrap w-full mt-2 lg:ml-0">
             {navigations?.map((item, index) => (
+              //  text-accentColorBlue
               <Link
                 key={index}
                 href={item?.path}
-                className="w-full px-0 lg:px-4 py-2 text-gray-500 rounded-md dark:text-gray-400 dark:hover:text-thirdColor hover:text-thirdColor hover:tracking-wide transition-all duration-300 focus:text-thirdColor focus:bg-text-thirdColor focus:outline-none dark:focus:bg-trueGray-700"
+                className="w-full px-0 lg:px-4 py-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
               >
                 {item?.title}
               </Link>
@@ -72,7 +74,7 @@ export function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 dark:hover:text-thirdColor hover:text-thirdColor hover:tracking-wide transition-all duration-300 focus:text-thirdColor focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
                 </Link>
@@ -80,8 +82,8 @@ export function Footer() {
             </div> */}
           </div>
 
-          <div className="text-gray-500 dark:text-gray-500 flex gap-5 flex-col">
-            <div className="hover:text-gray-600 transition-all duration-400">
+          <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
+            <div className="hover:text-darkSecondaryColor transition-all duration-400">
               {faConstants.followUs}
             </div>
             <div className={styles.socialLinks}>
@@ -102,7 +104,7 @@ export function Footer() {
                 <span className="sr-only">WhatsApp</span>
               </a>
             </div>
-            <div className="text-gray-500 hover:text-gray-600 transition-all duration-400 flex gap-2 flex-col">
+            <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
               {faConstants.contactUs}
               <div className="text-right" style={{ direction: "ltr" }}>
                 +989149191831
@@ -114,13 +116,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 mb-2 text-sm text-center text-gray-600 dark:text-gray-400">
+        <div className="mt-10 mb-2 text-sm text-center text-accentColorBlue dark:text-accentColorGary">
           Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
           <a
             href="http://hubertuspilates.com/"
             target="_blank"
             rel="noopener"
-            className="hover:text-thirdColor transition-all duration-300 focus:text-thirdColor"
+            className="hover:text-primaryColor transition-all duration-300 focus:text-primaryColor"
           >
             Hubertus Pilates.
           </a>
@@ -129,7 +131,7 @@ export function Footer() {
             href="https://github.com/elhamest/"
             target="_blank"
             rel="noopener"
-            className="hover:text-thirdColor transition-all duration-300 focus:text-thirdColor"
+            className="hover:text-primaryColor transition-all duration-300 focus:text-primaryColor"
           >
             Elham Estedlali
           </a> */}

@@ -9,7 +9,9 @@ const AboutUs = () => {
     <Container>
       <div className={styles.aboutUsWrapper}>
         <div className={styles.companyWrapper}>
-          <h1>درباره شرکت هوبرتوس پیلاتس</h1>
+          <h1 className="dark:text-pureWhiteColor">
+            درباره شرکت هوبرتوس پیلاتس
+          </h1>
           <p>
             شرکت هوبرتوس پیلاتس اولین تولید کننده دستگاه های پیلاتس در ایران
             توسط برادران زرعی تاسیس شده است که بعد از سالها تحقیق و بررسی در

@@ -47,7 +47,7 @@ export function PopupWidget() {
       {!isSmallScreen && (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed z-40 flex items-center justify-center transition duration-300 bg-thirdColor rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-thirdColorDark focus:bg-thirdColorDark ease"
+          className="fixed z-40 flex items-center justify-center transition duration-300 bg-primaryColor rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-primaryColor focus:bg-primaryColor ease"
         >
           <span className="sr-only">{faConstants.openContactFormWidget}</span>
           {isOpen ? (
@@ -89,8 +89,10 @@ export function PopupWidget() {
         <div
           className={`${styles.boxWrapper} flex flex-col overflow-hidden dark:border-gray-800 bg-white`}
         >
-          <div className="flex flex-col items-center justify-center h-32 p-5 bg-thirdColor">
-            <h3 className="text-lg text-white">{faConstants.howWeCanHelp}</h3>
+          <div className="flex flex-col items-center justify-center h-32 p-5 bg-primaryColor">
+            <h3 className="text-lg dark:text-pureWhiteColor">
+              {faConstants.howWeCanHelp}
+            </h3>
             <p className="text-white opacity-50">
               {faConstants.weUsuallyRespondInAFewHours}
             </p>
@@ -112,7 +114,7 @@ export function PopupWidget() {
               <div className="mb-4">
                 <label
                   htmlFor="full_name"
-                  className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                  className="block mb-2 text-sm text-accentColorBlue dark:text-accentColorGary"
                 >
                   {faConstants.fullName}
                 </label>
@@ -124,7 +126,7 @@ export function PopupWidget() {
                     required: "لطفا نام خود را وارد کنید",
                     maxLength: 80,
                   })}
-                  className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                  className={`w-full px-3 py-2 text-accentColorBlue placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                     errors.name
                       ? "border-red-600 focus:border-red-600 ring-red-100"
                       : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
@@ -140,7 +142,7 @@ export function PopupWidget() {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                  className="block mb-2 text-sm text-accentColorBlue dark:text-accentColorGary"
                 >
                   {faConstants.emailAddress}
                 </label>
@@ -155,7 +157,7 @@ export function PopupWidget() {
                     },
                   })}
                   placeholder="you@company.com"
-                  className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                  className={`w-full px-3 py-2 text-accentColorBlue placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                     errors.email
                       ? "border-red-600 focus:border-red-600 ring-red-100"
                       : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
@@ -173,7 +175,7 @@ export function PopupWidget() {
               <div className="mb-4">
                 <label
                   htmlFor="message"
-                  className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                  className="block mb-2 text-sm text-accentColorBlue dark:text-accentColorGary"
                 >
                   {faConstants.yourMessage}
                 </label>
@@ -185,7 +187,7 @@ export function PopupWidget() {
                     required: "لطفا پیام خود را وارد کنید",
                   })}
                   placeholder={faConstants.enterYourMessage}
-                  className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
+                  className={`w-full px-3 py-2 text-accentColorBlue placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                     errors.message
                       ? "border-red-600 focus:border-red-600 ring-red-100"
                       : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
@@ -201,7 +203,7 @@ export function PopupWidget() {
               <div className="mb-3">
                 <button
                   type="submit"
-                  className="w-full px-3 py-4 text-white bg-thirdColor rounded-md focus:bg-thirdColorDark focus:outline-none"
+                  className="w-full px-3 py-4 text-white bg-primaryColor rounded-md focus:bg-primaryColorDark focus:outline-none"
                 >
                   {isSubmitting ? (
                     <svg

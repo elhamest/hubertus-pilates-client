@@ -21,7 +21,7 @@ export const Faq = () => {
           <div key={item.question} className="mb-5">
             <button
               onClick={() => toggleAccordion(index)}
-              className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-gray-800 rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-gray-200"
+              className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-accentColorBlue rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-accentColorGary"
             >
               <span>{item.question}</span>
               <ChevronUpIcon
@@ -31,7 +31,7 @@ export const Faq = () => {
               />
             </button>
             {openIndex === index && (
-              <div className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
+              <div className="px-4 pt-4 pb-2 text-accentColorBlue dark:text-accentColorGary">
                 {item.answer}
               </div>
             )}

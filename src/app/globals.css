@@ -10,31 +10,33 @@
 }
 
 :root {
-  --primary-color: #a37535; /* (Warm Brown) - This will be your main accent color. for attentionm to highlight important buttons, links, icons, or other interactive elements */
-  --dark-primary-color: #745325;
-  --secondary-color: #3563a3;
-  --third-color: #905a98;
-  --third-color-dark: #794c80;
+  /* Primary Brand Color */
+  --primary-color: #905a98; /* Muted purple: brand color, used for logos, headers, and key elements, for the main icons.) */
 
-  --primary-text-color: #1e1915; /* (Deep Black) - This will be your secondary accent or text color. */
-  --medium-gray-color: #333333;
-  --ligth-gray-color: #eaeaea;
-  --off-white-color: #f9f9f9; /* rgb(249, 249, 249) :background-color in light mode */
-  --dark-gray-color: #171717; /* rgb(23, 23, 23) : backgrounc-color in dark mode */
-  --c400: #818cf8;
-  --c500: #6366f1;
-  --c600: #4f46e5;
-  --c700: #4338ca;
-  --c800: #3730a3;
-  --c900: #312e81;
+  /* Vibrant Accent Color */
+  --vibrant-purple: #7e3f8f; /* Vibrant purple for preTitles, buttons, etc. */
 
-  --light-tan-color: #d4b794; /* (Light Tan) - A lighter shade of the warm brown, providing a softer contrast. */
-  --creamy-white-color: #e8d7c2; /* (Creamy White) - A slightly warmer white that can be used for text or accents. */
-  --Light-beige-color: #f5f1e9; /* (Light Beige) - as a background or base color*/
+  /* Secondary Colors */
+  /* Use this for secondary headings, navigation bars, or as a hover effect on buttons. */
+  --dark-secondary-color: #6a4c6f; /* Darker shade of purple, for accents and secondary elements */
+  --ligth-secondary-color: #b695b9; /* Lighter shade of purple, for backgrounds or subtle highlights */
 
-  --medium-brown-color: #8c6b4a; /* (Medium Brown) - A darker shade of the warm brown, useful for borders or subtle accents ( without drawing too much attention). */
-  --light-brown-color: #c4a484; /* (Light Brown) - Another lighter shade of the warm brown, good for subtle highlights. */
-  --pure-white-color: #ffffff; /* (Pure White) - For crisp, clean elements like buttons or icons. */
+  /* Accent Colors */
+  --accent-color-blue: #4a5f73; /* Muted blue for links and secondary elements, for contrast and to add depth, for secondary icons */
+  --accent-color-blue-dark: #3a4a5c; /* Darker muted blue for primary headings */
+  --accent-color-gray-dark: #a6a6a6; /* Neutral gray for dark mode */
+  --accent-color-gray-darker: #808080; /* Darker gray for headings in light mode */
+  --accent-color-gray-light: #718096; /* Medium-dark gray for light mode */
+
+  /* Supporting Colors */
+  /* Use this for subtle hover effects, borders, or to soften the overall look */
+  --supporting-color-gray: #f4f4f4; /* Very light gray for backgrounds */
+  --supporting-color-lavender: #e0d4e1; /* Soft lavender for accents */
+
+  /* Neutral Colors */
+  --pure-white-color: #ffffff; /* Pure white for crisp elements, for icons in dark mode */
+  --off-white-color: #f9f9f9; /* Off-white for light mode background, rgb(249, 249, 249) */
+  --dark-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
 }
 
 body {
@@ -53,4 +55,22 @@ body {
 .animateFadeInUp.animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--accent-color-blue-dark);
+}
+
+h4 {
+  color: var(--accent-color-gray-darker);
+}
+
+p {
+  color: var(--accent-color-gray-light);
+}
+
+a {
+  color: var(--accent-color-blue);
 }

@@ -11,7 +11,7 @@ export const Products = (props) => {
         // id="products"
         className={`flex w-full flex-col mt-4 items-center justify-center text-center ${styles.sectionTitleContainer}`}
       >
-        <div className="text-sm font-semibold tracking-wider text-indigo-600 uppercase">
+        <div className="text-sm font-semibold tracking-wider text-vibrantPurple uppercase">
           {faConstants?.products}
         </div>
       </div>

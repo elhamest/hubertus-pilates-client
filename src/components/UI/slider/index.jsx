@@ -55,7 +55,7 @@ const HeroSlider = ({ imagePaths }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#ff0000" // #3563a3
+            stroke="#ff0000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -68,7 +68,7 @@ const HeroSlider = ({ imagePaths }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#ff0000" // #3563a3
+            stroke="#ff0000"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

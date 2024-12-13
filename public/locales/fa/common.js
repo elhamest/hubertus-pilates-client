@@ -1,7 +1,7 @@
 export const faConstants = {
   pageTitle: "هوبرتوس پیلاتس",
-  hubertus: "هوبرتوس",
-  companyName: "گروه مهندسی هوبرتوس",
+  companyName: "هوبرتوس",
+  engineeringDepartment: "گروه مهندسی",
   companyDescription: "تولید کننده دستگاه های پیلاتس",
   companyProud:
     "مفتخریم به تولید محصولات با کیفیت به دست مهندسان ایرانی مطابق استانداردهای روز دنیا",

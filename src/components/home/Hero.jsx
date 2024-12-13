@@ -15,13 +15,14 @@ export const Hero = () => {
           className={`flex items-center flex-grow-1 flex-shrink-1 flex-auto bg-transparent relative z-10 ${styles["ml-negative-10"]} ${styles.descriptionWrapper}`}
         >
           <div className={styles.descriptionContainer}>
-            <h1 className="leading-snug tracking-tight text-pureWhiteColor lg:leading-tight xl:leading-tight">
-              {faConstants.companyName}
+            <h1 className="leading-snug tracking-tight text-pureWhiteColor dark:text-pureWhiteColor lg:leading-tight xl:leading-tight">
+              {faConstants.engineeringDepartment}
+              <span>{` ${faConstants.companyName}`}</span>
             </h1>
-            <h2 className="py-5 text-lightBeigeColor">
+            <h2 className="py-5 text-pureWhiteColor dark:text-pureWhiteColor">
               {faConstants.companyDescription}
             </h2>
-            <p className="py-5 text-creamyWhiteColor">
+            <p className="py-5 text-pureWhiteColor">
               {faConstants.companyProud}
             </p>
 
@@ -52,25 +53,25 @@ export const Hero = () => {
 
       <Container>
         <div className="flex flex-col justify-center py-4">
-          <div className="text-xl text-center text-gray-700 dark:text-white">
+          <div className="text-xl text-center text-accentColorBlue dark:text-white">
             Trusted by <span className="text-indigo-600">2000+</span> customers
             worldwide
           </div>
 
           <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
+            <div className="pt-2 text-accentColorBlue dark:text-accentColorGary">
               <AmazonLogo />
             </div>
-            <div className="text-gray-400 dark:text-gray-400">
+            <div className="text-accentColorBlue dark:text-accentColorGary">
               <VerizonLogo />
             </div>
-            <div className="text-gray-400 dark:text-gray-400">
+            <div className="text-accentColorBlue dark:text-accentColorGary">
               <MicrosoftLogo />
             </div>
-            <div className="pt-1 text-gray-400 dark:text-gray-400">
+            <div className="pt-1 text-accentColorBlue dark:text-accentColorGary">
               <NetflixLogo />
             </div>
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
+            <div className="pt-2 text-accentColorBlue dark:text-accentColorGary">
               <SonyLogo />
             </div>
           </div>

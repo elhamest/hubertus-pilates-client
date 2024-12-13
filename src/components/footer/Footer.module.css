@@ -26,6 +26,6 @@
     fill: currentColor;
   }
   100% {
-    fill: var(--third-color);
+    fill: var(--primary-color);
   }
 }

@@ -9,21 +9,22 @@ export function SectionTitle(props) {
       }`}
     >
       {props.preTitle && (
-        <div className="text-sm font-semibold tracking-wider text-indigo-600 uppercase">
+        <div className="text-sm font-semibold tracking-wider text-vibrantPurple uppercase">
           {props.preTitle}
         </div>
       )}
 
       {props.title && (
+        //  text-accentColorBlue
         <h2
-          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white ${styles.title} animateFadeInUp`}
+          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight lg:leading-tight dark:text-pureWhiteColor ${styles.title} animateFadeInUp`}
         >
           {props.title}
         </h2>
       )}
 
       {props.children && (
-        <div className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+        <div className="max-w-2xl py-4 text-lg leading-normal text-accentColorBlue lg:text-xl xl:text-xl dark:text-accentColorGary">
           {props.children}
         </div>
       )}

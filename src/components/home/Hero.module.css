@@ -24,12 +24,35 @@
 .descriptionContainer {
   background-image: linear-gradient(
     135deg,
-    var(--creamy-white-color) 0%,
-    var(--light-tan-color) 5%,
-    var(--light-brown-color) 10%,
-    var(--medium-brown-color) 40%,
-    #a37535 100%
+    var(--supporting-color-lavender) 0%,
+    var(--ligth-secondary-color) 25%,
+    var(--primary-color) 50%,
+    var(--dark-secondary-color) 75%,
+    var(--accent-color-blue) 100%
   );
+  background-image: linear-gradient(
+    135deg,
+    var(--supporting-color-lavender) 0%,
+    var(--primary-color) 50%,
+    var(--dark-secondary-color) 100%
+  );
+
+  background-image: linear-gradient(
+    135deg,
+    var(--supporting-color-gray) 0%,
+    var(--supporting-color-lavender) 25%,
+    var(--ligth-secondary-color) 50%,
+    var(--accent-color-blue) 75%,
+    VAR(--dark-gray-color) 100%
+  );
+
+  background-image: linear-gradient(
+    349deg,
+    var(--supporting-color-gray) 0%,
+    var(--supporting-color-lavender) 5%,
+    /*50%*/ var(--accent-color-blue) 100%
+  );
+
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -64,7 +87,6 @@
 .viewProducts a {
   display: inline-block;
   background-color: var(--pure-white-color);
-  color: var(--secondary-color);
   padding: 16px 40px;
   font-size: 16px;
   font-weight: 300;
@@ -76,7 +98,7 @@
   width: 100%;
 }
 .viewProducts a:hover {
-  color: var(--third-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -160,6 +182,6 @@
   /* .descriptionContainer h1,
   .descriptionContainer h2,
   .descriptionContainer p {
-    color: var(--primary-text-color) !important;
+    color: var(--accent-color-blue) !important;
   } */
 }
