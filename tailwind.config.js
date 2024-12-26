@@ -1,5 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 
 const config = {
   mode: "jit",
@@ -31,7 +32,14 @@ const config = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".ltr": { direction: "ltr" },
+        ".rtl": { direction: "rtl" },
+      });
+    }),
+  ],
 };
 
 module.exports = config;

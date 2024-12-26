@@ -12,6 +12,9 @@ import { Products } from "@/components/products/Products";
 import { faProducts } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
 import Benefits from "@/components/home/Benefits";
+import Gallery from "@/components/UI/gallery/Gallery";
+import { faConstants } from "../../public/locales/fa/common";
+//  import { faConstants } from "../../out/locales/fa/common";
 
 export default function Home() {
   // const imagePaths = [
@@ -36,14 +39,50 @@ export default function Home() {
   // Use the custom hook for scroll animation
   useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible
 
+  const galleryItems = [
+    {
+      title: "Reformers",
+      image: "img/collections/reformers/reformers.webp",
+      link: "img/collections/reformers",
+    },
+    {
+      title: "Towers & Trapeze Systems",
+      image:
+        "img/collections/towers-and-trapeze-systems/towers-and-trapeze-systems.webp",
+      link: "img/collections/towers-trapeze-systems",
+    },
+    {
+      title: "Chairs & Barrels",
+      image: "img/collections/chairs-and-barrel/chairs-and-barrel.webp",
+      link: "img/collections/chairs-and-barrel",
+    },
+    {
+      title: "Additional Pilates Equipment",
+      image:
+        "img/collections/additional-pilates-equipment/additional-pilates-equipment.webp",
+      link: "img/collections/additional-pilates-equipment",
+    },
+    {
+      title: "Options & Upgrades",
+      image: "img/collections/options-and-upgrades/options-and-upgrades.webp",
+      link: "img/collections/options-and-upgrades",
+    },
+    {
+      title: "Accessories",
+      image: "img/collections/pilates-accessories/pilates-accessories.webp",
+      link: "img/collections/pilates-accessories",
+    },
+  ];
+
   return (
     <>
       <Hero />
-      <HomeSlider imagePaths={imagePaths} />
-
       <Container>
         <Benefits />
-
+        <Gallery
+          title={faConstants.collectionGalleryTitle}
+          items={galleryItems}
+        />
         <Products data={faProducts} />
 
         {/* <SectionTitle
@@ -76,6 +115,7 @@ export default function Home() {
 
         {/* <Cta /> */}
       </Container>
+      <HomeSlider imagePaths={imagePaths} />
     </>
   );
 }

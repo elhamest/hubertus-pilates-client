@@ -21,6 +21,7 @@ export const faConstants = {
   howWeCanHelp: "چگونه می توانیم به شما کمک کنیم؟",
   weUsuallyRespondInAFewHours: "ما معمولا در چند ساعت پاسخ می دهیم",
   sendMessage: "ارسال پیام",
+  collectionGalleryTitle: "تجهیزات پیلاتس ما",
   navigations: [
     { title: "محصولات", path: "/#products" },
     { title: "درباره هوبرتوس", path: "/about-us" },

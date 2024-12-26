@@ -28,6 +28,8 @@
   --accent-color-gray-darker: #808080; /* Darker gray for headings in light mode */
   --accent-color-gray-light: #718096; /* Medium-dark gray for light mode */
 
+  --border-color: #e5e7eb;
+
   /* Supporting Colors */
   /* Use this for subtle hover effects, borders, or to soften the overall look */
   --supporting-color-gray: #f4f4f4; /* Very light gray for backgrounds */
@@ -37,6 +39,9 @@
   --pure-white-color: #ffffff; /* Pure white for crisp elements, for icons in dark mode */
   --off-white-color: #f9f9f9; /* Off-white for light mode background, rgb(249, 249, 249) */
   --dark-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -73,4 +78,8 @@ p {
 
 a {
   color: var(--accent-color-blue);
+}
+
+.group:hover circle {
+  stroke-dashoffset: 0 !important;
 }

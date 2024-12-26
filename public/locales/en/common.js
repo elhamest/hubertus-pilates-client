@@ -21,6 +21,7 @@ export const enConstants = {
   howWeCanHelp: "How can we help?",
   weUsuallyRespondInAFewHours: "We usually respond in a few hours",
   sendMessage: "Send Message",
+  collectionGalleryTitle: "Our Pilates Equipment",
   navigations: [
     { title: "Products", path: "/products" },
     { title: "About Hubertus", path: "/about-us" },

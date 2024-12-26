@@ -56,7 +56,7 @@ export function Navbar() {
                 src={logoImage}
                 alt={faConstants.companyName}
                 width={80}
-                height={80}
+                // height={80}
                 style={{ height: "auto" }}
               />
             </span>

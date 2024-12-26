@@ -1,0 +1,156 @@
+.wrapper {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.headerTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Indicators */
+.headerIndicators {
+  display: none;
+}
+
+.headerIndicators button {
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.headerIndicators svg {
+  width: 24px;
+  height: 24px;
+  stroke: #333;
+}
+
+/* draw border on hover*/
+.drawBorder {
+  position: relative;
+  overflow: hidden;
+}
+
+.drawBorder::before {
+  /* 1 */
+  /* content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    clip-path: polygon(50% 100%, 50% 100%, 50% 100%, 50% 100%); */
+
+  /* 2 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  transform: rotate(-90deg); /* Rotate to start from the bottom */
+  clip-path: inset(0 0 100% 0); /* Start hiding the border */
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.drawBorder:hover::before {
+  animation: drawBorderHover 1s forwards;
+}
+
+/* @keyframes drawBorderHover {
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      border-color: var(--primary-color);
+    }
+  } */
+
+@keyframes drawBorderHover {
+  0% {
+    clip-path: inset(0 0 100% 0); /* Start with no visible border */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Full border visible */
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerIndicators button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerIndicators {
+    display: flex;
+    direction: ltr;
+  }
+
+  .headerIndicators button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headerIndicators button[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+/* Gallery Slider */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Gallery Card */
+.card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardTitle {
+  display: block;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}

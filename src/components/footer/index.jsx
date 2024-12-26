@@ -27,7 +27,7 @@ export function Footer() {
                   src={logoImage}
                   alt={faConstants.companyName}
                   width={80}
-                  height={80}
+                  // height={80}
                   style={{ height: "auto" }}
                 />
                 <span>{faConstants.companyName}</span>
