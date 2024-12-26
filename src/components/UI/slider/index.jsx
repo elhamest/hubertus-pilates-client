@@ -9,6 +9,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 
 import styles from "./Slider.module.css";
+import Image from "next/image";
 
 const HeroSlider = ({ imagePaths }) => {
   const swiperRef = useRef(null);
@@ -39,9 +40,11 @@ const HeroSlider = ({ imagePaths }) => {
       >
         {imagePaths.map((path, index) => (
           <SwiperSlide key={index}>
-            <img
+            <Image
               src={path}
               alt={`Slide ${index}`}
+              width={700} // for test
+              height={500} // for test
               className="w-full"
               // className="w-full h-full object-cover"
               style={{ height: "auto", maxHeight: "500px" }}

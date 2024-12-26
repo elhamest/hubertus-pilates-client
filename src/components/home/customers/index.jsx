@@ -1,3 +1,4 @@
+import { Container } from "@/components/UI/container/Container";
 import React from "react";
 
 function Customers() {

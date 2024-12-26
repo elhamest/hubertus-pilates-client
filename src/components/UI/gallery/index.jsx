@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import styles from "./Gallery.module.css";
 import { NavButton } from "../nav-button/NavButton";
 import Link from "next/link";
+import Image from "next/image";
 
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
@@ -43,7 +44,12 @@ const Gallery = ({ title, items }) => {
         {items.map((item, index) => (
           <div className={styles.card} key={index}>
             <Link href={item.link}>
-              <img src={item.image} alt={item.title} width={200} height={200} />
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={200}
+                height={200}
+              />
               <span className={styles.cardTitle}>{item.title}</span>
             </Link>
           </div>
