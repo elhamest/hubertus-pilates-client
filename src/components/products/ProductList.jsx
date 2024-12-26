@@ -15,20 +15,20 @@ function ProductList({ data }) {
             className="flex flex-wrap mb-5 lg:gap-10 lg:flex-nowrap "
           >
             <div
-              className={`flex items-center justify-center w-full lg:w-1/2 ${
+              className={`relative flex items-center justify-center w-full lg:w-1/2 ${
                 imgPos === "right" ? "lg:order-1" : ""
               }`}
             >
               <div>
                 <Image
                   src={product.image}
+                  alt={product.title}
                   width={521}
                   height={400}
-                  alt="Products"
-                  className={"object-cover"}
+                  className={"object-contain"}
                   // placeholder="blur"
                   // blurDataURL={product.image.src}
-                  style={{ maxHeight: "450px", objectFit: "contain" }}
+                  style={{ maxHeight: "450px", width: "auto" }}
                 />
               </div>
             </div>
@@ -72,11 +72,11 @@ function Product(props) {
     <div className="flex items-start gap-3 mt-1 space-x-3">
       <div
         className="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-8 h-8"
-        style={{ backgroundColor: "var(--primary-color)" }} // Use your primary color
+        style={{ backgroundColor: "var(--primary-color)" }}
       >
         {React.cloneElement(props.icon, {
           className: "w-5 h-5",
-          style: { color: "var(--pure-white-color)" }, // Use white for the icon
+          style: { color: "var(--pure-white-color)" },
         })}
       </div>
       <div>

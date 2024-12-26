@@ -1,9 +1,9 @@
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
+  // FaceSmileIcon,
+  // ChartBarSquareIcon,
+  // DevicePhoneMobileIcon,
+  // AdjustmentsHorizontalIcon,
   CursorArrowRaysIcon,
-  DevicePhoneMobileIcon,
-  AdjustmentsHorizontalIcon,
   SunIcon,
 } from "@heroicons/react/24/solid";
 
@@ -17,7 +17,7 @@ import reformerComboImg from "../../public/img/products/reformer-combo.webp";
 import ladderBarrelImg from "../../public/img/products/ladder-barrel.webp";
 import reformerWithTowerImg from "../../public/img/products/reformer-with-tower.webp";
 
-const faProducts = [
+export const faProducts = [
   {
     title: "ریفورمر کلاسیک (Classic Reformer)",
     desc: "سطح تمرینات پیلاتس خود با استفاده از ریفورمر کالسیک بالا ببرید. این دستگاه یکی از اصلی‌ترین وسایل تمرینی پیلاتس است که به شما در تقویت عضلات مرکزی، بهبود تعادل و انعطاف پذیری کمک می‌کند.",
@@ -223,55 +223,6 @@ const faProducts = [
     ],
   },
 ];
-export { faProducts };
-
-// const productOne = {
-//   title: "Highlight your benefits",
-//   desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
-//   image: productOneImg,
-//   bullets: [
-//     {
-//       title: "Understand your customers",
-//       desc: "Then explain the first point breifly in one or two lines.",
-//       icon: <FaceSmileIcon />,
-//     },
-//     {
-//       title: "Improve acquisition",
-//       desc: "Here you can add the next benefit point.",
-//       icon: <ChartBarSquareIcon />,
-//     },
-//     {
-//       title: "Drive customer retention",
-//       desc: "This will be your last bullet point in this section.",
-//       icon: <CursorArrowRaysIcon />,
-//     },
-//   ],
-// };
-
-// const productTwo = {
-//   title: "Offer more benefits here",
-//   desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
-//   image: productTwoImg,
-//   bullets: [
-//     {
-//       title: "Mobile Responsive Template",
-//       desc: "Nextly is designed as a mobile first responsive template.",
-//       icon: <DevicePhoneMobileIcon />,
-//     },
-//     {
-//       title: "Powered by Next.js & TailwindCSS",
-//       desc: "This template is powered by latest technologies and tools.",
-//       icon: <AdjustmentsHorizontalIcon />,
-//     },
-//     {
-//       title: "Dark & Light Mode",
-//       desc: "Nextly comes with a zero-config light & dark mode. ",
-//       icon: <SunIcon />,
-//     },
-//   ],
-// };
-
-// export { productOne, productTwo };
 
 const image = (
   <svg
@@ -287,3 +238,267 @@ const image = (
     />
   </svg>
 );
+
+export const faProductGalleryItems = [
+  {
+    title: "ریفورمرها", //"Reformers",
+    image: "../../img/collections/reformers/c-reformers.webp",
+    link: "collections/reformers",
+    items: [
+      {
+        title: "Compact Reformer",
+        image: "../../img/collections/reformers/compact-reformer.webp",
+        link: "compact-reformer",
+      },
+      {
+        title: "Reformer",
+        image: "../../img/collections/reformers/reformer.webp",
+        link: "reformer",
+      },
+      {
+        title: "Reformer With Tower",
+        image: "../../img/collections/reformers/reformer-with-tower.webp",
+        link: "reformer-with-tower",
+      },
+      {
+        title: "Reformer Combo",
+        image: "../../img/collections/reformers/reformer-combo.webp",
+        link: "reformer-combo",
+      },
+    ],
+  },
+  {
+    title: "تاورها و سیستم های Trapeze", //"Towers & Trapeze Systems",
+    image:
+      "../../img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp",
+    link: "collections/towers-trapeze-systems",
+    items: [
+      {
+        title: "trapeze-table (cadillac)",
+        image:
+          "../../img/collections/towers-and-trapeze-systems/trapeze-table-(cadillac).webp",
+        link: "trapeze-table",
+      },
+      {
+        title: "Wall Tower",
+        image:
+          "../../img/collections/towers-and-trapeze-systems/wall-tower.webp",
+        link: "wall-tower",
+      },
+      {
+        title: "Wall Unit",
+        image:
+          "../../img/collections/towers-and-trapeze-systems/wall-unit.webp",
+        link: "wall-unit",
+      },
+    ],
+  },
+  ,
+  {
+    title: "صندلی ها و Barrel ها", //"Chairs & Barrels",
+    image: "../../img/collections/chairs-and-barrels/c-chairs-barrels.webp",
+    link: "collections/chairs-and-barrels",
+    items: [
+      {
+        title: "Spine Corrector",
+        image: "../../img/collections/chairs-and-barrels/spine-corrector.webp",
+        link: "spine-corrector",
+      },
+      {
+        title: "Spine Corrector with F2",
+        image:
+          "../../img/collections/chairs-and-barrels/spine-corrector-with-f2.webp",
+        link: "spine-corrector-with-f2",
+      },
+      {
+        title: "Wunda Chair",
+        image: "../../img/collections/chairs-and-barrels/wunda-chair.webp",
+        link: "wunda-chair",
+      },
+      {
+        title: "Arm Chair Barrel Set",
+        image:
+          "../../img/collections/chairs-and-barrels/arm-chair-barrel-set.webp",
+        link: "arm-chair-barrel-set",
+      },
+      {
+        title: "Ladder Barrel",
+        image: "../../img/collections/chairs-and-barrels/ladder-barrel.webp",
+        link: "ladder-barrel",
+      },
+    ],
+  },
+  {
+    title: "تجهیزات اضافی پیلاتس", //"Additional Pilates Equipment",
+    image:
+      "../../img/collections/additional-pilates-equipment/c-additional-pilates-equipment.webp",
+    link: "collections/additional-pilates-equipment",
+    items: [
+      {
+        title: "Arc",
+        image: "../../img/collections/additional-pilates-equipment/arc.webp",
+        link: "arc",
+      },
+      {
+        title: "Cushion Block",
+        image:
+          "../../img/collections/additional-pilates-equipment/cushion-block.webp",
+        link: "cushion-block",
+      },
+      {
+        title: "Raised Mat",
+        image:
+          "../../img/collections/additional-pilates-equipment/raised-mat.webp",
+        link: "raised-mat",
+      },
+      {
+        title: "Wooden Pole",
+        image:
+          "../../img/collections/additional-pilates-equipment/wooden-pole.webp",
+        link: "wooden-pole",
+      },
+      {
+        title: "Ped A Pull",
+        image:
+          "../../img/collections/additional-pilates-equipment/ped-a-pull.webp",
+        link: "ped-a-pull",
+      },
+      {
+        title: "Ped A Pull Without Stool",
+        image:
+          "../../img/collections/additional-pilates-equipment/ped-a-pull-without-stool.webp",
+        link: "ped-a-pull-without-stool",
+      },
+    ],
+  },
+  {
+    title: "آپشن ها و ارتقا", // "Options & Upgrades",
+    image: "../../img/collections/options-and-upgrades/c-options-upgrades.webp",
+    link: "collections/options-and-upgrades",
+    items: [
+      {
+        title: "Sitting Box",
+        image: "../../img/collections/options-and-upgrades/sitting-box.webp",
+        link: "sitting-box",
+      },
+      {
+        title: "Jump Board",
+        image: "../../img/collections/options-and-upgrades/jump-board.webp",
+        link: "jump-board",
+      },
+      {
+        title: "Jump Board for Reformer Combo",
+        image:
+          "../../img/collections/options-and-upgrades/jump-board-for-reformer-combo.webp",
+        link: "jump-board-for-reformer-combo",
+      },
+      {
+        title: "Tower Only",
+        image: "../../img/collections/options-and-upgrades/tower-only.webp",
+        link: "tower-only",
+      },
+      {
+        title: "F2 System",
+        image: "../../img/collections/options-and-upgrades/f2-system.webp",
+        link: "f2-system",
+      },
+      {
+        title: "F2 System Connector",
+        image:
+          "../../img/collections/options-and-upgrades/f2-system-connector.webp",
+        link: "f2-system-connector",
+      },
+      {
+        title: "F2 System & Accessory Package",
+        image:
+          "../../img/collections/options-and-upgrades/f2-system-accessory-package.webp",
+        link: "f2-system-accessory-package",
+      },
+      {
+        title: "Extension Leg Sets",
+        image:
+          "../../img/collections/options-and-upgrades/extension-leg-sets.webp",
+        link: "extension-leg-sets",
+      },
+      {
+        title: "Trapeze Only",
+        image: "../../img/collections/options-and-upgrades/trapeze-only.webp",
+        link: "trapeze-only",
+      },
+      {
+        title: "Twin Mat Conversion",
+        image:
+          "../../img/collections/options-and-upgrades/twin-mat-conversion.webp",
+        link: "twin-mat-conversion",
+      },
+    ],
+  },
+  {
+    title: "لوازم جانبی", //"Accessories",
+    image:
+      "../../img/collections/pilates-accessories/c-pilates-accessories.webp",
+    link: "collections/pilates-accessories",
+    items: [
+      {
+        title: "Pilates Mat",
+        image: "../../img/collections/pilates-accessories/pilates_mat.webp",
+        link: "pilates_mat",
+      },
+      {
+        title: "Ankle Strap",
+        image: "../../img/collections/pilates-accessories/ankle-strap.webp",
+        link: "ankle-strap",
+      },
+      {
+        title: "Leg Strap",
+        image: "../../img/collections/pilates-accessories/leg-strap.webp",
+        link: "leg-strap",
+      },
+      {
+        title: "Aluminum Handle",
+        image: "../../img/collections/pilates-accessories/aluminum-handle.webp",
+        link: "aluminum-handle",
+      },
+      {
+        title: "Foot Strap",
+        image: "../../img/collections/pilates-accessories/foot-strap.webp",
+        link: "foot-strap",
+      },
+      {
+        title: "Fuzzy",
+        image: "../../img/collections/pilates-accessories/fuzzy.webp",
+        link: "fuzzy",
+      },
+      {
+        title: "Neoprene Handle",
+        image: "../../img/collections/pilates-accessories/neoprene-handle.webp",
+        link: "neoprene-handle",
+      },
+      {
+        title: "Rope",
+        image: "../../img/collections/pilates-accessories/rope.webp",
+        link: "rope",
+      },
+      {
+        title: "Safety Strap",
+        image: "../../img/collections/pilates-accessories/safety-strap.webp",
+        link: "safety-strap",
+      },
+      {
+        title: "Springs",
+        image: "../../img/collections/pilates-accessories/springs.webp",
+        link: "springs",
+      },
+      {
+        title: "Y Loop",
+        image: "../../img/collections/pilates-accessories/y-loop.webp",
+        link: "y-loop",
+      },
+      {
+        title: "Double Loop",
+        image: "../../img/collections/pilates-accessories/double-loop.webp",
+        link: "double-loop",
+      },
+    ],
+  },
+];
