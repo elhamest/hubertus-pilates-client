@@ -7,6 +7,7 @@ import Image from "next/image";
 // import NavLink from "../UI/nav-link/NavLink";
 import { faConstants } from "../../../public/locales/fa/common";
 import logoImage from "../../../public/img/logo.svg";
+
 import styles from "./Navbar.module.css";
 
 export function Navbar() {
@@ -121,16 +122,15 @@ export function Navbar() {
           </div>
         )}
 
-        {/* menu  */}
+        {/* Desktop Menu */}
         <div
-          className={`hidden text-center lg:flex lg:items-center ${
+          className={`hidden lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:flex lg:items-center ${
             isScrolled ? styles.scrolledMenu : ""
           }`}
         >
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigations?.map((menu, index) => (
               <li className={styles.navItem} key={index}>
-                {/* text-accentColorBlue */}
                 <Link
                   key={index}
                   href={menu?.path}
