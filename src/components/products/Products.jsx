@@ -8,8 +8,7 @@ export const Products = (props) => {
   return (
     <>
       <div
-        // id="products"
-        className={`flex w-full flex-col mt-4 items-center justify-center text-center ${styles.sectionTitleContainer}`}
+        className={`flex w-full flex-col mt-5 items-center justify-center text-center ${styles.sectionTitleContainer}`}
       >
         <div className="text-sm font-semibold tracking-wider text-vibrantPurple uppercase">
           {faConstants?.products}

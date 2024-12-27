@@ -16,6 +16,14 @@ import Gallery from "@/components/UI/gallery";
 import { faConstants } from "../../public/locales/fa/common";
 //  import { faConstants } from "../../out/locales/fa/common";
 
+const imagePaths = [
+  "img/slider2/s1.jpg",
+  "img/slider2/s2.jpg",
+  "img/slider2/s3.jpg",
+  "img/slider2/s4.jpg",
+  "img/slider2/s5.jpg",
+];
+
 export default function Home() {
   // const imagePaths = [
   //   "/img/slider/s1.webp",
@@ -27,14 +35,6 @@ export default function Home() {
   //   "/img/slider/s7.webp",
   //   "/img/slider/s8.webp",
   // ];
-
-  const imagePaths = [
-    "img/slider2/s1.jpg",
-    "img/slider2/s2.jpg",
-    "img/slider2/s3.jpg",
-    "img/slider2/s4.jpg",
-    "img/slider2/s5.jpg",
-  ];
 
   // Use the custom hook for scroll animation
   useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible

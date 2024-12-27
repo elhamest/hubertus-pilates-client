@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { faConstants } from "../../../public/locales/fa/common";
+
 import styles from "./PopupWidget.module.css";
 
 export function PopupWidget() {
