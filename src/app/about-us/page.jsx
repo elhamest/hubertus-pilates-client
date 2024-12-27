@@ -34,7 +34,7 @@ const AboutUs = () => {
         </div>
         <div className={styles.personsWrapper}>
           {faConstants?.persons?.map((person, index) => (
-            <div className={styles.boxWrapper} key={index}>
+            <div className={`${styles.boxWrapper} shadow-md`} key={index}>
               <div className={styles.boxContainer}>
                 <Image
                   src={person?.image}
