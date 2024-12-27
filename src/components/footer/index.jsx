@@ -4,6 +4,7 @@ import React from "react";
 import { Container } from "@/components/UI/container/Container";
 import { faConstants } from "../../../public/locales/fa/common";
 import logoImage from "../../../public/img/logo.svg";
+
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -13,11 +14,10 @@ export function Footer() {
     <div className="relative" id="contact-us">
       <Container>
         <div
-          className={`max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 lg:grid-cols-5 ${styles.footerContainer}`}
+          className={`max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 ${styles.footerContainer}`}
         >
-          <div className="lg:col-span-2">
+          <div>
             <div>
-              {/* text-primaryColor */}
               <Link
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-medium dark:text-accentColorGary"
@@ -27,90 +27,63 @@ export function Footer() {
                   src={logoImage}
                   alt={faConstants.companyName}
                   width={80}
-                  // height={80}
                   style={{ height: "auto" }}
                 />
                 <span>{faConstants.companyName}</span>
               </Link>
             </div>
 
-            <div className="max-w-md mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7 pl-2">
+            <div className="mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7 pl-2">
               {faConstants.footerSlug}
             </div>
-
-            {/* <div className="mt-5">
-              <a
-                href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
-                target="_blank"
-                rel="noopener"
-                className="relative block w-44"
-              >
-                <Image
-                  src="/img/vercel.svg"
-                  alt="Powered by Vercel"
-                  width="212"
-                  height="44"
-                />
-              </a>
-            </div> */}
           </div>
 
-          <div className="flex flex-wrap w-full mt-2 lg:ml-0">
-            {navigations?.map((item, index) => (
-              //  text-accentColorBlue
-              <Link
-                key={index}
-                href={item?.path}
-                className="w-full px-0 lg:px-4 py-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
-              >
-                {item?.title}
-              </Link>
-            ))}
-          </div>
-
-          <div>
-            {/* <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
+          <div className={styles.linkContainer}>
+            <div className="flex flex-wrap w-full mt-2 lg:ml-0">
+              {navigations?.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
-                  className="w-full px-4 py-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  href={item?.path}
+                  className="w-full px-0 lg:px-4 pb-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {item?.title}
                 </Link>
               ))}
-            </div> */}
-          </div>
+            </div>
 
-          <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
-            <div className="hover:text-darkSecondaryColor transition-all duration-400">
-              {faConstants.followUs}
-            </div>
-            <div className={styles.socialLinks}>
-              <a
-                href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
-                target="_blank"
-                rel="noopener"
-              >
-                <Instagram />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="https://wa.me/+989149191831"
-                target="_blank"
-                rel="noopener"
-              >
-                <WhatsApp />
-                <span className="sr-only">WhatsApp</span>
-              </a>
-            </div>
-            <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
-              {faConstants.contactUs}
-              <div className="text-right" style={{ direction: "ltr" }}>
-                +989149191831
+            <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
+              <div className="text-accentColorBlueDark hover:text-darkSecondaryColor transition-all duration-400 font-medium">
+                {faConstants.followUs}
               </div>
-              <div className="text-right" style={{ direction: "ltr" }}>
-                +989149191832
+              <div className={styles.socialLinks}>
+                <a
+                  href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Instagram />
+                  <span className="sr-only">Instagram</span>
+                </a>
+                <a
+                  href="https://wa.me/+989149191831"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <WhatsApp />
+                  <span className="sr-only">WhatsApp</span>
+                </a>
+              </div>
+
+              <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
+                <div className="font-medium text-accentColorBlueDark">
+                  {faConstants.contactUs}
+                </div>
+                <div className="text-right" style={{ direction: "ltr" }}>
+                  +989149191831
+                </div>
+                <div className="text-right" style={{ direction: "ltr" }}>
+                  +989149191832
+                </div>
               </div>
             </div>
           </div>

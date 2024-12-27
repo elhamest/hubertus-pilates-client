@@ -16,6 +16,7 @@ const config = {
         trueGray: colors.neutral,
         accentColorBlue: "#4a5f73",
         accentColorGary: "#a6a6a6",
+        accentColorBlueDark: "#3a4a5c",
         pureWhiteColor: "#ffffff",
         primaryColor: "#905a98",
         vibrantPurple: "#7e3f8f",
