@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-
-import styles from "./Gallery.module.css";
-import { NavButton } from "../nav-button/NavButton";
 import Link from "next/link";
 import Image from "next/image";
+import { NavButton } from "../nav-button/NavButton";
+
+import styles from "./Gallery.module.css";
 
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
@@ -44,12 +44,15 @@ const Gallery = ({ title, items }) => {
         {items.map((item, index) => (
           <div className={styles.card} key={index}>
             <Link href={item.link}>
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={200}
-                height={200}
-              />
+              <div className={styles.imageContainer}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw" // Optimize for different screen sizes
+                  style={{ objectFit: "cover" }} // Ensures the image covers the container
+                />
+              </div>
               <span className={styles.cardTitle}>{item.title}</span>
             </Link>
           </div>
