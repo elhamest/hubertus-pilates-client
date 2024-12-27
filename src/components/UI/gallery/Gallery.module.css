@@ -59,7 +59,7 @@
 .card img {
   width: 100%;
   height: auto;
-  margin: 10px 0 15px;
+  padding: 10px 0 15px;
   transition: transform 0.3s ease;
 }
 
@@ -69,7 +69,7 @@
 
 .cardTitle {
   display: block;
-  padding: 10px 10px 20px;
+  padding: 30px 10px 20px;
   font-size: 0.8rem; /* Default font size for mobile */
   font-weight: bold;
   color: #333;

@@ -53,7 +53,7 @@ const Gallery = ({ title, items }) => {
                   style={{ objectFit: "cover" }} // Ensures the image covers the container
                 />
               </div>
-              <span className={styles.cardTitle}>{item.title}</span>
+              <div className={styles.cardTitle}>{item.title}</div>
             </Link>
           </div>
         ))}

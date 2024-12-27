@@ -1,13 +1,12 @@
-import { faProductGalleryItems } from "@/components/data";
+import { faProductCollections } from "@/components/data";
 import { Container } from "@/components/UI/container/Container";
 import { CollectionGrid } from "@/components/collections/CollectionGrid";
 
 export default async function CollectionPage({ params }) {
   // Ensure params is properly awaited
   const { link } = await Promise.resolve(params);
-  console.log("params:", params);
 
-  const collection = faProductGalleryItems.find(
+  const collection = faProductCollections.find(
     (item) => item?.link === `collections/${link}`
   );
 
@@ -34,7 +33,7 @@ export default async function CollectionPage({ params }) {
 }
 
 export function generateStaticParams() {
-  return faProductGalleryItems.filter(Boolean).map((item) => ({
+  return faProductCollections.filter(Boolean).map((item) => ({
     link: item?.link?.split("/")[1],
   }));
 }

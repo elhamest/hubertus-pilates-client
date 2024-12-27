@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export function CollectionGrid({ items }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {items?.map((item, index) => (
         <div key={index} className="group p-4 bg-white rounded-lg shadow-md">
           <div className="relative w-full h-[300px] overflow-hidden rounded-lg bg-gray-100">
             <Image
-              src={`/${item?.image}`}
+              src={item?.image} //{`/${item?.image}`}
               alt={item?.title}
               fill
               style={{ objectFit: "cover" }}

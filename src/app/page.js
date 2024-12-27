@@ -9,7 +9,7 @@ import { Products } from "@/components/products/Products";
 // import { Faq } from "@/components/Faq";
 // import { Cta } from "@/components/Cta";
 
-import { faProducts, faProductGalleryItems } from "@/components/data";
+import { faProducts, faProductCollections } from "@/components/data";
 import HomeSlider from "@/components/home/HomeSlider";
 import Benefits from "@/components/home/Benefits";
 import Gallery from "@/components/UI/gallery";
@@ -46,7 +46,7 @@ export default function Home() {
         <Benefits />
         <Gallery
           title={faConstants.collectionGalleryTitle}
-          items={faProductGalleryItems}
+          items={faProductCollections}
         />
         <Products data={faProducts} />
 
