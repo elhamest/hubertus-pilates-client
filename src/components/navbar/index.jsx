@@ -107,7 +107,9 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="flex flex-wrap w-full mt-5 lg:hidden">
+          <div
+            className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu}`}
+          >
             {navigations?.map((item, index) => (
               //  text-accentColorBlue
               <Link

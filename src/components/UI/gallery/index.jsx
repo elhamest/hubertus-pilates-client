@@ -41,7 +41,7 @@ const Gallery = ({ title, items }) => {
       </div>
 
       <div className={styles.slider} ref={sliderRef}>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <div className={styles.card} key={index}>
             <Link href={item.link}>
               <div className={styles.imageContainer}>

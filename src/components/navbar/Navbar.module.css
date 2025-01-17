@@ -58,3 +58,32 @@
     display: block;
   }
 }
+
+/* Mobile menu styles for screens between 1024px and 500px */
+@media (max-width: 1024px) and (min-width: 500px) {
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(249, 249, 249, 0.95);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 60px; /* Adjust based on your navbar height */
+  }
+
+  .mobileMenu.open {
+    left: 0;
+  }
+}
+
+/* Mobile menu styles for screens below 500px */
+@media (max-width: 499px) {
+  .mobileMenu {
+    width: 100%;
+    background-color: rgba(249, 249, 249, 0.95);
+    /* padding-top: 60px;  */
+    /* Adjust based on your navbar height */
+  }
+}

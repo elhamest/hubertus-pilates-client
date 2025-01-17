@@ -56,7 +56,8 @@
   padding: 20px 30px;
 }
 .companyWrapper h1 {
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .companyWrapper p {
@@ -72,7 +73,16 @@
   margin: 50px 0 30px;
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+  .companyWrapper h1 {
+    font-size: 24px;
+  }
+}
+
 @media (min-width: 768px) {
+  .companyWrapper h1 {
+    font-size: 30px;
+  }
   .personsWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
