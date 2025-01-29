@@ -238,7 +238,7 @@ import armChairImg from "../../public/img/collections/chairs-and-barrels/arm-cha
 import cAdditionalPilatesEquipmentImg from "../../public/img/collections/additional-pilates-equipment/c-additional-pilates-equipment.webp";
 import arcImg from "../../public/img/collections/additional-pilates-equipment/arc.webp";
 import woodenPoleImg from "../../public/img/collections/additional-pilates-equipment/wooden-pole.webp";
-import pedOPullImg from "../../public/img/collections/additional-pilates-equipment/ped-O-pull.webp";
+import pedOPullImg from "../../public/img/collections/additional-pilates-equipment/ped-o-pull.webp";
 
 export const faProductCollections = [
   {
