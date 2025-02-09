@@ -9,6 +9,19 @@ const ThemeChanger = () => {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
+  // Set the initial theme to system preference
+  useEffect(() => {
+    if (mounted) {
+      //  && !theme
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      setTheme(systemTheme);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mounted]); //, theme, setTheme
+
   if (!mounted) return null;
 
   return (

@@ -12,8 +12,7 @@
 
 .headerTitle {
   font-size: 1.5rem; /* Smaller font size for mobile */
-  font-weight: bold;
-  color: #333;
+  font-weight: 500;
 }
 
 /* Navigation Buttons */

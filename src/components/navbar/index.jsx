@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import Image from "next/image";
-// import NavLink from "../UI/nav-link/NavLink";
 import { faConstants } from "../../../public/locales/fa/common";
 import logoImage from "../../../public/img/logo.svg";
 
@@ -14,7 +13,7 @@ export function Navbar() {
   const navigations = faConstants.navigations;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -39,9 +38,9 @@ export function Navbar() {
     <div
       className={`${styles.navbarWrapper} ${
         isScrolled ? styles.scrolled : ""
-      } ${isScrolled && theme === "light" ? styles.scrolledLight : ""} ${
-        isScrolled && theme === "dark" ? styles.scrolledDark : ""
-      }`}
+      } ${
+        isScrolled && resolvedTheme === "light" ? styles.scrolledLight : ""
+      } ${isScrolled && resolvedTheme === "dark" ? styles.scrolledDark : ""}`}
     >
       <nav className="container relative flex flex-wrap items-center justify-between mx-auto lg:justify-between">
         {/* Logo  */}
@@ -57,7 +56,6 @@ export function Navbar() {
                 src={logoImage}
                 alt={faConstants.companyName}
                 width={80}
-                // height={80}
                 style={{ height: "auto" }}
               />
             </span>
