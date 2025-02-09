@@ -22,7 +22,7 @@ function ProductList({ data }) {
               <div>
                 <Image
                   src={product.image}
-                  alt={product.title}
+                  alt={product?.title ?? "Product"}
                   width={521}
                   height={400}
                   className={"object-contain"}

@@ -22,10 +22,11 @@ export const enConstants = {
   weUsuallyRespondInAFewHours: "We usually respond in a few hours",
   sendMessage: "Send Message",
   collectionGalleryTitle: "Our Pilates Equipment",
+  allCollectionsTitle: "All Equipments",
   navigations: [
     { title: "Products", path: "/products" },
     { title: "About Hubertus", path: "/about-us" },
-    { title: "Contact Hubertus", path: "/contact-us" },
+    { title: "Contact Hubertus", path: "#contact-us" },
   ],
   persons: [
     {

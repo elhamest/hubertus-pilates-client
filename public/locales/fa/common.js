@@ -22,8 +22,9 @@ export const faConstants = {
   weUsuallyRespondInAFewHours: "ما معمولا در چند ساعت پاسخ می دهیم",
   sendMessage: "ارسال پیام",
   collectionGalleryTitle: "تجهیزات پیلاتس ما",
+  allCollectionsTitle: "همه تجهیزات",
   navigations: [
-    { title: "محصولات", path: "/#products" },
+    { title: "محصولات", path: "/products" },
     { title: "درباره هوبرتوس", path: "/about-us" },
     { title: "تماس با هوبرتوس", path: "#contact-us" },
   ],

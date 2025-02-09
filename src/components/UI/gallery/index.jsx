@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { NavButton } from "../nav-button/NavButton";
 
 import styles from "./Gallery.module.css";
+import commonStyles from "../../styles/shared.module.css";
+import GalleryItems from "./GalleryItems";
 
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
@@ -43,24 +43,8 @@ const Gallery = ({ title, items }) => {
           </NavButton>
         </div>
       </div>
-
-      <div className={styles.slider} ref={sliderRef}>
-        {items?.map((item, index) => (
-          <div className={styles.card} key={index}>
-            <Link href={item.link}>
-              <div className={styles.imageContainer}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw" // Optimize for different screen sizes
-                  style={{ objectFit: "cover" }} // Ensures the image covers the container
-                />
-              </div>
-              <div className={styles.cardTitle}>{item.title}</div>
-            </Link>
-          </div>
-        ))}
+      <div className={commonStyles.slider} ref={sliderRef}>
+        <GalleryItems items={items} />
       </div>
     </div>
   );

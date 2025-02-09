@@ -8,14 +8,16 @@ export function CollectionGrid({ items }) {
       {items?.map((item, index) => (
         <div key={index} className="group bg-white rounded-lg shadow-md">
           <div
-            className={`relative w-full h-[300px] overflow-hidden rounded-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
           >
+            {/* w-full h-[300px] */}
             <Image
               src={item?.image} //{`/${item?.image}`}
               alt={item?.title}
               // fill
-              style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              // width={430}
+              style={{ objectFit: "cover", width: "100%", height: "auto" }}
+              // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority={index < 6} // Load first 6 images immediately
             />
           </div>
