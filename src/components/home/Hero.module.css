@@ -43,7 +43,7 @@
     var(--supporting-color-lavender) 25%,
     var(--ligth-secondary-color) 50%,
     var(--accent-color-blue) 75%,
-    VAR(--dark-gray-color) 100%
+    VAR(--darker-gray-color) 100%
   ); */
 
   background-image: linear-gradient(

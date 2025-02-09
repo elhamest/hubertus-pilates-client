@@ -23,6 +23,7 @@ const config = {
         darkPrimaryColor: "#6a4c6f",
         darkSecondaryColor: "#6a4c6f",
         ligthSecondaryColor: "#b695b9",
+        darkGrayColor: "#1f1f1f",
       },
     },
     fontFamily: {

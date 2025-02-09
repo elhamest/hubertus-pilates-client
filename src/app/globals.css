@@ -38,7 +38,8 @@
   /* Neutral Colors */
   --pure-white-color: #ffffff; /* Pure white for crisp elements, for icons in dark mode */
   --off-white-color: #f9f9f9; /* Off-white for light mode background, rgb(249, 249, 249) */
-  --dark-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
+  --darker-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
+  --dark-gray-color: #1f1f1f;
 }
 html {
   scroll-behavior: smooth;
@@ -82,4 +83,9 @@ a {
 
 .group:hover circle {
   stroke-dashoffset: 0 !important;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 500;
 }

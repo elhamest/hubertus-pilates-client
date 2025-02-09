@@ -1,3 +1,8 @@
 .imageWrapper img {
   display: block;
 }
+
+.boxTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
