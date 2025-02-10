@@ -1,0 +1,6 @@
+.galleryList {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 35px;
+  flex-wrap: wrap;
+}

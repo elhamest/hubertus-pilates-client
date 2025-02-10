@@ -39,12 +39,19 @@
 }
 
 @media (min-width: 768px) {
-  .card {
-    flex: 0 0 350px; /* Fixed width for slider cards */ /* old: 300 */
+  .cardSlider {
+    flex: 0 0 335px; /* Fixed width for slider cards */
   }
 
-  .imageContainer {
-    height: 240px; /* old: 200 */
+  .cardProduct {
+    flex: 0 0 400px; /* Fixed width for product cards */
+  }
+
+  .cardSlider .imageContainer {
+    height: 240px;
+  }
+  .cardProduct .imageContainer {
+    height: 280px;
   }
 
   .cardTitle {

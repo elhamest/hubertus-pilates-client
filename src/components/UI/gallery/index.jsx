@@ -44,7 +44,7 @@ const Gallery = ({ title, items }) => {
       </div>
 
       <div className={`${styles.gallerySlider}`} ref={sliderRef}>
-        <GalleryItems items={items} />
+        <GalleryItems items={items} className="cardSlider" />
       </div>
     </div>
   );
