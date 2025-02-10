@@ -32,9 +32,9 @@
 .cardTitle {
   display: block;
   padding: 30px 10px 20px;
-  font-size: 0.8rem; /* Default font size for mobile */
-  font-weight: bold;
-  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-gray-color);
   text-align: center;
 }
 
@@ -48,6 +48,6 @@
   }
 
   .cardTitle {
-    font-size: 1.2rem;
+    font-size: 18px;
   }
 }

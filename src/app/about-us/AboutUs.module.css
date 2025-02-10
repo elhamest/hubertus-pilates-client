@@ -52,11 +52,6 @@
   text-align: justify;
 }
 /*---------*/
-.companyWrapper h1 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
 .companyWrapper p {
   line-height: 3;
   font-size: 16px;
@@ -70,16 +65,7 @@
   margin: 50px 0 30px;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .companyWrapper h1 {
-    font-size: 24px;
-  }
-}
-
 @media (min-width: 768px) {
-  .companyWrapper h1 {
-    font-size: 30px;
-  }
   .personsWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -89,11 +75,6 @@
 }
 
 @media (min-width: 1000px) {
-  .companyWrapper h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-
   .personsWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

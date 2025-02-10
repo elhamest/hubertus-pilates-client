@@ -24,8 +24,8 @@ export default async function CollectionPage({ params }) {
 
   return (
     <Container>
-      <div className="py-8">
-        <h1 className="pageTitle mb-8">{collection?.title}</h1>
+      <div className="py-8 pageWrapper">
+        <h1>{collection?.title}</h1>
         <CollectionGrid items={collection?.items} />
       </div>
     </Container>

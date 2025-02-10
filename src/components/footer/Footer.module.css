@@ -17,7 +17,7 @@
 }
 
 .socialLinks a svg:hover {
-  animation: fill-gradient 1s ease-in-out forwards;
+  animation: fill-gradient 0.5s ease-in-out forwards;
 }
 
 @media (min-width: 1024px) {

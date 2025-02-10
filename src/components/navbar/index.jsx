@@ -15,6 +15,10 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, resolvedTheme } = useTheme();
+  const textGradientClass =
+    resolvedTheme === "dark"
+      ? "textGradientEffectForDarkMode"
+      : "textGradientEffectForLightMode";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -110,7 +114,6 @@ export function Navbar() {
             className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu}`}
           >
             {navigations?.map((item, index) => (
-              //  text-accentColorBlue
               <Link
                 key={index}
                 href={item?.path}
@@ -135,7 +138,7 @@ export function Navbar() {
                 <Link
                   key={index}
                   href={menu?.path}
-                  className="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none transition-all duration-300 hover:tracking-wide"
+                  className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none transition-all duration-300 hover:tracking-wide ${textGradientClass}`}
                 >
                   {menu?.title}
                 </Link>

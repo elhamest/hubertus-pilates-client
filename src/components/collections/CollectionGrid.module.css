@@ -3,6 +3,13 @@
 }
 
 .boxTitle {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
+  color: var(--dark-gray-color);
+}
+
+@media (min-width: 768px) {
+  .cardTitle {
+    font-size: 18px;
+  }
 }

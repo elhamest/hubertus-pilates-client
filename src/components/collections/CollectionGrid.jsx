@@ -6,7 +6,7 @@ export function CollectionGrid({ items }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {items?.map((item, index) => (
-        <div key={index} className="group bg-white rounded-lg shadow-md">
+        <div key={index} className="group bg-white rounded-lg lightShadow">
           <div
             className={`relative overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
           >

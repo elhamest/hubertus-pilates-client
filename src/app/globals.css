@@ -5,7 +5,7 @@
 @layer base {
   html,
   body {
-    @apply dark:bg-trueGray-900;
+    @apply dark:bg-dark-gray;
   }
 }
 
@@ -36,11 +36,20 @@
   --supporting-color-lavender: #e0d4e1; /* Soft lavender for accents */
 
   /* Neutral Colors */
-  --pure-white-color: #ffffff; /* Pure white for crisp elements, for icons in dark mode */
+  --pure-white-color: #d1d7e0; /* Pure white for crisp elements, for icons in dark mode */
+  --neutral-white-color: #d1d7e0;
   --off-white-color: #f9f9f9; /* Off-white for light mode background, rgb(249, 249, 249) */
   --darker-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
-  --dark-gray-color: #1f1f1f;
+  --dark-gray-color: #151b23;
+
+  --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
+
+.dark .dark\:bg-dark-gray {
+  background-color: var(--dark-gray-color);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -63,11 +72,44 @@ body {
   transform: translateY(0);
 }
 
+/* text gradient hover */
+
+.textGradientEffectForLightMode,
+.textGradientEffectForDarkMode {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.8s ease-in-out;
+}
+.textGradientEffectForLightMode {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--primary-color) 50%,
+    var(--accent-color-blue) 50%
+  );
+}
+
+.textGradientEffectForDarkMode {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--primary-color) 50%,
+    var(--pure-white-color) 50%
+  );
+}
+
+.textGradientEffectForLightMode:hover,
+.textGradientEffectForDarkMode:hover {
+  background-position: 0%;
+}
+
 h1,
 h2,
 h3 {
-  /* color: var(--accent-color-blue-dark); */
-  color: var(--dark-gray-color);
+  color: var(--accent-color-blue-dark);
 }
 
 h4 {
@@ -82,11 +124,37 @@ a {
   color: var(--accent-color-blue);
 }
 
+.pageWrapper h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .pageWrapper h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pageWrapper h1 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageWrapper h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+/*-----*/
+
 .group:hover circle {
   stroke-dashoffset: 0 !important;
 }
 
-.pageTitle {
-  font-size: 26px;
-  font-weight: 500;
+.lightShadow {
+  box-shadow: var(--light-shadow);
 }

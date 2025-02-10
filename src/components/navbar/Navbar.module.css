@@ -22,7 +22,10 @@
   background-color: rgba(249, 249, 249, 0.95);
 }
 .navbarWrapper.scrolledDark {
-  background-color: rgba(43, 43, 43, 0.95);
+  background-color: rgb(33, 40, 48, 0.95);
+  /* #212830; */
+
+  /* rgba(43, 43, 43, 0.95); */
 }
 
 .scrolledLogo {

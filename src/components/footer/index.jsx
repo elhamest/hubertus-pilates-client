@@ -53,12 +53,12 @@ export function Footer() {
               </div>
 
               <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
-                <div className="text-accentColorBlueDark hover:text-darkSecondaryColor transition-all duration-400 font-medium">
+                <div className="text-accentColorBlueDark hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 font-medium">
                   {faConstants.followUs}
                 </div>
                 <div className={styles.socialLinks}>
                   <a
-                    href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
+                    href="https://instagram.com/hubertus_pilatesmachine"
                     target="_blank"
                     rel="noopener"
                   >
@@ -76,9 +76,7 @@ export function Footer() {
                 </div>
 
                 <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
-                  <div className="font-medium text-accentColorBlueDark">
-                    {faConstants.contactUs}
-                  </div>
+                  <div className="font-medium">{faConstants.contactUs}</div>
                   <div className="text-right" style={{ direction: "ltr" }}>
                     +989149191831
                   </div>

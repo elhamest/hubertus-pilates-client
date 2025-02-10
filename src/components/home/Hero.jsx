@@ -26,7 +26,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex items-start mt-2 sm:items-center">
-              <div className={styles.viewProducts}>
+              <div className={`${styles.viewProducts}`}>
                 <Link href="/products">{faConstants.viewProducts}</Link>
               </div>
             </div>
