@@ -7,7 +7,8 @@ import { faConstants } from "../../../public/locales/fa/common";
 const AboutUs = () => {
   return (
     <Container>
-      <div className={styles.aboutUsWrapper}>
+      {/* <div className="pageWrapper"> */}
+      <div>
         <div className={styles.companyWrapper}>
           <h1 className="dark:text-pureWhiteColor">
             درباره شرکت هوبرتوس پیلاتس
@@ -32,6 +33,7 @@ const AboutUs = () => {
           </p>
           <p> به امید سلامتی و تندرستی برای همه هم میهنان عزیزمان .</p>
         </div>
+
         <div className={styles.personsWrapper}>
           {faConstants?.persons?.map((person, index) => (
             <div className={`${styles.boxWrapper} shadow-md`} key={index}>
@@ -52,6 +54,7 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
+      {/* </div> */}
     </Container>
   );
 };

@@ -5,7 +5,7 @@ export function Container(props) {
   return (
     // xl:px-0
     <div
-      className={`container mx-auto ${styles.containerWrapper} ${
+      className={`container mx-auto ${styles.containerStyle} ${
         props.className ? props.className : ""
       }`}
     >

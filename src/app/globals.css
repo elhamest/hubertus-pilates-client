@@ -66,7 +66,8 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--accent-color-blue-dark);
+  /* color: var(--accent-color-blue-dark); */
+  color: var(--dark-gray-color);
 }
 
 h4 {

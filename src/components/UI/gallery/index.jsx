@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { NavButton } from "../nav-button/NavButton";
 
 import styles from "./Gallery.module.css";
-import commonStyles from "../../styles/shared.module.css";
 import GalleryItems from "./GalleryItems";
 
 const Gallery = ({ title, items }) => {
@@ -43,7 +42,8 @@ const Gallery = ({ title, items }) => {
           </NavButton>
         </div>
       </div>
-      <div className={commonStyles.slider} ref={sliderRef}>
+
+      <div className={`${styles.gallerySlider}`} ref={sliderRef}>
         <GalleryItems items={items} />
       </div>
     </div>

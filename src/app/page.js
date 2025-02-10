@@ -43,14 +43,15 @@ export default function Home() {
     <>
       <Hero />
       <Container>
-        <Benefits />
-        <Gallery
-          title={faConstants.collectionGalleryTitle}
-          items={faProductCollections}
-        />
-        <Products data={faProducts} />
+        <div>
+          <Benefits />
+          <Gallery
+            title={faConstants.collectionGalleryTitle}
+            items={faProductCollections}
+          />
+          {/* <Products data={faProducts} /> */}
 
-        {/* <SectionTitle
+          {/* <SectionTitle
           preTitle="Watch a video"
           title="Learn how to fullfil your needs"
         >
@@ -78,7 +79,8 @@ export default function Home() {
 
         <Faq /> */}
 
-        {/* <Cta /> */}
+          {/* <Cta /> */}
+        </div>
       </Container>
       <HomeSlider imagePaths={imagePaths} />
     </>

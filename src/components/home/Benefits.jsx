@@ -1,6 +1,7 @@
 import React from "react";
 import { SectionTitle } from "../UI/slider/section-title";
 import { faConstants } from "../../../public/locales/fa/common";
+
 import styles from "./Benefits.module.css";
 
 function Benefits() {
@@ -9,7 +10,6 @@ function Benefits() {
       preTitle={faConstants.benefits?.preTitle}
       title={faConstants.benefits?.title}
     >
-      <div id="products"></div>
       {faConstants.benefits?.items?.map((item, index) => (
         <div key={index} className={styles.benefitContainer}>
           <svg

@@ -8,11 +8,11 @@ export function CollectionGrid({ items }) {
       {items?.map((item, index) => (
         <div key={index} className="group bg-white rounded-lg shadow-md">
           <div
-            className={`relative overflow-hidden rounded-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
+            className={`relative overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
           >
             {/* w-full h-[300px] */}
             <Image
-              src={item?.image} //{`/${item?.image}`}
+              src={item?.image}
               alt={item?.title}
               // fill
               // width={430}
@@ -22,9 +22,7 @@ export function CollectionGrid({ items }) {
             />
           </div>
           <div className="p-4">
-            <h3 className={`${styles.boxTitle}  text-darkGrayColor`}>
-              {item?.title}
-            </h3>
+            <h3 className={styles.boxTitle}>{item?.title}</h3>
           </div>
         </div>
       ))}

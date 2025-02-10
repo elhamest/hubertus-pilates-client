@@ -13,93 +13,94 @@ export function Footer() {
   return (
     <div className="relative" id="contact-us">
       <Container>
-        <div
-          className={`max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 ${styles.footerContainer}`}
-        >
-          <div>
-            <div>
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-2xl font-medium dark:text-accentColorGary"
-              >
-                <Image
-                  // src="/img/logo.svg"
-                  src={logoImage}
-                  alt={faConstants.companyName}
-                  width={80}
-                  style={{ height: "auto" }}
-                />
-                <span>{faConstants.companyName}</span>
-              </Link>
-            </div>
-
-            <div className="mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7 pl-2">
-              {faConstants.footerSlug}
-            </div>
-          </div>
-
-          <div className={styles.linkContainer}>
-            <div className="flex flex-wrap w-full mt-2 lg:ml-0">
-              {navigations?.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item?.path}
-                  className="w-full px-0 lg:px-4 pb-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
-                >
-                  {item?.title}
-                </Link>
-              ))}
-            </div>
-
-            <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
-              <div className="text-accentColorBlueDark hover:text-darkSecondaryColor transition-all duration-400 font-medium">
-                {faConstants.followUs}
-              </div>
-              <div className={styles.socialLinks}>
-                <a
-                  href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Instagram />
-                  <span className="sr-only">Instagram</span>
-                </a>
-                <a
-                  href="https://wa.me/+989149191831"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <WhatsApp />
-                  <span className="sr-only">WhatsApp</span>
-                </a>
-              </div>
-
-              <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
-                <div className="font-medium text-accentColorBlueDark">
-                  {faConstants.contactUs}
-                </div>
-                <div className="text-right" style={{ direction: "ltr" }}>
-                  +989149191831
-                </div>
-                <div className="text-right" style={{ direction: "ltr" }}>
-                  +989149191832
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 mb-2 text-sm text-center text-accentColorBlue dark:text-accentColorGary">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a
-            href="http://hubertuspilates.com/"
-            target="_blank"
-            rel="noopener"
-            className="hover:text-primaryColor transition-all duration-300 focus:text-primaryColor"
+        <div>
+          <div
+            className={`max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 ${styles.footerContainer}`}
           >
-            Hubertus Pilates.
-          </a>
-          {/* Designed by{" "}
+            <div>
+              <div>
+                <Link
+                  href="/"
+                  className="flex items-center space-x-2 text-2xl font-medium dark:text-accentColorGary"
+                >
+                  <Image
+                    // src="/img/logo.svg"
+                    src={logoImage}
+                    alt={faConstants.companyName}
+                    width={80}
+                    style={{ height: "auto" }}
+                  />
+                  <span>{faConstants.companyName}</span>
+                </Link>
+              </div>
+
+              <div className="mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7 pl-2">
+                {faConstants.footerSlug}
+              </div>
+            </div>
+
+            <div className={styles.linkContainer}>
+              <div className="flex flex-wrap w-full mt-2 lg:ml-0">
+                {navigations?.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item?.path}
+                    className="w-full px-0 lg:px-4 pb-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
+                  >
+                    {item?.title}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
+                <div className="text-accentColorBlueDark hover:text-darkSecondaryColor transition-all duration-400 font-medium">
+                  {faConstants.followUs}
+                </div>
+                <div className={styles.socialLinks}>
+                  <a
+                    href="https://instagram.com/hubertus_pilatesmachine" //?igshid=134r9w3ht4adu
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Instagram />
+                    <span className="sr-only">Instagram</span>
+                  </a>
+                  <a
+                    href="https://wa.me/+989149191831"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <WhatsApp />
+                    <span className="sr-only">WhatsApp</span>
+                  </a>
+                </div>
+
+                <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
+                  <div className="font-medium text-accentColorBlueDark">
+                    {faConstants.contactUs}
+                  </div>
+                  <div className="text-right" style={{ direction: "ltr" }}>
+                    +989149191831
+                  </div>
+                  <div className="text-right" style={{ direction: "ltr" }}>
+                    +989149191832
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 mb-2 text-sm text-center text-accentColorBlue dark:text-accentColorGary">
+            Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
+            <a
+              href="http://hubertuspilates.com/"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-primaryColor transition-all duration-300 focus:text-primaryColor"
+            >
+              Hubertus Pilates.
+            </a>
+            {/* Designed by{" "}
           <a
             href="https://github.com/elhamest/"
             target="_blank"
@@ -108,6 +109,7 @@ export function Footer() {
           >
             Elham Estedlali
           </a> */}
+          </div>
         </div>
       </Container>
     </div>

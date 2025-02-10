@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Container } from "@/components/UI/container/Container";
 import heroImg from "../../../public/img/main-hero-fa.jpg";
 import { faConstants } from "../../../public/locales/fa/common";
 import styles from "./Hero.module.css";
@@ -28,9 +27,7 @@ export const Hero = () => {
 
             <div className="flex items-start mt-2 sm:items-center">
               <div className={styles.viewProducts}>
-                <Link href="#products" target="_self">
-                  {faConstants.viewProducts}
-                </Link>
+                <Link href="/products">{faConstants.viewProducts}</Link>
               </div>
             </div>
           </div>

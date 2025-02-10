@@ -7,17 +7,22 @@ import { Container } from "@/components/UI/container/Container";
 
 import commonStyles from "../../components/styles/shared.module.css";
 
-function Products() {
+function ProductsPage() {
   return (
     <Container>
-      <div div className={commonStyles.slider}>
-        <GalleryItems
-          title={faConstants.allCollectionsTitle}
-          items={faProductCollections}
-        />
+      <div className="py-8">
+        {/* pageWrapper */}
+        <h1 className="pageTitle mb-8">{faConstants.allCollectionsTitle}</h1>
+
+        <div className={commonStyles.galleryList}>
+          <GalleryItems
+            title={faConstants.allCollectionsTitle}
+            items={faProductCollections}
+          />
+        </div>
       </div>
     </Container>
   );
 }
 
-export default Products;
+export default ProductsPage;

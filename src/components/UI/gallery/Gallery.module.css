@@ -26,6 +26,14 @@
   stroke: #333;
 }
 
+/* Gallery Slider */
+.gallerySlider {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+
 @media (min-width: 768px) {
   .headerTitle {
     font-size: 2rem;
@@ -35,5 +43,16 @@
     display: flex;
     gap: 10px;
     direction: ltr;
+  }
+
+  .gallerySlider {
+    display: flex; /* Switch to flex for slider */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+  }
+
+  .gallerySlider::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -33,7 +33,7 @@ export default async function CollectionPage({ params }) {
 }
 
 export function generateStaticParams() {
-  return faProductCollections.filter(Boolean).map((item) => ({
+  return faProductCollections?.filter(Boolean)?.map((item) => ({
     link: item?.link?.split("/")[1],
   }));
 }
