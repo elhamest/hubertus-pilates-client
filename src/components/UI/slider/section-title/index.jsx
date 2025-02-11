@@ -17,7 +17,7 @@ export function SectionTitle(props) {
       {props.title && (
         //  text-accentColorBlue
         <h2
-          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight lg:leading-tight dark:text-pureWhiteColor ${styles.title} animateFadeInUp`}
+          className={`max-w-2xl mt-3 font-medium leading-snug tracking-tight lg:leading-tight dark:text-neutralWhiteColor ${styles.title} animateFadeInUp`}
         >
           {props.title}
         </h2>

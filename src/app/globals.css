@@ -37,7 +37,7 @@
   --supporting-color-lavender: #e0d4e1; /* Soft lavender for accents */
 
   /* Neutral Colors */
-  --pure-white-color: #d1d7e0; /* Pure white for crisp elements, for icons in dark mode */
+  --pure-white-color: #fff; /* Pure white for crisp elements, for icons in dark mode */
   --neutral-white-color: #d1d7e0;
   --off-white-color: #f9f9f9; /* Off-white for light mode background, rgb(249, 249, 249) */
   --darker-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
@@ -98,7 +98,7 @@ body {
     to right,
     var(--primary-color),
     var(--primary-color) 50%,
-    var(--pure-white-color) 50%
+    var(--neutral-white-color) 50%
   );
 }
 

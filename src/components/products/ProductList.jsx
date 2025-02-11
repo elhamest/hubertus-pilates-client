@@ -76,7 +76,7 @@ function Product(props) {
       >
         {React.cloneElement(props.icon, {
           className: "w-5 h-5",
-          style: { color: "var(--pure-white-color)" },
+          style: { color: "var(--neutral-white-color)" },
         })}
       </div>
       <div>

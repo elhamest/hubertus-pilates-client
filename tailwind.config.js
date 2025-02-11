@@ -17,7 +17,7 @@ const config = {
         accentColorBlue: "#4a5f73",
         accentColorGary: "#a6a6a6",
         accentColorBlueDark: "#3a4a5c",
-        pureWhiteColor: "#d1d7e0",
+        pureWhiteColor: "#fff",
         neutralWhiteColor: "#d1d7e0",
         offWhiteColor: "#f9f9f9",
         primaryColor: "#905a98",

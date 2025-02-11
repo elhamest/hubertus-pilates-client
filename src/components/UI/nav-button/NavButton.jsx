@@ -39,7 +39,7 @@ export function NavButton({ onClick, label, children }) {
 
   return (
     <button
-      className={`group relative w-14 h-14 flex items-center justify-center hover:bg-gray-50 transition-colors ${styles.navButton}`}
+      className={`group relative w-14 h-14 flex items-center justify-center transition-colors ${styles.navButton}`}
       onClick={onClick}
       aria-label={label}
       onMouseEnter={() => setIsHovered(true)}

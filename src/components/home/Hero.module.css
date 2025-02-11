@@ -86,7 +86,7 @@
 
 .viewProducts a {
   display: inline-block;
-  background-color: var(--pure-white-color);
+  background-color: var(--neutral-white-color);
   padding: 16px 40px;
   font-size: 16px;
   font-weight: 300;

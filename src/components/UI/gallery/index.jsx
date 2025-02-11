@@ -19,7 +19,7 @@ const Gallery = ({ title, items }) => {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <h2
-          className={`${styles.headerTitle} text-accentColorBlueDark dark:text-pureWhiteColor`}
+          className={`${styles.headerTitle} text-accentColorBlueDark dark:text-neutralWhiteColor`}
         >
           {title}
         </h2>

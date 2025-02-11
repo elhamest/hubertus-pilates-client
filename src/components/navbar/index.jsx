@@ -24,6 +24,7 @@ export function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  console.log("isOpen:", isOpen);
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setIsScrolled(true);
@@ -111,14 +112,14 @@ export function Navbar() {
         {/* Mobile menu */}
         {isOpen && (
           <div
-            className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu}`}
+            className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu} ${styles.open}`}
           >
             {navigations?.map((item, index) => (
               <Link
                 key={index}
                 href={item?.path}
                 className="w-full px-4 py-2 -ml-4 rounded-md dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
-                onClick={() => setIsOpen(!open)}
+                onClick={() => setIsOpen(!isOpen)}
               >
                 {item?.title}
               </Link>

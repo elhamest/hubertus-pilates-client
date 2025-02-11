@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div className="py-8">
         <div>
           <div className={`${styles.companyWrapper} pageWrapper`}>
-            <h1 className="dark:text-pureWhiteColor">
+            <h1 className="dark:text-neutralWhiteColor">
               درباره شرکت هوبرتوس پیلاتس
             </h1>
             <p className="dark:text-neutralWhiteColor">

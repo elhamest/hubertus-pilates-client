@@ -25,6 +25,11 @@
   height: 24px;
   stroke: #333;
 }
+@media (prefers-color-scheme: dark) {
+  .headerIndicators .navigatorSvg {
+    stroke: var(--pure-white-color);
+  }
+}
 
 /* Gallery Slider */
 .gallerySlider {

@@ -14,7 +14,7 @@ export const Hero = () => {
           className={`flex items-center flex-grow-1 flex-shrink-1 flex-auto bg-transparent relative z-10 ${styles["ml-negative-10"]} ${styles.descriptionWrapper}`}
         >
           <div className={styles.descriptionContainer}>
-            <h1 className="leading-snug tracking-tight text-pureWhiteColor dark:text-pureWhiteColor lg:leading-tight xl:leading-tight">
+            <h1 className="leading-snug tracking-tight text-neutralWhiteColor dark:text-neutralWhiteColor lg:leading-tight xl:leading-tight">
               {faConstants.engineeringDepartment}
               <span>{` ${faConstants.companyName}`}</span>
             </h1>

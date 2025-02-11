@@ -11,7 +11,9 @@ function ProductsPage() {
   return (
     <Container>
       <div className="py-8 pageWrapper">
-        <h1>{faConstants.allCollectionsTitle}</h1>
+        <h1 className="dark:text-neutralWhiteColor">
+          {faConstants.allCollectionsTitle}
+        </h1>
 
         <div className={styles.galleryList}>
           <GalleryItems items={faProductCollections} className="cardProduct" />
