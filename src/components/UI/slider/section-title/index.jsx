@@ -24,7 +24,9 @@ export function SectionTitle(props) {
       )}
 
       {props.children && (
-        <div className="max-w-2xl py-4 text-lg leading-normal text-accentColorBlue lg:text-xl xl:text-xl dark:text-accentColorGary">
+        <div
+          className={`max-w-2xl py-4 text-lg leading-normal text-accentColorBlue lg:text-xl xl:text-xl dark:text-accentColorGary ${styles.children}`}
+        >
           {props.children}
         </div>
       )}

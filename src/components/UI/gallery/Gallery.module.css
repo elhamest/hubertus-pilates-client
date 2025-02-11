@@ -17,7 +17,7 @@
 
 /* Navigation Buttons */
 .headerIndicators {
-  display: none; /* Hidden by default for mobile */
+  display: none;
 }
 
 .headerIndicators .navigatorSvg {
@@ -34,7 +34,7 @@
   padding: 10px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .headerTitle {
     font-size: 2rem;
   }
@@ -47,6 +47,7 @@
 
   .gallerySlider {
     display: flex; /* Switch to flex for slider */
+    justify-content: space-between;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 20px;

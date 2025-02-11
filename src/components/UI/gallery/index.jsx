@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { NavButton } from "../nav-button/NavButton";
 
 import styles from "./Gallery.module.css";
-import GalleryItems from "./GalleryItems";
+import GalleryItems from "./galleryItems/GalleryItems";
 
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
