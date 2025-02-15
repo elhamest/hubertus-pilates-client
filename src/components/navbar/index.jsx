@@ -24,7 +24,6 @@ export function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  console.log("isOpen:", isOpen);
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setIsScrolled(true);
@@ -139,7 +138,7 @@ export function Navbar() {
                 <Link
                   key={index}
                   href={menu?.path}
-                  className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none transition-all duration-300 hover:tracking-wide ${textGradientClass}`}
+                  className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor transition-all duration-300 hover:tracking-wide ${textGradientClass}`}
                 >
                   {menu?.title}
                 </Link>

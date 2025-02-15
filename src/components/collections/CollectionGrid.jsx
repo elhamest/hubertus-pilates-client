@@ -11,18 +11,16 @@ export function CollectionGrid({ items }) {
             <div
               className={`relative overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
             >
-              {/* w-full h-[300px] */}
               <Image
                 src={item?.image}
                 alt={item?.title}
-                // fill
-                // width={430}
-                style={{ objectFit: "cover", width: "100%", height: "auto" }}
+                fill
+                // style={{ objectFit: "cover", width: "100%", height: "auto" }}
                 // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority={index < 6} // Load first 6 images immediately
               />
             </div>
-            <div className="p-4">
+            <div className={`p-4 ${styles.contentWrapper}`}>
               <h3 className={styles.boxTitle}>{item?.title}</h3>
               <p>{item?.desc}</p>
             </div>
