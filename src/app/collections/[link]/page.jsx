@@ -1,4 +1,4 @@
-import { faProductCollections } from "@/components/data";
+import { faProductCollections } from "@/data/fa";
 import { Container } from "@/components/UI/container/Container";
 import { CollectionGrid } from "@/components/collections/CollectionGrid";
 

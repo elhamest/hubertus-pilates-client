@@ -1,25 +1,25 @@
 import { CursorArrowRaysIcon, SunIcon } from "@heroicons/react/24/solid";
 
-import cReformersImg from "../../public/img/collections/reformers/c-reformers.webp";
-import classicReformerImg from "../../public/img/collections/reformers/classic-reformer.webp";
-import reformerWithTowerImg from "../../public/img/collections/reformers/reformer-with-tower.webp";
-import reformerComboImg from "../../public/img/collections/reformers/reformer-combo.webp";
+import cReformersImg from "../../../public/img/collections/reformers/c-reformers.webp";
+import classicReformerImg from "../../../public/img/collections/reformers/classic-reformer.webp";
+import reformerWithTowerImg from "../../../public/img/collections/reformers/reformer-with-tower.webp";
+import reformerComboImg from "../../../public/img/collections/reformers/reformer-combo.webp";
 //
-import cTowersTrapezeSystemsImg from "../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp";
-import cadillacTrapezeTableImg from "../../public/img/collections/towers-and-trapeze-systems/cadillac-(trapeze-table).webp";
-import wallTowerUnitImg from "../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit.webp";
-import wallUnitImg from "../../public/img/collections/towers-and-trapeze-systems/wall-unit.webp";
+import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp";
+import cadillacTrapezeTableImg from "../../../public/img/collections/towers-and-trapeze-systems/cadillac-(trapeze-table).webp";
+import wallTowerUnitImg from "../../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit.webp";
+import wallUnitImg from "../../../public/img/collections/towers-and-trapeze-systems/wall-unit.webp";
 //
-import cChairsBarrelsImg from "../../public/img/collections/chairs-and-barrels/c-chairs-barrels.webp";
-import ladderBarrelImg from "../../public/img/collections/chairs-and-barrels/ladder-barrel.webp";
-import wundaChairImg from "../../public/img/collections/chairs-and-barrels/wunda-chair.webp";
-import spineCorrectorImg from "../../public/img/collections/chairs-and-barrels/spine-corrector.webp";
-import armChairImg from "../../public/img/collections/chairs-and-barrels/arm-chair.webp";
+import cChairsBarrelsImg from "../../../public/img/collections/chairs-and-barrels/c-chairs-barrels.webp";
+import ladderBarrelImg from "../../../public/img/collections/chairs-and-barrels/ladder-barrel.webp";
+import wundaChairImg from "../../../public/img/collections/chairs-and-barrels/wunda-chair.webp";
+import spineCorrectorImg from "../../../public/img/collections/chairs-and-barrels/spine-corrector.webp";
+import armChairImg from "../../../public/img/collections/chairs-and-barrels/arm-chair.webp";
 //
-import cAdditionalPilatesEquipmentImg from "../../public/img/collections/additional-pilates-equipment/c-additional-pilates-equipment.webp";
-import arcImg from "../../public/img/collections/additional-pilates-equipment/arc.webp";
-import woodenPoleImg from "../../public/img/collections/additional-pilates-equipment/wooden-pole.webp";
-import pedOPullImg from "../../public/img/collections/additional-pilates-equipment/ped-o-pull.webp";
+import cAdditionalPilatesEquipmentImg from "../../../public/img/collections/additional-pilates-equipment/c-additional-pilates-equipment.webp";
+import arcImg from "../../../public/img/collections/additional-pilates-equipment/arc.webp";
+import woodenPoleImg from "../../../public/img/collections/additional-pilates-equipment/wooden-pole.webp";
+import pedOPullImg from "../../../public/img/collections/additional-pilates-equipment/ped-o-pull.webp";
 //
 const pClassicReformer = {
   // title: "ریفورمر کلاسیک (Classic Reformer)",
@@ -359,3 +359,38 @@ export const faProductCollections = [
     ],
   },
 ];
+
+export const faNavigations = [
+  { title: "محصولات", path: "/products" },
+  { title: "درباره هوبرتوس", path: "/about-us" },
+  { title: "تماس با هوبرتوس", path: "#contact-us" },
+];
+
+export const faPersons = [
+  {
+    name: "شاهرخ زرعی",
+    education: "فوق دکترای مهندسی مکانیک",
+    description:
+      "کارشناس مکانیک با سالها تجربه در زمینه طراحی و تولید دستگاه‌ها و ماشین‌آلات مختلف چندین ثبت اختراع در رابطه با ماشین آلات مختلف و برنده مدال نقره اختراعات از کشور سوئیس.",
+    image: "img/persons/shahrokh-zarei.webp",
+  },
+  {
+    name: "شاهین زرعی",
+    education: "کارشناس مهندسی عمران",
+    description:
+      "کارشناس عمران با چندین سال تجربه در تولید دستگاه های شهربازی و کارهای اجرایی و عملیاتی در پروژه های عمرانی و کارگاهی و ...",
+    image: "img/persons/shahin-zarei.webp",
+  },
+];
+
+export const faBenefits = {
+  preTitle: "ویژگی ها و مزایا",
+  title: "مشخصات و مزایای دستگاه‌های پیلاتس هوبرتوس",
+  items: [
+    "مطابق با استانداردهای روز دنیا و کیفیت رقابتی با برندهای برتر دنیا",
+    "طراحی مقاوم و پایدار قطعات",
+    "قطعات قابل تعویض و دسترسی آسان به قطعات اصلی",
+    "یک سال گارانتی تمام قطعات",
+    "سه سال خدمات پس از فروش",
+  ],
+};

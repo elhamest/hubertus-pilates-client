@@ -3,13 +3,12 @@ import { Container } from "@/components/UI/container/Container";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Hero } from "@/components/home/Hero";
 // import { SectionTitle } from "@/components/UI/slider/section-title";
-import { Products } from "@/components/products/Products";
 // import { Video } from "@/components/Video";
 // import { Testimonials } from "@/components/Testimonials";
 // import { Faq } from "@/components/Faq";
 // import { Cta } from "@/components/Cta";
 
-import { faProducts, faProductCollections } from "@/components/data";
+import { faProductCollections } from "@/data/fa";
 import HomeSlider from "@/components/home/HomeSlider";
 import Benefits from "@/components/home/Benefits";
 import Gallery from "@/components/UI/gallery";
@@ -49,7 +48,6 @@ export default function Home() {
             title={faConstants.collectionGalleryTitle}
             items={faProductCollections}
           />
-          {/* <Products data={faProducts} /> */}
 
           {/* <SectionTitle
           preTitle="Watch a video"

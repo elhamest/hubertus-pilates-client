@@ -9,9 +9,9 @@ import { faConstants } from "../../../public/locales/fa/common";
 import logoImage from "../../../public/img/logo.svg";
 
 import styles from "./Navbar.module.css";
+import { faNavigations } from "../../data/fa";
 
 export function Navbar() {
-  const navigations = faConstants.navigations;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, resolvedTheme } = useTheme();
@@ -113,7 +113,7 @@ export function Navbar() {
           <div
             className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu} ${styles.open}`}
           >
-            {navigations?.map((item, index) => (
+            {faNavigations?.map((item, index) => (
               <Link
                 key={index}
                 href={item?.path}
@@ -133,7 +133,7 @@ export function Navbar() {
           }`}
         >
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigations?.map((menu, index) => (
+            {faNavigations?.map((menu, index) => (
               <li className={styles.navItem} key={index}>
                 <Link
                   key={index}

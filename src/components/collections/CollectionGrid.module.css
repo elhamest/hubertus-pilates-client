@@ -1,3 +1,6 @@
+.collectionWrapper {
+  /* position: relative; */
+}
 .imageWrapper {
   width: 100%;
   height: 300px;
@@ -13,9 +16,50 @@
   color: var(--dark-gray-color);
   margin-bottom: 12px;
 }
+.contentWrapper {
+  position: relative;
+  padding: 16px;
+}
 
 .contentWrapper > p {
   text-align: justify;
+  margin-bottom: 40px;
+}
+
+.viewMore {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px;
+  color: var(--accent-color-gray-light);
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  transition: all 0.4s;
+}
+.viewMore span {
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.viewMore span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+.viewMore:hover span {
+  padding-left: 20px;
+  color: var(--primary-color);
+}
+.viewMore:hover span:after {
+  opacity: 1;
+  left: 0;
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) {

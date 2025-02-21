@@ -1,16 +1,13 @@
 import React from "react";
 import { SectionTitle } from "../UI/slider/section-title";
-import { faConstants } from "../../../public/locales/fa/common";
 
 import styles from "./Benefits.module.css";
+import { faBenefits } from "../../data/fa";
 
 function Benefits() {
   return (
-    <SectionTitle
-      preTitle={faConstants.benefits?.preTitle}
-      title={faConstants.benefits?.title}
-    >
-      {faConstants.benefits?.items?.map((item, index) => (
+    <SectionTitle preTitle={faBenefits?.preTitle} title={faBenefits?.title}>
+      {faBenefits?.items?.map((item, index) => (
         <div key={index} className={styles.benefitContainer}>
           <svg
             className={styles.checkSvgImage}

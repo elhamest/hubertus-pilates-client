@@ -3,12 +3,12 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/UI/container/Container";
 import { faConstants } from "../../../public/locales/fa/common";
+import { faNavigations } from "../../data/fa";
 import logoImage from "../../../public/img/logo.svg";
 
 import styles from "./Footer.module.css";
 
 export function Footer() {
-  const navigations = faConstants.navigations;
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative" id="contact-us">
@@ -41,7 +41,7 @@ export function Footer() {
 
             <div className={styles.linkContainer}>
               <div className="flex flex-wrap w-full mt-2 lg:ml-0">
-                {navigations?.map((item, index) => (
+                {faNavigations?.map((item, index) => (
                   <Link
                     key={index}
                     href={item?.path}

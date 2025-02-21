@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@/components/UI/container/Container";
 import Image from "next/image";
 import styles from "./AboutUs.module.css";
-import { faConstants } from "../../../public/locales/fa/common";
+import { faPersons } from "@/data/fa";
 
 const AboutUs = () => {
   return (
@@ -38,7 +38,7 @@ const AboutUs = () => {
           </div>
 
           <div className={styles.personsWrapper}>
-            {faConstants?.persons?.map((person, index) => (
+            {faPersons?.map((person, index) => (
               <div className={`${styles.boxWrapper} shadow-md`} key={index}>
                 <div className={styles.boxContainer}>
                   <Image
