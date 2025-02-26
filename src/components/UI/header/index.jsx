@@ -2,23 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import Image from "next/image";
-import { faConstants } from "../../../public/locales/fa/common";
-import logoImage from "../../../public/img/logo.svg";
+import { useTheme } from "next-themes";
 
-import styles from "./Navbar.module.css";
-import { faNavigations } from "../../data/fa";
+import ThemeChanger from "../theme-changer/DarkSwitch";
+import { faConstants } from "../../../../public/locales/fa/common";
+import logoImage from "../../../../public/img/logo.svg";
+import Navbar from "./navbar";
+import MobileNavbar from "./mobile-navbar";
 
-export function Navbar() {
+import { faNavigations } from "../../../data/fa";
+
+import styles from "./Header.module.css";
+
+const Header = () => {
+  const { theme, resolvedTheme } = useTheme();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, resolvedTheme } = useTheme();
-  const textGradientClass =
-    resolvedTheme === "dark"
-      ? "textGradientEffectForDarkMode"
-      : "textGradientEffectForLightMode";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -57,9 +58,8 @@ export function Navbar() {
           >
             <span>
               <Image
-                // src="/img/logo.svg"
                 src={logoImage}
-                alt={faConstants.companyName}
+                alt={faConstants?.companyName}
                 width={80}
                 style={{ height: "auto" }}
               />
@@ -67,7 +67,7 @@ export function Navbar() {
             <span
               className={`text-primaryColor dark:text-pureWhiteColor ${styles.logoText}`}
             >
-              {faConstants.companyName}
+              {faConstants?.companyName}
             </span>
           </span>
         </Link>
@@ -113,16 +113,7 @@ export function Navbar() {
           <div
             className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu} ${styles.open}`}
           >
-            {faNavigations?.map((item, index) => (
-              <Link
-                key={index}
-                href={item?.path}
-                className="w-full px-4 py-2 -ml-4 rounded-md dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                {item?.title}
-              </Link>
-            ))}
+            <MobileNavbar navigations={faNavigations} setIsOpen={setIsOpen} />
           </div>
         )}
 
@@ -132,21 +123,11 @@ export function Navbar() {
             isScrolled ? styles.scrolledMenu : ""
           }`}
         >
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {faNavigations?.map((menu, index) => (
-              <li className={styles.navItem} key={index}>
-                <Link
-                  key={index}
-                  href={menu?.path}
-                  className={`inline-block px-4 py-2 text-lg font-normal no-underline rounded-md dark:text-pureWhiteColor hover:text-primaryColor dark:hover:text-primaryColor focus:text-primaryColor transition-all duration-300 hover:tracking-wide ${textGradientClass}`}
-                >
-                  {menu?.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <Navbar navigations={faNavigations} resolvedTheme={resolvedTheme} />
         </div>
       </nav>
     </div>
   );
-}
+};
+
+export default Header;

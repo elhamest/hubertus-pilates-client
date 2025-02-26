@@ -1,11 +1,11 @@
 import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { Footer } from "@/components/UI/footer";
 import { PopupWidget } from "@/components/popup-widget";
 
 import { faConstants } from "../../public/locales/fa/common";
 import "./globals.css";
+import Header from "@/components/UI/header";
 
 export const metadata = {
   title: faConstants.pageTitle,
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       </head> */}
       <body className={vazirMatn.className}>
         <ThemeProvider attribute="class">
-          <Navbar />
+          <Header />
           <div>{children}</div>
           <PopupWidget />
           <Footer />

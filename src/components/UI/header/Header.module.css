@@ -36,13 +36,8 @@
   display: none;
 }
 /* .dark .navbarWrapper.scrolled {
-  background-color: rgba(0, 0, 0, 0.95); 
-} */
-
-.navItem a {
-  width: 100%;
-  min-width: 170px;
-}
+    background-color: rgba(0, 0, 0, 0.95); 
+  } */
 
 @media (min-width: 1200px) {
   .navbarWrapper {
