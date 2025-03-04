@@ -23,7 +23,7 @@
 .headerIndicators .navigatorSvg {
   width: 24px;
   height: 24px;
-  stroke: #333;
+  stroke: var(--primary-color);
 }
 @media (prefers-color-scheme: dark) {
   .headerIndicators .navigatorSvg {

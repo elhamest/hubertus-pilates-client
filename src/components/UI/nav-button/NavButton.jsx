@@ -61,7 +61,7 @@ export function NavButton({ onClick, label, children }) {
           style={{
             strokeDasharray: "170",
             strokeDashoffset: isHovered ? "0" : "170",
-            transform: "rotate(-90deg)",
+            transform: "rotate(-60deg)" /*-90*/,
             transformOrigin: "center",
           }}
         />

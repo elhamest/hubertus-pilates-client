@@ -23,7 +23,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  border: 1px solid var(--accent-color-gray-dark);
+  border: 1px solid var(--ligth-secondary-color);
   border-radius: 50%;
   width: 56px;
   height: 56px;
@@ -33,8 +33,8 @@
 }
 
 .sliderControls button:hover {
-  background-color: var(--ligth-secondary-color);
-  border: 1px solid var(--ligth-secondary-color);
+  /* background-color: var(--primary-color); */
+  border: 1px solid var(--primary-color);
 }
 
 .sliderControls button svg {
@@ -53,14 +53,14 @@
 }
 
 .mainSliderPagination [class*="swiper-pagination-bullet"] {
-  background-color: green;
+  background-color: var(--ligth-secondary-color);
   width: 15px;
   height: 8px;
   border-radius: 4px;
   opacity: unset;
 }
 .mainSliderPagination [class*="swiper-pagination-bullet-active"] {
-  background-color: red;
+  background-color: var(--primary-color);
   width: 30px;
   height: 8px;
 }

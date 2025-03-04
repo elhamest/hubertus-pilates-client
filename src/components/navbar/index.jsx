@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import Image from "next/image";
+
+import ThemeChanger from "../UI/theme-changer/DarkSwitch";
 import { faConstants } from "../../../public/locales/fa/common";
+import { faNavigations } from "../../data/fa";
 import logoImage from "../../../public/img/logo.svg";
 
 import styles from "./Navbar.module.css";
-import { faNavigations } from "../../data/fa";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

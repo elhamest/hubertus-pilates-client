@@ -9,10 +9,7 @@ export function CollectionGrid({ items }) {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {items?.map((item, index) => {
         return (
-          <div
-            key={index}
-            className={`group bg-white rounded-lg lightShadow ${styles.collectionWrapper}`}
-          >
+          <div key={index} className={`group ${styles.collectionWrapper}`}>
             <div
               className={`relative overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
             >
@@ -28,10 +25,10 @@ export function CollectionGrid({ items }) {
             <div className={styles.contentWrapper}>
               <h3 className={styles.boxTitle}>{item?.title}</h3>
               <p>{item?.desc}</p>
-              <Link className={styles.viewMore} href={`products/${item?.id}`}>
-                <span>{faConstants?.viewMore}</span>
-              </Link>
             </div>
+            <Link className={styles.viewMore} href={`products/${item?.id}`}>
+              <span>{faConstants?.viewMore}</span>
+            </Link>
           </div>
         );
       })}

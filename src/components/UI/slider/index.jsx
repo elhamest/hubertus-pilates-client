@@ -52,10 +52,10 @@ const Slider = ({ imagePaths }) => {
           el: `.${styles.mainSliderPagination}`,
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         effect="fade"
         fadeEffect={{ crossFade: true }} // Optional: for better fade effect
         speed={4000} // transition duration

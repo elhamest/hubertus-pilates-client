@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { NavButton } from "../nav-button/NavButton";
 
 import styles from "./Gallery.module.css";
@@ -7,11 +7,11 @@ import GalleryItems from "./galleryItems/GalleryItems";
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
 
-  const scrollLeft = () => {
+  const moveLeft = () => {
     sliderRef.current.scrollBy({ left: -320, behavior: "smooth" });
   };
 
-  const scrollRight = () => {
+  const moveRight = () => {
     sliderRef.current.scrollBy({ left: 320, behavior: "smooth" });
   };
 
@@ -24,27 +24,27 @@ const Gallery = ({ title, items }) => {
           {title}
         </h2>
         <div className={`flex gap-4 ltr ${styles.headerIndicators}`}>
-          <NavButton onClick={scrollLeft} label="Previous">
+          <NavButton onClick={moveLeft} label="Previous">
             <svg
               className={`icon icon-chevron-left ${styles.navigatorSvg}`}
               viewBox="0 0 24 24"
             >
-              <path d="M14 6L8 12L14 18"></path>
+              <path d="M14 6L8 12L14 18" stroke="#905a98"></path>
             </svg>
           </NavButton>
-          <NavButton onClick={scrollRight} label="Next">
+          <NavButton onClick={moveRight} label="Next">
             <svg
               className={`icon icon-chevron-rigth ${styles.navigatorSvg}`}
               viewBox="0 0 24 24"
             >
-              <path d="M10 6L16 12L10 18"></path>
+              <path d="M10 6L16 12L10 18" stroke="#905a98"></path>
             </svg>
           </NavButton>
         </div>
       </div>
 
       <div className={`${styles.gallerySlider}`} ref={sliderRef}>
-        <GalleryItems items={items} className="cardSlider" />
+        <GalleryItems items={items} customClass="cardSlider" />
       </div>
     </div>
   );
