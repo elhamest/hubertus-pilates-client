@@ -361,7 +361,7 @@ export const faProductCollections = [
 ];
 
 export const faNavigations = [
-  { title: "محصولات", path: "/products" },
+  { title: "محصولات", path: "/collections" },
   { title: "درباره هوبرتوس", path: "/about-us" },
   { title: "تماس با هوبرتوس", path: "#contact-us" },
 ];

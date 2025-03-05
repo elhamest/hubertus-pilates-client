@@ -9,15 +9,14 @@ import logoImage from "../../../public/img/logo.svg";
 import styles from "./Footer.module.css";
 
 export function Footer() {
-  const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative" id="contact-us">
       <Container>
         <div>
           <div
-            className={`max-w-screen-xl pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 ${styles.footerContainer}`}
+            className={`max-w-screen-xl d-flex pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 ${styles.footerContainer}`}
           >
-            <div>
+            <div className={styles.slugWrapper}>
               <div>
                 <Link
                   href="/"
@@ -33,27 +32,29 @@ export function Footer() {
                   <span>{faConstants.companyName}</span>
                 </Link>
               </div>
-
-              <div className="mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7 pl-2">
+              <div className="mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7">
                 {faConstants.footerSlug}
               </div>
             </div>
 
-            <div className={styles.linkContainer}>
-              <div className="flex flex-wrap w-full mt-2 lg:ml-0">
-                {faNavigations?.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item?.path}
-                    className="w-full px-0 lg:px-4 pb-2 rounded-md dark:text-accentColorGary dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
-                  >
-                    {item?.title}
-                  </Link>
-                ))}
+            <div className="flex flex-col gap-4 dark:text-accentColorGary">
+              <div className="text-accentColorBlue font-semibold">
+                {faConstants?.relatedContent}
               </div>
+              {faNavigations?.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item?.path}
+                  className="inline-block dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
+                >
+                  {item?.title}
+                </Link>
+              ))}
+            </div>
 
-              <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
-                <div className="text-accentColorBlueDark hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 font-medium">
+            <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
+              <div>
+                <div className="text-accentColorBlueDark hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 font-semibold mb-2">
                   {faConstants.followUs}
                 </div>
                 <div className={styles.socialLinks}>
@@ -74,15 +75,15 @@ export function Footer() {
                     <span className="sr-only">WhatsApp</span>
                   </a>
                 </div>
+              </div>
 
-                <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
-                  <div className="font-medium">{faConstants.contactUs}</div>
-                  <div className="text-right" style={{ direction: "ltr" }}>
-                    +989149191831
-                  </div>
-                  <div className="text-right" style={{ direction: "ltr" }}>
-                    +989149191832
-                  </div>
+              <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
+                <div className="font-medium">{faConstants.contactUs}</div>
+                <div className="text-right" style={{ direction: "ltr" }}>
+                  +989149191831
+                </div>
+                <div className="text-right" style={{ direction: "ltr" }}>
+                  +989149191832
                 </div>
               </div>
             </div>

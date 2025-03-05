@@ -9,6 +9,7 @@ export const enConstants = {
     "We take pride in producing high-quality Pilates equipment by Iranian engineers, adhering to international standards and utilizing modern technologies. This has led to our products being well-regarded in global markets.",
   viewProducts: "View Products",
   products: "Products",
+  relatedContent: "Related Content",
   followUs: "Follow us",
   contactUs: "Contact us",
   openContactFormWidget: "Open Contact form Widget",

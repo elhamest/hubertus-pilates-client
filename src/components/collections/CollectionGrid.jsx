@@ -26,7 +26,7 @@ export function CollectionGrid({ items }) {
               <h3 className={styles.boxTitle}>{item?.title}</h3>
               <p>{item?.desc}</p>
             </div>
-            <Link className={styles.viewMore} href={`products/${item?.id}`}>
+            <Link className={styles.viewMore} href={`Collections/${item?.id}`}>
               <span>{faConstants?.viewMore}</span>
             </Link>
           </div>
@@ -35,4 +35,3 @@ export function CollectionGrid({ items }) {
     </div>
   );
 }
-// http://localhost:3000/collections/products/undefined
