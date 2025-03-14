@@ -1,11 +1,9 @@
-.hero-slider {
+.mainSliderWrapper {
+  direction: ltr;
   position: relative;
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
 }
 
-.slider-controls {
+.sliderControls {
   position: absolute;
   top: 50%;
   left: 0;
@@ -15,67 +13,84 @@
   transform: translateY(-50%);
   padding: 0 20px;
   z-index: 10;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  direction: ltr;
 }
 
-.slider-controls button {
+.sliderControls button {
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
-  font-size: 24px;
+  border: 1px solid var(--ligth-secondary-color);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider-pagination {
+.sliderControls button:hover {
+  /* background-color: var(--primary-color); */
+  border: 1px solid var(--primary-color);
+}
+
+.sliderControls button svg {
+  width: 24px;
+  height: 24px;
+}
+.sliderControls .navDisable {
+  background-color: transparent;
+  border: 1px solid var(--supporting-color-gray);
+}
+
+@media (prefers-color-scheme: dark) {
+  .headerIndicators button svg {
+    stroke: var(--pure-white-color);
+  }
+}
+
+.mainSliderPagination [class*="swiper-pagination-bullet"] {
+  background-color: var(--ligth-secondary-color);
+  width: 15px;
+  height: 8px;
+  border-radius: 4px;
+  opacity: unset;
+}
+.mainSliderPagination [class*="swiper-pagination-bullet-active"] {
+  background-color: var(--primary-color);
+  width: 30px;
+  height: 8px;
+}
+
+.mainSliderPagination {
+  direction: ltr;
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
+  width: 15rem !important;
+  left: 72px !important;
+  bottom: 36px !important;
   z-index: 10;
 }
 
-.pagination-dot {
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+@media (max-width: 767px) {
+  .sliderControls button {
+    border: none;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+  }
 
-.pagination-dot.active {
-  background: white;
+  .sliderControls svg {
+    width: 15px;
+    height: 15px;
+  }
+  .sliderControls button:hover {
+    background-color: transparent;
+    border: none;
+  }
+  .mainSliderPagination {
+    display: none;
+  }
 }
-.slider-controls button svg {
-  stroke: #ff0000; /* Change this to your desired color */
-  color: yellow;
-  fill: green;
-}
-
-/* ---------- */
-/* 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
- Center slide text vertically
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* .swiper-button-next {
-  color: red !important;
-} */

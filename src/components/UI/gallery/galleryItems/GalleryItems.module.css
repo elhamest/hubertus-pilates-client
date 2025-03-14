@@ -40,19 +40,20 @@
 }
 
 @media (min-width: 900px) {
+  /* Fixed width for slider cards */
   .cardSlider {
-    flex: 0 0 335px; /* Fixed width for slider cards */
+    flex: 0 0 335px;
   }
-
+  /* Fixed width for product cards 400px */
   .cardProduct {
-    flex: 0 0 340px; /* Fixed width for product cards 400px */
+    flex: 0 0 340px;
   }
 
   .cardSlider .imageContainer {
     height: 240px;
   }
   .cardProduct .imageContainer {
-    height: 260px; /* 280 */
+    height: 260px;
   }
 
   .cardTitle {

@@ -2,21 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
-import ThemeChanger from "../theme-changer/DarkSwitch";
-import { faConstants } from "../../../../public/locales/fa/common";
-import logoImage from "../../../../public/img/logo.svg";
-import Navbar from "./navbar";
-import MobileNavbar from "./mobile-navbar";
+import ThemeChanger from "../UI/theme-changer/DarkSwitch";
+import { faConstants } from "../../../public/locales/fa/common";
+import { faNavigations } from "../../data/fa";
+import logoImage from "../../../public/img/logo.svg";
 
-import { faNavigations } from "../../../data/fa";
-
-import styles from "./Header.module.css";
-
-const Header = () => {
-  const { theme, resolvedTheme } = useTheme();
+import styles from "./Navbar.module.css";
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

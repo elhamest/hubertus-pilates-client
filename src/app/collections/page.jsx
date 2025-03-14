@@ -5,9 +5,9 @@ import { faConstants } from "../../../public/locales/fa/common";
 import { faProductCollections } from "@/data/fa";
 import { Container } from "@/components/UI/container/Container";
 
-import styles from "./Products.module.css";
+import styles from "./Collections.module.css";
 
-function ProductsPage() {
+function CollectionsPage() {
   return (
     <Container>
       <div className="py-8 pageWrapper">
@@ -16,11 +16,14 @@ function ProductsPage() {
         </h1>
 
         <div className={styles.galleryList}>
-          <GalleryItems items={faProductCollections} className="cardProduct" />
+          <GalleryItems
+            items={faProductCollections}
+            customClass="cardProduct"
+          />
         </div>
       </div>
     </Container>
   );
 }
 
-export default ProductsPage;
+export default CollectionsPage;

@@ -2,12 +2,12 @@
 import React from "react";
 import Slider from "@/components/UI/slider";
 
-function HomeSlider({ imagePaths }) {
+const HomeSlider = ({ imagePaths }) => {
   return (
     <>
       <Slider imagePaths={imagePaths} />
     </>
   );
-}
+};
 
 export default HomeSlider;

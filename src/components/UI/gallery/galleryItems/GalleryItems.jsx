@@ -3,11 +3,11 @@ import Image from "next/image";
 
 import styles from "./GalleryItems.module.css";
 
-function GalleryItems({ items, className }) {
+function GalleryItems({ items, customClass }) {
   return (
     <>
       {items?.map((item, index) => (
-        <div className={`${styles.card} ${styles[className]}`} key={index}>
+        <div className={`${styles.card} ${styles[customClass]}`} key={index}>
           <Link href={item.link}>
             <div className={styles.imageContainer}>
               <Image

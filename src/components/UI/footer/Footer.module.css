@@ -4,10 +4,12 @@
   gap: 1rem;
 }
 
-.linkContainer {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+.slugWrapper {
+  width: 100%;
+}
+
+.slugWrapper div:nth-child(2) {
+  padding-left: 60px;
 }
 
 .socialLinks {
@@ -17,13 +19,14 @@
 }
 
 .socialLinks a svg:hover {
+  transform: scale(1.1);
   animation: fill-gradient 0.5s ease-in-out forwards;
 }
 
 @media (min-width: 1024px) {
   .footerContainer {
     gap: 3rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 2fr 1fr 1fr;
   }
 }
 
