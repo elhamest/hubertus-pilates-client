@@ -5,13 +5,16 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
-import ThemeChanger from "../UI/theme-changer/DarkSwitch";
-import { faConstants } from "../../../public/locales/fa/common";
-import { faNavigations } from "../../data/fa";
-import logoImage from "../../../public/img/logo.svg";
+import Navbar from "./navbar";
+import ThemeChanger from "../theme-changer/DarkSwitch";
+import { faConstants } from "../../../../public/locales/fa/common";
+import { faNavigations } from "../../../data/fa";
+import logoImage from "../../../../public/img/logo.svg";
 
-import styles from "./Navbar.module.css";
+import styles from "./Header.module.css";
 
+const Header = () => {
+  const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
