@@ -1,7 +1,8 @@
 export const navigations = [
-  { title: "Products", path: "/products" },
-  { title: "About Hubertus", path: "/about-us" },
-  { title: "Contact Hubertus", path: "#contact-us" },
+  { title: "Home Page", path: "/", showOnFooter: false },
+  { title: "Products", path: "/products", showOnFooter: true },
+  { title: "About Hubertus", path: "/about-us", showOnFooter: true },
+  { title: "Contact Hubertus", path: "#contact-us", showOnFooter: true },
 ];
 export const persons = [
   {

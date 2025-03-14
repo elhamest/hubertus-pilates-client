@@ -9,6 +9,10 @@ import logoImage from "../../../../public/img/logo.svg";
 import styles from "./Footer.module.css";
 
 export function Footer() {
+  const filteredNavigations = faNavigations?.filter(
+    (item) => item?.showOnFooter === true
+  );
+
   return (
     <div className="relative" id="contact-us">
       <Container>
@@ -41,7 +45,7 @@ export function Footer() {
               <div className="text-accentColorBlue font-semibold">
                 {faConstants?.relatedContent}
               </div>
-              {faNavigations?.map((item, index) => (
+              {filteredNavigations?.map((item, index) => (
                 <Link
                   key={index}
                   href={item?.path}

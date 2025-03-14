@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 
 import Navbar from "./navbar";
+import MobileNavbar from "./mobile-navbar";
 import ThemeChanger from "../theme-changer/DarkSwitch";
 import { faConstants } from "../../../../public/locales/fa/common";
 import { faNavigations } from "../../../data/fa";

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const MobileNavbar = ({ navigations, setIsOpen }) => {
   return (
     <>

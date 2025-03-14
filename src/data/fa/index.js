@@ -361,9 +361,10 @@ export const faProductCollections = [
 ];
 
 export const faNavigations = [
-  { title: "محصولات", path: "/collections" },
-  { title: "درباره هوبرتوس", path: "/about-us" },
-  { title: "تماس با هوبرتوس", path: "#contact-us" },
+  { title: "صفحه اصلی", path: "/", showOnFooter: false },
+  { title: "محصولات", path: "/collections", showOnFooter: true },
+  { title: "درباره هوبرتوس", path: "/about-us", showOnFooter: true },
+  { title: "تماس با هوبرتوس", path: "#contact-us", showOnFooter: true },
 ];
 
 export const faPersons = [
