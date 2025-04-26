@@ -2,10 +2,10 @@ import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import { Footer } from "@/components/UI/footer";
 import { PopupWidget } from "@/components/popup-widget";
-
+import Header from "@/components/UI/header";
+import Layout from "@/components/UI/layout";
 import { faConstants } from "../../public/locales/fa/common";
 import "./globals.css";
-import Header from "@/components/UI/header";
 
 export const metadata = {
   title: faConstants.pageTitle,
@@ -18,16 +18,15 @@ const vazirMatn = localFont({
   wright: "100 900",
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
+  // lang={params.locale || "fa"} dir={params.locale === "fa" ? "rtl" : "ltr"} suppressHydrationWarning
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      {/* <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head> */}
       <body className={vazirMatn.className}>
         <ThemeProvider attribute="class">
           <Header />
-          <div>{children}</div>
+          {/* locale={params.locale || "fa"} */}
+          <Layout locale="fa">{children}</Layout>
           <PopupWidget />
           <Footer />
         </ThemeProvider>

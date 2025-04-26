@@ -1,0 +1,25 @@
+.breadcrumb {
+  padding: 10px;
+  background-color: inherit;
+  font-size: 16px;
+}
+.breadcrumb ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+  color: #6c757d;
+}

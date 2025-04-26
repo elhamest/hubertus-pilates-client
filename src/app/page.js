@@ -1,5 +1,5 @@
 "use client";
-import { Container } from "@/components/UI/container/Container";
+import { Container } from "@/components/UI/container";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Hero } from "@/components/home/Hero";
 // import { SectionTitle } from "@/components/UI/slider/section-title";

@@ -1,10 +1,15 @@
+"use client";
+
 import Image from "next/image";
-
-import styles from "./CollectionGrid.module.css";
-import { faConstants } from "../../../public/locales/fa/common";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { faConstants } from "../../../../public/locales/fa/common";
 
-export function CollectionGrid({ items }) {
+import styles from "./Collection.module.css";
+
+export function Collection({ items }) {
+  const currentPath = usePathname();
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {items?.map((item, index) => {
@@ -26,7 +31,10 @@ export function CollectionGrid({ items }) {
               <h3 className={styles.boxTitle}>{item?.title}</h3>
               <p>{item?.desc}</p>
             </div>
-            <Link className={styles.viewMore} href={`Collections/${item?.id}`}>
+            <Link
+              className={styles.viewMore}
+              href={`${currentPath}/${item?.slug}`}
+            >
               <span>{faConstants?.viewMore}</span>
             </Link>
           </div>

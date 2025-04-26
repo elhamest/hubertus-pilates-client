@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@/components/UI/container/Container";
+import { Container } from "@/components/UI/container";
 
 export const Cta = () => {
   return (
