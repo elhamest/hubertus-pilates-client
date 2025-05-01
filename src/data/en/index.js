@@ -230,6 +230,7 @@ export const enProductCollections = [
     title: "Reformers",
     image: cReformersImg,
     path: "collections/reformers",
+    id: 1,
     items: [
       {
         title: "Classic Reformer",
@@ -237,6 +238,7 @@ export const enProductCollections = [
         slug: "classic-reformer",
         desc: "با ریفورمر کلاسیک، سطح تمرینات پیلاتس خود را ارتقا دهید. این دستگاه اصلی پیلاتس، به تقویت عضلات مرکزی، بهبود تعادل و افزایش انعطاف‌پذیری کمک می‌کند و برای همه سطوح، از مبتدی تا پیشرفته، مناسب است.",
         detail: pClassicReformer,
+        id: 1,
       },
       {
         title: "Reformer with Tower",
@@ -244,6 +246,7 @@ export const enProductCollections = [
         slug: "reformer-with-tower",
         desc: "ریفورمر با تاور، یکی از دستگاه‌های پرکاربرد پیلاتس است که ترکیبی از ریفورمر و وال یونیت می‌باشد. این دستگاه برای افراد مبتدی و پیشرفته مناسب است و به بهبود وضعیت بدن، انعطاف‌پذیری، قدرت عضلات مرکزی و کاهش وزن کمک می‌کند.",
         detail: pReformerWithTower,
+        id: 2,
       },
       {
         title: "Combo Reformer",
@@ -251,6 +254,7 @@ export const enProductCollections = [
         slug: "reformer-combo",
         desc: "کادیلاک ریفورمر ترکیبی از ریفورمر و کادیلاک است که تمرینات متنوعی را برای گروه‌های عضلانی مختلف ارائه می‌دهد. قابل تنظیم برای همه سطوح، این دستگاه برای سالن‌های خانگی و حرفه‌ای، به‌ویژه در فضاهای محدود، ایده‌آل است.",
         detail: pReformerCombo,
+        id: 3,
       },
     ],
   },
@@ -258,6 +262,7 @@ export const enProductCollections = [
     title: "Towers and Trapeze bars",
     image: cTowersTrapezeSystemsImg,
     path: "collections/towers-trapeze-systems",
+    id: 2,
     items: [
       {
         title: "Cadillac (trapeze-table)",
@@ -265,6 +270,7 @@ export const enProductCollections = [
         slug: "cadillac",
         desc: "کادیلاک، یکی از برجسته‌ترین دستگاه‌های پیلاتس، تمرینی کامل برای تقویت عضلات مرکزی، انعطاف‌پذیری، قدرت و تعادل ارائه می‌دهد. با قابلیت تنظیم مقاومت و شدت، برای افراد مبتدی و پیشرفته مناسب است.",
         detail: pCadilac,
+        id: 4,
       },
       {
         title: "Wall Tower unit",
@@ -272,6 +278,7 @@ export const enProductCollections = [
         slug: "wall-tower-unit",
         desc: "وال یونیت با اتصالات متنوع و باندهای مقاومتی قابل تنظیم، طیف گسترده‌ای از تمرینات را برای همه سطوح فراهم می‌کند. این دستگاه شامل تشک میله‌دار و دیواره با میله پوش‌بار است و برای سالن‌های خانگی و فضاهای محدود ایده‌آل می‌باشد.",
         detail: pWallUnit,
+        id: 5,
       },
       {
         title: "Wall unit",
@@ -279,6 +286,7 @@ export const enProductCollections = [
         slug: "wall-unit",
         desc: null,
         detail: null,
+        id: 6,
       },
     ],
   },
@@ -287,6 +295,7 @@ export const enProductCollections = [
     title: "Chairs and Barrels",
     image: cChairsBarrelsImg,
     path: "collections/chairs-and-barrels",
+    id: 3,
     items: [
       {
         title: "Ladder Barrel",
@@ -294,6 +303,7 @@ export const enProductCollections = [
         slug: "ladder-barrel",
         desc: "لدر برل، وسیله‌ای پرکاربرد در پیلاتس، به بهبود انعطاف‌پذیری، قدرت و سلامت مهره‌های پشتی کمک می‌کند. این دستگاه تمرینات متنوعی برای شانه‌ها، باسن و بهبود وضعیت بدن ارائه می‌دهد و برای افراد مبتدی و پیشرفته مناسب است.",
         detail: pLadderBarrel,
+        id: 7,
       },
       {
         title: "Wunda chair",
@@ -301,6 +311,7 @@ export const enProductCollections = [
         slug: "wunda-chair",
         desc: "صندلی ووندا، وسیله‌ای چالش‌برانگیز و منحصربه‌فرد در پیلاتس، برای تقویت قدرت عضلانی (به‌ویژه پاها، هسته و بازوها)، افزایش انعطاف‌پذیری و بهبود کنترل بدن طراحی شده است. این دستگاه برای همه سطوح، از مبتدی تا پیشرفته، مناسب است.",
         detail: pWundaChair,
+        id: 8,
       },
       {
         title: "Spine corrector",
@@ -308,6 +319,7 @@ export const enProductCollections = [
         slug: "spine-corrector",
         desc: "اسپین کورکتور ابزاری حرفه‌ای در پیلاتس است که با طراحی ارگونومیک خود، منحنی‌های طبیعی ستون فقرات را شبیه‌سازی می‌کند. این وسیله با بهبود تراز ستون فقرات و تقویت قدرت پایه، عملکرد شما را در پیلاتس افزایش می‌دهد و برای همه سطوح، از مبتدی تا پیشرفته، مناسب است.",
         detail: pSpineCorrector,
+        id: 9,
       },
       {
         title: "Arm Chair",
@@ -315,6 +327,7 @@ export const enProductCollections = [
         slug: "arm-chair",
         desc: "آرم چیر دستگاهی برای حرکات نشسته و کنترل‌شده است که قدرت، انعطاف‌پذیری و تعادل را بدون فشار غیرضروری بهبود می‌بخشد. این دستگاه برای افراد مسن یا با تحرک محدود ایده‌آل است و با تمرکز بر عضلات کلیدی مانند هسته، بازوها و پاها، همراه با تکنیک‌های تنفسی، آرامش و بهبود عملکرد فیزیکی را فراهم می‌کند.",
         detail: pArmChair,
+        id: 10,
       },
     ],
   },
@@ -322,6 +335,7 @@ export const enProductCollections = [
     title: "Additional Pilates Equipments",
     image: cAdditionalPilatesEquipmentImg,
     path: "collections/additional-pilates-equipment",
+    id: 4,
     items: [
       {
         title: "Arc",
@@ -329,6 +343,7 @@ export const enProductCollections = [
         slug: "arc",
         desc: null,
         detail: null,
+        id: 11,
       },
       {
         title: "Wooden Pole",
@@ -336,6 +351,7 @@ export const enProductCollections = [
         slug: "wooden-pole",
         desc: null,
         detail: null,
+        id: 12,
       },
       {
         title: "Ped o Pull",
@@ -343,6 +359,7 @@ export const enProductCollections = [
         slug: "ped-o-pull",
         desc: null,
         detail: null,
+        id: 13,
       },
     ],
   },

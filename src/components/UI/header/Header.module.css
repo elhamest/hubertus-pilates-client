@@ -7,6 +7,8 @@
   transition: padding 2s, box-shadow 2s;
   padding: 20px 15px;
   position: relative;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
 
 .navbarWrapper.scrolled {
