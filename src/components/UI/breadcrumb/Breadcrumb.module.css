@@ -10,16 +10,22 @@
   gap: 4px;
 }
 
+.breadcrumbLink {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
 .breadcrumb a {
   text-decoration: none;
-  color: #007bff;
+  color: var(--accent-color-gray-dark);
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline;
+  color: var(--primary-color);
 }
 
 .breadcrumb span {
   margin: 0 5px;
-  color: #6c757d;
+  color: var(--accent-color-gray-dark);
 }
