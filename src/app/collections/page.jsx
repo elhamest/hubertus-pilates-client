@@ -10,7 +10,7 @@ import styles from "./Collections.module.css";
 function CollectionsPage() {
   return (
     <Container>
-      <div className="pageWrapper">
+      <div className="pageWrapper pageHeight">
         <h1 className="dark:text-neutralWhiteColor">
           {faConstants.allCollectionsTitle}
         </h1>

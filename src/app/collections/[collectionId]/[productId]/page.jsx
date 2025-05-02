@@ -6,11 +6,11 @@ import { Container } from "@/components/UI/container";
 
 export default async function ProductPage({ params, locale = "fa" }) {
   const { productId } = await Promise.resolve(params);
-  console.log("params in product:", params);
+  // console.log("params in product:", params);
 
   return (
     <Container>
-      <div>Product Page: {productId}</div>
+      <div className="pageHeight">Product Page: {productId}</div>
     </Container>
   );
 }

@@ -39,7 +39,7 @@ export default function Home() {
   useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible
 
   return (
-    <>
+    <div className="page-height">
       <Hero />
       <Container>
         <div>
@@ -81,6 +81,6 @@ export default function Home() {
         </div>
       </Container>
       <HomeSlider imagePaths={imagePaths} />
-    </>
+    </div>
   );
 }

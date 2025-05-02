@@ -28,7 +28,7 @@ export default async function CollectionPage({ params, locale = "fa" }) {
 
   return (
     <Container>
-      <div className="pageWrapper">
+      <div className="pageWrapper pageHeight">
         <h1 className="dark:text-neutralWhiteColor">
           {selectedCollection?.title}
         </h1>

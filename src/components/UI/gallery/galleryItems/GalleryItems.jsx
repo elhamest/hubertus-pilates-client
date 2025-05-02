@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./GalleryItems.module.css";
 
 function GalleryItems({ items, customClass }) {
-  console.log("Gallery items, items:", items);
+  // console.log("Gallery items, items:", items);
   return (
     <>
       {items?.map((item, index) => (
