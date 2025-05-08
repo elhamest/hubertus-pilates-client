@@ -20,6 +20,7 @@
   /* Use this for secondary headings, navigation bars, or as a hover effect on buttons. */
   --dark-secondary-color: #6a4c6f; /* Darker shade of purple, for accents and secondary elements */
   --ligth-secondary-color: #b695b9; /* Lighter shade of purple, for backgrounds or subtle highlights */
+  --ligther-secondary-color: #e9d5eb;
 
   /* Accent Colors */
   --accent-color-blue: #4a5f73; /* Muted blue for links and secondary elements, for contrast and to add depth, for secondary icons */
@@ -125,10 +126,18 @@ a {
   color: var(--accent-color-blue);
 }
 
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .pageWrapper h1 {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .pageHeight {

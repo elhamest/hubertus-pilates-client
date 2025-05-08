@@ -10,7 +10,6 @@
     "export": "next build"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.5",
     "next": "^15.1.6",
     "next-themes": "^0.3.0",
     "react": "^18.2.0",

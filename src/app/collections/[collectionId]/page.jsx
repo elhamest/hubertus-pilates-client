@@ -19,7 +19,7 @@ export default async function CollectionPage({ params, locale = "fa" }) {
       <Container>
         <div className="min-h-[400px] flex items-center justify-center">
           <h1 className="text-2xl font-semibold text-gray-800">
-            Collection not found
+            مجموعه ای یافت نشد.
           </h1>
         </div>
       </Container>
