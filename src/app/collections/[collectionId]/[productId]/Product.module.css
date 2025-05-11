@@ -3,7 +3,6 @@
   max-width: 1300px;
   padding: 0 16px;
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   gap: 80px;
@@ -21,6 +20,7 @@
 
 .textContainer {
   width: 55%;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -32,37 +32,38 @@
 }
 
 .imageStyle {
-  /* width: 100%;
-  height: auto; */
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 .productDescription {
-  font-size: 1.125rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
+  text-align: justify;
+  line-height: 1.75;
 }
 
 .featureBox {
-  background-color: #f3f4f6;
+  background-color: var(--supporting-color-gray);
   padding: 16px;
   border-radius: 8px;
+  width: 100%;
 }
 
 .featureBox ul {
   list-style-position: inside;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 15px;
+  gap: 14px;
 }
 
 .featureBox ul li {
   padding: 0 16px 0 0;
   position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-gray-color);
 }
 
 .featureBox ul li > span {
@@ -70,11 +71,11 @@
 }
 
 .featureBox ul li:first-child {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .featureBox ul li:last-child {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .featureBox ul li::before {
   content: " ";

@@ -21,6 +21,7 @@
   width: 100%;
   height: 100%;
 }
+
 .descriptionContainer {
   /* background-image: linear-gradient(
     135deg,
@@ -45,7 +46,6 @@
     var(--accent-color-blue) 75%,
     VAR(--darker-gray-color) 100%
   ); */
-
   background-image: linear-gradient(
     349deg,
     var(--supporting-color-gray) 0%,
@@ -59,7 +59,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 25px;
+  padding-right: 50px;
   padding-left: 40px;
   padding-top: 30px;
   padding-bottom: 30px;

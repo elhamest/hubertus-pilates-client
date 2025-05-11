@@ -4,12 +4,21 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
   min-width: 150px;
 }
 
 .card:hover {
   transform: translateY(-1px);
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(
+      --dark-mode-card-bg
+    ) !important; /* Use the variable for dark mode */
+  }
 }
 
 .imageContainer {

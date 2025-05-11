@@ -46,6 +46,8 @@
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+  --dark-mode-card-bg: #f0f0f0; /* Slightly darker than pure white */
 }
 
 .dark .dark\:bg-dark-gray {
