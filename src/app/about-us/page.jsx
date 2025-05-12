@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@/components/UI/container/Container";
+import { Container } from "@/components/UI/container";
 import Image from "next/image";
 import styles from "./AboutUs.module.css";
 import { faPersons } from "@/data/fa";
@@ -7,7 +7,7 @@ import { faPersons } from "@/data/fa";
 const AboutUs = () => {
   return (
     <Container>
-      <div className="py-8">
+      <div className="py-8 pageHeight">
         <div>
           <div className={`${styles.companyWrapper} pageWrapper`}>
             <h1 className="dark:text-neutralWhiteColor">

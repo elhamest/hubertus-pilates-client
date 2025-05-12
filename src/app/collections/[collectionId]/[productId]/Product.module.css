@@ -1,0 +1,103 @@
+.productWrapper {
+  margin: 0 60px;
+  max-width: 1300px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+}
+
+.imageContainer {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-right: 60px;
+}
+
+.textContainer {
+  width: 55%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.textContainer h1 {
+  border-bottom: 1px solid var(--ligther-secondary-color);
+}
+
+.imageStyle {
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.productDescription {
+  margin-bottom: 24px;
+  text-align: justify;
+  line-height: 1.75;
+}
+
+.featureBox {
+  background-color: var(--supporting-color-gray);
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.featureBox ul {
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+
+.featureBox ul li {
+  padding: 0 16px 0 0;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-gray-color);
+}
+
+.featureBox ul li > span {
+  padding: 0 10px 0 0;
+}
+
+.featureBox ul li:first-child {
+  margin-top: 14px;
+}
+
+.featureBox ul li:last-child {
+  margin-bottom: 14px;
+}
+.featureBox ul li::before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--ligth-secondary-color);
+  border-radius: 50%;
+}
+
+.notFoundContainer {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFoundText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}

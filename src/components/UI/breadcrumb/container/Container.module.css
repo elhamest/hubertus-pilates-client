@@ -1,0 +1,17 @@
+.containerStyle {
+  padding: 0 1.2rem;
+  /* padding: 20px 30px; */
+  width: 95%;
+}
+
+@media (min-width: 426px) {
+  .containerStyle {
+    padding: 0 2rem;
+  }
+}
+
+/* @media (min-width: 1000px) {
+    .containerStyle {
+      padding: 25px 100px;
+    }
+  } */

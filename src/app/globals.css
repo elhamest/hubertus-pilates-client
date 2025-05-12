@@ -20,6 +20,7 @@
   /* Use this for secondary headings, navigation bars, or as a hover effect on buttons. */
   --dark-secondary-color: #6a4c6f; /* Darker shade of purple, for accents and secondary elements */
   --ligth-secondary-color: #b695b9; /* Lighter shade of purple, for backgrounds or subtle highlights */
+  --ligther-secondary-color: #e9d5eb;
 
   /* Accent Colors */
   --accent-color-blue: #4a5f73; /* Muted blue for links and secondary elements, for contrast and to add depth, for secondary icons */
@@ -45,6 +46,8 @@
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+  --dark-mode-card-bg: #f0f0f0; /* Slightly darker than pure white */
 }
 
 .dark .dark\:bg-dark-gray {
@@ -125,10 +128,22 @@ a {
   color: var(--accent-color-blue);
 }
 
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .pageWrapper h1 {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
+  width: 100%;
+}
+
+.pageHeight {
+  min-height: 80vh;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
