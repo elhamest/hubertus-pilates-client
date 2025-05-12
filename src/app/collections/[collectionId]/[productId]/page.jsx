@@ -13,7 +13,7 @@ export default async function ProductPage({ params, locale = "fa" }) {
 
   function findItemBySlug(selectedSlug) {
     for (const collection of productCollections) {
-      const foundItem = collection.items?.find(
+      const foundItem = collection?.items?.find(
         (item) => item?.slug === selectedSlug
       );
       if (foundItem) return { collection, item: foundItem };
