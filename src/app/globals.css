@@ -10,44 +10,42 @@
 }
 
 :root {
-  /* Primary Brand Color */
-  --primary-color: #905a98; /* Muted purple: brand color, used for logos, headers, and key elements, for the main icons.) */
+  --primary-color: #905a98;
 
   /* Vibrant Accent Color */
-  --vibrant-purple: #7e3f8f; /* Vibrant purple for preTitles, buttons, etc. */
+  --vibrant-purple: #7e3f8f;
 
   /* Secondary Colors */
-  /* Use this for secondary headings, navigation bars, or as a hover effect on buttons. */
-  --dark-secondary-color: #6a4c6f; /* Darker shade of purple, for accents and secondary elements */
-  --ligth-secondary-color: #b695b9; /* Lighter shade of purple, for backgrounds or subtle highlights */
+  --dark-secondary-color: #6a4c6f;
+  --ligth-secondary-color: #b695b9;
   --ligther-secondary-color: #e9d5eb;
 
   /* Accent Colors */
-  --accent-color-blue: #4a5f73; /* Muted blue for links and secondary elements, for contrast and to add depth, for secondary icons */
-  --accent-color-blue-dark: #3a4a5c; /* Darker muted blue for primary headings */
-  --accent-color-gray-dark: #a6a6a6; /* Neutral gray for dark mode */
-  --accent-color-gray-darker: #808080; /* Darker gray for headings in light mode */
-  --accent-color-gray-light: #718096; /* Medium-dark gray for light mode */
-  /* --gray: #757575; */
-
+  --accent-color-blue: #4a5f73;
+  --accent-color-blue-dark: #3a4a5c;
+  --accent-color-gray-dark: #a6a6a6;
+  --accent-color-gray-darker: #808080;
+  --accent-color-gray-light: #718096;
+  --accent-color-gray-lighter: #cbd5e1;
+  --accent-color-gray: #e2e8f0;
   --border-color: #e5e7eb;
 
   /* Supporting Colors */
-  /* Use this for subtle hover effects, borders, or to soften the overall look */
-  --supporting-color-gray: #f4f4f4; /* Very light gray for backgrounds */
-  --supporting-color-lavender: #e0d4e1; /* Soft lavender for accents */
+  --supporting-color-gray: #f4f4f4;
+  --supporting-color-lavender: #e0d4e1;
 
   /* Neutral Colors */
-  --pure-white-color: #fff; /* Pure white for crisp elements, for icons in dark mode */
+  --pure-white-color: #fff;
   --neutral-white-color: #d1d7e0;
-  --off-white-color: #f9f9f9; /* Off-white for light mode background, rgb(249, 249, 249) */
-  --darker-gray-color: #171717; /* Dark gray for dark mode background, rgb(23, 23, 23) */
+  --off-white-color: #f7f7fa;
+  --darker-gray-color: #171717;
   --dark-gray-color: #151b23;
+  --dark-mode-card-bg: #23272e;
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 
-  --dark-mode-card-bg: #f0f0f0; /* Slightly darker than pure white */
+  --dark-accent-color: #b695b9;
 }
 
 .dark .dark\:bg-dark-gray {

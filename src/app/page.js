@@ -16,25 +16,17 @@ import { faConstants } from "../../public/locales/fa/common";
 //  import { faConstants } from "../../out/locales/fa/common";
 
 const imagePaths = [
-  "img/slider2/s1.jpg",
-  "img/slider2/s2.jpg",
-  "img/slider2/s3.jpg",
-  "img/slider2/s4.jpg",
-  "img/slider2/s5.jpg",
+  "/img/slider/s1.webp",
+  "/img/slider/s2.webp",
+  "/img/slider/s3.webp",
+  "/img/slider/s4.webp",
+  "/img/slider/s5.webp",
+  "/img/slider/s6.webp",
+  "/img/slider/s7.webp",
+  "/img/slider/s8.webp",
 ];
 
 export default function Home() {
-  // const imagePaths = [
-  //   "/img/slider/s1.webp",
-  //   "/img/slider/s2.webp",
-  //   "/img/slider/s3.webp",
-  //   "/img/slider/s4.webp",
-  //   "/img/slider/s5.webp",
-  //   "/img/slider/s6.webp",
-  //   "/img/slider/s7.webp",
-  //   "/img/slider/s8.webp",
-  // ];
-
   // Use the custom hook for scroll animation
   useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible
 
