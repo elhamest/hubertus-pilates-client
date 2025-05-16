@@ -24,9 +24,9 @@ export default function RootLayout({ children, params }) {
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body className={vazirMatn.className}>
         <ThemeProvider attribute="class">
-          <Header />
+          <Header locale={params.locale} />
           {/* locale={params.locale || "fa"} */}
-          <Layout locale="fa">{children}</Layout>
+          <Layout locale={params.locale}>{children}</Layout>
           <PopupWidget />
           <Footer />
         </ThemeProvider>

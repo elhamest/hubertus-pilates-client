@@ -11,9 +11,13 @@
   width: 100%;
   height: 300px;
 }
+.collectionWrapper:hover .imageWrapper img {
+  transform: translateY(-1px) scale(1.02);
+}
 
 .imageWrapper img {
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .boxTitle {
@@ -65,11 +69,11 @@
   left: -20px;
   transition: 0.5s;
 }
-.viewMore:hover span {
+.collectionWrapper:hover .viewMore span {
   padding-left: 20px;
   color: var(--primary-color);
 }
-.viewMore:hover span:after {
+.collectionWrapper:hover .viewMore span:after {
   opacity: 1;
   left: 0;
   color: var(--primary-color);

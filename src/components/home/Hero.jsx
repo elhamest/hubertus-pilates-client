@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import heroImg from "../../../public/img/main-hero-fa.jpg";
+import heroImg from "../../../public/img/hero1.jpg";
 import { faConstants } from "../../../public/locales/fa/common";
 import styles from "./Hero.module.css";
 import Link from "next/link";

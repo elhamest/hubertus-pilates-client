@@ -10,11 +10,13 @@ import MobileNavbar from "./mobile-navbar";
 import ThemeChanger from "../theme-changer/DarkSwitch";
 import { faConstants } from "../../../../public/locales/fa/common";
 import { faNavigations } from "../../../data/fa";
+import { enNavigations } from "../../../data/en";
 import logoImage from "../../../../public/img/logo.svg";
 
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = ({ locale = "fa" }) => {
+  const navigations = locale === "fa" ? faNavigations : enNavigations;
   const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -111,7 +113,7 @@ const Header = () => {
           <div
             className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu} ${styles.open}`}
           >
-            <MobileNavbar navigations={faNavigations} setIsOpen={setIsOpen} />
+            <MobileNavbar navigations={navigations} setIsOpen={setIsOpen} />
           </div>
         )}
 
@@ -121,7 +123,7 @@ const Header = () => {
             isScrolled ? styles.scrolledMenu : ""
           }`}
         >
-          <Navbar navigations={faNavigations} resolvedTheme={resolvedTheme} />
+          <Navbar navigations={navigations} resolvedTheme={resolvedTheme} />
         </div>
       </nav>
     </div>
