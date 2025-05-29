@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Container } from "@/components/UI/container";
-import { ChevronUpIcon } from "@heroicons/react/24/solid";
+// import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -24,11 +24,28 @@ export const Faq = () => {
               className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-accentColorBlue rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-accentColorGary"
             >
               <span>{item.question}</span>
-              <ChevronUpIcon
+
+              {/* <ChevronUpIcon
                 className={`${
                   openIndex === index ? "transform rotate-180" : ""
                 } w-5 h-5 text-indigo-500`}
-              />
+              /> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className={`fa-solid fa-chevron-up ${
+                  openIndex === index ? "transform rotate-180" : ""
+                } w-5 h-5 text-indigo-500`}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                />
+              </svg>
             </button>
             {openIndex === index && (
               <div className="px-4 pt-4 pb-2 text-accentColorBlue dark:text-accentColorGary">

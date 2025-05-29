@@ -12,13 +12,20 @@
 :root {
   --primary-color: #905a98;
 
-  /* Vibrant Accent Color */
-  --vibrant-purple: #7e3f8f;
-
   /* Secondary Colors */
-  --dark-secondary-color: #6a4c6f;
   --ligth-secondary-color: #b695b9;
   --ligther-secondary-color: #e9d5eb;
+
+  --accent-color-gold: #eab464; /* Warm gold/amber */
+  --accent-color-green: #7bb686; /* Sage green */
+  --accent-color-coral: #ff857a; /* Soft coral */
+  --wood-color: #d6a77a; /* Light wood, for backgrounds or accents */
+  --neutral-gray: #bfc4ca;
+
+  /* Use #eab464 (gold) for buttons, highlights, or icons.
+Use #7bb686 (sage) for subtle backgrounds, badges, or callouts.
+Use #ff857a (coral) for attention-grabbing elements (sale, new).
+Combine with wood textures or backgrounds for a cohesive, stylish look. */
 
   /* Accent Colors */
   --accent-color-blue: #4a5f73;
@@ -26,19 +33,16 @@
   --accent-color-gray-dark: #a6a6a6;
   --accent-color-gray-darker: #808080;
   --accent-color-gray-light: #718096;
-  --accent-color-gray-lighter: #cbd5e1;
   --accent-color-gray: #e2e8f0;
   --border-color: #e5e7eb;
 
   /* Supporting Colors */
   --supporting-color-gray: #f4f4f4;
-  --supporting-color-lavender: #e0d4e1;
 
   /* Neutral Colors */
   --pure-white-color: #fff;
   --neutral-white-color: #d1d7e0;
   --off-white-color: #f7f7fa;
-  --darker-gray-color: #171717;
   --dark-gray-color: #151b23;
   --dark-mode-card-bg: #23272e;
 
