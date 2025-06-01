@@ -3,7 +3,7 @@ import { Container } from "@/components/UI/container";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Hero } from "@/components/home/Hero";
 import { SectionTitle } from "@/components/UI/slider/section-title";
-import { Video } from "@/components/Video";
+import { Video } from "@/components/home/video";
 import { Testimonials } from "@/components/home/testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
@@ -42,14 +42,22 @@ export default function Home({ locale = "fa" }) {
           />
 
           <SectionTitle
-            preTitle="Watch a video"
-            title="Learn how to fullfil your needs"
+            preTitle={locale === "fa" ? "یک ویدیو تماشا کنید" : "Watch a video"}
+            title={
+              locale === "fa"
+                ? "یاد بگیرید که چگونه نیازهای خود را برآورده کنید"
+                : "Learn how to fullfil your needs"
+            }
           >
-            This section is to highlight a promo or demo video of your product.
-            Analysts says a landing page with video has 3% more conversion rate.
-            So, don&apos;t forget to add one. Just like this.
-          </SectionTitle>
+            {locale === "fa"
+              ? `این بخش برای برجسته کردن یک ویدیوی تبلیغاتی یا نمایشی از محصول شماست.
+تحلیلگران می‌گویند یک صفحه فرود با ویدیو ۳٪ نرخ تبدیل بیشتری دارد.
 
+پس فراموش نکنید که یکی اضافه کنید. درست مثل این.`
+              : `This section is to highlight a promo or demo video of your product.
+            Analysts says a landing page with video has 3% more conversion rate.
+            So, don&apos;t forget to add one. Just like this.`}
+          </SectionTitle>
           <Video videoId="fZ0D0cnR88E" />
 
           {/* <SectionTitle
