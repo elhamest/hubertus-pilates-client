@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
-import heroImg from "../../../public/img/hero1.jpg";
-import { faConstants } from "../../../public/locales/fa/common";
-import styles from "./Hero.module.css";
 import Link from "next/link";
+import heroImg from "../../../../public/img/hero1.jpg";
+import { faConstants } from "../../../../public/locales/fa/common";
+
+import styles from "./Hero.module.css";
 
 export const Hero = () => {
   return (

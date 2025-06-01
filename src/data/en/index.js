@@ -335,20 +335,25 @@ export const enNavigations = [
   { title: "Contact Hubertus", path: "#contact-us", showOnFooter: true },
 ];
 
-export const persons = [
+export const enPersons = [
   {
-    name: "Shahrokh Zar'ei",
-    education: "PhD in Mechanical Engineering",
-    description:
-      "A seasoned mechanical expert with years of experience in designing and manufacturing various machines and equipment. He holds multiple patents related to different machinery and has won a silver medal for inventions from Switzerland.",
-    image: "/img/persons/shahrokh-zarei.webp",
+    name: "Dr. Shahrokh Zarei",
+    education: "Ph.D. in Mechanical Engineering",
+    description: [
+      "Experienced specialist in industrial machinery design and manufacturing",
+      "Holder of multiple national and international patents in machinery",
+      "Silver medal winner at Switzerland Inventions Competition",
+    ],
+    image: "img/persons/shahrokh-zarei.webp",
   },
   {
-    name: "Shahin Zar'ei",
-    education: "Bachelor's in Civil Engineering",
-    description:
-      "A civil engineer with several years of experience in producing amusement park equipment and executing civil and operational projects in workshops, etc.",
-    image: "/img/persons/shahin-zarei.webp",
+    name: "Shahin Zarei",
+    education: "Bachelor of Civil Engineering",
+    description: [
+      "Civil engineer with years of experience in amusement ride manufacturing",
+      "Specialized in executive and operational aspects of construction projects",
+    ],
+    image: "img/persons/shahin-zarei.webp",
   },
 ];
 

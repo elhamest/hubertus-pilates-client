@@ -1,7 +1,7 @@
 "use client";
 import { Container } from "@/components/UI/container";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Hero } from "@/components/home/Hero";
+import { Hero } from "@/components/home/hero";
 import { SectionTitle } from "@/components/UI/slider/section-title";
 import { Video } from "@/components/home/video";
 import { Testimonials } from "@/components/home/testimonials";
@@ -9,8 +9,8 @@ import { Faq } from "@/components/home/faq";
 import { Cta } from "@/components/Cta";
 
 import { faProductCollections } from "@/data/fa";
-import HomeSlider from "@/components/home/HomeSlider";
-import Benefits from "@/components/home/Benefits";
+import HomeSlider from "@/components/home/home-slider";
+import Benefits from "@/components/home/benefits";
 import Gallery from "@/components/UI/gallery";
 import { faConstants } from "../../public/locales/fa/common";
 //  import { faConstants } from "../../out/locales/fa/common";
@@ -91,7 +91,7 @@ export default function Home({ locale = "fa" }) {
           <Faq /> */}
           {/* ------------------------------------ */}
 
-          <Cta />
+          {/* <Cta /> */}
         </div>
       </Container>
       {/* <HomeSlider imagePaths={imagePaths} /> */}
