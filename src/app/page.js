@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Hero } from "@/components/home/Hero";
 import { SectionTitle } from "@/components/UI/slider/section-title";
 import { Video } from "@/components/Video";
-import { Testimonials } from "@/components/Testimonials";
+import { Testimonials } from "@/components/home/testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
@@ -26,7 +26,7 @@ const imagePaths = [
   "/img/slider/s8.webp",
 ];
 
-export default function Home() {
+export default function Home({ locale = "fa" }) {
   // Use the custom hook for scroll animation
   useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible
 
@@ -52,15 +52,20 @@ export default function Home() {
 
           <Video videoId="fZ0D0cnR88E" />
 
-          <SectionTitle
-            preTitle="Testimonials"
-            title="Here's what our customers said"
+          {/* <SectionTitle
+            preTitle={locale === "fa" ? "نظرات مشتریان" : "Testimonials"}
+            title={
+              locale === "fa"
+                ? "این چیزی است که مشتریان ما گفتند"
+                : "Here's what our customers said"
+            }
           >
-            Testimonials is a great way to increase the brand trust and
-            awareness. Use this section to highlight your popular customers.
+            {locale === "fa"
+              ? "نظرات مشتریان راهی عالی برای افزایش اعتماد و آگاهی از برند است. از این بخش برای برجسته کردن مشتریان محبوب خود استفاده کنید."
+              : `Testimonials is a great way to increase the brand trust and
+            awareness. Use this section to highlight your popular customers.`}
           </SectionTitle>
-
-          <Testimonials />
+          <Testimonials /> */}
 
           <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">
             Answer your customers possible questions here, it will increase the

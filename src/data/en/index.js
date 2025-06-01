@@ -363,3 +363,30 @@ export const benefits = {
     "Three years of after-sales service",
   ],
 };
+
+export const enTestimonials = {
+  title: "Testimonials  ",
+  subTitle: "Here's what our customers said",
+  description:
+    "Testimonials is a great way to increase the brand trust and awareness. Use this section to highlight your popular customers.",
+  items: [
+    {
+      title: "Sarah Steiner",
+      subTitle: "VP Sales at Google",
+      description:
+        "Share a real testimonial that hits some of your benefits from one of your popular customer.",
+    },
+    {
+      title: "Dylan Ambrose",
+      subTitle: "Lead marketer at Netflix",
+      description:
+        "Make sure you only pick the right sentence to keep it short and simple.",
+    },
+    {
+      title: "Gabrielle Winn",
+      subTitle: "Co-founder of Acme Inc",
+      description:
+        "This is an awesome landing page template I have seen. I would use this for anything.",
+    },
+  ],
+};

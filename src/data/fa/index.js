@@ -402,3 +402,40 @@ export const faAboutUs = {
               کرد`,
   desc3: `به امید سلامتی و تندرستی برای همه هم میهنان عزیزمان .`,
 };
+
+import userOneImg from "../../../public/img/testimonials/user1.jpg";
+import userTwoImg from "../../../public/img/testimonials/user2.jpg";
+import userThreeImg from "../../../public/img/testimonials/user3.jpg";
+
+export const faTestimonials = {
+  title: "نظرات مشتریان",
+  subTitle: "این چیزی است که مشتریان ما گفتند",
+  description:
+    "نظرات مشتریان راهی عالی برای افزایش اعتماد و آگاهی از برند است. از این بخش برای برجسته کردن مشتریان محبوب خود استفاده کنید.",
+  items: [
+    {
+      id: 1,
+      name: "سارا ستایش",
+      title: "معاون فروش در گوگل",
+      description:
+        "یک توصیف واقعی از یکی از مشتریان محبوبتان که برخی از مزایای شما را برجسته می‌کند، به اشتراک بگذارید.",
+      image: userOneImg,
+    },
+    {
+      id: 2,
+      name: "دارا کسرایی",
+      title: "بازاریاب ارشد در نتفلیکس",
+      description:
+        "مطمئن شوید که فقط جمله مناسب را انتخاب می‌کنید تا کوتاه و ساده باشد.",
+      image: userTwoImg,
+    },
+    {
+      id: 3,
+      name: "گابریل کرمانی",
+      title: "یکی از بنیانگذاران شرکت Acme Inc",
+      description:
+        "این یک الگوی صفحه لندینگ فوق‌العاده است که دیده‌ام. من از این برای هر چیزی استفاده می‌کنم.",
+      image: userThreeImg,
+    },
+  ],
+};
