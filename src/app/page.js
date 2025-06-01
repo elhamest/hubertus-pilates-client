@@ -5,7 +5,7 @@ import { Hero } from "@/components/home/Hero";
 import { SectionTitle } from "@/components/UI/slider/section-title";
 import { Video } from "@/components/home/video";
 import { Testimonials } from "@/components/home/testimonials";
-import { Faq } from "@/components/Faq";
+import { Faq } from "@/components/home/faq";
 import { Cta } from "@/components/Cta";
 
 import { faProductCollections } from "@/data/fa";
@@ -41,7 +41,7 @@ export default function Home({ locale = "fa" }) {
             items={faProductCollections}
           />
 
-          <SectionTitle
+          {/* <SectionTitle
             preTitle={locale === "fa" ? "یک ویدیو تماشا کنید" : "Watch a video"}
             title={
               locale === "fa"
@@ -58,8 +58,9 @@ export default function Home({ locale = "fa" }) {
             Analysts says a landing page with video has 3% more conversion rate.
             So, don&apos;t forget to add one. Just like this.`}
           </SectionTitle>
-          <Video videoId="fZ0D0cnR88E" />
+          <Video videoId="fZ0D0cnR88E" /> */}
 
+          {/* ------------------------------------ */}
           {/* <SectionTitle
             preTitle={locale === "fa" ? "نظرات مشتریان" : "Testimonials"}
             title={
@@ -74,13 +75,21 @@ export default function Home({ locale = "fa" }) {
             awareness. Use this section to highlight your popular customers.`}
           </SectionTitle>
           <Testimonials /> */}
+          {/* ------------------------------------ */}
 
-          <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">
-            Answer your customers possible questions here, it will increase the
-            conversion rate as well as support or chat requests.
+          {/* <SectionTitle
+            preTitle="FAQ"
+            title={
+              locale === "fa" ? "سوالات متداول" : "Frequently Asked Questions"
+            }
+          >
+            {locale === "fa"
+              ? "به سوالات احتمالی مشتریان خود در اینجا پاسخ دهید، این کار نرخ تبدیل و همچنین درخواست‌های پشتیبانی یا چت را افزایش می‌دهد."
+              : `Answer your customers possible questions here, it will increase the
+            conversion rate as well as support or chat requests.`}
           </SectionTitle>
-
-          <Faq />
+          <Faq /> */}
+          {/* ------------------------------------ */}
 
           <Cta />
         </div>
