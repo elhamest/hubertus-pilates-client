@@ -2,12 +2,13 @@ import React from "react";
 import styles from "./Container.module.css";
 
 export function Container(props) {
+  const extraPadding = props?.extraPadding;
+
   return (
-    // xl:px-0
     <div
-      className={`container mx-auto ${styles.containerStyle} ${
+      className={`${styles.container} mx-auto ${
         props.className ? props.className : ""
-      }`}
+      } ${extraPadding ? styles.extraPadding : ""}`}
     >
       {props.children}
     </div>

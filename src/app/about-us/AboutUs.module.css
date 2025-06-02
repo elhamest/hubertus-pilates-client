@@ -10,6 +10,19 @@
   width: 100%;
 }
 
+.boxDescription {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  text-align: justify;
+  list-style-type: disc;
+  padding: 0 70px;
+}
+.boxWrapper ul li {
+  list-style-position: inside;
+}
+
 .boxContainer {
   align-items: center;
   display: grid;
@@ -30,7 +43,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 113%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .boxSubtitle {
@@ -42,15 +55,6 @@
   text-align: center;
 }
 
-.boxDescription {
-  align-items: center;
-  display: flex;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  text-align: justify;
-}
 /*---------*/
 .companyWrapper p {
   line-height: 3;

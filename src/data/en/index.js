@@ -335,20 +335,25 @@ export const enNavigations = [
   { title: "Contact Hubertus", path: "#contact-us", showOnFooter: true },
 ];
 
-export const persons = [
+export const enPersons = [
   {
-    name: "Shahrokh Zar'ei",
-    education: "PhD in Mechanical Engineering",
-    description:
-      "A seasoned mechanical expert with years of experience in designing and manufacturing various machines and equipment. He holds multiple patents related to different machinery and has won a silver medal for inventions from Switzerland.",
-    image: "/img/persons/shahrokh-zarei.webp",
+    name: "Dr. Shahrokh Zarei",
+    education: "Ph.D. in Mechanical Engineering",
+    description: [
+      "Experienced specialist in industrial machinery design and manufacturing",
+      "Holder of multiple national and international patents in machinery",
+      "Silver medal winner at Switzerland Inventions Competition",
+    ],
+    image: "img/persons/shahrokh-zarei.webp",
   },
   {
-    name: "Shahin Zar'ei",
-    education: "Bachelor's in Civil Engineering",
-    description:
-      "A civil engineer with several years of experience in producing amusement park equipment and executing civil and operational projects in workshops, etc.",
-    image: "/img/persons/shahin-zarei.webp",
+    name: "Shahin Zarei",
+    education: "Bachelor of Civil Engineering",
+    description: [
+      "Civil engineer with years of experience in amusement ride manufacturing",
+      "Specialized in executive and operational aspects of construction projects",
+    ],
+    image: "img/persons/shahin-zarei.webp",
   },
 ];
 
@@ -363,3 +368,51 @@ export const benefits = {
     "Three years of after-sales service",
   ],
 };
+
+export const enTestimonials = {
+  title: "Testimonials  ",
+  subTitle: "Here's what our customers said",
+  description:
+    "Testimonials is a great way to increase the brand trust and awareness. Use this section to highlight your popular customers.",
+  items: [
+    {
+      title: "Sarah Steiner",
+      subTitle: "VP Sales at Google",
+      description:
+        "Share a real testimonial that hits some of your benefits from one of your popular customer.",
+    },
+    {
+      title: "Dylan Ambrose",
+      subTitle: "Lead marketer at Netflix",
+      description:
+        "Make sure you only pick the right sentence to keep it short and simple.",
+    },
+    {
+      title: "Gabrielle Winn",
+      subTitle: "Co-founder of Acme Inc",
+      description:
+        "This is an awesome landing page template I have seen. I would use this for anything.",
+    },
+  ],
+};
+
+export const enFaq = [
+  {
+    question: "Is this template completely free to use?",
+    answer: "Yes, this template is completely free to use.",
+  },
+  {
+    question: "Can I use it in a commercial project?",
+    answer: "Yes, this you can.",
+  },
+  {
+    question: "What is your refund policy? ",
+    answer:
+      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+  },
+  {
+    question: "Do you offer technical support? ",
+    answer:
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+  },
+];
