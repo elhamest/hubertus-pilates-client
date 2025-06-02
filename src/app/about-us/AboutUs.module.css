@@ -11,7 +11,7 @@
 }
 
 .boxDescription {
-  font-size: 17px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 200%;
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 113%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .boxSubtitle {

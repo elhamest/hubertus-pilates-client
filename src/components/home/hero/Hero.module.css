@@ -26,8 +26,8 @@
   background-image: linear-gradient(
     349deg,
     var(--supporting-color-gray) 0%,
-    var(--accent-color-blue) 50%,
-    var(--accent-color-blue) 100%
+    var(--wood-color) 50%,
+    var(--darker-wood-color) 100%
   );
 
   width: 100%;
@@ -47,6 +47,19 @@
   font-weight: 500;
 }
 
+.fancy {
+  color: var(--neutral-white-color);
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cpath fill='%23f4f4f4' d='M0 0h800v400H0z'/%3E%3Cg fill='%23eab464' opacity='0.6'%3E%3Cpath d='M200 0v200L0 0zm400 0v200L200 0zm200 0v200L400 0z'/%3E%3Cpath d='M0 400V200l200 200zm400 0V200l-200 200zm200 0V200l-200 200z'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
 .descriptionContainer h2 {
   font-size: 16px;
   font-weight: 200;
@@ -63,23 +76,30 @@
 
 .viewProducts a {
   display: inline-block;
-  background-color: var(--neutral-white-color);
-  padding: 16px 40px;
+  background: var(--accent-color-gold);
+  padding: 20px 30px;
   font-size: 16px;
-  font-weight: 300;
-  border-radius: 10px;
-  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 2px solid var(--accent-color-gold);
+  color: var(--darker-wood-color);
+  /* color: var(--primary-dark-color); */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+  width: auto;
+  min-width: 220px;
   text-align: center;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  letter-spacing: 1px;
-  width: 100%;
-  box-sizing: border-box;
+  margin-top: 30px;
 }
 
 .viewProducts a:hover {
-  color: var(--primary-color);
-  letter-spacing: 1.2px;
+  background: transparent;
+  color: var(--dark-wood-color);
+  border-color: var(--accent-color-gold);
 }
 
 @media (max-width: 768px) {

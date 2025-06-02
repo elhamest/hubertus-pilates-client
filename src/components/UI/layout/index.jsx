@@ -6,7 +6,9 @@ const Layout = ({ children, locale = "fa" }) => {
 
   return (
     <div>
-      <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+      {pathToTitleMap && (
+        <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+      )}
       <main>{children}</main>
     </div>
   );

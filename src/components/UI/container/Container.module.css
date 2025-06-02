@@ -1,11 +1,15 @@
 .container {
   width: 100%;
-  padding: 3.5rem;
+  padding: 3rem 3.5rem;
+}
+
+.extraPadding {
+  padding: 3rem 5rem;
 }
 
 @media (max-width: 640px) {
   .container {
-    padding: 1.2rem;
+    padding: 1.2rem !important;
     width: 95%;
   }
 }

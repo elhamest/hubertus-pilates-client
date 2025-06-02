@@ -1,12 +1,11 @@
 .productWrapper {
-  margin: 0 60px;
-  max-width: 1300px;
+  margin: 0 30px;
   padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 80px;
-  max-width: 1200px;
+  max-width: 1300px; /*1200*/
 }
 
 .imageContainer {
@@ -64,6 +63,8 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--dark-gray-color);
+  text-align: justify;
+  line-height: 2;
 }
 
 .featureBox ul li > span {
@@ -100,4 +101,10 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #1f2937;
+}
+
+@media (min-width: 1500px) {
+  .productWrapper {
+    margin: 0 30px 0 60px;
+  }
 }

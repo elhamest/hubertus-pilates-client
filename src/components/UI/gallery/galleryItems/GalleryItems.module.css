@@ -12,15 +12,6 @@
   transform: translateY(-1px);
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: var(
-      --dark-mode-card-bg
-    ) !important; /* Use the variable for dark mode */
-  }
-}
-
 .imageContainer {
   position: relative;
   width: 100%;
@@ -46,6 +37,20 @@
   font-weight: 500;
   color: var(--dark-gray-color);
   text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.card:hover .cardTitle {
+  color: var(--primary-color);
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(
+      --dark-mode-card-bg
+    ) !important; /* Use the variable for dark mode */
+  }
 }
 
 @media (min-width: 900px) {
@@ -53,9 +58,9 @@
   .cardSlider {
     flex: 0 0 335px;
   }
-  /* Fixed width for product cards 400px */
+  /* Fixed width for product cards 335px */
   .cardProduct {
-    flex: 0 0 340px;
+    flex: 0 0 335px;
   }
 
   .cardSlider .imageContainer {

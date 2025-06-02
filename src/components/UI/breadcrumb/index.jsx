@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Container } from "./container";
+import { BreadCrumbContainer } from "./container";
 
 import styles from "./Breadcrumb.module.css";
 
@@ -12,8 +12,12 @@ const Breadcrumb = ({ locale, pathToTitleMap }) => {
   // The filter keeps only truthy values (empty strings are falsy)
   const pathSegments = pathname?.split("/")?.filter((x) => x);
 
+  if (!pathSegments || pathSegments.length === 0) {
+    return null;
+  }
+
   return (
-    <Container>
+    <BreadCrumbContainer>
       {pathSegments?.length > 0 && (
         <nav className={styles.breadcrumb} aria-label="breadcrumb">
           <ol style={{ direction: locale === "fa" ? "rtl" : "ltr" }}>
@@ -51,7 +55,7 @@ const Breadcrumb = ({ locale, pathToTitleMap }) => {
           </ol>
         </nav>
       )}
-    </Container>
+    </BreadCrumbContainer>
   );
 };
 

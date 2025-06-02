@@ -1,6 +1,6 @@
 "use client";
 
-import GalleryItems from "@/components/UI/gallery/galleryItems/GalleryItems";
+import GalleryItems from "@/components/UI/gallery/galleryItems";
 import { faConstants } from "../../../public/locales/fa/common";
 import { faProductCollections } from "@/data/fa";
 import { Container } from "@/components/UI/container";
