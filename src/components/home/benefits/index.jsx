@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle } from "../../UI/slider/section-title";
+import { SectionTitle } from "../../UI/section-title";
 
 import styles from "./Benefits.module.css";
 import { faBenefits } from "../../../data/fa";

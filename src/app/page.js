@@ -2,7 +2,7 @@
 import { Container } from "@/components/UI/container";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Hero } from "@/components/home/hero";
-import { SectionTitle } from "@/components/UI/slider/section-title";
+import { SectionTitle } from "@/components/UI/section-title";
 import { Video } from "@/components/home/video";
 import { Testimonials } from "@/components/home/testimonials";
 import { Faq } from "@/components/home/faq";

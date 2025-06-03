@@ -23,6 +23,11 @@
   animation: fill-gradient 0.5s ease-in-out forwards;
 }
 
+@media (max-width: 768px) {
+  .slugWrapper div:nth-child(2) {
+    padding-left: 0;
+  }
+}
 @media (min-width: 1024px) {
   .footerContainer {
     gap: 3rem;
