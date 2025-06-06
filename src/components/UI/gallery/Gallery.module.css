@@ -5,14 +5,16 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
 
 .headerTitle {
-  font-size: 1.5rem; /* Smaller font size for mobile */
+  color: var(--accent-color-blue-dark);
+  font-size: 1.5rem;
   font-weight: 500;
+  /* dark:text-neutralWhiteColor */
 }
 
 /* Navigation Buttons */
@@ -25,6 +27,7 @@
   height: 24px;
   stroke: var(--primary-color);
 }
+
 @media (prefers-color-scheme: dark) {
   .headerIndicators .navigatorSvg {
     stroke: var(--pure-white-color);
@@ -39,6 +42,11 @@
   padding: 10px 0;
 }
 
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+}
 @media (min-width: 900px) {
   .headerTitle {
     font-size: 2rem;

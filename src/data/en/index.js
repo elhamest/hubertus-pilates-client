@@ -332,7 +332,7 @@ export const enNavigations = [
   { title: "Home Page", path: "/", showOnFooter: false },
   { title: "Products", path: "/collections", showOnFooter: true },
   { title: "About Hubertus", path: "/about-us", showOnFooter: true },
-  { title: "Contact Hubertus", path: "#contact-us", showOnFooter: true },
+  { title: "Contact Us", path: "#contact-us", showOnFooter: true },
 ];
 
 export const enPersons = [

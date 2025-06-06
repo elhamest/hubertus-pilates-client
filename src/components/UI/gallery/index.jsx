@@ -18,11 +18,7 @@ const Gallery = ({ title, items }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <h2
-          className={`${styles.headerTitle} text-accentColorBlueDark dark:text-neutralWhiteColor`}
-        >
-          {title}
-        </h2>
+        <h2 className={styles.headerTitle}>{title}</h2>
         <div className={`flex gap-4 ltr ${styles.headerIndicators}`}>
           <NavButton onClick={moveLeft} label="Previous">
             <svg
