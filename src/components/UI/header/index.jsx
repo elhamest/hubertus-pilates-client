@@ -48,7 +48,7 @@ const Header = ({ locale = "fa" }) => {
         isScrolled && resolvedTheme === "light" ? styles.scrolledLight : ""
       } ${isScrolled && resolvedTheme === "dark" ? styles.scrolledDark : ""}`}
     >
-      <nav className="container relative flex flex-wrap items-center justify-between mx-auto lg:justify-between">
+      <nav className="container relative flex flex-wrap items-center justify-between mx-auto">
         {/* Logo  */}
         <Link href="/">
           <span
@@ -72,7 +72,11 @@ const Header = ({ locale = "fa" }) => {
           </span>
         </Link>
 
-        <div className="flex items-center lg:order-2">
+        {/* Theme Changer */}
+        <div
+          className="flex items-center lg:order-2"
+          style={{ zIndex: "1050" }}
+        >
           <div
             className={`gap-3 ml-5 lg:ml-0 lg:flex mr-auto lg:mr-0 lg:order-2 ${
               isScrolled ? styles.scrolledThemeChanger : ""
@@ -111,7 +115,7 @@ const Header = ({ locale = "fa" }) => {
         {/* Mobile menu */}
         {isOpen && (
           <div
-            className={`flex flex-wrap w-full mt-5 lg:hidden ${styles.mobileMenu} ${styles.open}`}
+            className={`flex flex-wrap w-full mt-5 lg:hidden lightShadow ${styles.mobileMenu} ${styles.open}`}
           >
             <MobileNavbar navigations={navigations} setIsOpen={setIsOpen} />
           </div>

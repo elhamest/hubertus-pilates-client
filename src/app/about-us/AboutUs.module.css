@@ -15,9 +15,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 200%;
-  text-align: justify;
+  text-align: unset;
   list-style-type: disc;
-  padding: 0 70px;
+  padding: 0 10px;
 }
 .boxWrapper ul li {
   list-style-position: inside;
@@ -84,5 +84,10 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
     margin: 80px 0 60px;
+  }
+
+  .boxDescription {
+    padding: 0 70px;
+    text-align: justify;
   }
 }

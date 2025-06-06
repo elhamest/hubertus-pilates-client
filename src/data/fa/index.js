@@ -336,7 +336,7 @@ export const faNavigations = [
   { title: "صفحه اصلی", path: "/", showOnFooter: false },
   { title: "محصولات", path: "/collections", showOnFooter: true },
   { title: "درباره هوبرتوس", path: "/about-us", showOnFooter: true },
-  { title: "تماس با هوبرتوس", path: "#contact-us", showOnFooter: true },
+  { title: "تماس با ما", path: "#contact-us", showOnFooter: true },
 ];
 
 export const faProducts = [

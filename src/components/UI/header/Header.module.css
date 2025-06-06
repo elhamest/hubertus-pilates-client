@@ -25,9 +25,6 @@
 }
 .navbarWrapper.scrolledDark {
   background-color: rgb(33, 40, 48, 0.95);
-  /* #212830; */
-
-  /* rgba(43, 43, 43, 0.95); */
 }
 
 .scrolledLogo {
@@ -41,19 +38,16 @@
     background-color: rgba(0, 0, 0, 0.95); 
   } */
 
-@media (min-width: 1200px) {
-  .navbarWrapper {
-    padding: 30px 70px;
-  }
-}
-
 @media (min-width: 768px) {
   .navbarWrapper {
     padding: 30px 50px;
   }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 1200px) {
+  .navbarWrapper {
+    padding: 30px 70px;
+  }
   .logoText {
     display: block;
   }
@@ -66,11 +60,12 @@
     top: 0;
     left: -100%;
     width: 250px;
-    height: 100vh;
+    max-height: 100vh;
+    min-height: 300px;
     background-color: rgba(249, 249, 249, 0.95);
     transition: left 0.3s ease-in-out;
     z-index: 1000;
-    padding-top: 60px; /* Adjust based on your navbar height */
+    padding-top: 60px; /* Adjust based on the navbar height */
   }
 
   .mobileMenu.open {
@@ -83,7 +78,5 @@
   .mobileMenu {
     width: 100%;
     background-color: rgba(249, 249, 249, 0.95);
-    /* padding-top: 60px;  */
-    /* Adjust based on your navbar height */
   }
 }
