@@ -34,7 +34,7 @@ export function PopupWidget() {
   }, []);
 
   const onSubmit = (data) => {
-    const mailtoUrl = `mailto:e.estedlali@gmail.com?subject=${encodeURIComponent(
+    const mailtoUrl = `mailto:info@hubertuspilates.com?subject=${encodeURIComponent(
       `${userName} sent a message from Hubertus site`
     )}&body=${encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`
