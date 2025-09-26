@@ -20,22 +20,30 @@ const Gallery = ({ title, items }) => {
       <div className={styles.header}>
         <h2 className={styles.headerTitle}>{title}</h2>
         <div className={`flex gap-4 ltr ${styles.headerIndicators}`}>
-          <NavButton onClick={moveLeft} label="Previous">
+          <button
+            className={styles.circleButton}
+            onClick={moveLeft}
+            aria-label="Previous"
+          >
             <svg
               className={`icon icon-chevron-left ${styles.navigatorSvg}`}
               viewBox="0 0 24 24"
             >
-              <path d="M14 6L8 12L14 18" stroke="#905a98"></path>
+              <path d="M14 6L8 12L14 18" fill="#905a98"></path>
             </svg>
-          </NavButton>
-          <NavButton onClick={moveRight} label="Next">
+          </button>
+          <button
+            className={styles.circleButton}
+            onClick={moveRight}
+            aria-label="Next"
+          >
             <svg
               className={`icon icon-chevron-rigth ${styles.navigatorSvg}`}
               viewBox="0 0 24 24"
             >
-              <path d="M10 6L16 12L10 18" stroke="#905a98"></path>
+              <path d="M10 6L16 12L10 18" fill="#905a98"></path>
             </svg>
-          </NavButton>
+          </button>
         </div>
       </div>
 
