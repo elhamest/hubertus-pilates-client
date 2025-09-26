@@ -22,15 +22,40 @@
   display: none;
 }
 
-.headerIndicators .navigatorSvg {
+.circleButton {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.circleButton .navigatorSvg {
   width: 24px;
   height: 24px;
-  stroke: var(--primary-color);
+}
+.circleButton .navigatorSvg path {
+  fill: var(--primary-color);
+}
+
+.circleButton:hover {
+  background-color: var(--primary-color);
+}
+
+.circleButton:hover .navigatorSvg path {
+  fill: var(--pure-white-color);
 }
 
 @media (prefers-color-scheme: dark) {
-  .headerIndicators .navigatorSvg {
-    stroke: var(--pure-white-color);
+  .circleButton .navigatorSvg path {
+    fill: var(--pure-white-color);
+  }
+  .circleButton {
+    border-color: #4b5563;
   }
 }
 

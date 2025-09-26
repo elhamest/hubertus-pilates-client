@@ -12,6 +12,7 @@
 :root {
   --primary-color: #905a98;
   --primary-dark-color: #453847;
+  --dark-secondary-color: #6a4c6f;
 
   /* Secondary Colors */
   --ligth-secondary-color: #b695b9;
@@ -48,6 +49,8 @@
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 
   --dark-accent-color: #b695b9;
+
+  --transition-400: 0.4s ease;
 }
 
 .dark .dark\:bg-dark-gray {

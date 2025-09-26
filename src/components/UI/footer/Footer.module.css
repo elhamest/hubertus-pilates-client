@@ -23,6 +23,23 @@
   animation: fill-gradient 0.5s ease-in-out forwards;
 }
 
+.telWrapper {
+  color: var(--accent-color-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: default;
+}
+
+.telWrapper:hover a {
+  color: var(--dark-secondary-color);
+}
+.telWrapper a {
+  text-align: right;
+  direction: ltr;
+  transition: all var(--transition-400);
+}
+
 @media (max-width: 768px) {
   .slugWrapper div:nth-child(2) {
     padding-left: 0;

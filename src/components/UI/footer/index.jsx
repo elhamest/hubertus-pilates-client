@@ -81,14 +81,10 @@ export function Footer() {
                 </div>
               </div>
 
-              <div className="text-accentColorBlue hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 flex gap-2 flex-col">
+              <div className={`${styles.telWrapper} dark:text-accentColorGary`}>
                 <div className="font-medium">{faConstants.contactUs}</div>
-                <div className="text-right" style={{ direction: "ltr" }}>
-                  +989149191831
-                </div>
-                <div className="text-right" style={{ direction: "ltr" }}>
-                  +989149191832
-                </div>
+                <a href="tel:+989149191831">+989149191831</a>
+                <a href="tel:+989149191832">+989149191832</a>
               </div>
             </div>
           </div>
