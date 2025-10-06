@@ -1,26 +1,76 @@
+//----- reformers
 import cReformersImg from "../../../public/img/collections/reformers/c-reformers.webp";
-import classicReformerImg from "../../../public/img/collections/reformers/classic-reformer.webp";
-import reformerWithTowerImg from "../../../public/img/collections/reformers/reformer-with-tower.webp";
-import reformerComboImg from "../../../public/img/collections/reformers/reformer-combo.webp";
-//
+// classic-reformer
+import classicReformerImg1 from "../../../public/img/collections/reformers/classic-reformer/classic-reformer.webp";
+import classicReformerImg2 from "../../../public/img/collections/reformers/classic-reformer/17-reformer-classic-1.png";
+import classicReformerImg3 from "../../../public/img/collections/reformers/classic-reformer/18-reformer-classic-2.png";
+import classicReformerImg4 from "../../../public/img/collections/reformers/classic-reformer/19-reformer-classic-3.png";
+import classicReformerImg5 from "../../../public/img/collections/reformers/classic-reformer/20-reformer-classic-4.png";
+import classicReformerImg6 from "../../../public/img/collections/reformers/classic-reformer/21-reformer-classic-5.png";
+import classicReformerImg7 from "../../../public/img/collections/reformers/classic-reformer/22-reformer-classic-6.png";
+import classicReformerImg8 from "../../../public/img/collections/reformers/classic-reformer/23-reformer-classic-7.png";
+import classicReformerImg9 from "../../../public/img/collections/reformers/classic-reformer/24-reformer-classic-8.png";
+import classicReformerImg10 from "../../../public/img/collections/reformers/classic-reformer/25-reformer-classic-9.png";
+import classicReformerImg11 from "../../../public/img/collections/reformers/classic-reformer/26-reformer-classic-10.png";
+// reformer-with-tower
+import reformerWithTowerImg1 from "../../../public/img/collections/reformers/reformer-with-tower/reformer-with-tower.webp";
+import reformerWithTowerImg2 from "../../../public/img/collections/reformers/reformer-with-tower/30-reformer-with-tower-1.png";
+import reformerWithTowerImg3 from "../../../public/img/collections/reformers/reformer-with-tower/31-reformer-with-tower-2.png";
+// reformer-combo
+import reformerComboImg1 from "../../../public/img/collections/reformers/reformer-combo/reformer-combo.webp";
+import reformerComboImg2 from "../../../public/img/collections/reformers/reformer-combo/13-reformer-combo-cadillac-1.png";
+import reformerComboImg3 from "../../../public/img/collections/reformers/reformer-combo/14-reformer-combo-cadillac-2.png";
+import reformerComboImg4 from "../../../public/img/collections/reformers/reformer-combo/15-reformer-combo-cadillac-3.png";
+import reformerComboImg5 from "../../../public/img/collections/reformers/reformer-combo/16-reformer-combo-cadillac-4.png";
+import reformerComboImg6 from "../../../public/img/collections/reformers/reformer-combo/27-reformer-combo-cadillac-5.png";
+import reformerComboImg7 from "../../../public/img/collections/reformers/reformer-combo/28-reformer-combo-cadillac-6.png";
+import reformerComboImg8 from "../../../public/img/collections/reformers/reformer-combo/29-reformer-combo-cadillac-7.png";
+import reformerComboImg9 from "../../../public/img/collections/reformers/reformer-combo/32-reformer-combo-cadillac-8.png";
+
+//----- towers-trapeze-systems
 import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp";
-import cadillacTrapezeTableImg from "../../../public/img/collections/towers-and-trapeze-systems/cadillac-(trapeze-table).webp";
-import wallTowerUnitImg from "../../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit.webp";
-import wallUnitImg from "../../../public/img/collections/towers-and-trapeze-systems/wall-unit.webp";
-//
+// cadillac
+import cadillacTrapezeTableImg1 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/cadillac-(trapeze-table).webp";
+// wall-tower-unit
+import wallTowerUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit/wall-tower-unit.webp";
+// wall-unit
+import wallUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-unit/wall-unit.webp";
+
+//----- chairs-and-barrels
 import cChairsBarrelsImg from "../../../public/img/collections/chairs-and-barrels/c-chairs-barrels.webp";
-import ladderBarrelImg from "../../../public/img/collections/chairs-and-barrels/ladder-barrel.webp";
-import wundaChairImg from "../../../public/img/collections/chairs-and-barrels/wunda-chair.webp";
-import spineCorrectorImg from "../../../public/img/collections/chairs-and-barrels/spine-corrector.webp";
-import armChairImg from "../../../public/img/collections/chairs-and-barrels/arm-chair.webp";
-//
+// ladder-barrel
+import ladderBarrelImg1 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/ladder-barrel.webp";
+import ladderBarrelImg2 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/09-ladder-barrel-1.png";
+import ladderBarrelImg3 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/10-ladder-barrel-2.png";
+import ladderBarrelImg4 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/11-ladder-barrel-3.png";
+import ladderBarrelImg5 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/12-ladder-barrel-4.png";
+// wunda-chair
+import wundaChairImg1 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/wunda-chair.webp";
+import wundaChairImg2 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/03-wunda-chair-1.png";
+import wundaChairImg3 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/04-wunda-chair-2.png";
+import wundaChairImg4 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/05-wunda-chair-3.png";
+import wundaChairImg5 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/06-wunda-chair-4.png";
+import wundaChairImg6 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/07-wunda-chair-5.png";
+import wundaChairImg7 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/08-wunda-chair-6.png";
+// spine-corrector
+import spineCorrectorImg1 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/spine-corrector.webp";
+import spineCorrectorImg2 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/01-spine-corrector-1.png";
+import spineCorrectorImg3 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/02-spine-corrector-2.png";
+// arm-chair
+import armChairImg1 from "../../../public/img/collections/chairs-and-barrels/arm-chair/arm-chair.webp";
+
+//-----
 import cAdditionalPilatesEquipmentImg from "../../../public/img/collections/additional-pilates-equipment/c-additional-pilates-equipment.webp";
-import arcImg from "../../../public/img/collections/additional-pilates-equipment/arc.webp";
-import woodenPoleImg from "../../../public/img/collections/additional-pilates-equipment/wooden-pole.webp";
-import pedOPullImg from "../../../public/img/collections/additional-pilates-equipment/ped-o-pull.webp";
+// arc
+import arcImg1 from "../../../public/img/collections/additional-pilates-equipment/arc/arc.webp";
+// wooden-pole
+import woodenPoleImg1 from "../../../public/img/collections/additional-pilates-equipment/wooden-pole/wooden-pole.webp";
 //
+import pedOPullImg1 from "../../../public/img/collections/additional-pilates-equipment/ped-o-pull/ped-o-pull.webp";
+//-----
+
 const pClassicReformer = {
-  // title: "ریفورمر کلاسیک (Classic Reformer)",
+  // "ریفورمر کلاسیک (Classic Reformer)",
   desc: "سطح تمرینات پیلاتس خود با استفاده از ریفورمر کالسیک بالا ببرید. این دستگاه یکی از اصلی‌ترین وسایل تمرینی پیلاتس است که به شما در تقویت عضلات مرکزی، بهبود تعادل و انعطاف پذیری کمک می‌کند.",
   bullets: [
     {
@@ -135,7 +185,7 @@ const pLadderBarrel = {
 };
 
 const pWundaChair = {
-  // title: "وندا چیر(Wunda Chair)",
+  // "وندا چیر(Wunda Chair)",
   desc: "صندلی ووندا، یک وسیله متفاوت و چالش‌برانگیز در تمرین‌های پیلاتس است. این صندلی توسط جوزف پیلاتس اختراع شده است. صرف‌نظر از اینکه شما مبتدی یا پیشرفته هستید، صندلی ووندا می‌تواند به شما در دستیابی به قدرت عضلانی، به ویژه در پاها، هسته و بازوها، انعطاف‌پذیری و کنترل بیشتر بدن کمک کند.",
   bullets: [
     {
@@ -198,27 +248,56 @@ export const faProductCollections = [
     items: [
       {
         title: "ریفورمر کلاسیک",
-        image: classicReformerImg,
+        // image: classicReformerImg1,
         slug: "classic-reformer",
         desc: "با ریفورمر کلاسیک، سطح تمرینات پیلاتس خود را ارتقا دهید. این دستگاه اصلی پیلاتس، به تقویت عضلات مرکزی، بهبود تعادل و افزایش انعطاف‌پذیری کمک می‌کند و برای همه سطوح، از مبتدی تا پیشرفته، مناسب است.",
         detail: pClassicReformer,
         id: 1,
+        images: [
+          classicReformerImg1,
+          classicReformerImg2,
+          classicReformerImg3,
+          classicReformerImg4,
+          classicReformerImg5,
+          classicReformerImg6,
+          classicReformerImg7,
+          classicReformerImg8,
+          classicReformerImg9,
+          classicReformerImg10,
+          classicReformerImg11,
+        ],
       },
       {
         title: "ریفورمر با تاور یا وال",
-        image: reformerWithTowerImg,
+        // image: reformerWithTowerImg1,
         slug: "reformer-with-tower",
         desc: "ریفورمر با تاور، یکی از دستگاه‌های پرکاربرد پیلاتس است که ترکیبی از ریفورمر و وال یونیت می‌باشد. این دستگاه برای افراد مبتدی و پیشرفته مناسب است و به بهبود وضعیت بدن، انعطاف‌پذیری، قدرت عضلات مرکزی و کاهش وزن کمک می‌کند.",
         detail: pReformerWithTower,
         id: 2,
+        images: [
+          reformerWithTowerImg1,
+          reformerWithTowerImg2,
+          reformerWithTowerImg3,
+        ],
       },
       {
         title: "کادیلاک ریفورمر (کومبو ریفورمر)",
-        image: reformerComboImg,
+        // image: reformerComboImg1,
         slug: "reformer-combo",
         desc: "کادیلاک ریفورمر ترکیبی از ریفورمر و کادیلاک است که تمرینات متنوعی را برای گروه‌های عضلانی مختلف ارائه می‌دهد. قابل تنظیم برای همه سطوح، این دستگاه برای سالن‌های خانگی و حرفه‌ای، به‌ویژه در فضاهای محدود، ایده‌آل است.",
         detail: pReformerCombo,
         id: 3,
+        images: [
+          reformerComboImg1,
+          reformerComboImg2,
+          reformerComboImg3,
+          reformerComboImg4,
+          reformerComboImg5,
+          reformerComboImg6,
+          reformerComboImg7,
+          reformerComboImg8,
+          reformerComboImg9,
+        ],
       },
     ],
   },
@@ -231,27 +310,30 @@ export const faProductCollections = [
     items: [
       {
         title: "کادیلاک",
-        image: cadillacTrapezeTableImg,
+        // image: cadillacTrapezeTableImg1,
         slug: "cadillac",
         desc: "کادیلاک، یکی از برجسته‌ترین دستگاه‌های پیلاتس، تمرینی کامل برای تقویت عضلات مرکزی، انعطاف‌پذیری، قدرت و تعادل ارائه می‌دهد. با قابلیت تنظیم مقاومت و شدت، برای افراد مبتدی و پیشرفته مناسب است.",
         detail: pCadilac,
         id: 4,
+        images: [cadillacTrapezeTableImg1],
       },
       {
         title: "وال یونیت",
-        image: wallTowerUnitImg,
+        // image: wallTowerUnitImg1,
         slug: "wall-tower-unit",
         desc: "وال یونیت با اتصالات متنوع و باندهای مقاومتی قابل تنظیم، طیف گسترده‌ای از تمرینات را برای همه سطوح فراهم می‌کند. این دستگاه شامل تشک میله‌دار و دیواره با میله پوش‌بار است و برای سالن‌های خانگی و فضاهای محدود ایده‌آل می‌باشد.",
         detail: pWallUnit,
         id: 5,
+        images: [wallTowerUnitImg1],
       },
       {
         title: "وال یونیت دیواری",
-        image: wallUnitImg,
+        // image: wallUnitImg1,
         slug: "wall-unit",
         desc: null,
         detail: null,
         id: 6,
+        images: [wallUnitImg1],
       },
     ],
   },
@@ -265,35 +347,53 @@ export const faProductCollections = [
     items: [
       {
         title: "لدربرل",
-        image: ladderBarrelImg,
+        // image: ladderBarrelImg1,
         slug: "ladder-barrel",
         desc: "لدر برل، وسیله‌ای پرکاربرد در پیلاتس، به بهبود انعطاف‌پذیری، قدرت و سلامت مهره‌های پشتی کمک می‌کند. این دستگاه تمرینات متنوعی برای شانه‌ها، باسن و بهبود وضعیت بدن ارائه می‌دهد و برای افراد مبتدی و پیشرفته مناسب است.",
         detail: pLadderBarrel,
         id: 7,
+        images: [
+          ladderBarrelImg1,
+          ladderBarrelImg2,
+          ladderBarrelImg3,
+          ladderBarrelImg4,
+          ladderBarrelImg5,
+        ],
       },
       {
         title: "ونداچیر (صندلی تعادلی)",
-        image: wundaChairImg,
+        // image: wundaChairImg1,
         slug: "wunda-chair",
         desc: "صندلی ووندا، وسیله‌ای چالش‌برانگیز و منحصربه‌فرد در پیلاتس، برای تقویت قدرت عضلانی (به‌ویژه پاها، هسته و بازوها)، افزایش انعطاف‌پذیری و بهبود کنترل بدن طراحی شده است. این دستگاه برای همه سطوح، از مبتدی تا پیشرفته، مناسب است.",
         detail: pWundaChair,
         id: 8,
+        images: [
+          wundaChairImg1,
+          wundaChairImg2,
+          wundaChairImg3,
+          wundaChairImg4,
+          wundaChairImg5,
+          wundaChairImg6,
+          wundaChairImg7,
+        ],
       },
       {
         title: "اسپین کوررکتور",
-        image: spineCorrectorImg,
+        // image: spineCorrectorImg,
         slug: "spine-corrector",
         desc: "اسپین کورکتور ابزاری حرفه‌ای در پیلاتس است که با طراحی ارگونومیک خود، منحنی‌های طبیعی ستون فقرات را شبیه‌سازی می‌کند. این وسیله با بهبود تراز ستون فقرات و تقویت قدرت پایه، عملکرد شما را در پیلاتس افزایش می‌دهد و برای همه سطوح، از مبتدی تا پیشرفته، مناسب است.",
         detail: pSpineCorrector,
         id: 9,
+        images: [spineCorrectorImg1, spineCorrectorImg2, spineCorrectorImg3],
       },
       {
         title: "آرم چیر",
-        image: armChairImg,
+        // image: armChairImg1,
         slug: "arm-chair",
         desc: "آرم چیر دستگاهی برای حرکات نشسته و کنترل‌شده است که قدرت، انعطاف‌پذیری و تعادل را بدون فشار غیرضروری بهبود می‌بخشد. این دستگاه برای افراد مسن یا با تحرک محدود ایده‌آل است و با تمرکز بر عضلات کلیدی مانند هسته، بازوها و پاها، همراه با تکنیک‌های تنفسی، آرامش و بهبود عملکرد فیزیکی را فراهم می‌کند.",
         detail: pArmChair,
         id: 10,
+        images: [armChairImg1],
       },
     ],
   },
@@ -306,27 +406,30 @@ export const faProductCollections = [
     items: [
       {
         title: "Arc",
-        image: arcImg,
+        // image: arcImg1,
         slug: "arc",
         desc: null,
         detail: null,
         id: 11,
+        images: [arcImg1],
       },
       {
         title: "میله چوبی",
-        image: woodenPoleImg,
+        // image: woodenPoleImg1``,
         slug: "wooden-pole",
         desc: null,
         detail: null,
         id: 12,
+        images: [woodenPoleImg1],
       },
       {
         title: "پد و پول",
-        image: pedOPullImg,
+        // image: pedOPullImg1,
         slug: "ped-o-pull",
         desc: null,
         detail: null,
         id: 13,
+        images: [pedOPullImg1],
       },
     ],
   },

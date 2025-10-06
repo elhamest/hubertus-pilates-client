@@ -20,7 +20,7 @@ export function Collection({ items }) {
                 className={`relative overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100 p-4 ${styles.imageWrapper}`}
               >
                 <Image
-                  src={item?.image}
+                  src={item?.images?.at(0)}
                   alt={item?.title}
                   fill
                   // style={{ objectFit: "cover", width: "100%", height: "auto" }}

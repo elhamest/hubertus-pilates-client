@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
+
 import { faProductCollections } from "@/data/fa";
 import { enProductCollections } from "@/data/en";
 import { Container } from "@/components/UI/container";
-import Image from "next/image";
+
 import style from "./Product.module.css";
 
 export default async function ProductPage({ params, locale = "fa" }) {
@@ -39,7 +41,7 @@ export default async function ProductPage({ params, locale = "fa" }) {
         <div className={`${style.productWrapper} pageInnerWrapper`}>
           <div className={style.imageContainer}>
             <Image
-              src={founded.item?.image}
+              src={founded.item?.images?.at(0)}
               alt={founded.item?.title}
               width={500}
               height={500}
