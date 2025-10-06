@@ -11,7 +11,7 @@ function CollectionsPage() {
   return (
     <Container>
       <div className="pageWrapper pageHeight">
-        <h1 className="dark:text-neutralWhiteColor">
+        <h1 className="dark:text-offWhiteColor">
           {faConstants.allCollectionsTitle}
         </h1>
 

@@ -23,7 +23,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  border: 1px solid var(--ligth-secondary-color);
+  border: 1px solid var(--primary-color-light);
   border-radius: 50%;
   width: 56px;
   height: 56px;
@@ -48,12 +48,12 @@
 
 @media (prefers-color-scheme: dark) {
   .headerIndicators button svg {
-    stroke: var(--pure-white-color);
+    stroke: var(--pure-white);
   }
 }
 
 .mainSliderPagination [class*="swiper-pagination-bullet"] {
-  background-color: var(--ligth-secondary-color);
+  background-color: var(--primary-color-light);
   width: 15px;
   height: 8px;
   border-radius: 4px;

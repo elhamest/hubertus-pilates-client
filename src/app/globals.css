@@ -9,52 +9,61 @@
   }
 }
 
+/* دکمه‌های ثانویه */
+.secondary-button {
+  background: transparent;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
+}
+
+/* کارت محصولات */
+.product-card {
+  background: var(--pure-white);
+  border: 1px solid var(--light-gray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 :root {
-  --primary-color: #905a98;
-  --primary-dark-color: #453847;
-  --dark-secondary-color: #6a4c6f;
+  /* primary  */
+  /* --primary-color: #905a98;
+  --primary-color-dark: #7a4a82;
+  --primary-color-light: #a87ab0; */
 
-  /* Secondary Colors */
-  --ligth-secondary-color: #b695b9;
-  --ligther-secondary-color: #e9d5eb;
+  /* Current: #905a98 */
+  --primary-color: #7a4a82;
+  --primary-color-dark: #6a3a72;
+  --primary-color-light: #8a5a92;
 
-  --accent-color-gold: #eab464; /* Warm gold/amber, for buttons, highlights, or icons */
-  --accent-color-green: #7bb686; /* Sage green, for subtle backgrounds, badges, or callouts */
-  --accent-color-coral: #ff857a; /* Soft coral, for attention-grabbing elements (sale, new) */
-  --wood-color: #d6a77a; /* Light wood, for backgrounds or accents */
-  --dark-wood-color: #9b5b1e;
-  --darker-wood-color: #5c4835;
-  --neutral-gray: #bfc4ca;
+  --earth-brown: #9b5b1e;
+  --earth-brown-dark: #834c15;
+  --earth-brown-light: #b37235;
 
-  /* Accent Colors */
+  /* Dark Neutrals */
+  --charcoal: #2d3748; /*  متن‌ها */
+  --dark-gray: #4a5568; /*  متن ثانویه */
+  --medium-gray: #718096; /*  متن غیرفعال */
+
+  /* Light Neutrals */
+  --light-gray: #edf2f7; /* پس‌زمینه‌های روشن */
+  --off-white: #f8f9fa; /* پس‌زمینه اصلی */
+  --pure-white: #ffffff; /*  قسمت‌های خاص */
+
+  /* Accent */
+  --accent-gold: #d4af37; /*   هایلایت */
+  --accent-teal: #2d9cdb; /*   لینک‌ها */
+  --success-green: #38a169;
   --accent-color-blue: #4a5f73;
   --accent-color-blue-dark: #3a4a5c;
   --accent-color-gray-dark: #a6a6a6;
-  --accent-color-gray-darker: #808080;
-  --accent-color-gray-light: #718096;
-  --accent-color-gray: #e2e8f0;
-  --border-color: #e5e7eb;
-
-  /* Supporting Colors */
-  --supporting-color-gray: #f4f4f4;
-
-  /* Neutral Colors */
-  --pure-white-color: #fff;
-  --neutral-white-color: #d1d7e0;
-  --off-white-color: #f7f7fa;
-  --dark-gray-color: #151b23;
-  --dark-mode-card-bg: #23272e;
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
-
-  --dark-accent-color: #b695b9;
 
   --transition-400: 0.4s ease;
 }
 
 .dark .dark\:bg-dark-gray {
-  background-color: var(--dark-gray-color);
+  background-color: var(--charcoal);
 }
 
 html {
@@ -65,7 +74,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--off-white-color);
+  background-color: var(--off-white);
 }
 
 .animateFadeInUp {
@@ -104,7 +113,7 @@ body {
     to right,
     var(--primary-color),
     var(--primary-color) 50%,
-    var(--neutral-white-color) 50%
+    var(--off-white) 50%
   );
 }
 
@@ -120,11 +129,11 @@ h3 {
 }
 
 h4 {
-  color: var(--accent-color-gray-darker);
+  color: var(--dark-gray);
 }
 
 p {
-  color: var(--accent-color-gray-light);
+  color: var(--medium-gray);
 }
 
 a {

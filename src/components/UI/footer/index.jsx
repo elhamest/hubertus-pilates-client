@@ -18,7 +18,7 @@ export function Footer() {
       <Container>
         <div>
           <div
-            className={`max-w-screen-xl d-flex pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-trueGray-700 ${styles.footerContainer}`}
+            className={`max-w-screen-xl d-flex pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-darkGray-700 ${styles.footerContainer}`}
           >
             <div className={styles.slugWrapper}>
               <div>
@@ -49,7 +49,7 @@ export function Footer() {
                 <Link
                   key={index}
                   href={item?.path}
-                  className="inline-block dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-trueGray-700"
+                  className="inline-block dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-darkGray-700"
                 >
                   {item?.title}
                 </Link>
@@ -58,7 +58,7 @@ export function Footer() {
 
             <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
               <div>
-                <div className="text-accentColorBlueDark hover:text-darkSecondaryColor dark:text-accentColorGary transition-all duration-400 font-semibold mb-2">
+                <div className="text-accentColorBlueDark hover:text-primaryColorDark dark:text-accentColorGary transition-all duration-400 font-semibold mb-2">
                   {faConstants.followUs}
                 </div>
                 <div className={styles.socialLinks}>

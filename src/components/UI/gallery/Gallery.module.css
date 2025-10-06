@@ -14,7 +14,7 @@
   color: var(--accent-color-blue-dark);
   font-size: 1.5rem;
   font-weight: 500;
-  /* dark:text-neutralWhiteColor */
+  /* dark:text-offWhiteColor */
 }
 
 /* Navigation Buttons */
@@ -47,12 +47,12 @@
 }
 
 .circleButton:hover .navigatorSvg path {
-  fill: var(--pure-white-color);
+  fill: var(--pure-white);
 }
 
 @media (prefers-color-scheme: dark) {
   .circleButton .navigatorSvg path {
-    fill: var(--pure-white-color);
+    fill: var(--pure-white);
   }
   .circleButton {
     border-color: #4b5563;

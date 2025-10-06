@@ -3,7 +3,7 @@
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: var(--pure-white-color);
+  background-color: var(--pure-white);
   transition: all 0.5s ease-in-out;
 }
 
@@ -23,7 +23,7 @@
 .boxTitle {
   font-size: 16px;
   font-weight: 600;
-  color: var(--dark-gray-color);
+  color: var(--charcoal);
   margin-bottom: 12px;
 }
 .contentWrapper {
@@ -50,7 +50,7 @@
   font-size: 15px;
   font-weight: 500;
   margin: 5px;
-  color: var(--accent-color-gray-light);
+  color: var(--medium-gray);
   position: absolute;
   left: 16px;
   bottom: 16px;

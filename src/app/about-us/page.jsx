@@ -9,10 +9,10 @@ const AboutUs = () => {
     <Container extraPadding>
       <div className="pageHeight">
         <div className={`${styles.companyWrapper} pageWrapper`}>
-          <h1 className="dark:text-neutralWhiteColor">{faAboutUs?.title} </h1>
-          <p className="dark:text-neutralWhiteColor">{faAboutUs?.desc1}</p>
-          <p className="dark:text-neutralWhiteColor">{faAboutUs?.desc2}</p>
-          <p className="dark:text-neutralWhiteColor">{faAboutUs?.desc3} </p>
+          <h1 className="dark:text-offWhiteColor">{faAboutUs?.title} </h1>
+          <p className="dark:text-offWhiteColor">{faAboutUs?.desc1}</p>
+          <p className="dark:text-offWhiteColor">{faAboutUs?.desc2}</p>
+          <p className="dark:text-offWhiteColor">{faAboutUs?.desc3} </p>
         </div>
 
         <div className={styles.personsWrapper}>

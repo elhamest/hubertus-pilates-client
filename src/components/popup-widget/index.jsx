@@ -48,7 +48,7 @@ export function PopupWidget() {
       {!isSmallScreen && (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed z-40 flex items-center justify-center transition duration-300 bg-primaryColor rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-primaryColor focus:bg-primaryColor ease"
+          className={`fixed z-40 flex items-center justify-center transition duration-300 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none ease ${styles.popupButton}`}
         >
           <span className="sr-only">{faConstants.openContactFormWidget}</span>
           {isOpen ? (
@@ -90,7 +90,7 @@ export function PopupWidget() {
         <div
           className={`${styles.boxWrapper} flex flex-col overflow-hidden dark:border-gray-800 bg-white`}
         >
-          <div className="flex flex-col items-center justify-center h-32 p-5 bg-primaryColor">
+          <div className={`h-32 p-5  ${styles.titleWrapper}`}>
             <h3 className="text-lg dark:text-pureWhiteColor">
               {faConstants.howWeCanHelp}
             </h3>
@@ -98,6 +98,7 @@ export function PopupWidget() {
               {faConstants.weUsuallyRespondInAFewHours}
             </p>
           </div>
+
           <div className="flex-grow h-full p-6 overflow-auto bg-gray-50">
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
               {/* <input
@@ -204,7 +205,7 @@ export function PopupWidget() {
               <div className="mb-3">
                 <button
                   type="submit"
-                  className="w-full px-3 py-4 text-white bg-primaryColor rounded-md focus:bg-primaryColorDark focus:outline-none"
+                  className={`${styles.submitButton} px-3 py-4 rounded-md`}
                 >
                   {isSubmitting ? (
                     <svg

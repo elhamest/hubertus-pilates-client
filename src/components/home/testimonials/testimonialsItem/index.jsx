@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TestimonialsItem = ({ data }) => {
   return (
-    <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+    <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-darkGray-800">
       <p className="text-2xl leading-normal ">{data?.description}</p>
 
       {/* Avatar */}

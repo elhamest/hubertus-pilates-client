@@ -28,7 +28,7 @@
 }
 
 .textContainer h1 {
-  border-bottom: 1px solid var(--ligther-secondary-color);
+  border-bottom: 1px solid var(--primary-color-light);
 }
 
 .imageStyle {
@@ -63,7 +63,7 @@
   position: relative;
   font-size: 16px;
   font-weight: 500;
-  color: var(--dark-gray-color);
+  color: var(--charcoal);
   text-align: justify;
   line-height: 2;
 }
@@ -87,7 +87,7 @@
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background-color: var(--ligth-secondary-color);
+  background-color: var(--primary-color-light);
   border-radius: 50%;
 }
 
