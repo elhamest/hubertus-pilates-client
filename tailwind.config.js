@@ -13,15 +13,14 @@ const config = {
   theme: {
     extend: {
       colors: {
-        primaryColor: "#7a4a82",
-        primaryColorDark: "#6a3a72",
+        primaryColor: "#86508e",
+        primaryColorDark: "#77477e",
         darkGray: "#4a5568",
         accentColorBlue: "#4a5f73",
         accentColorGary: "#a6a6a6",
         accentColorBlueDark: "#3a4a5c",
         pureWhiteColor: "#fff",
         offWhiteColor: "#f8f9fa",
-        primaryColorDark: "#7a4a82",
       },
     },
     fontFamily: {
