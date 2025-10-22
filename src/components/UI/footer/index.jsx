@@ -18,13 +18,13 @@ export function Footer() {
       <Container>
         <div>
           <div
-            className={`max-w-screen-xl d-flex pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-darkGray-700 ${styles.footerContainer}`}
+            className={`max-w-screen-xl d-flex pt-10 mx-auto mt-5 border-t border-gray-300 dark:border-richBlack-700 ${styles.footerContainer}`}
           >
             <div className={styles.slugWrapper}>
               <div>
                 <Link
                   href="/"
-                  className="flex items-center space-x-2 text-2xl font-medium dark:text-accentColorGary"
+                  className="flex items-center space-x-2 text-2xl font-medium dark:text-silverChalice"
                 >
                   <Image
                     // src="/img/logo.svg"
@@ -36,12 +36,12 @@ export function Footer() {
                   <span>{faConstants.companyName}</span>
                 </Link>
               </div>
-              <div className="mt-6 text-accentColorBlue dark:text-accentColorGary text-justify leading-7">
+              <div className="mt-6 text-accentColorBlue dark:text-silverChalice text-justify leading-7">
                 {faConstants.footerSlug}
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 dark:text-accentColorGary">
+            <div className="flex flex-col gap-4 dark:text-silverChalice">
               <div className="text-accentColorBlue font-semibold">
                 {faConstants?.relatedContent}
               </div>
@@ -49,16 +49,16 @@ export function Footer() {
                 <Link
                   key={index}
                   href={item?.path}
-                  className="inline-block dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-darkGray-700"
+                  className="inline-block dark:hover:text-primaryColor hover:text-primaryColor hover:tracking-wide transition-all duration-300 focus:text-primaryColor focus:bg-text-primaryColor focus:outline-none dark:focus:bg-richBlack-700"
                 >
                   {item?.title}
                 </Link>
               ))}
             </div>
 
-            <div className="text-accentColorBlue dark:text-accentColorGary flex gap-5 flex-col">
+            <div className="text-accentColorBlue dark:text-silverChalice flex gap-5 flex-col">
               <div>
-                <div className="text-accentColorBlueDark hover:text-primaryColorDark dark:text-accentColorGary transition-all duration-400 font-semibold mb-2">
+                <div className="text-accentColorBlueDark hover:text-primaryColorDark dark:text-silverChalice transition-all duration-400 font-semibold mb-2">
                   {faConstants.followUs}
                 </div>
                 <div className={styles.socialLinks}>
@@ -81,7 +81,7 @@ export function Footer() {
                 </div>
               </div>
 
-              <div className={`${styles.telWrapper} dark:text-accentColorGary`}>
+              <div className={`${styles.telWrapper} dark:text-silverChalice`}>
                 <div className="font-medium">{faConstants.contactUs}</div>
                 <a href="tel:+989149191831">+989149191831</a>
                 <a href="tel:+989149191832">+989149191832</a>
@@ -89,7 +89,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-10 mb-2 text-sm text-center text-accentColorBlue dark:text-accentColorGary">
+          <div className="mt-10 mb-2 text-sm text-center text-accentColorBlue dark:text-silverChalice">
             Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
             <a
               href="http://hubertuspilates.com/"

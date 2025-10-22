@@ -18,12 +18,10 @@ export const Hero = () => {
               {faConstants.engineeringDepartment}
               <span>{` ${faConstants.companyName}`}</span>
             </h1>
-            <h2 className="py-5 dark:text-pureWhiteColor">
+            <h2 className="dark:text-pureWhiteColor">
               {faConstants.companyDescription}
             </h2>
-            <p className="py-5 text-pureWhiteColor">
-              {faConstants.companyProud}
-            </p>
+            <p className="text-pureWhiteColor">{faConstants.companyProud}</p>
 
             <div className={styles.viewProducts}>
               <Link href="/collections">{faConstants.viewProducts}</Link>

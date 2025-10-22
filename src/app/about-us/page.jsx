@@ -6,7 +6,7 @@ import { faPersons, faAboutUs } from "@/data/fa";
 
 const AboutUs = () => {
   return (
-    <Container extraPadding>
+    <Container>
       <div className="pageHeight">
         <div className={`${styles.companyWrapper} pageWrapper`}>
           <h1 className="dark:text-offWhiteColor">{faAboutUs?.title} </h1>

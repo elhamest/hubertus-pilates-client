@@ -34,27 +34,28 @@
   --primary-color-dark: #77477e;
   --primary-color-light: #95599e;
 
-  --earth-brown: #9b5b1e;
-  --earth-brown-dark: #834c15;
-  --earth-brown-light: #b37235;
+  --earth-brown: #a47f51;
+  --accent-gold: #d4af37;
 
-  /* Dark Neutrals */
-  --charcoal: #2d3748; /*  متن‌ها */
-  --dark-gray: #4a5568; /*  متن ثانویه */
-  --medium-gray: #718096; /*  متن غیرفعال */
+  --sea-green: #588e50;
+  --lapis-lazuli: #035e7b;
+  --moon-stone: #46acc2;
+  /* text */
+  --jet-color: #333333;
+  --rich-black: #0d1f22;
+  --slate-gray: #6b7280;
+  --silver-chalice: #a6a6a6;
+  --platinum-gray: #e2e2e2;
 
   /* Light Neutrals */
-  --light-gray: #edf2f7; /* پس‌زمینه‌های روشن */
   --off-white: #f8f9fa; /* پس‌زمینه اصلی */
   --pure-white: #ffffff; /*  قسمت‌های خاص */
 
   /* Accent */
-  --accent-gold: #d4af37; /*   هایلایت */
   --accent-teal: #2d9cdb; /*   لینک‌ها */
   --success-green: #38a169;
   --accent-color-blue: #4a5f73;
   --accent-color-blue-dark: #3a4a5c;
-  --accent-color-gray-dark: #a6a6a6;
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
@@ -129,7 +130,7 @@ h3 {
 }
 
 h4 {
-  color: var(--dark-gray);
+  color: var(--rich-black);
 }
 
 p {
@@ -185,4 +186,70 @@ a {
 
 .lightShadow {
   box-shadow: var(--light-shadow);
+}
+
+/* --- swiper --- */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.swiper-slide {
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainSwiper {
+  height: 80%;
+  width: 100%;
+}
+.swiper-pagination-progressbar {
+  background: var(--slate-gray) !important;
+  /* rgba(255, 255, 255, 0.25); */
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+.swiper-pagination-progressbar {
+  background: var(--silver-chalice) !important;
+  /* var(--platinum-gray) */
+  height: 4px !important;
+}
+
+.swiper-pagination-progressbar-fill {
+  background: #6b7280;
+}
+
+/* thumbSwiper */
+.thumbSwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.thumbSwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.thumbSwiper .swiper-slide-thumb-active {
+  opacity: 1;
 }

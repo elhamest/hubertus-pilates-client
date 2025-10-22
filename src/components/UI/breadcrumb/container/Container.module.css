@@ -1,10 +1,36 @@
 .containerStyle {
-  padding: 20px 30px;
-  width: 94%;
+  padding: 48px 60px 0;
+  width: 95%;
+  max-width: 1536px;
 }
 
-@media (min-width: 426px) {
+@media (max-width: 1535px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 639px) {
   .containerStyle {
-    padding: 20px 2rem;
+    padding: 20px 30px;
+    max-width: 100%;
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { BreadCrumbContainer } from "./container";
 
 import styles from "./Breadcrumb.module.css";

@@ -6,6 +6,6 @@
 @layer base {
   html,
   body {
-    @apply dark:bg-darkGray-900;
+    @apply dark:bg-richBlack-900;
   }
 }

@@ -27,7 +27,7 @@
   margin-bottom: 12px;
 }
 .contentWrapper {
-  padding: 16px;
+  padding: 20px;
 }
 
 .contentWrapper > p {
@@ -71,12 +71,12 @@
 }
 .collectionWrapper:hover .viewMore span {
   padding-left: 20px;
-  color: var(--primary-color);
+  color: var(--primary-color-light);
 }
 .collectionWrapper:hover .viewMore span:after {
   opacity: 1;
   left: 0;
-  color: var(--primary-color);
+  color: var(--primary-color-light);
 }
 
 @media (min-width: 768px) {

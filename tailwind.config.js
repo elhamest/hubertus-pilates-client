@@ -15,9 +15,9 @@ const config = {
       colors: {
         primaryColor: "#86508e",
         primaryColorDark: "#77477e",
-        darkGray: "#4a5568",
+        richBlack: "#0d1f22",
         accentColorBlue: "#4a5f73",
-        accentColorGary: "#a6a6a6",
+        silverChalice: "#a6a6a6",
         accentColorBlueDark: "#3a4a5c",
         pureWhiteColor: "#fff",
         offWhiteColor: "#f8f9fa",

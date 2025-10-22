@@ -65,12 +65,14 @@
 .descriptionContainer h1 {
   font-size: 28px;
   font-weight: 500;
+  -webkit-text-stroke: 1px var(--earth-brown);
 }
 
 .descriptionContainer h2 {
   font-size: 16px;
   font-weight: 200;
   color: var(--pure-shite);
+  margin: 40px 0 20px;
 }
 
 .descriptionContainer p {
@@ -81,14 +83,15 @@
 }
 .viewProducts {
   width: 100%;
+  margin-top: 35px;
 }
 
 .viewProducts a {
   display: inline-block;
   border-radius: 8px;
-  padding: 12px 20px;
+  padding: 8px 20px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -98,12 +101,12 @@
   width: auto;
   text-align: center;
   color: white;
-  border: 1px solid var(--pure-white);
+  border: 1px solid var(--earth-brown);
 }
 
 .viewProducts a:hover {
   background: transparent;
-  color: var(--earth-brown);
+  color: var(--accent-gold);
   border-color: var(--accent-gold);
 }
 

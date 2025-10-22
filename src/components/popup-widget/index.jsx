@@ -116,7 +116,7 @@ export function PopupWidget() {
               <div className="mb-4">
                 <label
                   htmlFor="full_name"
-                  className="block mb-2 text-sm text-accentColorBlue dark:text-accentColorGary"
+                  className="block mb-2 text-sm text-accentColorBlue dark:text-silverChalice"
                 >
                   {faConstants.fullName}
                 </label>
@@ -144,7 +144,7 @@ export function PopupWidget() {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm text-accentColorBlue dark:text-accentColorGary"
+                  className="block mb-2 text-sm text-accentColorBlue dark:text-silverChalice"
                 >
                   {faConstants.emailAddress}
                 </label>
@@ -177,7 +177,7 @@ export function PopupWidget() {
               <div className="mb-4">
                 <label
                   htmlFor="message"
-                  className="block mb-2 text-sm text-accentColorBlue dark:text-accentColorGary"
+                  className="block mb-2 text-sm text-accentColorBlue dark:text-silverChalice"
                 >
                   {faConstants.yourMessage}
                 </label>

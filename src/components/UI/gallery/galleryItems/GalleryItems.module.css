@@ -8,10 +8,6 @@
   min-width: 150px;
 }
 
-.card:hover {
-  transform: translateY(-1px);
-}
-
 .imageContainer {
   position: relative;
   width: 100%;
@@ -23,7 +19,7 @@
   width: 100%;
   height: auto;
   padding: 10px 0 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .imageContainer:hover img {

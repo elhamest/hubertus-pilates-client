@@ -6,6 +6,7 @@ import { enProductCollections } from "@/data/en";
 import { Container } from "@/components/UI/container";
 
 import style from "./Product.module.css";
+import ThumsGallery from "@/components/UI/thums-gallery";
 
 export default async function ProductPage({ params, locale = "fa" }) {
   const { productId } = await Promise.resolve(params);
@@ -38,8 +39,8 @@ export default async function ProductPage({ params, locale = "fa" }) {
   return (
     <Container>
       <div className="pageWrapper pageHeight">
-        <div className={`${style.productWrapper} pageInnerWrapper`}>
-          <div className={style.imageContainer}>
+        <div className={style.productWrapper}>
+          {/* <div className={style.imageContainer}>
             <Image
               src={founded.item?.images?.at(0)}
               alt={founded.item?.title}
@@ -48,7 +49,8 @@ export default async function ProductPage({ params, locale = "fa" }) {
               className={style.imageStyle}
               priority
             />
-          </div>
+          </div> */}
+          <ThumsGallery />
 
           <div className={style.textContainer}>
             <h1>{founded?.item?.title}</h1>
