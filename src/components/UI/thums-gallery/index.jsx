@@ -34,8 +34,13 @@ const ThumsGallery = ({ data }) => {
       >
         {data?.map((item, index) => {
           return (
-            <SwiperSlide key={index} className={styles.mainWrapper}>
-              <Image fill alt="" src={item} />
+            <SwiperSlide
+              key={index}
+              className={`${styles.mainWrapper} ${
+                item?.isHorizontal ? styles.horizontal : styles.vertical
+              }`}
+            >
+              <Image alt="" src={item.img} />
             </SwiperSlide>
           );
         })}
@@ -57,7 +62,6 @@ const ThumsGallery = ({ data }) => {
           className={`${styles.circleButton} ${styles.swiperButtonNext}`}
           aria-label="Previous"
         >
-          {" "}
           <svg
             className={`icon icon-chevron-rigth ${styles.navigatorSvg}`}
             viewBox="0 0 24 24"
@@ -79,8 +83,13 @@ const ThumsGallery = ({ data }) => {
       >
         {data?.map((item, index) => {
           return (
-            <SwiperSlide key={index} className={styles.thumbWrapper}>
-              <Image fill alt="" src={item} />
+            <SwiperSlide
+              key={index}
+              className={`${styles.thumbWrapper} ${
+                item?.isHorizontal ? styles.horizontal : styles.vertical
+              }`}
+            >
+              <Image fill alt="" src={item?.img} />
             </SwiperSlide>
           );
         })}

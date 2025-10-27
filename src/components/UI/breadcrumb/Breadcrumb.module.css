@@ -1,12 +1,17 @@
 .breadcrumb {
   background-color: inherit;
-  font-size: 16px;
+  font-size: 13px;
 }
 .breadcrumb ol {
   list-style: none;
   padding: 0;
   display: flex;
   gap: 4px;
+}
+
+.breadcrumb ol li {
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumbLink {
@@ -24,6 +29,14 @@
   color: var(--primary-color);
 }
 
+.breadcrumbLink svg:first-child {
+  width: 15px;
+  height: 15px;
+}
+.breadcrumbLink svg:last-child {
+  width: 12px;
+  height: 12px;
+}
 .breadcrumb span {
   margin: 0 5px;
   color: var(--dusty-gray);

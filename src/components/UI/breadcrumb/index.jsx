@@ -47,7 +47,7 @@ const Breadcrumb = ({ locale, pathToTitleMap }) => {
                   ) : (
                     <div className={styles.breadcrumbLink}>
                       <Link href={`/${currentPath}`}>{displayName}</Link>
-                      <AngleLeftIcon />{" "}
+                      <AngleLeftIcon />
                     </div>
                   )}
                 </li>

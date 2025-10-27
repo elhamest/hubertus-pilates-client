@@ -18,7 +18,7 @@ export function Collection({ items }) {
             <Link href={`${currentPath}/${item?.slug}`}>
               <div className={styles.imageWrapper}>
                 <Image
-                  src={item?.images?.at(0)}
+                  src={item?.images?.at(0)?.img}
                   alt={item?.title}
                   priority={index < 6} // Load first 6 images immediately
                 />

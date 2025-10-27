@@ -11,6 +11,15 @@
 .mainWrapper {
   border: 1px solid var(--platinum-gray);
 }
+.mainWrapper.horizontal img,
+.thumbWrapper.horizontal img {
+  object-fit: scale-down;
+}
+.mainWrapper.vertical img,
+.thumbWrapper.vertical img {
+  object-fit: cover;
+}
+
 .thumbWrapper {
   border: 1px solid var(--platinum-gray);
   cursor: pointer;

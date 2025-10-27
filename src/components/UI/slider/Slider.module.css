@@ -43,7 +43,7 @@
 }
 .sliderControls .navDisable {
   background-color: transparent;
-  border: 1px solid var(--supporting-color-gray);
+  border: 1px solid var(--silver-chalice);
 }
 
 @media (prefers-color-scheme: dark) {
