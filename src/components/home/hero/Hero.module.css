@@ -132,7 +132,7 @@
     height: 500px;
     background: linear-gradient(
       135deg,
-      var(--charcoal) 50%,
+      var(--jet-black) 50%,
       var(--primary-color-dark) 100%
     );
     color: var(--pure-white);

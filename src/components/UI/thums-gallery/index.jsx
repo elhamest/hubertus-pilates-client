@@ -9,101 +9,64 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import "swiper/css/pagination";
 
 import styles from "./ThumsGallery.module.css";
 
-const ThumsGallery = () => {
+const ThumsGallery = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  if (!data) {
+    return;
+  }
 
   return (
     <div className={styles.swiperWrapper}>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
-        pagination={{
-          type: "progressbar",
-        }}
         loop={true}
         spaceBetween={10}
-        navigation={true}
+        navigation={{
+          nextEl: `.${styles.swiperButtonNext}`,
+          prevEl: `.${styles.swiperButtonPrev}`,
+        }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs, Pagination]}
+        modules={[FreeMode, Navigation, Thumbs]}
         className="mainSwiper"
       >
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-          />
-        </SwiperSlide>
+        {data?.map((item, index) => {
+          return (
+            <SwiperSlide key={index} className={styles.mainWrapper}>
+              <Image fill alt="" src={item} />
+            </SwiperSlide>
+          );
+        })}
+
+        {/* Custom Navigation Buttons */}
+
+        <button
+          className={`${styles.circleButton} ${styles.swiperButtonPrev}`}
+          aria-label="Next"
+        >
+          <svg
+            className={`icon icon-chevron-left ${styles.navigatorSvg}`}
+            viewBox="0 0 24 24"
+          >
+            <path d="M14 6L8 12L14 18" fill="#905a98"></path>
+          </svg>
+        </button>
+        <button
+          className={`${styles.circleButton} ${styles.swiperButtonNext}`}
+          aria-label="Previous"
+        >
+          {" "}
+          <svg
+            className={`icon icon-chevron-rigth ${styles.navigatorSvg}`}
+            viewBox="0 0 24 24"
+          >
+            <path d="M10 6L16 12L10 18" fill="#905a98"></path>
+          </svg>
+        </button>
       </Swiper>
+
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
@@ -114,76 +77,13 @@ const ThumsGallery = () => {
         modules={[FreeMode, Navigation, Thumbs]}
         className="thumbSwiper"
       >
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            fill
-            alt=""
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-          />
-        </SwiperSlide>
+        {data?.map((item, index) => {
+          return (
+            <SwiperSlide key={index} className={styles.thumbWrapper}>
+              <Image fill alt="" src={item} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

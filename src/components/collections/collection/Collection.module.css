@@ -1,29 +1,43 @@
-.collectionWrapper {
+.collections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.collection {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--pure-white);
   transition: all 0.5s ease-in-out;
+  max-width: 380px;
 }
 
 .imageWrapper {
   width: 100%;
   height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: transparent;
+  padding: 16px;
 }
-.collectionWrapper:hover .imageWrapper img {
+.collection:hover .imageWrapper img {
   transform: translateY(-1px) scale(1.02);
 }
 
 .imageWrapper img {
   display: block;
   transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .boxTitle {
   font-size: 16px;
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--jet-black);
   margin-bottom: 12px;
 }
 .contentWrapper {
@@ -50,7 +64,7 @@
   font-size: 15px;
   font-weight: 500;
   margin: 5px;
-  color: var(--medium-gray);
+  color: var(--dusty-gray);
   position: absolute;
   left: 16px;
   bottom: 16px;
@@ -69,18 +83,27 @@
   left: -20px;
   transition: 0.5s;
 }
-.collectionWrapper:hover .viewMore span {
+.collection:hover .viewMore span {
   padding-left: 20px;
   color: var(--primary-color-light);
 }
-.collectionWrapper:hover .viewMore span:after {
+.collection:hover .viewMore span:after {
   opacity: 1;
   left: 0;
   color: var(--primary-color-light);
 }
 
 @media (min-width: 768px) {
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .cardTitle {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .collections {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

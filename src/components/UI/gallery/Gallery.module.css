@@ -14,7 +14,6 @@
   color: var(--accent-color-blue-dark);
   font-size: 1.5rem;
   font-weight: 500;
-  /* dark:text-offWhiteColor */
 }
 
 /* Navigation Buttons */
@@ -39,11 +38,11 @@
   height: 24px;
 }
 .circleButton .navigatorSvg path {
-  fill: var(--primary-color);
+  fill: var(--primary-color-dark);
 }
 
 .circleButton:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-light);
 }
 
 .circleButton:hover .navigatorSvg path {

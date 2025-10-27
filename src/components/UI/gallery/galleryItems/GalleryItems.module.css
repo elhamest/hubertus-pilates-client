@@ -31,7 +31,7 @@
   padding: 10px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--charcoal);
+  color: var(--jet-blackkkk);
   text-align: center;
   transition: color 0.3s ease-in-out;
 }
@@ -43,7 +43,7 @@
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   .card {
-    background: var(--charcoal) !important; /* Use the variable for dark mode */
+    background: var(--jet-black) !important; /* Use the variable for dark mode */
   }
 }
 

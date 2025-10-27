@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   html,
   body {
     @apply dark:bg-dark-gray;
   }
-}
+} */
 
 /* دکمه‌های ثانویه */
 .secondary-button {
@@ -41,11 +41,16 @@
   --lapis-lazuli: #035e7b;
   --moon-stone: #46acc2;
   /* text */
-  --jet-color: #333333;
   --rich-black: #0d1f22;
   --slate-gray: #6b7280;
   --silver-chalice: #a6a6a6;
   --platinum-gray: #e2e2e2;
+  --text-color: #3a558b;
+
+  --dusty-gray: #616161;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --jet-black: #212121;
 
   /* Light Neutrals */
   --off-white: #f8f9fa; /* پس‌زمینه اصلی */
@@ -55,7 +60,6 @@
   --accent-teal: #2d9cdb; /*   لینک‌ها */
   --success-green: #38a169;
   --accent-color-blue: #4a5f73;
-  --accent-color-blue-dark: #3a4a5c;
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
@@ -63,9 +67,9 @@
   --transition-400: 0.4s ease;
 }
 
-.dark .dark\:bg-dark-gray {
-  background-color: var(--charcoal);
-}
+/* .dark .dark\:bg-dark-gray {
+  background-color: var(--);
+} */
 
 html {
   scroll-behavior: smooth;
@@ -126,17 +130,14 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--accent-color-blue-dark);
+  color: var(--jet-black);
 }
-
 h4 {
   color: var(--rich-black);
 }
-
 p {
-  color: var(--medium-gray);
+  color: var(--gray-800);
 }
-
 a {
   color: var(--accent-color-blue);
 }
@@ -220,22 +221,6 @@ a {
 .mainSwiper {
   height: 80%;
   width: 100%;
-}
-.swiper-pagination-progressbar {
-  background: var(--slate-gray) !important;
-  /* rgba(255, 255, 255, 0.25); */
-  position: absolute !important;
-  bottom: 0 !important;
-  right: 0 !important;
-}
-.swiper-pagination-progressbar {
-  background: var(--silver-chalice) !important;
-  /* var(--platinum-gray) */
-  height: 4px !important;
-}
-
-.swiper-pagination-progressbar-fill {
-  background: #6b7280;
 }
 
 /* thumbSwiper */

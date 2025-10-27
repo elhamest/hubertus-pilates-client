@@ -4,9 +4,9 @@ import Image from "next/image";
 import { faProductCollections } from "@/data/fa";
 import { enProductCollections } from "@/data/en";
 import { Container } from "@/components/UI/container";
+import ThumsGallery from "@/components/UI/thums-gallery";
 
 import style from "./Product.module.css";
-import ThumsGallery from "@/components/UI/thums-gallery";
 
 export default async function ProductPage({ params, locale = "fa" }) {
   const { productId } = await Promise.resolve(params);
@@ -50,7 +50,7 @@ export default async function ProductPage({ params, locale = "fa" }) {
               priority
             />
           </div> */}
-          <ThumsGallery />
+          <ThumsGallery data={founded?.item?.images} />
 
           <div className={style.textContainer}>
             <h1>{founded?.item?.title}</h1>
