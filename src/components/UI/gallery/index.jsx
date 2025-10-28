@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
-import { NavButton } from "../nav-button/NavButton";
+import { useRef } from "react";
+
+import GalleryItems from "./galleryItems";
 
 import styles from "./Gallery.module.css";
-import GalleryItems from "./galleryItems";
 
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
@@ -47,7 +47,7 @@ const Gallery = ({ title, items }) => {
         </div>
       </div>
 
-      <div className={`${styles.gallerySlider}`} ref={sliderRef}>
+      <div className={styles.gallerySlider} ref={sliderRef}>
         <GalleryItems items={items} customClass="cardSlider" />
       </div>
     </div>

@@ -14,9 +14,7 @@ function GalleryItems({ items, customClass }) {
               <Image
                 src={item?.image}
                 alt={item?.title ?? "Collection"}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw" // Optimize for different screen sizes
-                style={{ objectFit: "cover" }} // Ensures the image covers the container
+                className={styles.image}
               />
             </div>
             <div className={styles.cardTitle}>{item?.title}</div>
