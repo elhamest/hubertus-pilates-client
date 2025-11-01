@@ -11,19 +11,19 @@ function Customers() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-          <div className="pt-2 text-accentColorBlue dark:text-accentColorGary">
+          <div className="pt-2 text-accentColorBlue dark:text-silverChalice">
             <AmazonLogo />
           </div>
-          <div className="text-accentColorBlue dark:text-accentColorGary">
+          <div className="text-accentColorBlue dark:text-silverChalice">
             <VerizonLogo />
           </div>
-          <div className="text-accentColorBlue dark:text-accentColorGary">
+          <div className="text-accentColorBlue dark:text-silverChalice">
             <MicrosoftLogo />
           </div>
-          <div className="pt-1 text-accentColorBlue dark:text-accentColorGary">
+          <div className="pt-1 text-accentColorBlue dark:text-silverChalice">
             <NetflixLogo />
           </div>
-          <div className="pt-2 text-accentColorBlue dark:text-accentColorGary">
+          <div className="pt-2 text-accentColorBlue dark:text-silverChalice">
             <SonyLogo />
           </div>
         </div>

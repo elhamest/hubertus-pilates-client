@@ -88,7 +88,7 @@ const Header = ({ locale = "fa" }) => {
           {/* Mobile menu button */}
           <button
             aria-label="Toggle Menu"
-            className="px-2 py-1 text-accentColorBlue rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-accentColorGary dark:focus:bg-trueGray-700"
+            className="px-2 py-1 text-accentColorBlue rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-silverChalice dark:focus:bg-richBlack-700"
             onClick={toggleMenu}
           >
             <svg

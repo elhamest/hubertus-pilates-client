@@ -1,18 +1,25 @@
-import React from "react";
-import { Container } from "@/components/UI/container";
 import Image from "next/image";
-import styles from "./AboutUs.module.css";
 import { faPersons, faAboutUs } from "@/data/fa";
 
-const AboutUs = () => {
+import styles from "./AboutUs.module.css";
+import Breadcrumb from "@/components/UI/breadcrumb";
+import { generatePathToTitleMap } from "@/utils/pathMaps";
+import { Container } from "@/components/UI/container";
+
+const AboutUs = ({ locale = "fa" }) => {
+  const pathToTitleMap = generatePathToTitleMap(locale);
+
   return (
-    <Container extraPadding>
-      <div className="pageHeight">
+    <Container>
+      {pathToTitleMap && (
+        <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+      )}
+      <div className={`${styles.aboutUsWrapper} pageHeight`}>
         <div className={`${styles.companyWrapper} pageWrapper`}>
-          <h1 className="dark:text-neutralWhiteColor">{faAboutUs?.title} </h1>
-          <p className="dark:text-neutralWhiteColor">{faAboutUs?.desc1}</p>
-          <p className="dark:text-neutralWhiteColor">{faAboutUs?.desc2}</p>
-          <p className="dark:text-neutralWhiteColor">{faAboutUs?.desc3} </p>
+          <h1 className="dark:text-offWhiteColor">{faAboutUs?.title} </h1>
+          <p className="dark:text-offWhiteColor">{faAboutUs?.desc1}</p>
+          <p className="dark:text-offWhiteColor">{faAboutUs?.desc2}</p>
+          <p className="dark:text-offWhiteColor">{faAboutUs?.desc3} </p>
         </div>
 
         <div className={styles.personsWrapper}>

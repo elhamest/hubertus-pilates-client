@@ -15,6 +15,8 @@ import Gallery from "@/components/UI/gallery";
 import { faConstants } from "../../public/locales/fa/common";
 //  import { faConstants } from "../../out/locales/fa/common";
 
+import styles from "./HomePage.module.css";
+
 const imagePaths = [
   "/img/slider/s1.webp",
   "/img/slider/s2.webp",
@@ -31,17 +33,16 @@ export default function Home({ locale = "fa" }) {
   useScrollAnimation(".animateFadeInUp", 0.1); // Trigger when 10% of the element is visible
 
   return (
-    <div className="page-height">
+    <div className={styles.homeWrapper}>
       <Hero />
-      <Container>
-        <div>
-          <Benefits />
-          <Gallery
-            title={faConstants.collectionGalleryTitle}
-            items={faProductCollections}
-          />
 
-          {/* <SectionTitle
+      <Container>
+        <Benefits />
+        <Gallery
+          title={faConstants.collectionGalleryTitle}
+          items={faProductCollections}
+        />
+        {/* <SectionTitle
             preTitle={locale === "fa" ? "یک ویدیو تماشا کنید" : "Watch a video"}
             title={
               locale === "fa"
@@ -60,8 +61,8 @@ export default function Home({ locale = "fa" }) {
           </SectionTitle>
           <Video videoId="fZ0D0cnR88E" /> */}
 
-          {/* ------------------------------------ */}
-          {/* <SectionTitle
+        {/* ------------------------------------ */}
+        {/* <SectionTitle
             preTitle={locale === "fa" ? "نظرات مشتریان" : "Testimonials"}
             title={
               locale === "fa"
@@ -75,9 +76,9 @@ export default function Home({ locale = "fa" }) {
             awareness. Use this section to highlight your popular customers.`}
           </SectionTitle>
           <Testimonials /> */}
-          {/* ------------------------------------ */}
+        {/* ------------------------------------ */}
 
-          {/* <SectionTitle
+        {/* <SectionTitle
             preTitle="FAQ"
             title={
               locale === "fa" ? "سوالات متداول" : "Frequently Asked Questions"
@@ -89,10 +90,9 @@ export default function Home({ locale = "fa" }) {
             conversion rate as well as support or chat requests.`}
           </SectionTitle>
           <Faq /> */}
-          {/* ------------------------------------ */}
+        {/* ------------------------------------ */}
 
-          {/* <Cta /> */}
-        </div>
+        {/* <Cta /> */}
       </Container>
       {/* <HomeSlider imagePaths={imagePaths} /> */}
     </div>

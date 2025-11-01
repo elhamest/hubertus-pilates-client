@@ -1,44 +1,47 @@
 .container {
+  /* Desktop first - start with largest screen */
+  max-width: 1300px; /*1280px*/
   width: 100%;
-  padding: 3rem 3.5rem;
+  padding: 48px 60px;
+  margin: 0 auto;
 }
 
-.extraPadding {
-  padding: 3rem 5rem;
-}
-
-@media (max-width: 640px) {
+/* Work down to smaller screens */
+@media (max-width: 1535px) {
   .container {
-    padding: 1.2rem !important;
-    width: 95%;
-  }
-}
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
+    max-width: 1300px;
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1279px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
   .container {
     max-width: 768px;
+    padding: 30px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
   .container {
-    max-width: 1024px;
+    max-width: 600px;
+    padding: 15px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 639px) {
   .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 100%;
+    padding: 20px 30px 40px;
   }
 }

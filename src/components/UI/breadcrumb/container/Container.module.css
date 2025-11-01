@@ -1,10 +1,10 @@
 .containerStyle {
-  padding: 20px 30px;
-  width: 94%;
+  width: 95%;
+  margin: 20px 0 40px;
 }
 
-@media (min-width: 426px) {
+@media (max-width: 768px) {
   .containerStyle {
-    padding: 20px 2rem;
+    margin: 0 0 20px;
   }
 }

@@ -1,12 +1,18 @@
 import React from "react";
+import Image from "next/image";
+
 import { faProductCollections } from "@/data/fa";
 import { enProductCollections } from "@/data/en";
 import { Container } from "@/components/UI/container";
-import Image from "next/image";
+import ThumsGallery from "@/components/UI/thums-gallery";
+
 import style from "./Product.module.css";
+import Breadcrumb from "@/components/UI/breadcrumb";
+import { generatePathToTitleMap } from "@/utils/pathMaps";
 
 export default async function ProductPage({ params, locale = "fa" }) {
   const { productId } = await Promise.resolve(params);
+  const pathToTitleMap = generatePathToTitleMap(locale);
 
   const productCollections =
     locale === "fa" ? faProductCollections : enProductCollections;
@@ -26,6 +32,9 @@ export default async function ProductPage({ params, locale = "fa" }) {
   if (!founded) {
     return (
       <Container>
+        {pathToTitleMap && (
+          <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+        )}
         <div className={style.notFoundContainer}>
           <h1 className={style.notFoundText}>محصول یافت نشد.</h1>
         </div>
@@ -35,18 +44,12 @@ export default async function ProductPage({ params, locale = "fa" }) {
 
   return (
     <Container>
+      {pathToTitleMap && (
+        <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+      )}
       <div className="pageWrapper pageHeight">
-        <div className={`${style.productWrapper} pageInnerWrapper`}>
-          <div className={style.imageContainer}>
-            <Image
-              src={founded.item?.image}
-              alt={founded.item?.title}
-              width={500}
-              height={500}
-              className={style.imageStyle}
-              priority
-            />
-          </div>
+        <div className={style.productWrapper}>
+          <ThumsGallery data={founded?.item?.images} />
 
           <div className={style.textContainer}>
             <h1>{founded?.item?.title}</h1>

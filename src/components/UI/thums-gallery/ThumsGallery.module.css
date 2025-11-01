@@ -1,0 +1,174 @@
+.thumsGalleryWrapper {
+  width: 100%;
+  max-width: 482px;
+  padding: 20px 0;
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSwiper {
+  height: 75%;
+  width: 100%;
+  position: relative;
+}
+
+.mainSwiperSlide {
+  border: 1px solid var(--platinum-gray);
+  height: 100%;
+}
+.thumbSwiperSlide {
+  border: 1px solid var(--platinum-gray);
+  cursor: pointer;
+}
+
+.mainSwiperSlide.horizontal img,
+.thumbSwiperSlide.horizontal img {
+  object-fit: scale-down;
+}
+.mainSwiperSlide.vertical img,
+.thumbSwiperSlide.vertical img {
+  object-fit: cover;
+}
+
+.circleButton {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+.thumsGalleryWrapper:hover .circleButton {
+  opacity: 1;
+  visibility: visible;
+}
+
+.circleButton .navigatorSvg {
+  width: 24px;
+  height: 24px;
+}
+.circleButton .navigatorSvg path {
+  fill: var(--primary-color-dark);
+}
+
+.circleButton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.circleButton:hover .navigatorSvg path {
+  fill: var(--pure-white);
+}
+
+.swiperButtonPrev {
+  left: 10px;
+}
+.swiperButtonNext {
+  right: 10px;
+}
+
+/* Hide default navigation buttons  */
+.mainSwiper .swiper-button-prev,
+.mainSwiper .swiper-button-next {
+  display: none;
+}
+.swiperButtonPrev::after,
+.swiperButtonNext::after {
+  display: none;
+}
+
+.pagination {
+  display: none;
+}
+
+.thumbSwiper {
+  height: 25%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  display: block;
+  margin-top: 10px;
+}
+.thumbSwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.thumbSwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+/* Mobile styles (max-width: 767px) */
+@media (max-width: 767px) {
+  .thumsGalleryWrapper {
+    max-width: 350px;
+    padding: 10px 0;
+  }
+  .thumbSwiper {
+    display: none !important;
+  }
+  .mainSwiper {
+    height: auto;
+    flex: 1;
+  }
+
+  .pagination {
+    width: 150px !important;
+    text-align: center;
+    z-index: 10;
+    display: block !important;
+    position: absolute;
+    left: 50% !important;
+    bottom: -10px !important;
+  }
+
+  .pagination :global(.swiper-pagination-bullet) {
+    width: 12px;
+    height: 6px;
+    background: var(--silver-chalice);
+    opacity: 1;
+    margin: 0 6px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  .pagination :global(.swiper-pagination-bullet-active) {
+    width: 25px;
+    background: var(--primary-color-dark);
+  }
+
+  .circleButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* For dark mode pagination */
+@media (prefers-color-scheme: dark) {
+  .circleButton .navigatorSvg path {
+    fill: var(--pure-white);
+  }
+  .circleButton {
+    border-color: #4b5563;
+  }
+
+  .pagination :global(.swiper-pagination-bullet) {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .pagination :global(.swiper-pagination-bullet-active) {
+    background: #000;
+  }
+}

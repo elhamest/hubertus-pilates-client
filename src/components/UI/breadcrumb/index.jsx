@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { BreadCrumbContainer } from "./container";
 
 import styles from "./Breadcrumb.module.css";
@@ -46,7 +47,7 @@ const Breadcrumb = ({ locale, pathToTitleMap }) => {
                   ) : (
                     <div className={styles.breadcrumbLink}>
                       <Link href={`/${currentPath}`}>{displayName}</Link>
-                      <AngleLeftIcon />{" "}
+                      <AngleLeftIcon />
                     </div>
                   )}
                 </li>

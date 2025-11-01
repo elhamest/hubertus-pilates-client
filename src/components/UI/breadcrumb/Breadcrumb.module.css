@@ -1,12 +1,17 @@
 .breadcrumb {
   background-color: inherit;
-  font-size: 16px;
+  font-size: 13px;
 }
 .breadcrumb ol {
   list-style: none;
   padding: 0;
   display: flex;
   gap: 4px;
+}
+
+.breadcrumb ol li {
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumbLink {
@@ -17,14 +22,28 @@
 
 .breadcrumb a {
   text-decoration: none;
-  color: var(--accent-color-gray-dark);
+  color: var(--dusty-gray);
 }
 
 .breadcrumb a:hover {
   color: var(--primary-color);
 }
 
+.breadcrumbLink svg:first-child {
+  width: 15px;
+  height: 15px;
+}
+.breadcrumbLink svg:last-child {
+  width: 12px;
+  height: 12px;
+}
 .breadcrumb span {
   margin: 0 5px;
-  color: var(--accent-color-gray-dark);
+  color: var(--dusty-gray);
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 11px;
+  }
 }

@@ -2,60 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   html,
   body {
     @apply dark:bg-dark-gray;
   }
+} */
+
+/* دکمه‌های ثانویه */
+.secondary-button {
+  background: transparent;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
+}
+
+/* کارت محصولات */
+.product-card {
+  background: var(--pure-white);
+  border: 1px solid var(--light-gray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 :root {
-  --primary-color: #905a98;
-  --primary-dark-color: #453847;
-  --dark-secondary-color: #6a4c6f;
+  /* primary  */
+  /* --primary-color: #905a98;
+  --primary-color-dark: #7a4a82;
+  --primary-color-light: #a87ab0; */
 
-  /* Secondary Colors */
-  --ligth-secondary-color: #b695b9;
-  --ligther-secondary-color: #e9d5eb;
+  /* Current: #905a98 */
+  --primary-color: #86508e;
+  --primary-color-dark: #77477e;
+  --primary-color-light: #95599e;
 
-  --accent-color-gold: #eab464; /* Warm gold/amber, for buttons, highlights, or icons */
-  --accent-color-green: #7bb686; /* Sage green, for subtle backgrounds, badges, or callouts */
-  --accent-color-coral: #ff857a; /* Soft coral, for attention-grabbing elements (sale, new) */
-  --wood-color: #d6a77a; /* Light wood, for backgrounds or accents */
-  --dark-wood-color: #9b5b1e;
-  --darker-wood-color: #5c4835;
-  --neutral-gray: #bfc4ca;
+  --earth-brown: #a47f51;
+  --accent-gold: #d4af37;
 
-  /* Accent Colors */
+  --sea-green: #588e50;
+  --lapis-lazuli: #035e7b;
+  --moon-stone: #46acc2;
+  /* text */
+  --rich-black: #0d1f22;
+  --slate-gray: #6b7280;
+  --silver-chalice: #a6a6a6;
+  --platinum-gray: #e2e2e2;
+  --text-color: #3a558b;
+
+  --dusty-gray: #616161;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --jet-black: #212121;
+
+  /* Light Neutrals */
+  --off-white: #f8f9fa; /* پس‌زمینه اصلی */
+  --pure-white: #ffffff; /*  قسمت‌های خاص */
+
+  /* Accent */
+  --accent-teal: #2d9cdb; /*   لینک‌ها */
+  --success-green: #38a169;
   --accent-color-blue: #4a5f73;
-  --accent-color-blue-dark: #3a4a5c;
-  --accent-color-gray-dark: #a6a6a6;
-  --accent-color-gray-darker: #808080;
-  --accent-color-gray-light: #718096;
-  --accent-color-gray: #e2e8f0;
-  --border-color: #e5e7eb;
-
-  /* Supporting Colors */
-  --supporting-color-gray: #f4f4f4;
-
-  /* Neutral Colors */
-  --pure-white-color: #fff;
-  --neutral-white-color: #d1d7e0;
-  --off-white-color: #f7f7fa;
-  --dark-gray-color: #151b23;
-  --dark-mode-card-bg: #23272e;
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 
-  --dark-accent-color: #b695b9;
-
   --transition-400: 0.4s ease;
 }
 
-.dark .dark\:bg-dark-gray {
-  background-color: var(--dark-gray-color);
-}
+/* .dark .dark\:bg-dark-gray {
+  background-color: var(--);
+} */
 
 html {
   scroll-behavior: smooth;
@@ -65,7 +79,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--off-white-color);
+  background-color: var(--off-white);
 }
 
 .animateFadeInUp {
@@ -104,7 +118,7 @@ body {
     to right,
     var(--primary-color),
     var(--primary-color) 50%,
-    var(--neutral-white-color) 50%
+    var(--off-white) 50%
   );
 }
 
@@ -116,17 +130,14 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--accent-color-blue-dark);
+  color: var(--jet-black);
 }
-
 h4 {
-  color: var(--accent-color-gray-darker);
+  color: var(--rich-black);
 }
-
 p {
-  color: var(--accent-color-gray-light);
+  color: var(--dusty-gray);
 }
-
 a {
   color: var(--accent-color-blue);
 }
@@ -136,6 +147,8 @@ a {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .pageWrapper h1 {
@@ -176,4 +189,33 @@ a {
 
 .lightShadow {
   box-shadow: var(--light-shadow);
+}
+
+/* --- swiper in ThumsGallery component --- */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.swiper-slide {
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

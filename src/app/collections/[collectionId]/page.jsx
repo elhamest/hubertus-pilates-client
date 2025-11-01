@@ -1,7 +1,11 @@
 import { faProductCollections } from "@/data/fa";
 import { enProductCollections } from "@/data/en";
-import { Container } from "@/components/UI/container";
 import { Collection } from "@/components/collections/collection";
+
+import styles from "./CollectionPage.module.css";
+import { Container } from "@/components/UI/container";
+import { generatePathToTitleMap } from "@/utils/pathMaps";
+import Breadcrumb from "@/components/UI/breadcrumb";
 
 export default async function CollectionPage({ params, locale = "fa" }) {
   // Ensure params is properly awaited
@@ -14,9 +18,14 @@ export default async function CollectionPage({ params, locale = "fa" }) {
     (item) => item?.path === `collections/${collectionId}`
   );
 
+  const pathToTitleMap = generatePathToTitleMap(locale);
+
   if (!selectedCollection) {
     return (
       <Container>
+        {pathToTitleMap && (
+          <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+        )}
         <div className="min-h-[400px] flex items-center justify-center">
           <h1 className="text-2xl font-semibold text-gray-800">
             مجموعه ای یافت نشد.
@@ -28,10 +37,11 @@ export default async function CollectionPage({ params, locale = "fa" }) {
 
   return (
     <Container>
-      <div className="pageWrapper pageHeight">
-        <h1 className="dark:text-neutralWhiteColor">
-          {selectedCollection?.title}
-        </h1>
+      {pathToTitleMap && (
+        <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+      )}
+      <div className={`${styles.collectionPageWrapper} pageWrapper pageHeight`}>
+        <h1 className="dark:text-offWhiteColor">{selectedCollection?.title}</h1>
         <Collection items={selectedCollection?.items} />
       </div>
     </Container>
