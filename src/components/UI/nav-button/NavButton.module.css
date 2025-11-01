@@ -1,0 +1,20 @@
+@media (min-width: 1280px) {
+  .navButton {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navButton[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}

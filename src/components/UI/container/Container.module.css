@@ -1,0 +1,47 @@
+.container {
+  /* Desktop first - start with largest screen */
+  max-width: 1300px; /*1280px*/
+  width: 100%;
+  padding: 48px 60px;
+  margin: 0 auto;
+}
+
+/* Work down to smaller screens */
+@media (max-width: 1535px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 768px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 600px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    max-width: 100%;
+    padding: 20px 40px 40px;
+  }
+}

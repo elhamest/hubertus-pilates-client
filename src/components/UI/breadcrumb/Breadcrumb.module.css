@@ -1,0 +1,43 @@
+.breadcrumb {
+  background-color: inherit;
+  font-size: 13px;
+}
+.breadcrumb ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.breadcrumb ol li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbLink {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--dusty-gray);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.breadcrumbLink svg:first-child {
+  width: 15px;
+  height: 15px;
+}
+.breadcrumbLink svg:last-child {
+  width: 12px;
+  height: 12px;
+}
+.breadcrumb span {
+  margin: 0 5px;
+  color: var(--dusty-gray);
+}

@@ -1,0 +1,28 @@
+export const enConstants = {
+  pageTitle: "Hubertus Pilates",
+  companyName: "Hubertus",
+  engineeringDepartment: "Engineering Group",
+  companyDescription: "Manufacturer of Pilates Devices",
+  companyProud:
+    "Design and manufacturing of high-quality Pilates equipment based on global standards",
+  footerSlug:
+    "We take pride in producing high-quality Pilates equipment by Iranian engineers, adhering to international standards and utilizing modern technologies. This has led to our products being well-regarded in global markets.",
+  viewProducts: "View Products",
+  products: "Products",
+  relatedContent: "Related Content",
+  followUs: "Follow us",
+  contactUs: "Contact us",
+  openContactFormWidget: "Open Contact form Widget",
+  fullName: "Full Name",
+  enterYourName: "Please enter your name",
+  emailAddress: "Email Address",
+  enterYourEmail: "Please enter your email",
+  yourMessage: "Your Message",
+  EnterYourMessage: "Please enter youor message",
+  howWeCanHelp: "How can we help?",
+  weUsuallyRespondInAFewHours: "We usually respond in a few hours",
+  sendMessage: "Send Message",
+  collectionGalleryTitle: "Our Pilates Equipment",
+  allCollectionsTitle: "All Equipments",
+  viewMore: "View more",
+};

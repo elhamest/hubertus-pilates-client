@@ -1,0 +1,28 @@
+export const faConstants = {
+  pageTitle: "هوبرتوس پیلاتس",
+  companyName: "هوبرتوس",
+  engineeringDepartment: "گروه مهندسی",
+  companyDescription: "تولید کننده دستگاه های پیلاتس",
+  companyProud:
+    "طراحی و تولید تجهیزات پیلاتس با کیفیت بر اساس استانداردهای جهانی",
+  footerSlug:
+    "ما به تولید محصولات با کیفیت بالا در زمینه وسایل پیلاتس توسط مهندسان ایرانی با توجه به استانداردهای بین‌المللی و با استفاده از تکنولوژی‌های روز دنیا افتخار می‌کنیم و این موضوع باعث شده است که محصولات ما در بازارهای جهانی نیز مورد توجه قرار گیرند.",
+  viewProducts: "مشاهده محصولات",
+  products: "محصولات",
+  relatedContent: "مطالب مرتبط",
+  followUs: "ما را دنبال کنید",
+  contactUs: "با ما تماس بگیرید",
+  openContactFormWidget: "باز کردن بخش تماس از ویجت",
+  fullName: "نام و نام خانوادگی",
+  enterYourName: "لطفا نام خود را وارد کنید",
+  emailAddress: "آدرس ایمیل",
+  enterYourEmail: "لطفا ایمیل خود را وارد کنید",
+  yourMessage: "پیام شما",
+  enterYourMessage: "لطفا پیام خود را وارد کنید",
+  howWeCanHelp: "چگونه می توانیم به شما کمک کنیم؟",
+  weUsuallyRespondInAFewHours: "ما معمولا در چند ساعت پاسخ می دهیم",
+  sendMessage: "ارسال پیام",
+  collectionGalleryTitle: "تجهیزات پیلاتس ما",
+  allCollectionsTitle: "همه تجهیزات",
+  viewMore: "مشاهده بیشتر",
+};

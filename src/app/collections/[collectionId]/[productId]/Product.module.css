@@ -1,0 +1,151 @@
+.productWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  max-width: 1300px;
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.textContainer {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 700px;
+  min-width: 500px;
+  width: 100%;
+}
+
+.textContainer h1 {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.imageStyle {
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.productDescription {
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-align: justify;
+  line-height: 2.2;
+  width: 100%;
+}
+
+.featureBox {
+  padding: 0 16px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.featureBox ul {
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.featureBox ul li {
+  padding: 0 16px 0 0;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  text-align: justify;
+  line-height: 1.7;
+  width: 100%;
+}
+
+.featureBox ul li > span {
+  padding: 0 10px 0 0;
+}
+
+.featureBox ul li:first-child {
+  margin-top: 14px;
+}
+
+.featureBox ul li:last-child {
+  margin-bottom: 14px;
+}
+.featureBox ul li::before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--gray-700);
+  border-radius: 50%;
+}
+
+.notFoundContainer {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFoundText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1100px) {
+  .productWrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .textContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .productWrapper {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .textContainer h1 {
+    font-size: 14px;
+  }
+
+  .productDescription {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .featureBox ul li {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .featureBox {
+    padding: 0 10px;
+  }
+}

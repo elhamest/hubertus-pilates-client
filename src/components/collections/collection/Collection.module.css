@@ -1,0 +1,115 @@
+.collections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.collection {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--pure-white);
+  transition: all 0.5s ease-in-out;
+  max-width: 380px;
+}
+
+.imageWrapper {
+  width: 100%;
+  /* height: auto; */
+  height: 55%;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: transparent;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collection:hover .imageWrapper img {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.imageWrapper img {
+  display: block;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.boxTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 12px;
+}
+
+.contentWrapper {
+  padding: 20px 25px;
+  position: relative;
+  height: 45%;
+}
+
+.contentWrapper > p {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.viewMore {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px;
+  color: var(--dusty-gray);
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  transition: all 0.5s ease-in-out;
+}
+.viewMore span {
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.viewMore span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+.collection:hover .viewMore span {
+  padding-left: 20px;
+  color: var(--earth-brown);
+}
+.collection:hover .viewMore span:after {
+  opacity: 1;
+  left: 0;
+  color: var(--earth-brown);
+}
+
+@media (min-width: 768px) {
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardTitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .collections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
