@@ -41,3 +41,9 @@
   margin: 0 5px;
   color: var(--dusty-gray);
 }
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 11px;
+  }
+}

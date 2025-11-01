@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import "swiper/css/pagination";
 
 import styles from "./ThumsGallery.module.css";
 
@@ -19,7 +20,7 @@ const ThumsGallery = ({ data }) => {
   }
 
   return (
-    <div className={styles.swiperWrapper}>
+    <div className={styles.thumsGalleryWrapper}>
       {/* Main Swiper */}
       <Swiper
         loop={true}
@@ -29,14 +30,19 @@ const ThumsGallery = ({ data }) => {
           prevEl: `.${styles.swiperButtonPrev}`,
         }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mainSwiper"
+        modules={[FreeMode, Navigation, Thumbs, Pagination]}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+          el: `.${styles.pagination}`,
+        }}
+        className={`${styles.mainSwiper} mainSwiper`}
       >
         {data?.map((item, index) => {
           return (
             <SwiperSlide
               key={index}
-              className={`${styles.mainWrapper} ${
+              className={`${styles.mainSwiperSlide} ${
                 item?.isHorizontal ? styles.horizontal : styles.vertical
               }`}
             >
@@ -69,7 +75,10 @@ const ThumsGallery = ({ data }) => {
         </button>
       </Swiper>
 
-      {/* Thumbnail Swiper */}
+      {/* Pagination container - always in DOM but hidden on desktop */}
+      <div className={styles.pagination}></div>
+
+      {/* Thumbnail Swiper - always in DOM but hidden on mobile */}
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
@@ -78,13 +87,13 @@ const ThumsGallery = ({ data }) => {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="thumbSwiper"
+        className={`thumbSwiper ${styles.thumbSwiper}`}
       >
         {data?.map((item, index) => {
           return (
             <SwiperSlide
               key={index}
-              className={`${styles.thumbWrapper} ${
+              className={`${styles.thumbSwiperSlide} ${
                 item?.isHorizontal ? styles.horizontal : styles.vertical
               }`}
             >

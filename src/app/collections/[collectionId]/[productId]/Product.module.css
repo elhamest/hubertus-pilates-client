@@ -2,10 +2,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 40px;
   max-width: 1300px;
   width: 100%;
-  /* margin: 0 auto; */
 }
 
 .imageContainer {
@@ -112,6 +111,7 @@
 }
 
 /* Mobile responsiveness */
+
 @media (max-width: 1100px) {
   .productWrapper {
     flex-direction: column;
@@ -125,10 +125,12 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .productWrapper {
-    padding: 0 10px;
-    gap: 15px;
+    gap: 35px;
+  }
+  .textContainer {
+    min-width: 100%;
   }
 
   .textContainer h1 {
