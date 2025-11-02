@@ -36,6 +36,9 @@
 
   --earth-brown: #a47f51;
   --accent-gold: #d4af37;
+  --brown-light: #a38c75;
+  --brown-dark: #3e3a36;
+  --brown-medium: #665a4d;
 
   --sea-green: #588e50;
   --lapis-lazuli: #035e7b;
@@ -50,7 +53,6 @@
   --dusty-gray: #616161;
   --gray-700: #616161;
   --gray-800: #424242;
-  --jet-black: #212121;
 
   /* Light Neutrals */
   --off-white: #f8f9fa; /* پس‌زمینه اصلی */
@@ -130,7 +132,7 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--jet-black);
+  color: var(--rich-black);
 }
 h4 {
   color: var(--rich-black);

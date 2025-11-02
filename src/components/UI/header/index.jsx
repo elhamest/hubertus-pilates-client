@@ -3,15 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 
-import Navbar from "./navbar";
+import Logo from "@/components/UI/svg/Logo";
 import MobileNavbar from "./mobile-navbar";
 import ThemeChanger from "../theme-changer/DarkSwitch";
-import { faConstants } from "../../../../public/locales/fa/common";
 import { faNavigations } from "../../../data/fa";
 import { enNavigations } from "../../../data/en";
-import logoImage from "../../../../public/img/logo.svg";
 
 import styles from "./Header.module.css";
 
@@ -41,58 +38,47 @@ const Header = ({ locale = "fa" }) => {
   }, []);
 
   return (
-    <div
-      className={`${styles.navbarWrapper} ${
+    <header
+      className={`${styles.headerWrapper}  ${
         isScrolled ? styles.scrolled : ""
       } ${
         isScrolled && resolvedTheme === "light" ? styles.scrolledLight : ""
-      } ${isScrolled && resolvedTheme === "dark" ? styles.scrolledDark : ""}`}
+      } ${isScrolled && resolvedTheme === "dark" ? styles.scrolledDark : ""}
+      `}
     >
-      <nav className="container relative flex flex-wrap items-center justify-between mx-auto">
-        {/* Logo  */}
-        <Link href="/">
-          <span
-            className={`flex items-center text-2xl font-medium ${
-              isScrolled ? styles.scrolledLogo : ""
-            }`}
-          >
-            <span>
-              <Image
-                src={logoImage}
-                alt={faConstants?.companyName}
-                width={80}
-                style={{ height: "auto" }}
-              />
-            </span>
-            <span
-              className={`text-primaryColor dark:text-pureWhiteColor ${styles.logoText}`}
-            >
-              {faConstants?.companyName}
-            </span>
-          </span>
-        </Link>
+      <nav className={styles.container}>
+        <span className={styles.logoImage}>
+          <Link href="/">
+            {isScrolled ? <Logo color="#86508e" /> : <Logo color="#fff" />}
+          </Link>
+        </span>
 
         {/* Theme Changer */}
-        <div
-          className="flex items-center lg:order-2"
-          style={{ zIndex: "1050" }}
-        >
-          <div
-            className={`gap-3 ml-5 lg:ml-0 lg:flex mr-auto lg:mr-0 lg:order-2 ${
-              isScrolled ? styles.scrolledThemeChanger : ""
-            }`}
-          >
+        <div className={styles.themeChangerContainer}>
+          {/* Desktop Menu */}
+          <div className={styles.desktopMenu}>
+            <ul className={styles.navList}>
+              {navigations?.map((menu, index) => (
+                <li key={index}>
+                  <Link key={index} href={menu?.path}>
+                    {menu?.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.themeChangerWrapper}>
             <ThemeChanger />
           </div>
 
           {/* Mobile menu button */}
           <button
             aria-label="Toggle Menu"
-            className="px-2 py-1 text-accentColorBlue rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-silverChalice dark:focus:bg-richBlack-700"
+            className={styles.mobileMenuButton}
             onClick={toggleMenu}
           >
             <svg
-              className="w-6 h-6 fill-primaryColor"
+              className={styles.menuIcon}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -115,22 +101,13 @@ const Header = ({ locale = "fa" }) => {
         {/* Mobile menu */}
         {isOpen && (
           <div
-            className={`flex flex-wrap w-full mt-5 lg:hidden lightShadow ${styles.mobileMenu} ${styles.open}`}
+            className={`${styles.mobileMenu} ${styles.lightShadow} ${styles.open}`}
           >
             <MobileNavbar navigations={navigations} setIsOpen={setIsOpen} />
           </div>
         )}
-
-        {/* Desktop Menu */}
-        <div
-          className={`hidden lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:flex lg:items-center ${
-            isScrolled ? styles.scrolledMenu : ""
-          }`}
-        >
-          <Navbar navigations={navigations} resolvedTheme={resolvedTheme} />
-        </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

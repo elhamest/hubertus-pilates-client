@@ -11,35 +11,36 @@ export const Hero = () => {
   return (
     <>
       <div className={styles.heroWrapper}>
-        {/* description */}
-        <div className={styles.descriptionWrapper}>
-          <div className={styles.descriptionContainer}>
-            <h1 className={`lg:leading-tight xl:leading-tight`}>
-              {faConstants.engineeringDepartment}
-              <span>{` ${faConstants.companyName}`}</span>
-            </h1>
-            <h2 className="dark:text-pureWhiteColor">
+        {/* text */}
+        <div className={styles.heroContainer}>
+          <div className={styles.textContainer}>
+            <h3>
               {faConstants.companyDescription}
-            </h2>
-            <p className="text-pureWhiteColor">{faConstants.companyProud}</p>
+              <span className={styles.smallDots}></span>
+            </h3>
+            {/* <h3>{faConstants.companyProud}</h3> */}
+            <h1>
+              <span
+                className={styles.companyName}
+              >{`${faConstants.engineeringDepartment} ${faConstants.companyName}`}</span>
+            </h1>
 
-            <div className={styles.viewProducts}>
+            {/* <p className={styles.companyProud}>{faConstants.companyProud}</p> */}
+
+            <div className={styles.viewButton}>
               <Link href="/collections">{faConstants.viewProducts}</Link>
+              <button>تست</button>
             </div>
+
+            <span className={styles.spanDots} alt="dots" />
           </div>
+          <div className={styles.heroSlider}>Slider</div>
         </div>
 
         {/* photo */}
-        <div
-          className={`flex items-center justify-center flex-grow-1 flex-shrink-1 flex-auto h-full ${styles.imageWrapper}`}
-        >
+        <div className={styles.imageWrapper}>
           <div className={styles.imageContainer}>
-            <Image
-              src={heroImg}
-              alt="Hero Illustration"
-              loading="eager"
-              placeholder="blur"
-            />
+            <Image src={heroImg} alt="Hero Illustration" loading="eager" />
           </div>
         </div>
       </div>
