@@ -87,7 +87,9 @@ body {
 .animateFadeInUp {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1.3s ease, transform 1.3s ease;
+  /* transition: opacity 1.3s ease, transform 1.3s ease; */
+  transition: transform 0.9s cubic-bezier(0, 0.3, 0.3, 0.995),
+    opacity 0.9s linear;
 }
 
 .animateFadeInUp.animate {

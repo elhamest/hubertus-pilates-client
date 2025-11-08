@@ -77,7 +77,7 @@
   width: 126px;
   height: 186px;
   background-repeat: no-repeat;
-  background-image: url("../../../../public/img/span-dots.svg");
+  background-image: url("../../../../public/img/dots/span-dots.svg");
   transform: scaleX(-1); /* Flips horizontally */
 }
 
@@ -104,7 +104,7 @@
   width: 168px;
   height: 66px;
   background-repeat: no-repeat;
-  background-image: url("../../../../public/img/dots.svg");
+  background-image: url("../../../../public/img/dots/dots.svg");
   transform: scaleX(-1); /* Flips horizontally */
 }
 
@@ -114,11 +114,6 @@
   font-weight: 400;
   letter-spacing: -0.025em;
   margin: 30px 0 40px;
-  transition: transform 0.8s cubic-bezier(0, 0.3, 0.3, 0.995),
-    opacity 0.3s linear;
-}
-
-.textContainer h1 {
   color: var(--pure-white);
   -webkit-text-stroke: 1px var(--earth-brown);
 }

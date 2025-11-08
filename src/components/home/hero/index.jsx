@@ -21,15 +21,17 @@ export const Hero = () => {
             {/* <h3>{faConstants.companyProud}</h3> */}
             <h1>
               <span
-                className={styles.companyName}
+                className={`${styles.companyName} animateFadeInUp`}
               >{`${faConstants.engineeringDepartment} ${faConstants.companyName}`}</span>
             </h1>
 
             {/* <p className={styles.companyProud}>{faConstants.companyProud}</p> */}
 
             <div className={styles.viewButton}>
-              <Link href="/collections">{faConstants.viewProducts}</Link>
-              <button>تست</button>
+              <Link href="/collections" className="animateFadeInUp">
+                {faConstants.viewProducts}
+              </Link>
+              <button className="animateFadeInUp">تست</button>
             </div>
 
             <span className={styles.spanDots} alt="dots" />
