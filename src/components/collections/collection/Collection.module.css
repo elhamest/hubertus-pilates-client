@@ -113,12 +113,15 @@
   .collections {
     grid-template-columns: 1fr;
   }
+  .collection {
+    max-width: 300px;
+  }
 
   .boxTitle {
     font-size: 14px;
   }
   .contentWrapper {
-    padding: 20px;
+    padding: 10px 20px 20px;
   }
   .contentWrapper > p {
     font-size: 12px;

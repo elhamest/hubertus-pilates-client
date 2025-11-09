@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 
 import Logo from "@/components/UI/svg/Logo";
 import MobileNavbar from "./mobile-navbar";
@@ -11,12 +12,16 @@ import { faNavigations } from "../../../data/fa";
 import { enNavigations } from "../../../data/en";
 
 import styles from "./Header.module.css";
+import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
 
 const Header = ({ locale = "fa" }) => {
+  const pathname = usePathname();
   const navigations = locale === "fa" ? faNavigations : enNavigations;
   const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const isHomePage = pathname === "/";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -49,7 +54,11 @@ const Header = ({ locale = "fa" }) => {
       <nav className={styles.container}>
         <span className={styles.logoImage}>
           <Link href="/">
-            {isScrolled ? <Logo color="#86508e" /> : <Logo color="#fff" />}
+            {isScrolled || !isHomePage ? (
+              <Logo color="#86508e" />
+            ) : (
+              <Logo color="#fff" />
+            )}
           </Link>
         </span>
 
@@ -57,7 +66,11 @@ const Header = ({ locale = "fa" }) => {
         <div className={styles.themeChangerContainer}>
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
-            <ul className={styles.navList}>
+            <ul
+              className={`${styles.navList} ${
+                !isHomePage ? styles.notHomePage : ""
+              }`}
+            >
               {navigations?.map((menu, index) => (
                 <li key={index}>
                   <Link key={index} href={menu?.path}>
@@ -78,7 +91,9 @@ const Header = ({ locale = "fa" }) => {
             onClick={toggleMenu}
           >
             <svg
-              className={styles.menuIcon}
+              className={`${styles.menuIcon} ${
+                isScrolled ? styles.scrolled : ""
+              }`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >

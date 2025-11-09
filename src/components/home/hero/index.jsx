@@ -11,21 +11,15 @@ export const Hero = () => {
   return (
     <>
       <div className={styles.heroWrapper}>
-        {/* text */}
         <div className={styles.heroContainer}>
           <div className={styles.textContainer}>
             <h3>
               {faConstants.companyDescription}
               <span className={styles.smallDots}></span>
             </h3>
-            {/* <h3>{faConstants.companyProud}</h3> */}
             <h1>
-              <span
-                className={`${styles.companyName} animateFadeInUp`}
-              >{`${faConstants.engineeringDepartment} ${faConstants.companyName}`}</span>
+              <span className="animateFadeInUp">{`${faConstants.engineeringDepartment} ${faConstants.companyName}`}</span>
             </h1>
-
-            {/* <p className={styles.companyProud}>{faConstants.companyProud}</p> */}
 
             <div className={styles.viewButton}>
               <Link href="/collections" className="animateFadeInUp">
@@ -33,10 +27,8 @@ export const Hero = () => {
               </Link>
               <button className="animateFadeInUp">تست</button>
             </div>
-
-            <span className={styles.spanDots} alt="dots" />
           </div>
-          <div className={styles.heroSlider}>Slider</div>
+          <span className={styles.spanDots} alt="dots" />
         </div>
 
         {/* photo */}

@@ -152,7 +152,7 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 .pageWrapper h1 {

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import styles from "./DarkSwitch.module.css";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
@@ -12,7 +13,6 @@ const ThemeChanger = () => {
   // Set the initial theme to system preference
   useEffect(() => {
     if (mounted) {
-      //  && !theme
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
@@ -20,22 +20,21 @@ const ThemeChanger = () => {
       setTheme(systemTheme);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mounted]); //, theme, setTheme
+  }, [mounted]);
 
   if (!mounted) return null;
 
   return (
-    <div className="flex items-center order-last ">
+    <div className={styles.themeChanger}>
       {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
-          className="text-silverChalice rounded-full outline-none focus:outline-none "
+          className={`${styles.button} ${styles.lightButton}`}
         >
-          <span className="sr-only">Light Mode</span>
-
+          <span className={styles.srOnly}>Light Mode</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5"
+            className={styles.icon}
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -45,13 +44,12 @@ const ThemeChanger = () => {
       ) : (
         <button
           onClick={() => setTheme("dark")}
-          className="text-accentColorBlue rounded-full outline-none focus:outline-none focus-visible:ring focus-visible:ring-gray-100 focus:ring-opacity-20"
+          className={`${styles.button} ${styles.darkButton}`}
         >
-          <span className="sr-only">Dark Mode</span>
+          <span className={styles.srOnly}>Dark Mode</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            className={styles.icon}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
