@@ -9,14 +9,35 @@
   border: 2px solid var(--primary-purple);
 }
 
-/* کارت محصولات */
 .product-card {
   background: var(--pure-white);
   border: 1px solid var(--light-gray);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+/* System preference as initial fallback */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+html.dark {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
 :root {
+  --background: #f8f9fa;
+  --foreground: #0d1f22;
+
   --primary-color: #86508e;
   --primary-color-dark: #77477e;
   --primary-color-light: #95599e;
@@ -41,14 +62,17 @@
   --gray-700: #616161;
   --gray-800: #424242;
 
-  /* Light Neutrals */
-  --off-white: #f8f9fa; /* پس‌زمینه اصلی */
-  --pure-white: #ffffff; /*  قسمت‌های خاص */
+  --off-white: #f8f9fa;
+  --pure-white: #ffffff;
 
   /* Accent */
   --accent-teal: #2d9cdb; /*   لینک‌ها */
   --success-green: #38a169;
   --accent-color-blue: #4a5f73;
+
+  /* footer: #1C1B19 */
+  /* titlew color: #F2EDE8  24px 400 */
+  /* subtitle: rgba(242,237,232,.7) 16px 300 */
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
@@ -64,7 +88,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--off-white);
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 .animateFadeInUp {
