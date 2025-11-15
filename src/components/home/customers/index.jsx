@@ -5,25 +5,25 @@ function Customers() {
   return (
     <Container>
       <div className="flex flex-col justify-center py-4">
-        <div className="text-xl text-center text-accentColorBlue dark:text-white">
+        <div className="text-xl text-center text-accentColorBlue">
           Trusted by <span className="text-indigo-600">2000+</span> customers
           worldwide
         </div>
 
         <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-          <div className="pt-2 text-accentColorBlue dark:text-silverChalice">
+          <div className="pt-2 text-accentColorBlue">
             <AmazonLogo />
           </div>
-          <div className="text-accentColorBlue dark:text-silverChalice">
+          <div className="text-accentColorBlue">
             <VerizonLogo />
           </div>
-          <div className="text-accentColorBlue dark:text-silverChalice">
+          <div className="text-accentColorBlue">
             <MicrosoftLogo />
           </div>
-          <div className="pt-1 text-accentColorBlue dark:text-silverChalice">
+          <div className="pt-1 text-accentColorBlue">
             <NetflixLogo />
           </div>
-          <div className="pt-2 text-accentColorBlue dark:text-silverChalice">
+          <div className="pt-2 text-accentColorBlue">
             <SonyLogo />
           </div>
         </div>

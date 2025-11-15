@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TestimonialsItem = ({ data }) => {
   return (
-    <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-richBlack-800">
+    <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14">
       <p className="text-2xl leading-normal ">{data?.description}</p>
 
       {/* Avatar */}
@@ -18,7 +18,7 @@ const TestimonialsItem = ({ data }) => {
         </div>
         <div>
           <div className="text-lg font-medium">{data?.name}</div>
-          <div className="text-gray-600 dark:text-gray-400">{data?.title}</div>
+          <div className="text-gray-600">{data?.title}</div>
         </div>
       </div>
     </div>

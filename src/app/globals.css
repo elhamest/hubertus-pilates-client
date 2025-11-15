@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  html,
-  body {
-    @apply dark:bg-dark-gray;
-  }
-} */
-
 /* دکمه‌های ثانویه */
 .secondary-button {
   background: transparent;
@@ -24,12 +17,6 @@
 }
 
 :root {
-  /* primary  */
-  /* --primary-color: #905a98;
-  --primary-color-dark: #7a4a82;
-  --primary-color-light: #a87ab0; */
-
-  /* Current: #905a98 */
   --primary-color: #86508e;
   --primary-color-dark: #77477e;
   --primary-color-light: #95599e;
@@ -68,10 +55,6 @@
 
   --transition-400: 0.4s ease;
 }
-
-/* .dark .dark\:bg-dark-gray {
-  background-color: var(--);
-} */
 
 html {
   scroll-behavior: smooth;

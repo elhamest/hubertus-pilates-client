@@ -7,7 +7,7 @@ const MobileNavbar = ({ navigations, setIsOpen }) => {
         <Link
           key={index}
           href={item?.path}
-          className="w-full px-4 py-2 -ml-4 rounded-md dark:text-pureWhiteColor hover:text-primaryColor hover:bg-pureWhiteColor dark:hover:text-primaryColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
+          className="w-full px-4 py-2 -ml-4 rounded-md hover:text-primaryColor hover:bg-pureWhiteColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           {item?.title}

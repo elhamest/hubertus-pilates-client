@@ -41,7 +41,7 @@ export default async function CollectionPage({ params, locale = "fa" }) {
         <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
       )}
       <div className={`${styles.collectionPageWrapper} pageWrapper pageHeight`}>
-        <h1 className="dark:text-offWhiteColor">{selectedCollection?.title}</h1>
+        <h1>{selectedCollection?.title}</h1>
         <Collection items={selectedCollection?.items} />
       </div>
     </Container>
