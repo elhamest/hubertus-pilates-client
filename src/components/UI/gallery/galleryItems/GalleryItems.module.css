@@ -1,9 +1,9 @@
 .card {
-  background: #fff;
+  background-color: var(--card-color);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
   min-width: 200px;
 }
 

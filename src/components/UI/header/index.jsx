@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 import Logo from "@/components/UI/svg/Logo";
 import MobileNavbar from "./mobile-navbar";
-import ThemeChanger from "../theme-changer/DarkSwitch";
+import ThemeChanger from "../theme-toggle/ThemeToggle";
 import { faNavigations } from "../../../data/fa";
 import { enNavigations } from "../../../data/en";
 
@@ -17,7 +17,7 @@ import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.share
 const Header = ({ locale = "fa" }) => {
   const pathname = usePathname();
   const navigations = locale === "fa" ? faNavigations : enNavigations;
-  const { resolvedTheme } = useTheme();
+  // const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -42,13 +42,12 @@ const Header = ({ locale = "fa" }) => {
     };
   }, []);
 
+  //  ${
+  //       isScrolled && resolvedTheme === "light" ? styles.scrolledLight : ""
+  //     } ${isScrolled && resolvedTheme === "dark" ? styles.scrolledDark : ""}
   return (
     <header
-      className={`${styles.headerWrapper}  ${
-        isScrolled ? styles.scrolled : ""
-      } ${
-        isScrolled && resolvedTheme === "light" ? styles.scrolledLight : ""
-      } ${isScrolled && resolvedTheme === "dark" ? styles.scrolledDark : ""}
+      className={`${styles.headerWrapper}  ${isScrolled ? styles.scrolled : ""}
       `}
     >
       <nav className={styles.container}>

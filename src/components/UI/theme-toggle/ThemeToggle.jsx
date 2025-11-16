@@ -1,34 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import styles from "./DarkSwitch.module.css";
+import { useTheme } from "../../theme-provider/ThemeProvider";
+import styles from "./ThemeToggle.module.css";
 
-const ThemeChanger = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
-
-  // Set the initial theme to system preference
-  useEffect(() => {
-    if (mounted) {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-      setTheme(systemTheme);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mounted]);
-
-  if (!mounted) return null;
+const ThemeToggle = () => {
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className={styles.themeChanger}>
       {theme === "dark" ? (
         <button
-          onClick={() => setTheme("light")}
+          onClick={() => toggleTheme("light")}
           className={`${styles.button} ${styles.lightButton}`}
         >
           <span className={styles.srOnly}>Light Mode</span>
@@ -43,7 +25,7 @@ const ThemeChanger = () => {
         </button>
       ) : (
         <button
-          onClick={() => setTheme("dark")}
+          onClick={() => toggleTheme("dark")}
           className={`${styles.button} ${styles.darkButton}`}
         >
           <span className={styles.srOnly}>Dark Mode</span>
@@ -66,4 +48,4 @@ const ThemeChanger = () => {
   );
 };
 
-export default ThemeChanger;
+export default ThemeToggle;
