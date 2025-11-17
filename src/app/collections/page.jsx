@@ -18,9 +18,7 @@ function CollectionsPage({ locale = "fa" }) {
         <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
       )}
       <div className="pageWrapper pageHeight">
-        <h1 className="dark:text-offWhiteColor">
-          {faConstants.allCollectionsTitle}
-        </h1>
+        <h1>{faConstants.allCollectionsTitle}</h1>
 
         <div className={styles.galleryList}>
           <GalleryItems

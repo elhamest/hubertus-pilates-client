@@ -18,7 +18,7 @@ const Gallery = ({ title, items }) => {
   return (
     <div className={styles.galleryWrapper}>
       <div className={styles.header}>
-        <h2 className={styles.headerTitle}>{title}</h2>
+        <h2 className={`${styles.headerTitle} animateFadeInUp`}>{title}</h2>
         <div className={`flex gap-4 ltr ${styles.headerIndicators}`}>
           <button
             className={styles.circleButton}

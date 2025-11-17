@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="180" viewBox="0 0 120 180" fill="none">
+  <circle cx="30" cy="3" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="3" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="90" cy="3" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="30" cy="33" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="33" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="90" cy="33" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="30" cy="63" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="63" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="90" cy="63" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="30" cy="93" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="93" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="90" cy="93" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="30" cy="123" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="30" cy="153" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="30" cy="177" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="123" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="153" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="177" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="90" cy="153" r="3" fill="white" fill-opacity="0.5"/>
+  <circle cx="90" cy="177" r="3" fill="white" fill-opacity="0.5"/>
+</svg>

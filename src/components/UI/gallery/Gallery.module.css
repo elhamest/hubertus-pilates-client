@@ -1,6 +1,6 @@
 .galleryWrapper {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 
 .header {
@@ -11,7 +11,7 @@
 }
 
 .headerTitle {
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -95,6 +95,10 @@
 
 /* Mobile Styles (480px to 767px) */
 @media (max-width: 767px) {
+  .galleryWrapper {
+    margin-top: 80px;
+  }
+
   .gallerySlider {
     grid-template-columns: repeat(2, minmax(130px, 1fr));
     gap: 16px;

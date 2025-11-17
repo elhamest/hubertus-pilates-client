@@ -1,0 +1,77 @@
+.themeChanger {
+  display: flex;
+  align-items: center;
+  order: last;
+}
+
+.button {
+  border-radius: 50%;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--focus-ring-color, #666);
+  outline-offset: 2px;
+}
+
+.lightButton {
+  color: var(--silver-chalice);
+}
+
+.darkButton {
+  color: var(--silver-chalice);
+}
+
+.darkButton:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.button:hover .icon {
+  transform: scale(1.1);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1023px) {
+  .themeChanger {
+    margin-left: 0;
+    order: unset;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .button {
+    padding: 6px;
+  }
+}

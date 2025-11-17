@@ -1,30 +1,48 @@
 import React from "react";
-import { SectionTitle } from "../../UI/section-title";
+import Image from "next/image";
 
-import styles from "./Benefits.module.css";
+import { SectionTitle } from "../../UI/section-title";
 import { faBenefits } from "../../../data/fa";
+
+import bigFeatureImage from "../../../../public/img/feature-600.webp";
+import smallFeatureImage from "../../../../public/img/feature2.webp";
+import dotsImage from "../../../../public/img/dots/6dots.svg";
+import styles from "./Benefits.module.css";
 
 function Benefits() {
   return (
-    <SectionTitle preTitle={faBenefits?.preTitle} title={faBenefits?.title}>
-      {faBenefits?.items?.map((item, index) => (
-        <div key={index} className={styles.benefitContainer}>
-          <svg
-            className={styles.checkSvgImage}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M20 6L9 17l-5-5" />
-          </svg>
-          {item}
+    <section className={styles.benefitsWrapper}>
+      <div className={styles.contentWrapper}>
+        <h2>تمایز ما در یک نگاه</h2>
+        {/* <h2 className="animateFadeInUp">هنر پیلاتس</h2>
+        <h2 className="animateFadeInUp">مهندسی‌شده توسط ما</h2> */}
+        {/* <h3>
+          از مواد اولیه درجه یک تا طراحی کاربرمحور، هر جزئیاتی برای ارتقای تجربه
+          پیلاتس شما طراحی شده است.
+        </h3> */}
+        <div>
+          {faBenefits?.items?.map((item, index) => (
+            <div
+              key={index}
+              className={`${styles.benefitItem} animateFadeInUp`}
+            >
+              {item}
+            </div>
+          ))}
         </div>
-      ))}
-    </SectionTitle>
+      </div>
+      <div className={styles.imageWrapper}>
+        <div className={styles.bigImageContainer}>
+          <Image src={bigFeatureImage} alt="Features 2" />
+        </div>
+        <div className={styles.dots}>
+          <Image src={dotsImage} alt="Dots" />
+        </div>
+        <div className={styles.smallImageContainer}>
+          <Image src={smallFeatureImage} alt="Features 1" />
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  html,
-  body {
-    @apply dark:bg-dark-gray;
-  }
-} */
-
 /* دکمه‌های ثانویه */
 .secondary-button {
   background: transparent;
@@ -16,7 +9,6 @@
   border: 2px solid var(--primary-purple);
 }
 
-/* کارت محصولات */
 .product-card {
   background: var(--pure-white);
   border: 1px solid var(--light-gray);
@@ -24,18 +16,22 @@
 }
 
 :root {
-  /* primary  */
-  /* --primary-color: #905a98;
-  --primary-color-dark: #7a4a82;
-  --primary-color-light: #a87ab0; */
+  /* Light mode defaults */
+  --background: #f8f9fa;
+  --foreground: #0d1f22;
+  --header-color: #f9f9f9f2;
+  --card-color: #fff;
+  --footer-color: #e2e2e2;
 
-  /* Current: #905a98 */
   --primary-color: #86508e;
   --primary-color-dark: #77477e;
   --primary-color-light: #95599e;
 
   --earth-brown: #a47f51;
   --accent-gold: #d4af37;
+  --brown-light: #a38c75;
+  --brown-dark: #3e3a36;
+  --brown-medium: #665a4d;
 
   --sea-green: #588e50;
   --lapis-lazuli: #035e7b;
@@ -50,16 +46,18 @@
   --dusty-gray: #616161;
   --gray-700: #616161;
   --gray-800: #424242;
-  --jet-black: #212121;
 
-  /* Light Neutrals */
-  --off-white: #f8f9fa; /* پس‌زمینه اصلی */
-  --pure-white: #ffffff; /*  قسمت‌های خاص */
+  --off-white: #f8f9fa;
+  --pure-white: #ffffff;
 
   /* Accent */
   --accent-teal: #2d9cdb; /*   لینک‌ها */
   --success-green: #38a169;
   --accent-color-blue: #4a5f73;
+
+  /* footer: #1C1B19 */
+  /* titlew color: #F2EDE8  24px 400 */
+  /* subtitle: rgba(242,237,232,.7) 16px 300 */
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
@@ -67,9 +65,80 @@
   --transition-400: 0.4s ease;
 }
 
-/* .dark .dark\:bg-dark-gray {
-  background-color: var(--);
-} */
+/* Automatic system dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #22272e;
+    --foreground: #e2e8f0;
+    --header-color: #212830f2;
+    --card-color: #212830;
+    --footer-color: #151b23;
+
+    --primary-color: #9f7aea;
+    --primary-color-dark: #805ad5;
+    --primary-color-light: #b794f4;
+    --earth-brown: #d69e2e;
+    --accent-gold: #ecc94b;
+    --brown-light: #cbd5e0;
+    --brown-dark: #e2e8f0;
+    --brown-medium: #a0aec0;
+    --sea-green: #48bb78;
+    --lapis-lazuli: #3182ce;
+    --moon-stone: #63b3ed;
+    --rich-black: #f7fafc;
+    --slate-gray: #cbd5e0;
+    --silver-chalice: #a0aec0;
+    --platinum-gray: #4a5568;
+    --text-color: #90cdf4;
+    --dusty-gray: #718096;
+    --gray-700: #9198a1;
+    --gray-800: #2d3748;
+    --off-white: #1a202c;
+    --pure-white: #2d3748;
+    --accent-teal: #38b2ac;
+    --success-green: #48bb78;
+    --accent-color-blue: #d1d7e0;
+  }
+}
+/* Manual dark mode override */
+.dark {
+  --background: #22272e;
+  --foreground: #e2e8f0;
+  --header-color: #212830f2;
+  --card-color: #212830;
+  --footer-color: #151b23;
+
+  --primary-color: #9f7aea;
+  --primary-color-dark: #805ad5;
+  --primary-color-light: #b794f4;
+
+  --earth-brown: #d69e2e;
+  --accent-gold: #ecc94b;
+  --brown-light: #cbd5e0;
+  --brown-dark: #e2e8f0;
+  --brown-medium: #a0aec0;
+
+  --sea-green: #48bb78;
+  --lapis-lazuli: #3182ce;
+  --moon-stone: #63b3ed;
+
+  --rich-black: #f7fafc;
+  --slate-gray: #cbd5e0;
+  --silver-chalice: #a0aec0;
+  --platinum-gray: #4a5568;
+  --text-color: #90cdf4;
+
+  --dusty-gray: #718096;
+  --gray-700: #9198a1;
+  --gray-800: #2d3748;
+
+  --off-white: #1a202c;
+  --pure-white: #c9cbcc;
+
+  --accent-teal: #38b2ac;
+  --success-green: #48bb78;
+  --accent-color-blue: #d1d7e0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -79,13 +148,16 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--off-white);
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 .animateFadeInUp {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1.3s ease, transform 1.3s ease;
+  /* transition: opacity 1.3s ease, transform 1.3s ease; */
+  transition: transform 0.9s cubic-bezier(0, 0.3, 0.3, 0.995),
+    opacity 0.9s linear;
 }
 
 .animateFadeInUp.animate {
@@ -130,13 +202,13 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--jet-black);
+  color: var(--rich-black);
 }
 h4 {
   color: var(--rich-black);
 }
 p {
-  color: var(--dusty-gray);
+  color: var(--gray-700);
 }
 a {
   color: var(--accent-color-blue);
@@ -148,7 +220,7 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 .pageWrapper h1 {

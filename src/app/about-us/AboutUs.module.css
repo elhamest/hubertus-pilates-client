@@ -1,5 +1,5 @@
 .boxWrapper {
-  background-color: #fff;
+  background-color: var(--card-color);
   border-radius: 25px;
   display: grid;
   gap: 20px;
@@ -21,6 +21,7 @@
 }
 .boxWrapper ul li {
   list-style-position: inside;
+  color: var(--gray-700);
 }
 
 .boxContainer {
@@ -38,7 +39,7 @@
 }
 
 .boxTitle {
-  color: #000;
+  color: var(--brown-dark);
   font-size: 20px;
   font-style: normal;
   font-weight: 600;

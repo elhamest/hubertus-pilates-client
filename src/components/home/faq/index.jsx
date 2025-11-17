@@ -25,7 +25,7 @@ export const Faq = ({ locale = "fa" }) => {
           <div key={item.question} className="mb-5">
             <button
               onClick={() => toggleAccordion(index)}
-              className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-accentColorBlue rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-richBlack-800 dark:text-silverChalice"
+              className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-accentColorBlue rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75"
             >
               <span>{item.question}</span>
 
@@ -52,7 +52,7 @@ export const Faq = ({ locale = "fa" }) => {
               </svg>
             </button>
             {openIndex === index && (
-              <div className="px-4 pt-4 pb-2 text-accentColorBlue dark:text-silverChalice">
+              <div className="px-4 pt-4 pb-2 text-accentColorBlue">
                 {item.answer}
               </div>
             )}
