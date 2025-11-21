@@ -1,28 +1,45 @@
 .galleryWrapper {
   text-align: center;
-  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 170px auto 0;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 25px;
+  width: 100%;
+  margin-right: 100px;
 }
 
 .headerTitle {
   font-size: 30px;
   font-weight: 500;
+  margin: 0;
+  text-align: right;
+}
+
+/* Gallery Container with Navigation Buttons */
+.galleryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  gap: 20px;
 }
 
 /* Navigation Buttons */
-.headerIndicators {
-  display: flex;
-  gap: 10px;
-  direction: ltr;
-}
-
-.circleButton {
+.leftButton,
+.rightButton {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -31,32 +48,38 @@
   justify-content: center;
   background: transparent;
   border: 1px solid #d1d5db;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  flex-shrink: 0;
+  z-index: 2;
 }
-.circleButton .navigatorSvg {
+
+.leftButton:hover,
+.rightButton:hover {
+  background-color: var(--primary-color-light);
+  border-color: var(--primary-color-light);
+}
+
+.navigatorSvg {
   width: 24px;
   height: 24px;
 }
-.circleButton .navigatorSvg path {
+
+.navigatorSvg path {
   fill: var(--primary-color-dark);
+  transition: fill 0.3s ease;
 }
 
-.circleButton:hover {
-  background-color: var(--primary-color-light);
-}
-
-.circleButton:hover .navigatorSvg path {
+.leftButton:hover .navigatorSvg path,
+.rightButton:hover .navigatorSvg path {
   fill: var(--pure-white);
 }
 
-@media (prefers-color-scheme: dark) {
-  .circleButton .navigatorSvg path {
-    fill: var(--pure-white);
-  }
-  .circleButton {
-    border-color: #4b5563;
-  }
+/* Gallery Slider Wrapper - Contains the scroll */
+.gallerySliderWrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
 }
 
 .gallerySlider {
@@ -65,49 +88,150 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 20px;
-  padding: 10px 0;
+  padding: 10px 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .gallerySlider::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome/Safari */
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.gallerySlider {
+  scrollbar-width: none;
+}
+
+/* Card Slider styles for GalleryItems */
+.cardSlider {
+  flex-shrink: 0;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .navigatorSvg path {
+    fill: var(--pure-white);
+  }
+
+  .leftButton,
+  .rightButton {
+    border-color: #4b5563;
+  }
+
+  .leftButton:hover,
+  .rightButton:hover {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+  }
+}
+
+/* Desktop and Tablet with scroll (from 768px and above) */
+@media (min-width: 768px) {
+  .gallerySlider {
+    overflow-x: auto;
+  }
 }
 
 /* Tablet Styles (768px to 899px) */
-@media (max-width: 899px) {
+@media (max-width: 899px) and (min-width: 768px) {
   .header {
     justify-content: center;
+    margin-right: 0;
   }
 
   .headerTitle {
     font-size: 1.5rem;
   }
 
-  .headerIndicators {
+  .galleryContainer {
+    gap: 10px;
+  }
+
+  .leftButton,
+  .rightButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .gallerySlider {
+    padding: 10px 15px;
+  }
+
+  .cardSlider {
+    flex: 0 0 220px;
+  }
+}
+
+/* Mobile Styles (480px to 767px) - Hide buttons and use grid */
+@media (max-width: 767px) and (min-width: 481px) {
+  .galleryWrapper {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+  .header {
+    margin-right: 0;
+  }
+  .galleryContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .leftButton,
+  .rightButton {
     display: none;
+  }
+
+  .gallerySliderWrapper {
+    width: 100%;
   }
 
   .gallerySlider {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    overflow-x: visible;
+    padding: 0;
+  }
+
+  .cardSlider {
+    flex: none;
+    width: 100%;
   }
 }
 
-/* Mobile Styles (480px to 767px) */
-@media (max-width: 767px) {
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
   .galleryWrapper {
     margin-top: 80px;
+    padding: 0 15px;
+  }
+  .header {
+    margin-right: 0;
+  }
+  .galleryContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .leftButton,
+  .rightButton {
+    display: none;
+  }
+
+  .gallerySliderWrapper {
+    width: 100%;
   }
 
   .gallerySlider {
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
-    gap: 16px;
-  }
-}
-
-@media (max-width: 380px) {
-  .gallerySlider {
-    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 12px;
+    overflow-x: visible;
+    padding: 0;
+  }
+
+  .cardSlider {
+    flex: none;
+    width: 100%;
   }
 }

@@ -18,8 +18,8 @@ import reformerWithTowerImg2 from "../../../public/img/collections/reformers/ref
 import reformerWithTowerImg3 from "../../../public/img/collections/reformers/reformer-with-tower/31-reformer-with-tower-2.png";
 // reformer-combo
 import reformerComboImg1 from "../../../public/img/collections/reformers/reformer-combo/01-reformer-combo.webp";
-import reformerComboImg2 from "../../../public/img/collections/reformers/reformer-combo/13-reformer-combo-cadillac-1.png";
-import reformerComboImg3 from "../../../public/img/collections/reformers/reformer-combo/14-reformer-combo-cadillac-2.png";
+// import reformerComboImg2 from "../../../public/img/collections/reformers/reformer-combo/13-reformer-combo-cadillac-1.png";
+// import reformerComboImg3 from "../../../public/img/collections/reformers/reformer-combo/14-reformer-combo-cadillac-2.png";
 import reformerComboImg4 from "../../../public/img/collections/reformers/reformer-combo/15-reformer-combo-cadillac-3.png";
 import reformerComboImg5 from "../../../public/img/collections/reformers/reformer-combo/16-reformer-combo-cadillac-4.png";
 import reformerComboImg6 from "../../../public/img/collections/reformers/reformer-combo/27-reformer-combo-cadillac-5.png";
@@ -31,6 +31,8 @@ import reformerComboImg9 from "../../../public/img/collections/reformers/reforme
 import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp";
 // cadillac
 import cadillacTrapezeTableImg1 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/01-cadillac-(trapeze-table).webp";
+import cadillacTrapezeTableImg2 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/13-cadillac-1.png";
+import cadillacTrapezeTableImg3 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/14-cadillac-2.png";
 // wall-tower-unit
 import wallTowerUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit/01-wall-tower-unit.webp";
 // wall-unit
@@ -286,8 +288,8 @@ export const faProductCollections = [
         id: 3,
         images: [
           { img: reformerComboImg1, isHorizontal: true },
-          { img: reformerComboImg2, isHorizontal: true },
-          { img: reformerComboImg3, isHorizontal: false },
+          // { img: reformerComboImg2, isHorizontal: true },
+          // { img: reformerComboImg3, isHorizontal: false },
           { img: reformerComboImg4, isHorizontal: false },
           { img: reformerComboImg5, isHorizontal: false },
           { img: reformerComboImg6, isHorizontal: true },
@@ -311,7 +313,11 @@ export const faProductCollections = [
         desc: "کادیلاک، یکی از برجسته‌ترین دستگاه‌های پیلاتس، تمرینی کامل برای تقویت عضلات مرکزی، انعطاف‌پذیری، قدرت و تعادل ارائه می‌دهد. با قابلیت تنظیم مقاومت و شدت، برای افراد مبتدی و پیشرفته مناسب است.",
         detail: pCadilac,
         id: 4,
-        images: [{ img: cadillacTrapezeTableImg1, isHorizontal: true }],
+        images: [
+          { img: cadillacTrapezeTableImg1, isHorizontal: true },
+          { img: cadillacTrapezeTableImg2, isHorizontal: true },
+          { img: cadillacTrapezeTableImg3, isHorizontal: false },
+        ],
       },
       {
         title: "وال یونیت",

@@ -4,12 +4,12 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  min-width: 200px;
 }
 
 .cardSlider {
   flex: 0 0 335px;
 }
+
 .cardProduct {
   flex: 0 0 335px;
 }
@@ -37,7 +37,7 @@
   height: 100%;
   padding: 10px 0 15px;
   transition: transform 0.3s ease-in-out;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .imageContainer:hover .image {
@@ -64,26 +64,33 @@
   }
 }
 
-@media (max-width: 899px) {
+/* Tablet Styles (768px to 899px) */
+@media (max-width: 899px) and (min-width: 768px) {
   .cardSlider,
   .cardProduct {
-    flex: none;
+    flex: 0 0 220px;
   }
 
   .imageContainer {
-    height: 120px;
+    height: 180px;
   }
 
-  .image {
-    object-fit: scale-down;
+  .cardTitle {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+}
+
+/* Mobile Styles (767px and below) */
+@media (max-width: 767px) {
+  .cardSlider,
+  .cardProduct {
+    flex: none;
+    width: 100%;
   }
 
-  .cardSlider .imageContainer {
-    height: 160px;
-  }
-
-  .cardProduct .imageContainer {
-    height: 160px;
+  .imageContainer {
+    height: 140px;
   }
 
   .cardTitle {

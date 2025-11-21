@@ -38,11 +38,13 @@ export default function Home({ locale = "fa" }) {
 
       <Container>
         <Benefits />
-        <Gallery
-          title={faConstants.collectionGalleryTitle}
-          items={faProductCollections}
-        />
-        {/* <SectionTitle
+      </Container>
+
+      <Gallery
+        title={faConstants.collectionGalleryTitle}
+        items={faProductCollections}
+      />
+      {/* <SectionTitle
             preTitle={locale === "fa" ? "یک ویدیو تماشا کنید" : "Watch a video"}
             title={
               locale === "fa"
@@ -61,8 +63,8 @@ export default function Home({ locale = "fa" }) {
           </SectionTitle>
           <Video videoId="fZ0D0cnR88E" /> */}
 
-        {/* ------------------------------------ */}
-        {/* <SectionTitle
+      {/* ------------------------------------ */}
+      {/* <SectionTitle
             preTitle={locale === "fa" ? "نظرات مشتریان" : "Testimonials"}
             title={
               locale === "fa"
@@ -76,24 +78,11 @@ export default function Home({ locale = "fa" }) {
             awareness. Use this section to highlight your popular customers.`}
           </SectionTitle>
           <Testimonials /> */}
-        {/* ------------------------------------ */}
+      {/* ------------------------------------ */}
 
-        {/* <SectionTitle
-            preTitle="FAQ"
-            title={
-              locale === "fa" ? "سوالات متداول" : "Frequently Asked Questions"
-            }
-          >
-            {locale === "fa"
-              ? "به سوالات احتمالی مشتریان خود در اینجا پاسخ دهید، این کار نرخ تبدیل و همچنین درخواست‌های پشتیبانی یا چت را افزایش می‌دهد."
-              : `Answer your customers possible questions here, it will increase the
-            conversion rate as well as support or chat requests.`}
-          </SectionTitle>
-          <Faq /> */}
-        {/* ------------------------------------ */}
+      <Faq locale={locale} />
 
-        {/* <Cta /> */}
-      </Container>
+      {/* <Cta /> */}
       {/* <HomeSlider imagePaths={imagePaths} /> */}
     </div>
   );
