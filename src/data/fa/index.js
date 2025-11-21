@@ -28,7 +28,7 @@ import reformerComboImg8 from "../../../public/img/collections/reformers/reforme
 import reformerComboImg9 from "../../../public/img/collections/reformers/reformer-combo/32-reformer-combo-cadillac-8.png";
 
 //----- towers-trapeze-systems
-import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp";
+import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.png";
 // cadillac
 import cadillacTrapezeTableImg1 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/01-cadillac-(trapeze-table).webp";
 import cadillacTrapezeTableImg2 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/13-cadillac-1.png";
@@ -39,7 +39,7 @@ import wallTowerUnitImg1 from "../../../public/img/collections/towers-and-trapez
 import wallUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-unit/01-wall-unit.webp";
 
 //----- chairs-and-barrels
-import cChairsBarrelsImg from "../../../public/img/collections/chairs-and-barrels/c-chairs-barrels.webp";
+import cChairsBarrelsImg from "../../../public/img/collections/chairs-and-barrels/c-chairs-barrels.png";
 // ladder-barrel
 import ladderBarrelImg1 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/01-ladder-barrel.webp";
 import ladderBarrelImg2 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/09-ladder-barrel-1.png";

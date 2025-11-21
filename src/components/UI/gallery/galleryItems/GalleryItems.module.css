@@ -4,14 +4,29 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Card Content Wrapper */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Consistent width classes - FORCE same width */
 .cardSlider {
-  flex: 0 0 335px;
+  width: 335px !important;
+  min-width: 335px !important;
+  flex: 0 0 335px !important;
 }
 
 .cardProduct {
-  flex: 0 0 335px;
+  width: 335px !important;
+  min-width: 335px !important;
+  flex: 0 0 335px !important;
 }
 
 .imageContainer {
@@ -22,6 +37,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  background: white; /* Add background to contain images */
 }
 
 .cardSlider .imageContainer {
@@ -33,14 +50,14 @@
 }
 
 .image {
-  width: 100%;
-  height: 100%;
-  padding: 10px 0 15px;
-  transition: transform 0.3s ease-in-out;
   object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
 }
 
-.imageContainer:hover .image {
+.cardContent:hover .image {
   transform: scale(1.02);
 }
 
@@ -52,6 +69,11 @@
   color: var(--rich-black);
   text-align: center;
   transition: color 0.3s ease-in-out;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px; /* Ensure title area has consistent height */
 }
 
 .card:hover .cardTitle {
@@ -62,13 +84,19 @@
   .card {
     background: var(--rich-black) !important;
   }
+
+  .imageContainer {
+    background: #374151; /* Dark background for dark mode */
+  }
 }
 
 /* Tablet Styles (768px to 899px) */
 @media (max-width: 899px) and (min-width: 768px) {
   .cardSlider,
   .cardProduct {
-    flex: 0 0 220px;
+    width: 220px !important;
+    min-width: 220px !important;
+    flex: 0 0 220px !important;
   }
 
   .imageContainer {
@@ -78,6 +106,7 @@
   .cardTitle {
     font-size: 14px;
     padding: 15px 10px;
+    min-height: 50px;
   }
 }
 
@@ -85,8 +114,9 @@
 @media (max-width: 767px) {
   .cardSlider,
   .cardProduct {
-    flex: none;
-    width: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+    flex: none !important;
   }
 
   .imageContainer {
@@ -96,5 +126,6 @@
   .cardTitle {
     font-size: 14px;
     padding: 10px;
+    min-height: 40px;
   }
 }
