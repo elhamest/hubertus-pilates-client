@@ -2,16 +2,16 @@
 import cReformersImg from "../../../public/img/collections/reformers/c-reformers.webp";
 // classic-reformer
 import classicReformerImg1 from "../../../public/img/collections/reformers/classic-reformer/01-classic-reformer.webp";
-import classicReformerImg2 from "../../../public/img/collections/reformers/classic-reformer/17-reformer-classic-1.png";
-import classicReformerImg3 from "../../../public/img/collections/reformers/classic-reformer/18-reformer-classic-2.png";
-import classicReformerImg4 from "../../../public/img/collections/reformers/classic-reformer/19-reformer-classic-3.png";
-import classicReformerImg5 from "../../../public/img/collections/reformers/classic-reformer/20-reformer-classic-4.png";
-import classicReformerImg6 from "../../../public/img/collections/reformers/classic-reformer/21-reformer-classic-5.png";
-import classicReformerImg7 from "../../../public/img/collections/reformers/classic-reformer/22-reformer-classic-6.png";
-import classicReformerImg8 from "../../../public/img/collections/reformers/classic-reformer/23-reformer-classic-7.png";
-import classicReformerImg9 from "../../../public/img/collections/reformers/classic-reformer/24-reformer-classic-8.png";
-import classicReformerImg10 from "../../../public/img/collections/reformers/classic-reformer/25-reformer-classic-9.png";
-import classicReformerImg11 from "../../../public/img/collections/reformers/classic-reformer/26-reformer-classic-10.png";
+import classicReformerImg2 from "../../../public/img/collections/reformers/classic-reformer/17-reformer-classic-1.webp";
+import classicReformerImg3 from "../../../public/img/collections/reformers/classic-reformer/18-reformer-classic-2.webp";
+import classicReformerImg4 from "../../../public/img/collections/reformers/classic-reformer/19-reformer-classic-3.webp";
+import classicReformerImg5 from "../../../public/img/collections/reformers/classic-reformer/20-reformer-classic-4.webp";
+import classicReformerImg6 from "../../../public/img/collections/reformers/classic-reformer/21-reformer-classic-5.webp";
+import classicReformerImg7 from "../../../public/img/collections/reformers/classic-reformer/22-reformer-classic-6.webp";
+import classicReformerImg8 from "../../../public/img/collections/reformers/classic-reformer/23-reformer-classic-7.webp";
+import classicReformerImg9 from "../../../public/img/collections/reformers/classic-reformer/24-reformer-classic-8.webp";
+import classicReformerImg10 from "../../../public/img/collections/reformers/classic-reformer/25-reformer-classic-9.webp";
+import classicReformerImg11 from "../../../public/img/collections/reformers/classic-reformer/26-reformer-classic-10.webp";
 // reformer-with-tower
 import reformerWithTowerImg1 from "../../../public/img/collections/reformers/reformer-with-tower/01-reformer-with-tower.webp";
 import reformerWithTowerImg2 from "../../../public/img/collections/reformers/reformer-with-tower/30-reformer-with-tower-1.png";
