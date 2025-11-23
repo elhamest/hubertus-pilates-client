@@ -1,51 +1,53 @@
 //----- reformers
 import cReformersImg from "../../../public/img/collections/reformers/c-reformers.webp";
 // classic-reformer
-import classicReformerImg1 from "../../../public/img/collections/reformers/classic-reformer/01-classic-reformer.webp";
-import classicReformerImg2 from "../../../public/img/collections/reformers/classic-reformer/17-reformer-classic-1.png";
-import classicReformerImg3 from "../../../public/img/collections/reformers/classic-reformer/18-reformer-classic-2.png";
-import classicReformerImg4 from "../../../public/img/collections/reformers/classic-reformer/19-reformer-classic-3.png";
-import classicReformerImg5 from "../../../public/img/collections/reformers/classic-reformer/20-reformer-classic-4.png";
-import classicReformerImg6 from "../../../public/img/collections/reformers/classic-reformer/21-reformer-classic-5.png";
-import classicReformerImg7 from "../../../public/img/collections/reformers/classic-reformer/22-reformer-classic-6.png";
-import classicReformerImg8 from "../../../public/img/collections/reformers/classic-reformer/23-reformer-classic-7.png";
-import classicReformerImg9 from "../../../public/img/collections/reformers/classic-reformer/24-reformer-classic-8.png";
-import classicReformerImg10 from "../../../public/img/collections/reformers/classic-reformer/25-reformer-classic-9.png";
-import classicReformerImg11 from "../../../public/img/collections/reformers/classic-reformer/26-reformer-classic-10.png";
+// import classicReformerImg1 from "../../../public/img/collections/reformers/classic-reformer/01-classic-reformer.webp";
+import classicReformerImg2 from "../../../public/img/collections/reformers/classic-reformer/17-reformer-classic-1.webp";
+import classicReformerImg3 from "../../../public/img/collections/reformers/classic-reformer/18-reformer-classic-2.webp";
+import classicReformerImg4 from "../../../public/img/collections/reformers/classic-reformer/19-reformer-classic-3.webp";
+import classicReformerImg5 from "../../../public/img/collections/reformers/classic-reformer/20-reformer-classic-4.webp";
+import classicReformerImg6 from "../../../public/img/collections/reformers/classic-reformer/21-reformer-classic-5.webp";
+import classicReformerImg7 from "../../../public/img/collections/reformers/classic-reformer/22-reformer-classic-6.webp";
+import classicReformerImg8 from "../../../public/img/collections/reformers/classic-reformer/23-reformer-classic-7.webp";
+import classicReformerImg9 from "../../../public/img/collections/reformers/classic-reformer/24-reformer-classic-8.webp";
+import classicReformerImg10 from "../../../public/img/collections/reformers/classic-reformer/25-reformer-classic-9.webp";
+import classicReformerImg11 from "../../../public/img/collections/reformers/classic-reformer/26-reformer-classic-10.webp";
 // reformer-with-tower
-import reformerWithTowerImg1 from "../../../public/img/collections/reformers/reformer-with-tower/01-reformer-with-tower.webp";
-import reformerWithTowerImg2 from "../../../public/img/collections/reformers/reformer-with-tower/30-reformer-with-tower-1.png";
-import reformerWithTowerImg3 from "../../../public/img/collections/reformers/reformer-with-tower/31-reformer-with-tower-2.png";
+// import reformerWithTowerImg1 from "../../../public/img/collections/reformers/reformer-with-tower/01-reformer-with-tower.webp";
+import reformerWithTowerImg2 from "../../../public/img/collections/reformers/reformer-with-tower/30-reformer-with-tower-1.webp";
+import reformerWithTowerImg3 from "../../../public/img/collections/reformers/reformer-with-tower/31-reformer-with-tower-2.webp";
 // reformer-combo
-import reformerComboImg1 from "../../../public/img/collections/reformers/reformer-combo/01-reformer-combo.webp";
-import reformerComboImg2 from "../../../public/img/collections/reformers/reformer-combo/13-reformer-combo-cadillac-1.png";
-import reformerComboImg3 from "../../../public/img/collections/reformers/reformer-combo/14-reformer-combo-cadillac-2.png";
-import reformerComboImg4 from "../../../public/img/collections/reformers/reformer-combo/15-reformer-combo-cadillac-3.png";
-import reformerComboImg5 from "../../../public/img/collections/reformers/reformer-combo/16-reformer-combo-cadillac-4.png";
-import reformerComboImg6 from "../../../public/img/collections/reformers/reformer-combo/27-reformer-combo-cadillac-5.png";
-import reformerComboImg7 from "../../../public/img/collections/reformers/reformer-combo/28-reformer-combo-cadillac-6.png";
-import reformerComboImg8 from "../../../public/img/collections/reformers/reformer-combo/29-reformer-combo-cadillac-7.png";
-import reformerComboImg9 from "../../../public/img/collections/reformers/reformer-combo/32-reformer-combo-cadillac-8.png";
+// import reformerComboImg1 from "../../../public/img/collections/reformers/reformer-combo/01-reformer-combo.webp";
+// import reformerComboImg2 from "../../../public/img/collections/reformers/reformer-combo/13-reformer-combo-cadillac-1.png";
+// import reformerComboImg3 from "../../../public/img/collections/reformers/reformer-combo/14-reformer-combo-cadillac-2.png";
+import reformerComboImg6 from "../../../public/img/collections/reformers/reformer-combo/27-reformer-combo-cadillac-5.webp";
+import reformerComboImg4 from "../../../public/img/collections/reformers/reformer-combo/15-reformer-combo-cadillac-3.webp";
+import reformerComboImg5 from "../../../public/img/collections/reformers/reformer-combo/16-reformer-combo-cadillac-4.webp";
+import reformerComboImg7 from "../../../public/img/collections/reformers/reformer-combo/28-reformer-combo-cadillac-6.webp";
+import reformerComboImg8 from "../../../public/img/collections/reformers/reformer-combo/29-reformer-combo-cadillac-7.webp";
+import reformerComboImg9 from "../../../public/img/collections/reformers/reformer-combo/32-reformer-combo-cadillac-8.webp";
 
 //----- towers-trapeze-systems
-import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.webp";
+import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.png";
 // cadillac
-import cadillacTrapezeTableImg1 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/01-cadillac-(trapeze-table).webp";
+// import cadillacTrapezeTableImg1 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/01-cadillac-(trapeze-table).webp";
+import cadillacTrapezeTableImg2 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/13-cadillac-1.webp";
+import cadillacTrapezeTableImg3 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/14-cadillac-2.webp";
 // wall-tower-unit
 import wallTowerUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit/01-wall-tower-unit.webp";
 // wall-unit
 import wallUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-unit/01-wall-unit.webp";
 
 //----- chairs-and-barrels
-import cChairsBarrelsImg from "../../../public/img/collections/chairs-and-barrels/c-chairs-barrels.webp";
+import cChairsBarrelsImg from "../../../public/img/collections/chairs-and-barrels/c-chairs-barrels.png";
 // ladder-barrel
-import ladderBarrelImg1 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/01-ladder-barrel.webp";
+// import ladderBarrelImg1 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/01-ladder-barrel.webp";
 import ladderBarrelImg2 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/09-ladder-barrel-1.png";
 import ladderBarrelImg3 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/10-ladder-barrel-2.png";
 import ladderBarrelImg4 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/11-ladder-barrel-3.png";
 import ladderBarrelImg5 from "../../../public/img/collections/chairs-and-barrels/ladder-barrel/12-ladder-barrel-4.png";
 // wunda-chair
-import wundaChairImg1 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/01-wunda-chair.webp";
+// import wundaChairImg1 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/01-wunda-chair.webp";
 import wundaChairImg2 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/03-wunda-chair-1.png";
 import wundaChairImg3 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/04-wunda-chair-2.png";
 import wundaChairImg4 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/05-wunda-chair-3.png";
@@ -53,7 +55,7 @@ import wundaChairImg5 from "../../../public/img/collections/chairs-and-barrels/w
 import wundaChairImg6 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/07-wunda-chair-5.png";
 import wundaChairImg7 from "../../../public/img/collections/chairs-and-barrels/wunda-chair/08-wunda-chair-6.png";
 // spine-corrector
-import spineCorrectorImg1 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/01-spine-corrector.webp";
+// import spineCorrectorImg1 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/01-spine-corrector.webp";
 import spineCorrectorImg2 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/02-spine-corrector-1.png";
 import spineCorrectorImg3 from "../../../public/img/collections/chairs-and-barrels/spine-corrector/03-spine-corrector-2.png";
 // arm-chair
@@ -253,7 +255,7 @@ export const faProductCollections = [
         detail: pClassicReformer,
         id: 1,
         images: [
-          { img: classicReformerImg1, isHorizontal: true },
+          // { img: classicReformerImg1, isHorizontal: true },
           { img: classicReformerImg2, isHorizontal: true },
           { img: classicReformerImg3, isHorizontal: false },
           { img: classicReformerImg4, isHorizontal: false },
@@ -273,7 +275,7 @@ export const faProductCollections = [
         detail: pReformerWithTower,
         id: 2,
         images: [
-          { img: reformerWithTowerImg1, isHorizontal: true },
+          // { img: reformerWithTowerImg1, isHorizontal: true },
           { img: reformerWithTowerImg2, isHorizontal: true },
           { img: reformerWithTowerImg3, isHorizontal: true },
         ],
@@ -285,12 +287,12 @@ export const faProductCollections = [
         detail: pReformerCombo,
         id: 3,
         images: [
-          { img: reformerComboImg1, isHorizontal: true },
-          { img: reformerComboImg2, isHorizontal: true },
-          { img: reformerComboImg3, isHorizontal: false },
+          // { img: reformerComboImg1, isHorizontal: true },
+          // { img: reformerComboImg2, isHorizontal: true },
+          // { img: reformerComboImg3, isHorizontal: false },
+          { img: reformerComboImg6, isHorizontal: true },
           { img: reformerComboImg4, isHorizontal: false },
           { img: reformerComboImg5, isHorizontal: false },
-          { img: reformerComboImg6, isHorizontal: true },
           { img: reformerComboImg7, isHorizontal: true },
           { img: reformerComboImg8, isHorizontal: false },
           { img: reformerComboImg9, isHorizontal: true },
@@ -311,7 +313,11 @@ export const faProductCollections = [
         desc: "کادیلاک، یکی از برجسته‌ترین دستگاه‌های پیلاتس، تمرینی کامل برای تقویت عضلات مرکزی، انعطاف‌پذیری، قدرت و تعادل ارائه می‌دهد. با قابلیت تنظیم مقاومت و شدت، برای افراد مبتدی و پیشرفته مناسب است.",
         detail: pCadilac,
         id: 4,
-        images: [{ img: cadillacTrapezeTableImg1, isHorizontal: true }],
+        images: [
+          // { img: cadillacTrapezeTableImg1, isHorizontal: true },
+          { img: cadillacTrapezeTableImg2, isHorizontal: true },
+          { img: cadillacTrapezeTableImg3, isHorizontal: false },
+        ],
       },
       {
         title: "وال یونیت",
@@ -346,7 +352,7 @@ export const faProductCollections = [
         detail: pLadderBarrel,
         id: 7,
         images: [
-          { img: ladderBarrelImg1, isHorizontal: true },
+          // { img: ladderBarrelImg1, isHorizontal: true },
           { img: ladderBarrelImg2, isHorizontal: true },
           { img: ladderBarrelImg3, isHorizontal: true },
           { img: ladderBarrelImg4, isHorizontal: false },
@@ -360,7 +366,7 @@ export const faProductCollections = [
         detail: pWundaChair,
         id: 8,
         images: [
-          { img: wundaChairImg1, isHorizontal: true },
+          // { img: wundaChairImg1, isHorizontal: true },
           { img: wundaChairImg2, isHorizontal: true },
           { img: wundaChairImg3, isHorizontal: true },
           { img: wundaChairImg4, isHorizontal: true },
@@ -376,7 +382,7 @@ export const faProductCollections = [
         detail: pSpineCorrector,
         id: 9,
         images: [
-          { img: spineCorrectorImg1, isHorizontal: true },
+          // { img: spineCorrectorImg1, isHorizontal: true },
           { img: spineCorrectorImg2, isHorizontal: true },
           { img: spineCorrectorImg3, isHorizontal: true },
         ],
