@@ -14,25 +14,25 @@ import classicReformerImg10 from "../../../public/img/collections/reformers/clas
 import classicReformerImg11 from "../../../public/img/collections/reformers/classic-reformer/26-reformer-classic-10.webp";
 // reformer-with-tower
 // import reformerWithTowerImg1 from "../../../public/img/collections/reformers/reformer-with-tower/01-reformer-with-tower.webp";
-import reformerWithTowerImg2 from "../../../public/img/collections/reformers/reformer-with-tower/30-reformer-with-tower-1.png";
-import reformerWithTowerImg3 from "../../../public/img/collections/reformers/reformer-with-tower/31-reformer-with-tower-2.png";
+import reformerWithTowerImg2 from "../../../public/img/collections/reformers/reformer-with-tower/30-reformer-with-tower-1.webp";
+import reformerWithTowerImg3 from "../../../public/img/collections/reformers/reformer-with-tower/31-reformer-with-tower-2.webp";
 // reformer-combo
 // import reformerComboImg1 from "../../../public/img/collections/reformers/reformer-combo/01-reformer-combo.webp";
 // import reformerComboImg2 from "../../../public/img/collections/reformers/reformer-combo/13-reformer-combo-cadillac-1.png";
 // import reformerComboImg3 from "../../../public/img/collections/reformers/reformer-combo/14-reformer-combo-cadillac-2.png";
-import reformerComboImg4 from "../../../public/img/collections/reformers/reformer-combo/15-reformer-combo-cadillac-3.png";
-import reformerComboImg5 from "../../../public/img/collections/reformers/reformer-combo/16-reformer-combo-cadillac-4.png";
-import reformerComboImg6 from "../../../public/img/collections/reformers/reformer-combo/27-reformer-combo-cadillac-5.png";
-import reformerComboImg7 from "../../../public/img/collections/reformers/reformer-combo/28-reformer-combo-cadillac-6.png";
-import reformerComboImg8 from "../../../public/img/collections/reformers/reformer-combo/29-reformer-combo-cadillac-7.png";
-import reformerComboImg9 from "../../../public/img/collections/reformers/reformer-combo/32-reformer-combo-cadillac-8.png";
+import reformerComboImg4 from "../../../public/img/collections/reformers/reformer-combo/15-reformer-combo-cadillac-3.webp";
+import reformerComboImg5 from "../../../public/img/collections/reformers/reformer-combo/16-reformer-combo-cadillac-4.webp";
+import reformerComboImg6 from "../../../public/img/collections/reformers/reformer-combo/27-reformer-combo-cadillac-5.webp";
+import reformerComboImg7 from "../../../public/img/collections/reformers/reformer-combo/28-reformer-combo-cadillac-6.webp";
+import reformerComboImg8 from "../../../public/img/collections/reformers/reformer-combo/29-reformer-combo-cadillac-7.webp";
+import reformerComboImg9 from "../../../public/img/collections/reformers/reformer-combo/32-reformer-combo-cadillac-8.webp";
 
 //----- towers-trapeze-systems
 import cTowersTrapezeSystemsImg from "../../../public/img/collections/towers-and-trapeze-systems/c-towers-trapeze-systems.png";
 // cadillac
 // import cadillacTrapezeTableImg1 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/01-cadillac-(trapeze-table).webp";
-import cadillacTrapezeTableImg2 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/13-cadillac-1.png";
-import cadillacTrapezeTableImg3 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/14-cadillac-2.png";
+import cadillacTrapezeTableImg2 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/13-cadillac-1.webp";
+import cadillacTrapezeTableImg3 from "../../../public/img/collections/towers-and-trapeze-systems/cadillac/14-cadillac-2.webp";
 // wall-tower-unit
 import wallTowerUnitImg1 from "../../../public/img/collections/towers-and-trapeze-systems/wall-tower-unit/01-wall-tower-unit.webp";
 // wall-unit
