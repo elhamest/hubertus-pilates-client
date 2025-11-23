@@ -16,6 +16,7 @@
 .imageWrapper {
   width: 100%;
   height: 50%;
+  max-height: 400px;
   position: relative;
   overflow: hidden;
   border-top-left-radius: 0.5rem;
@@ -32,9 +33,11 @@
 }
 
 .imageWrapper img {
+  width: 100%;
+  height: 100%;
   display: block;
   transition: transform 0.3s ease;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .boxTitle {

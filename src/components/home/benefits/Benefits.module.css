@@ -9,8 +9,6 @@
   border-radius: 8px;
   max-width: 500px;
   padding: 20px 25px;
-  /* background-color: var(--card-color); */
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .contentWrapper h2 {
@@ -85,12 +83,16 @@
     display: none;
   }
   .dots {
-    margin: 0;
+    /* margin: 0;
     width: 100px;
     position: absolute;
     bottom: 0;
     left: 280px;
-    transform: rotate(90deg);
+    transform: rotate(90deg); */
+    display: none;
+  }
+  .bigImageContainer img {
+    border-radius: 8px;
   }
 }
 

@@ -52,6 +52,16 @@
   cursor: pointer;
   flex-shrink: 0;
   z-index: 2;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rightButton {
+  right: 0;
+}
+.leftButton {
+  left: 0;
 }
 
 .leftButton:hover,
@@ -125,81 +135,6 @@
   }
 }
 
-/* Desktop and Tablet with scroll (from 768px and above) */
-@media (min-width: 768px) {
-  .gallerySlider {
-    overflow-x: auto;
-  }
-}
-
-/* Tablet Styles (768px to 899px) */
-@media (max-width: 899px) and (min-width: 768px) {
-  .header {
-    justify-content: center;
-    margin-right: 0;
-  }
-
-  .headerTitle {
-    font-size: 1.5rem;
-  }
-
-  .galleryContainer {
-    gap: 10px;
-  }
-
-  .leftButton,
-  .rightButton {
-    width: 48px;
-    height: 48px;
-  }
-
-  .gallerySlider {
-    padding: 10px 15px;
-  }
-
-  .cardSlider {
-    flex: 0 0 220px;
-  }
-}
-
-/* Mobile Styles (480px to 767px) - Hide buttons and use grid */
-@media (max-width: 767px) and (min-width: 481px) {
-  .galleryWrapper {
-    margin-top: 80px;
-    padding: 0 15px;
-  }
-  .header {
-    margin-right: 0;
-  }
-  .galleryContainer {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .leftButton,
-  .rightButton {
-    display: none;
-  }
-
-  .gallerySliderWrapper {
-    width: 100%;
-  }
-
-  .gallerySlider {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    overflow-x: visible;
-    padding: 0;
-  }
-
-  .cardSlider {
-    flex: none;
-    width: 100%;
-  }
-}
-
-/* Small Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
   .galleryWrapper {
     margin-top: 80px;
@@ -233,5 +168,82 @@
   .cardSlider {
     flex: none;
     width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .galleryWrapper {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+  .header {
+    margin-right: 0;
+  }
+  .galleryContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .leftButton,
+  .rightButton {
+    display: none;
+  }
+
+  .gallerySliderWrapper {
+    width: 100%;
+  }
+
+  .gallerySlider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    overflow-x: visible;
+    padding: 0;
+  }
+
+  .cardSlider {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Desktop and Tablet with scroll (from 768px and above) */
+@media (min-width: 768px) {
+  .gallerySlider {
+    overflow-x: auto;
+  }
+
+  .galleryWrapper {
+    margin: 60px auto 0;
+  }
+}
+
+/* Tablet Styles (768px to 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .header {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .galleryContainer {
+    gap: 10px;
+  }
+
+  .leftButton,
+  .rightButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .gallerySlider {
+    padding: 10px 15px;
+  }
+
+  .cardSlider {
+    flex: 0 0 220px;
   }
 }
