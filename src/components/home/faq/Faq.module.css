@@ -1,13 +1,14 @@
 .faqWrapper {
-  background-color: burlywood;
   margin-top: 170px;
+  background-color: var(--earth-brown);
 }
 
-.description {
-  margin-bottom: 2rem;
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--rich-black);
+  margin-bottom: 30px;
   text-align: center;
-  color: #374151;
-  line-height: 1.6;
 }
 
 .container {
@@ -24,7 +25,10 @@
 }
 
 .faqItem {
-  margin-bottom: 1.25rem;
+  background: #fff;
+  border-radius: 28px;
+  transition: all var(--transition-fast);
+  margin-bottom: 24px;
 }
 
 .faqButton {

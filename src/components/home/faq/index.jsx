@@ -22,16 +22,13 @@ export const Faq = ({ locale = "fa" }) => {
 
   return (
     <div className={styles.faqWrapper}>
-      <div className={styles.description}>
-        {locale === "fa"
-          ? "به سوالات احتمالی مشتریان خود در اینجا پاسخ دهید، این کار نرخ تبدیل و همچنین درخواست‌های پشتیبانی یا چت را افزایش می‌دهد."
-          : `Answer your customers possible questions here, it will increase the
-            conversion rate as well as support or chat requests.`}
+      <div className={styles.title}>
+        {locale === "fa" ? "سوالات متداول" : "Frequently Asked Questions"}
       </div>
 
       <Container className={styles.container}>
         <div className={styles.wrapper}>
-          {faqData?.map((item, index) => (
+          {faqData?.slice(0, 6)?.map((item, index) => (
             <div key={item.question} className={styles.faqItem}>
               <button
                 onClick={() => toggleAccordion(index)}
