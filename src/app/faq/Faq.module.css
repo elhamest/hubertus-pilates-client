@@ -1,7 +1,7 @@
 .faqWrapper {
-  margin-top: 170px;
-  padding: 60px 0;
-  background-color: var(--faq-background);
+  /* margin-top: 170px; */
+  /* padding: 60px 0; */
+  /* background-color: var(--faq-background); */
 }
 
 .title {
@@ -78,7 +78,7 @@
 }
 
 .answer {
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 1.2rem 1rem 0.5rem 1rem;
   color: #3b82f6;
   line-height: 1.6;
 }

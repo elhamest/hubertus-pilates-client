@@ -433,10 +433,31 @@ export const faProductCollections = [
 ];
 
 export const faNavigations = [
-  { title: "صفحه اصلی", path: "/", showOnFooter: false },
-  { title: "محصولات", path: "/collections", showOnFooter: true },
-  { title: "درباره هوبرتوس", path: "/about-us", showOnFooter: true },
-  { title: "تماس با ما", path: "#contact-us", showOnFooter: true },
+  { title: "صفحه اصلی", path: "/", showOnFooter: false, showOnHeader: true },
+  {
+    title: "محصولات",
+    path: "/collections",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "درباره هوبرتوس",
+    path: "/about-us",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "تماس با ما",
+    path: "#contact-us",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "سوالات متداول",
+    path: "/faq",
+    showOnFooter: true,
+    showOnHeader: false,
+  },
 ];
 
 export const faProducts = [

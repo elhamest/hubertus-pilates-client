@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
+
 import { Container } from "@/components/UI/container";
 // import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import { enFaq } from "../../../data/en";
@@ -65,6 +67,11 @@ export const Faq = ({ locale = "fa" }) => {
               )}
             </div>
           ))}
+          <div>
+            <Link href="/faq">
+              {locale === "fa" ? "مشاهده همه سوالات" : "View All"}
+            </Link>
+          </div>
         </div>
       </Container>
     </div>

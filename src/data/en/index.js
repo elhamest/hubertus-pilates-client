@@ -432,10 +432,31 @@ export const enProductCollections = [
 ];
 
 export const enNavigations = [
-  { title: "Home Page", path: "/", showOnFooter: false },
-  { title: "Products", path: "/collections", showOnFooter: true },
-  { title: "About Hubertus", path: "/about-us", showOnFooter: true },
-  { title: "Contact Us", path: "#contact-us", showOnFooter: true },
+  { title: "Home Page", path: "/", showOnFooter: false, showOnHeader: true },
+  {
+    title: "Products",
+    path: "/collections",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "About Hubertus",
+    path: "/about-us",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "Contact Us",
+    path: "#contact-us",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "FAQ",
+    path: "/faq",
+    showOnFooter: true,
+    showOnHeader: false,
+  },
 ];
 
 export const enPersons = [

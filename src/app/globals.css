@@ -55,6 +55,9 @@
   --success-green: #38a169;
   --accent-color-blue: #4a5f73;
 
+  --faq-background: #f0f2f5;
+  --faq-card: #ffffff;
+
   /* footer: #1C1B19 */
   /* titlew color: #F2EDE8  24px 400 */
   /* subtitle: rgba(242,237,232,.7) 16px 300 */
@@ -98,6 +101,9 @@
     --accent-teal: #38b2ac;
     --success-green: #48bb78;
     --accent-color-blue: #d1d7e0;
+
+    --faq-background: #1e2228;
+    --faq-card: #1a1e24;
   }
 }
 /* Manual dark mode override */
@@ -138,6 +144,9 @@
   --accent-teal: #38b2ac;
   --success-green: #48bb78;
   --accent-color-blue: #d1d7e0;
+
+  --faq-background: #1e2228;
+  --faq-card: #1a1e24;
 }
 
 html {

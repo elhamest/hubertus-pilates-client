@@ -13,21 +13,23 @@ function CollectionsPage({ locale = "fa" }) {
   const pathToTitleMap = generatePathToTitleMap(locale);
 
   return (
-    <Container>
-      {pathToTitleMap && (
-        <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
-      )}
-      <div className="pageWrapper pageHeight">
-        <h1>{faConstants.allCollectionsTitle}</h1>
+    <div className={styles.collectionsPageWrapper}>
+      <Container>
+        {pathToTitleMap && (
+          <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
+        )}
+        <div className="pageWrapper pageHeight">
+          <h1>{faConstants.allCollectionsTitle}</h1>
 
-        <div className={styles.galleryList}>
-          <GalleryItems
-            items={faProductCollections}
-            customClass="cardProduct"
-          />
+          <div className={styles.galleryList}>
+            <GalleryItems
+              items={faProductCollections}
+              customClass="cardProduct"
+            />
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 }
 
