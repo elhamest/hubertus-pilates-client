@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import { Container } from "@/components/UI/container";
-// import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import ChevronUp from "@/components/UI/svg/ChevronUp";
 import { enFaq } from "../../../data/en";
 import { faFaq } from "../../../data/fa";
 
@@ -39,28 +39,13 @@ export const Faq = ({ locale = "fa" }) => {
                 }`}
               >
                 <span className={styles.question}>{item.question}</span>
-
-                {/* <ChevronUpIcon
-                className={`${
-                  openIndex === index ? styles.chevronRotated : ""
-                } ${styles.chevron}`}
-              /> */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className={`fa-solid fa-chevron-up ${
+                <div
+                  className={`${
                     openIndex === index ? styles.chevronRotated : ""
                   } ${styles.chevron}`}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                  />
-                </svg>
+                  <ChevronUp />
+                </div>
               </button>
               {openIndex === index && (
                 <div className={styles.answer}>{item.answer}</div>

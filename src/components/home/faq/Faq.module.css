@@ -64,12 +64,15 @@
 
 .question {
   flex: 1;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--rich-black);
+}
+.faqButtonActive .question {
+  font-weight: 500;
 }
 
 .chevron {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #6366f1;
   transition: transform 0.2s ease;
 }
 
@@ -79,6 +82,7 @@
 
 .answer {
   padding: 1rem 1rem 0.5rem 1rem;
-  color: #3b82f6;
-  line-height: 1.6;
+  color: var(--gray-800);
+  font-size: 15px;
+  font-weight: 300;
 }
