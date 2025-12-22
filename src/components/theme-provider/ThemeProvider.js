@@ -6,53 +6,77 @@ const ThemeContext = createContext({ theme: "light", toggleTheme: () => {} });
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
-  const [mounted, setMounted] = useState(false); // Prevent hydration mismatch
+  const [mounted, setMounted] = useState(false);
 
-  // load theme on mount
+  // Initialize theme from localStorage or system preference
   useEffect(() => {
-    const localTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    // Check localStorage first
+    const storedTheme = localStorage.getItem("theme");
 
-    if (localTheme) {
-      setTheme(localTheme);
-    } else if (prefersDark) {
-      setTheme("dark");
+    if (storedTheme) {
+      // Use stored theme
+      setTheme(storedTheme);
+      document.documentElement.classList.toggle("dark", storedTheme === "dark");
+    } else {
+      // Check system preference
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const systemTheme = prefersDark ? "dark" : "light";
+      setTheme(systemTheme);
+      document.documentElement.classList.toggle("dark", systemTheme === "dark");
     }
 
     setMounted(true);
   }, []);
 
-  // Apply theme class and persist
-  useEffect(() => {
-    if (!mounted) return;
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-  }, [theme, mounted]);
+  // Toggle theme function
+  const toggleTheme = () => {
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "dark" ? "light" : "dark";
 
-  // Listen for system changes (only if no user preference)
+      // Update localStorage
+      localStorage.setItem("theme", newTheme);
+
+      // Update HTML class immediately
+      document.documentElement.classList.toggle("dark", newTheme === "dark");
+      document.documentElement.classList.toggle("light", newTheme === "light");
+
+      console.log("Theme toggled to:", newTheme);
+      return newTheme;
+    });
+  };
+
+  // Listen to system theme changes (only if no user preference)
   useEffect(() => {
     if (!mounted) return;
+
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const handleChange = (e) => {
+      // Only respond if there's no stored theme preference
       if (!localStorage.getItem("theme")) {
-        setTheme(e.matches ? "dark" : "light");
+        const newTheme = e.matches ? "dark" : "light";
+        setTheme(newTheme);
+        document.documentElement.classList.toggle("dark", newTheme === "dark");
       }
     };
+
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, [mounted]);
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
+  // Ensure theme is applied on mount
+  useEffect(() => {
+    if (mounted) {
+      console.log("ThemeProvider mounted with theme:", theme);
+      console.log("LocalStorage theme:", localStorage.getItem("theme"));
+    }
+  }, [mounted, theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {mounted ? children : null} {/* Avoid rendering until mounted */}
+      {children}
     </ThemeContext.Provider>
   );
 }

@@ -44,12 +44,6 @@ const FaqPage = ({ locale = "fa" }) => {
                   }`}
                 >
                   <span className={styles.question}>{item.question}</span>
-
-                  {/* <ChevronUpIcon
-                className={`${
-                  openIndex === index ? styles.chevronRotated : ""
-                } ${styles.chevron}`}
-              /> */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
