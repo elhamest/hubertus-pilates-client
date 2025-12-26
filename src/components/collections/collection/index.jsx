@@ -27,9 +27,9 @@ export function Collection({ items }) {
                 <h3 className={styles.boxTitle}>{item?.title}</h3>
                 <p>{item?.desc}</p>
 
-                <span className={styles.viewMore}>
+                <div className={styles.viewMore}>
                   <span>{faConstants?.viewMore}</span>
-                </span>
+                </div>
               </div>
             </Link>
           </div>

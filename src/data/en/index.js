@@ -432,10 +432,31 @@ export const enProductCollections = [
 ];
 
 export const enNavigations = [
-  { title: "Home Page", path: "/", showOnFooter: false },
-  { title: "Products", path: "/collections", showOnFooter: true },
-  { title: "About Hubertus", path: "/about-us", showOnFooter: true },
-  { title: "Contact Us", path: "#contact-us", showOnFooter: true },
+  { title: "Home Page", path: "/", showOnFooter: false, showOnHeader: true },
+  {
+    title: "Products",
+    path: "/collections",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "About Hubertus",
+    path: "/about-us",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "Contact Us",
+    path: "#contact-us",
+    showOnFooter: true,
+    showOnHeader: true,
+  },
+  {
+    title: "FAQ",
+    path: "/faq",
+    showOnFooter: true,
+    showOnHeader: false,
+  },
 ];
 
 export const enPersons = [
@@ -528,21 +549,86 @@ export const enTestimonials = {
 
 export const enFaq = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question:
+      "Can classic reformers be converted to tower or cadillac reformers?",
+    answer: "Yes, all reformers can be converted to other models.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Do you produce different wood colors?",
+    answer: "No, wood color cannot be changed.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "Do you produce different leather colors?",
+    answer: "Yes, almost all colors can be produced.",
+  },
+  {
+    question: "Do you ship devices to all cities?",
+    answer: "Yes, we ship to all cities in Iran and also have exports.",
+  },
+  {
+    question: "Do you have a showroom in Tehran?",
+    answer: "Yes, we do.",
+  },
+  {
+    question: "Do you offer warranty and after-sales service?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Yes, we offer one year warranty and 10 years of after-sales service. (Springs are not covered by warranty)",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "How are the devices shipped?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Shipping costs are borne by the customer and devices are delivered to your home or gym by freight service.",
+  },
+  {
+    question: "How to clean the devices?",
+    answer:
+      "Do not use alcohol to clean the devices. Use damp cloths as much as possible and get special reformer mats. If the leather loses its shine over time, you can use leather spray.",
+  },
+  {
+    question: "What is the lifespan of the springs?",
+    answer: "The lifespan of springs depends on your usage.",
+  },
+  {
+    question: "How are spring colors categorized by resistance?",
+    answer:
+      "Springs from hardest to softest are: red, blue, black, white, and yellow.",
+  },
+  {
+    question: "Do you have long springs?",
+    answer:
+      "Yes, white springs are long and are shipped with reformer, tower, and cadillac reformer devices.",
+  },
+  {
+    question: "Are the raw materials for devices domestic or imported?",
+    answer:
+      "Most raw materials for components (wood, paint, plastic materials, rubber materials, etc.) are imported, but production is done domestically.",
+  },
+  {
+    question: "Are you manufacturers?",
+    answer: "Yes, we produce the devices from start to finish ourselves.",
+  },
+  {
+    question: "Are your devices standardized?",
+    answer:
+      "Devices produced by Hubertus Pilates company are approved by the Iran Pilates Association and if you need to obtain a studio or Pilates gym license from legal authorities in our country, you won't face any problems.",
+  },
+  {
+    question: "How is your packaging?",
+    answer:
+      "For exclusive shipping, single-layer packaging is used, and for freight shipping, double-layer packaging is used.",
+  },
+  {
+    question: "How is device installation and setup?",
+    answer:
+      "Training videos are sent for device installation and they can be easily installed following the videos (if needed, installer can be sent to your location at an additional cost).",
+  },
+  {
+    question: "How can we purchase from you?",
+    answer:
+      "Purchases can only be made through WhatsApp or phone calls with numbers 09149191831-2.",
+  },
+  {
+    question: "Do you provide training?",
+    answer: "The only training reference is the Iran Pilates Association.",
   },
 ];

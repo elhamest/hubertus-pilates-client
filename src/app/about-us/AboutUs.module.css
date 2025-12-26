@@ -1,3 +1,7 @@
+.AboutUsPageWrapper {
+  margin-bottom: 120px;
+}
+
 .boxWrapper {
   background-color: var(--card-color);
   border-radius: 25px;

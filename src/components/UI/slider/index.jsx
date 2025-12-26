@@ -3,8 +3,6 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import ChevronLeft from "@/components/UI/svg/ChevronLeft";
-import ChevronRight from "@/components/UI/svg/ChevronRight";
 
 // Import Swiper styles
 import "swiper/css";

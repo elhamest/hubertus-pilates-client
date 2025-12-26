@@ -4,7 +4,7 @@ import React from "react";
 import { Container } from "@/components/UI/container";
 import { faConstants } from "../../../../public/locales/fa/common";
 import { faNavigations } from "../../../data/fa";
-import logoImage from "../../../../public/img/logo.svg";
+import logoImage from "../../../../public/img/logo-white.svg";
 
 import styles from "./Footer.module.css";
 

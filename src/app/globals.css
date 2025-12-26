@@ -21,7 +21,7 @@
   --foreground: #0d1f22;
   --header-color: #f9f9f9f2;
   --card-color: #fff;
-  --footer-color: #e2e2e2;
+  --footer-color: #0d1f22;
 
   --primary-color: #86508e;
   --primary-color-dark: #77477e;
@@ -55,9 +55,13 @@
   --success-green: #38a169;
   --accent-color-blue: #4a5f73;
 
+  --faq-background: #f0f2f5;
+  --faq-card: #f9fafb;
+  --faq-card-hover: #f3f4f6;
+
   /* footer: #1C1B19 */
-  /* titlew color: #F2EDE8  24px 400 */
-  /* subtitle: rgba(242,237,232,.7) 16px 300 */
+  --title-color: #f2ede8;
+  --subtitle-color: rgba(242, 237, 232, 0.7);
 
   --light-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
     rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
@@ -98,6 +102,10 @@
     --accent-teal: #38b2ac;
     --success-green: #48bb78;
     --accent-color-blue: #d1d7e0;
+
+    --faq-background: #1e2228;
+    --faq-card: #1a1e24;
+    --faq-card-hover: #25282e;
   }
 }
 /* Manual dark mode override */
@@ -133,11 +141,15 @@
   --gray-800: #2d3748;
 
   --off-white: #1a202c;
-  --pure-white: #c9cbcc;
+  --pure-white: #2d3748;
 
   --accent-teal: #38b2ac;
   --success-green: #48bb78;
   --accent-color-blue: #d1d7e0;
+
+  --faq-background: #1e2228;
+  --faq-card: #1a1e24;
+  --faq-card-hover: #25282e;
 }
 
 html {

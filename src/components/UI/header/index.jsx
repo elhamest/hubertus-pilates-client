@@ -17,6 +17,10 @@ import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.share
 const Header = ({ locale = "fa" }) => {
   const pathname = usePathname();
   const navigations = locale === "fa" ? faNavigations : enNavigations;
+  const filteredNavigations = navigations?.filter(
+    (item) => item?.showOnHeader === true
+  );
+
   // const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,7 +74,7 @@ const Header = ({ locale = "fa" }) => {
                 !isHomePage ? styles.notHomePage : ""
               }`}
             >
-              {navigations?.map((menu, index) => (
+              {filteredNavigations?.map((menu, index) => (
                 <li key={index}>
                   <Link key={index} href={menu?.path}>
                     {menu?.title}
@@ -117,7 +121,10 @@ const Header = ({ locale = "fa" }) => {
           <div
             className={`${styles.mobileMenu} ${styles.lightShadow} ${styles.open}`}
           >
-            <MobileNavbar navigations={navigations} setIsOpen={setIsOpen} />
+            <MobileNavbar
+              navigations={filteredNavigations}
+              setIsOpen={setIsOpen}
+            />
           </div>
         )}
       </nav>

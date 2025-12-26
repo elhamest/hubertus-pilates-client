@@ -18,36 +18,16 @@ const vazirMatn = localFont({
   wright: "100 900",
 });
 
-// The inline script sets the .dark class immediately based on localStorage or system preference, avoiding FOUC. flash of unstyled content
 export default function RootLayout({ children, params }) {
   // lang={params.locale || "fa"} dir={params.locale === "fa" ? "rtl" : "ltr"} suppressHydrationWarning
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme');
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (theme === 'dark' || (!theme && prefersDark)) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
+      <head></head>
 
       <body className={vazirMatn.className}>
         <ThemeProvider>
           <Header locale={params.locale} />
-          {/* locale={params.locale || "fa"} */}
-          <Layout locale={params.locale}>{children}</Layout>
+          <Layout locale={params.locale || "fa"}>{children}</Layout>
           <PopupWidget />
           <Footer />
         </ThemeProvider>

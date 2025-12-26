@@ -1,3 +1,7 @@
+.collectionsPageWrapper {
+  margin-bottom: 120px;
+}
+
 .galleryList {
   display: flex;
   column-gap: 20px;

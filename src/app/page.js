@@ -80,7 +80,7 @@ export default function Home({ locale = "fa" }) {
           <Testimonials /> */}
       {/* ------------------------------------ */}
 
-      {/* <Faq locale={locale} /> */}
+      <Faq locale={locale} />
 
       {/* <Cta /> */}
       {/* <HomeSlider imagePaths={imagePaths} /> */}
