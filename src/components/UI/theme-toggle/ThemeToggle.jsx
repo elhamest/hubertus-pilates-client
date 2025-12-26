@@ -8,17 +8,17 @@ const ThemeToggle = () => {
 
   // Add debug logging
   const handleToggle = () => {
-    console.log("Before toggle - Current theme:", theme);
-    console.log("Before toggle - localStorage:", localStorage.getItem("theme"));
+    // console.log("Before toggle - Current theme:", theme);
+    // console.log("Before toggle - localStorage:", localStorage.getItem("theme"));
     toggleTheme();
     // Check after a short delay
-    setTimeout(() => {
-      console.log(
-        "After toggle - localStorage:",
-        localStorage.getItem("theme")
-      );
-      console.log("HTML class:", document.documentElement.className);
-    }, 100);
+    // setTimeout(() => {
+    //   console.log(
+    //     "After toggle - localStorage:",
+    //     localStorage.getItem("theme")
+    //   );
+    //   console.log("HTML class:", document.documentElement.className);
+    // }, 100);
   };
 
   return (

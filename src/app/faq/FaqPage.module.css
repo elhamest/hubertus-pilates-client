@@ -1,0 +1,21 @@
+.faqPageWrapper {
+  background-color: var(--faq-background);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--rich-black);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.container {
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+}

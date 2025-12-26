@@ -42,7 +42,7 @@ export function ThemeProvider({ children }) {
       document.documentElement.classList.toggle("dark", newTheme === "dark");
       document.documentElement.classList.toggle("light", newTheme === "light");
 
-      console.log("Theme toggled to:", newTheme);
+      // console.log("Theme toggled to:", newTheme);
       return newTheme;
     });
   };
@@ -67,12 +67,12 @@ export function ThemeProvider({ children }) {
   }, [mounted]);
 
   // Ensure theme is applied on mount
-  useEffect(() => {
-    if (mounted) {
-      console.log("ThemeProvider mounted with theme:", theme);
-      console.log("LocalStorage theme:", localStorage.getItem("theme"));
-    }
-  }, [mounted, theme]);
+  // useEffect(() => {
+  //   if (mounted) {
+  //     console.log("ThemeProvider mounted with theme:", theme);
+  //     console.log("LocalStorage theme:", localStorage.getItem("theme"));
+  //   }
+  // }, [mounted, theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

@@ -1,19 +1,33 @@
+"use client";
 import Link from "next/link";
 
-const MobileNavbar = ({ navigations, setIsOpen }) => {
+import styles from "./MobileNavbar.module.css";
+
+const MobileNavbar = ({ navigations, setIsOpen, isOpen }) => {
+  const handleLinkClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <>
+    <div className={styles.navContainer}>
       {navigations?.map((item, index) => (
         <Link
           key={index}
           href={item?.path}
-          className="w-full px-4 py-2 -ml-4 rounded-md hover:text-primaryColor hover:bg-pureWhiteColor focus:text-primaryColor focus:outline-none hover:tracking-wide transition-all duration-300"
-          onClick={() => setIsOpen(!isOpen)}
+          className={styles.navLink}
+          onClick={handleLinkClick}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              handleLinkClick();
+            }
+          }}
+          role="menuitem"
+          tabIndex={0}
         >
           {item?.title}
         </Link>
       ))}
-    </>
+    </div>
   );
 };
 

@@ -155,7 +155,7 @@
     width: 250px;
     max-height: 100vh;
     min-height: 300px;
-    background-color: rgba(249, 249, 249, 0.95);
+    background-color: rgba(249, 249, 249);
     transition: left 0.3s ease-in-out;
     z-index: 1000;
     padding-top: 80px;
@@ -171,7 +171,7 @@
 @media (max-width: 499px) {
   .mobileMenu {
     width: 100%;
-    background-color: rgba(249, 249, 249, 0.95);
+    background-color: var(--background);
     position: fixed;
     top: 0;
     left: -100%;
@@ -184,6 +184,9 @@
 
   .mobileMenu.open {
     left: 0;
+  }
+  .menuIcon {
+    fill: var(--primary-color);
   }
 }
 

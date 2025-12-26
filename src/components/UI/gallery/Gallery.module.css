@@ -70,18 +70,13 @@
   border-color: var(--primary-color-light);
 }
 
-.navigatorSvg {
-  width: 24px;
-  height: 24px;
-}
-
-.navigatorSvg path {
-  fill: var(--primary-color-dark);
+.leftButton path,
+.rightButton path {
   transition: fill 0.3s ease;
 }
 
-.leftButton:hover .navigatorSvg path,
-.rightButton:hover .navigatorSvg path {
+.leftButton:hover svg path,
+.rightButton:hover svg path {
   fill: var(--pure-white);
 }
 
@@ -137,11 +132,13 @@
 
 @media (max-width: 480px) {
   .galleryWrapper {
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 0 15px;
+    align-items: center;
   }
   .header {
     margin-right: 0;
+    justify-content: center;
   }
   .galleryContainer {
     flex-direction: column;
@@ -169,15 +166,25 @@
     flex: none;
     width: 100%;
   }
+
+  .headerTitle {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .galleryWrapper {
     margin-top: 60px;
     padding: 0 15px;
+    align-items: center;
   }
   .header {
     margin-right: 0;
+  }
+  .headerTitle {
+    font-size: 30px;
+    text-align: center;
   }
   .galleryContainer {
     flex-direction: column;

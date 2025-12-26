@@ -3,7 +3,10 @@
   padding: 60px 0;
   background-color: var(--faq-background);
 }
-
+.faqContainer {
+  max-width: 42rem;
+  margin: 0 auto;
+}
 .title {
   font-size: 32px;
   font-weight: 500;
@@ -12,77 +15,42 @@
   text-align: center;
 }
 
-.container {
+/* .container {
   padding: 0 !important;
-}
+} */
 
-.wrapper {
-  width: 100%;
-  max-width: 42rem;
-  padding: 0.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 1rem;
+.viewAll {
+  text-align: left;
 }
-
-.faqItem {
-  background: var(faq-card);
-  border-radius: 28px;
-  transition: all var(--transition-fast);
-  margin-bottom: 24px;
-}
-
-.faqButton {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem;
-  text-align: right;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  color: #3b82f6;
-  background-color: #f9fafb;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.faqButton:hover {
-  background-color: #f3f4f6;
-}
-
-.faqButton:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
-}
-
-.faqButtonActive {
-  background-color: #f3f4f6;
-}
-
-.question {
-  flex: 1;
-  font-weight: 300;
+.viewAll a {
+  margin: 5px;
   font-size: 16px;
-  color: var(--rich-black);
-}
-.faqButtonActive .question {
   font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 18px;
+  display: inline-block;
+  transition: all 150ms linear;
+  text-decoration: none;
+  width: auto;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
-.chevron {
-  transition: transform 0.2s ease;
+.viewAll:hover a {
+  background-color: var(--primary-color);
+  color: var(--pure-white);
 }
 
-.chevronRotated {
-  transform: rotate(180deg);
-}
-
-.answer {
-  padding: 1rem 1rem 0.5rem 1rem;
-  color: var(--gray-800);
-  font-size: 15px;
-  font-weight: 300;
+@media (max-width: 768px) {
+  .faqWrapper {
+    margin-top: 0;
+  }
+  .viewAll {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .viewAll a {
+    width: 100%;
+    text-align: center;
+  }
 }

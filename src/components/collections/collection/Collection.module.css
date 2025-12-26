@@ -48,7 +48,7 @@
 }
 
 .contentWrapper {
-  padding: 20px 25px;
+  padding: 20px 25px 60px;
   position: relative;
   height: 50%;
 }
@@ -57,7 +57,7 @@
   font-size: 15px;
   font-weight: 400;
   text-align: justify;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   overflow: hidden;
   display: -webkit-box;
   line-clamp: 5;
@@ -68,15 +68,14 @@
 
 .viewMore {
   cursor: pointer;
-  display: inline-block;
-  text-align: center;
+  display: block;
+  text-align: left;
   font-size: 15px;
   font-weight: 500;
   margin: 5px;
   color: var(--dusty-gray);
-  position: absolute;
-  left: 20px;
-  bottom: 16px;
+  position: relative;
+  margin: 20px auto;
   transition: all 0.5s ease-in-out;
 }
 
@@ -133,6 +132,7 @@
 
   .viewMore {
     font-size: 12px;
+    bottom: 0;
   }
   .viewMore span {
     padding-left: 20px;

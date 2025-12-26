@@ -1,28 +1,18 @@
 "use client";
+import React from "react";
 
-import { useState } from "react";
-import { faFaq } from "@/data/fa";
-import { enFaq } from "@/data/en";
-
+import { Container } from "@/components/UI/container";
 import Breadcrumb from "@/components/UI/breadcrumb";
 import { generatePathToTitleMap } from "@/utils/pathMaps";
-import { Container } from "@/components/UI/container";
+import { enFaq } from "@/data/en";
+import { faFaq } from "@/data/fa";
+import { FaqList } from "@/components/faq-list";
 
-import styles from "./Faq.module.css";
+import styles from "./FaqPage.module.css";
 
 const FaqPage = ({ locale = "fa" }) => {
   const pathToTitleMap = generatePathToTitleMap(locale);
   const faqData = locale === "fa" ? faFaq : enFaq;
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(null);
-    } else {
-      setOpenIndex(index);
-    }
-  };
 
   return (
     <div className={styles.faqPageWrapper}>
@@ -32,41 +22,13 @@ const FaqPage = ({ locale = "fa" }) => {
         )}
 
         <div className={`${styles.faqWrapper} pageHeight pageWrapper`}>
-          <h1>{locale === "fa" ? "سوالات متداول" : "FAQ"}</h1>
-
-          <div className={styles.wrapper}>
-            {faqData?.map((item, index) => (
-              <div key={item.question} className={styles.faqItem}>
-                <button
-                  onClick={() => toggleAccordion(index)}
-                  className={`${styles.faqButton} ${
-                    openIndex === index ? styles.faqButtonActive : ""
-                  }`}
-                >
-                  <span className={styles.question}>{item.question}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className={`fa-solid fa-chevron-up ${
-                      openIndex === index ? styles.chevronRotated : ""
-                    } ${styles.chevron}`}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                    />
-                  </svg>
-                </button>
-                {openIndex === index && (
-                  <div className={styles.answer}>{item.answer}</div>
-                )}
-              </div>
-            ))}
+          <div className={styles.title}>
+            {locale === "fa" ? "سوالات متداول" : "Frequently Asked Questions"}
           </div>
+
+          {/* <Container className={styles.container}> */}
+          <FaqList faqData={faqData} locale={locale} />
+          {/* </Container> */}
         </div>
       </Container>
     </div>

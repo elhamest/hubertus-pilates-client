@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import GalleryItems from "./galleryItems";
 import styles from "./Gallery.module.css";
+import ChevronRight from "../svg/ChevronRight";
+import ChevronLeft from "../svg/ChevronLeft";
 
 const Gallery = ({ title, items }) => {
   const sliderRef = useRef(null);
@@ -25,9 +27,7 @@ const Gallery = ({ title, items }) => {
           onClick={moveRight}
           aria-label="Next"
         >
-          <svg className={styles.navigatorSvg} viewBox="0 0 24 24">
-            <path d="M10 6L16 12L10 18" />
-          </svg>
+          <ChevronRight color="#86508e" width={28} height={28} />
         </button>
 
         <div className={styles.gallerySliderWrapper}>
@@ -41,9 +41,7 @@ const Gallery = ({ title, items }) => {
           onClick={moveLeft}
           aria-label="Previous"
         >
-          <svg className={styles.navigatorSvg} viewBox="0 0 24 24">
-            <path d="M14 6L8 12L14 18" />
-          </svg>
+          <ChevronLeft color="#86508e" width={28} height={28} />
         </button>
       </div>
     </div>
