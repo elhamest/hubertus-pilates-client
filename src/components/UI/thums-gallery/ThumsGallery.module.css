@@ -111,6 +111,14 @@
   opacity: 1;
 }
 
+/* Add this to your existing CSS file */
+.clickableSlide {
+  cursor: zoom-in !important;
+}
+.clickableSlide:hover {
+  opacity: 0.95;
+}
+
 /* Mobile styles (max-width: 767px) */
 @media (max-width: 767px) {
   .thumsGalleryWrapper {

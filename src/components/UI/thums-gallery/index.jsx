@@ -10,99 +10,144 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 
+import ImageLightbox from "@/components/UI/image-lightbox";
+
 import styles from "./ThumsGallery.module.css";
 
 const ThumsGallery = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
   if (!data) {
     return;
   }
 
+  const handleImageClick =
+    ((index) => {
+      setLightboxIndex(index);
+      setLightboxOpen(true);
+    },
+    []);
+
+  const handleCloseLightbox = () => {
+    setLightboxOpen(false);
+  };
+  const handlePrevImage = () => {
+    setLightboxIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+    );
+  };
+  const handleNextImage = () => {
+    setLightboxIndex((prevIndex) =>
+      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <div className={styles.thumsGalleryWrapper}>
-      {/* Main Swiper */}
-      <Swiper
-        loop={true}
-        spaceBetween={10}
-        navigation={{
-          nextEl: `.${styles.swiperButtonNext}`,
-          prevEl: `.${styles.swiperButtonPrev}`,
-        }}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs, Pagination]}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-          el: `.${styles.pagination}`,
-        }}
-        className={`${styles.mainSwiper} mainSwiper`}
-      >
-        {data?.map((item, index) => {
-          return (
-            <SwiperSlide
-              key={index}
-              className={`${styles.mainSwiperSlide} ${
-                item?.isHorizontal ? styles.horizontal : styles.vertical
-              }`}
-            >
-              <Image alt="" src={item.img} />
-            </SwiperSlide>
-          );
-        })}
-
-        <button
-          className={`${styles.circleButton} ${styles.swiperButtonPrev}`}
-          aria-label="Next"
+    <>
+      <div className={styles.thumsGalleryWrapper}>
+        {/* Main Swiper */}
+        <Swiper
+          loop={true}
+          spaceBetween={10}
+          navigation={{
+            nextEl: `.${styles.swiperButtonNext}`,
+            prevEl: `.${styles.swiperButtonPrev}`,
+          }}
+          thumbs={{ swiper: thumbsSwiper }}
+          modules={[FreeMode, Navigation, Thumbs, Pagination]}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+            el: `.${styles.pagination}`,
+          }}
+          className={`${styles.mainSwiper} mainSwiper`}
+          initialSlide={lightboxIndex}
         >
-          <svg
-            className={`icon icon-chevron-left ${styles.navigatorSvg}`}
-            viewBox="0 0 24 24"
-          >
-            <path d="M14 6L8 12L14 18" fill="#905a98"></path>
-          </svg>
-        </button>
-        <button
-          className={`${styles.circleButton} ${styles.swiperButtonNext}`}
-          aria-label="Previous"
-        >
-          <svg
-            className={`icon icon-chevron-rigth ${styles.navigatorSvg}`}
-            viewBox="0 0 24 24"
-          >
-            <path d="M10 6L16 12L10 18" fill="#905a98"></path>
-          </svg>
-        </button>
-      </Swiper>
+          {data?.map((item, index) => {
+            return (
+              <SwiperSlide
+                key={index}
+                className={`${styles.mainSwiperSlide} ${
+                  item?.isHorizontal ? styles.horizontal : styles.vertical
+                } ${styles.clickableSlide}`}
+                onClick={() => handleImageClick(index)}
+              >
+                <Image
+                  alt=""
+                  src={item.img}
+                  fill
+                  style={{ cursor: "zoom-in" }}
+                />
+              </SwiperSlide>
+            );
+          })}
 
-      {/* Pagination container - always in DOM but hidden on desktop */}
-      <div className={styles.pagination}></div>
-
-      {/* Thumbnail Swiper - always in DOM but hidden on mobile */}
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className={`thumbSwiper ${styles.thumbSwiper}`}
-      >
-        {data?.map((item, index) => {
-          return (
-            <SwiperSlide
-              key={index}
-              className={`${styles.thumbSwiperSlide} ${
-                item?.isHorizontal ? styles.horizontal : styles.vertical
-              }`}
+          <button
+            className={`${styles.circleButton} ${styles.swiperButtonPrev}`}
+            aria-label="Next"
+          >
+            <svg
+              className={`icon icon-chevron-left ${styles.navigatorSvg}`}
+              viewBox="0 0 24 24"
             >
-              <Image fill alt="" src={item?.img} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </div>
+              <path d="M14 6L8 12L14 18" fill="#905a98"></path>
+            </svg>
+          </button>
+          <button
+            className={`${styles.circleButton} ${styles.swiperButtonNext}`}
+            aria-label="Previous"
+          >
+            <svg
+              className={`icon icon-chevron-rigth ${styles.navigatorSvg}`}
+              viewBox="0 0 24 24"
+            >
+              <path d="M10 6L16 12L10 18" fill="#905a98"></path>
+            </svg>
+          </button>
+        </Swiper>
+
+        {/* Pagination container - always in DOM but hidden on desktop */}
+        <div className={styles.pagination}></div>
+
+        {/* Thumbnail Swiper - always in DOM but hidden on mobile */}
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          loop={true}
+          spaceBetween={10}
+          slidesPerView={4}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className={`thumbSwiper ${styles.thumbSwiper}`}
+        >
+          {data?.map((item, index) => {
+            return (
+              <SwiperSlide
+                key={index}
+                className={`${styles.thumbSwiperSlide} ${
+                  item?.isHorizontal ? styles.horizontal : styles.vertical
+                }`}
+              >
+                <Image fill alt="" src={item?.img} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+      {/* Image Lightbox */}
+      {lightboxOpen && (
+        <ImageLightbox
+          images={data}
+          currentIndex={lightboxIndex}
+          onClose={handleCloseLightbox}
+          onPrev={handlePrevImage}
+          onNext={handleNextImage}
+        />
+      )}
+    </>
   );
 };
 
