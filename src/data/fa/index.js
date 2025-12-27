@@ -330,7 +330,7 @@ export const faProductCollections = [
       {
         title: "وال یونیت دیواری",
         slug: "wall-unit",
-        desc: null,
+        desc: `وال یونیت دیواری و وال یونیت تشک دار، تجهیزات یکسانی دارند. با این تفاوت که وال یونیت دیواری تشک کامل نداشته و کاملا به دیوار وصل می شود و جای کمتری اشغال می کند.`,
         detail: null,
         id: 6,
         images: [{ img: wallUnitImg1, isHorizontal: false }],
@@ -487,7 +487,7 @@ export const faPersons = [
     name: "مهندس شاهین زرعی",
     education: "کارشناس مهندسی عمران",
     description: [
-      "کارشناس عمران با چندین سال تجربه در تولید دستگاه‌های شهربازی",
+      "کارشناس عمران با چندین سال تجربه تولید",
       "متخصص در کارهای اجرایی و عملیاتی پروژه‌های عمرانی",
     ],
     image: "img/persons/shahin-zarei.webp",
