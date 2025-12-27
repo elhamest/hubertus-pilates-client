@@ -38,7 +38,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: white; /* Add background to contain images */
 }
 
 .cardSlider .imageContainer {
@@ -78,16 +77,6 @@
 
 .card:hover .cardTitle {
   color: var(--primary-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: var(--rich-black) !important;
-  }
-
-  .imageContainer {
-    background: #374151; /* Dark background for dark mode */
-  }
 }
 
 /* Tablet Styles (768px to 899px) */
