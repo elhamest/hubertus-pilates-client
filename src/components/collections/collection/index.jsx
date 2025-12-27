@@ -15,7 +15,10 @@ export function Collection({ items }) {
       {items?.map((item, index) => {
         return (
           <div key={index} className={styles.collection}>
-            <Link href={`${currentPath}/${item?.slug}`}>
+            <Link
+              href={`${currentPath}/${item?.slug}`}
+              className={styles.collectionLink}
+            >
               <div className={styles.imageWrapper}>
                 <Image
                   src={item?.images?.at(0)?.img}
