@@ -14,6 +14,27 @@
   padding: 0 !important;
 }
 
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto 0;
+}
+
+.loadMore {
+  background-color: var(--faq-card);
+  color: var(--rich-black);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loadMore:hover {
+  opacity: 0.85;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 30px;

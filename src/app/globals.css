@@ -49,6 +49,7 @@
 
   --off-white: #f8f9fa;
   --pure-white: #ffffff;
+  --always-white: #fff;
 
   /* Accent */
   --accent-teal: #2d9cdb; /*   لینک‌ها */
@@ -99,6 +100,8 @@
     --gray-800: #2d3748;
     --off-white: #1a202c;
     --pure-white: #2d3748;
+    --always-white: #fff;
+
     --accent-teal: #38b2ac;
     --success-green: #48bb78;
     --accent-color-blue: #d1d7e0;
@@ -142,6 +145,7 @@
 
   --off-white: #1a202c;
   --pure-white: #2d3748;
+  --always-white: #fff;
 
   --accent-teal: #38b2ac;
   --success-green: #48bb78;
