@@ -6,7 +6,7 @@ import { enProductCollections } from "@/data/en";
 import { Container } from "@/components/UI/container";
 import ThumsGallery from "@/components/UI/thums-gallery";
 
-import style from "./Product.module.css";
+import styles from "./Product.module.css";
 import Breadcrumb from "@/components/UI/breadcrumb";
 import { generatePathToTitleMap } from "@/utils/pathMaps";
 
@@ -35,8 +35,8 @@ export default async function ProductPage({ params, locale = "fa" }) {
         {pathToTitleMap && (
           <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
         )}
-        <div className={style.notFoundContainer}>
-          <h1 className={style.notFoundText}>محصول یافت نشد.</h1>
+        <div className={styles.notFoundContainer}>
+          <h1 className={styles.notFoundText}>محصول یافت نشد.</h1>
         </div>
       </Container>
     );
@@ -48,19 +48,19 @@ export default async function ProductPage({ params, locale = "fa" }) {
         <Breadcrumb locale={locale} pathToTitleMap={pathToTitleMap} />
       )}
       <div className="pageWrapper pageHeight">
-        <div className={style.productWrapper}>
+        <div className={styles.productWrapper}>
           <ThumsGallery data={founded?.item?.images} />
 
-          <div className={style.textContainer}>
+          <div className={styles.textContainer}>
             <h1>{founded?.item?.title}</h1>
 
             {founded?.item?.desc && (
-              <p className={style.productDescription}>
+              <p className={styles.productDescription}>
                 {founded?.item?.detail?.desc}
               </p>
             )}
 
-            <div className={style.featureBox}>
+            <div className={styles.featureBox}>
               <ul>
                 {founded?.item?.detail?.bullets?.map((f, index) => {
                   return (

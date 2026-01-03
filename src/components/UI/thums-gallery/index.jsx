@@ -24,6 +24,20 @@ const ThumsGallery = ({ data }) => {
     return;
   }
 
+  // const handleCloseLightbox = () => {
+  //   setLightboxOpen(false);
+  // };
+  const handlePrevImage = () => {
+    setLightboxIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+    );
+  };
+  const handleNextImage = () => {
+    setLightboxIndex((prevIndex) =>
+      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <div className={styles.thumsGalleryWrapper}>
       {/* Main Swiper */}
@@ -59,7 +73,6 @@ const ThumsGallery = ({ data }) => {
             </SwiperSlide>
           );
         })}
-
         <button
           className={`${styles.circleButton} ${styles.swiperButtonPrev}`}
           aria-label="Next"

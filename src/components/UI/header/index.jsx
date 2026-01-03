@@ -123,7 +123,7 @@ const Header = ({ locale = "fa" }) => {
           >
             <MobileNavbar
               navigations={filteredNavigations}
-              setIsOpen={setIsOpen}
+              setIsOpen={toggleMenu}
             />
           </div>
         )}
