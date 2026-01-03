@@ -25,7 +25,7 @@ export const Hero = () => {
               <Link href="/collections" className="animateFadeInUp">
                 {faConstants.viewProducts}
               </Link>
-              <button className="animateFadeInUp">تماس با ما</button>
+              {/* <button className="animateFadeInUp">تماس با ما</button> */}
             </div>
           </div>
           <span className={styles.spanDots} alt="dots" />
