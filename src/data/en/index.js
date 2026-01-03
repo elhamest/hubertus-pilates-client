@@ -489,7 +489,7 @@ export const enBenefits = {
     "Durable and robust part design",
     "Interchangeable parts and easy access to main components",
     "One-year warranty on all parts",
-    "Three years of after-sales service",
+    "Ten years of after-sales service",
   ],
 };
 
