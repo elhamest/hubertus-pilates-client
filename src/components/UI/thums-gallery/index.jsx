@@ -10,10 +10,15 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 
+import LightboxGallery from "./LightboxGallery";
+
 import styles from "./ThumsGallery.module.css";
 
 const ThumsGallery = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   if (!data) {
     return;
@@ -42,11 +47,15 @@ const ThumsGallery = ({ data }) => {
           return (
             <SwiperSlide
               key={index}
+              onClick={() => {
+                setActiveIndex(index);
+                setLightboxOpen(true);
+              }}
               className={`${styles.mainSwiperSlide} ${
                 item?.isHorizontal ? styles.horizontal : styles.vertical
               }`}
             >
-              <Image alt="" src={item.img} />
+              <Image alt="" src={item?.img} />
             </SwiperSlide>
           );
         })}
@@ -102,6 +111,14 @@ const ThumsGallery = ({ data }) => {
           );
         })}
       </Swiper>
+
+      {lightboxOpen && (
+        <LightboxGallery
+          images={data}
+          startIndex={activeIndex}
+          onClose={() => setLightboxOpen(false)}
+        />
+      )}
     </div>
   );
 };
