@@ -13,6 +13,7 @@
   width: 90%;
   max-width: 1100px;
   height: 90vh;
+  margin-top: 25px;
 }
 
 .swiper {
@@ -26,16 +27,29 @@
 }
 
 .image {
-  object-fit: contain;
+  object-fit: scale-down;
 }
 
 .closeBtn {
   position: absolute;
-  top: -45px;
+  top: -25px;
   right: 0;
   background: none;
   border: none;
   color: white;
   font-size: 28px;
   cursor: pointer;
+  z-index: 1000;
+}
+
+/* Swiper navigation arrows */
+.swiper:global(.swiper-button-next),
+.swiper:global(.swiper-button-prev) {
+  color: #86508e; /* purple */
+}
+
+/* Optional: hover effect */
+.swiper:global(.swiper-button-next:hover),
+.swiper:global(.swiper-button-prev:hover) {
+  opacity: 0.85;
 }
