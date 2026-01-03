@@ -89,14 +89,6 @@
   transition: max-height 0.4s ease-in, opacity 0.3s ease-in 0.1s;
 }
 
-.noFaq {
-  text-align: center;
-  padding: 40px;
-  color: var(--gray-500);
-  font-size: 18px;
-  font-weight: 300;
-}
-
 @media (max-width: 768px) {
   .question {
     padding: 20px 16px;
