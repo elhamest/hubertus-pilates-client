@@ -9,9 +9,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import styles from "./LightboxGallery.module.css";
+import styles from "./LightBoxGallery.module.css";
 
-const LightboxGallery = ({ images, startIndex = 0, onClose }) => {
+const LightBoxGallery = ({ images, startIndex = 0, onClose }) => {
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") onClose();
@@ -52,4 +52,4 @@ const LightboxGallery = ({ images, startIndex = 0, onClose }) => {
   );
 };
 
-export default LightboxGallery;
+export default LightBoxGallery;

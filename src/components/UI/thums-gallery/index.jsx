@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 
-import LightboxGallery from "./LightboxGallery";
+import LightBoxGallery from "./LightBoxGallery";
 
 import styles from "./ThumsGallery.module.css";
 
@@ -126,7 +126,7 @@ const ThumsGallery = ({ data }) => {
       </Swiper>
 
       {lightboxOpen && (
-        <LightboxGallery
+        <LightBoxGallery
           images={data}
           startIndex={activeIndex}
           onClose={() => setLightboxOpen(false)}

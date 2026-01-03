@@ -20,6 +20,9 @@
   border: 1px solid var(--platinum-gray);
   height: 100%;
 }
+.mainSwiperSlide img {
+  cursor: pointer;
+}
 .thumbSwiperSlide {
   border: 1px solid var(--platinum-gray);
   cursor: pointer;
