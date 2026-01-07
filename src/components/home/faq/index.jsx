@@ -22,7 +22,9 @@ export const Faq = ({ locale = "fa" }) => {
         <FaqList faqData={faqData.slice(0, 6)} locale={locale} />
 
         <div className={styles.viewAll}>
-          <Link href="/faq">{locale === "fa" ? "مشاهده همه" : "View All"}</Link>
+          <Link href="/faq" className="animateFadeInUp">
+            {locale === "fa" ? "مشاهده همه" : "View All"}
+          </Link>
         </div>
       </div>
     </div>
