@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
 import Link from "next/link";
 
-import { Container } from "@/components/UI/container";
 import { enFaq } from "../../../data/en";
 import { faFaq } from "../../../data/fa";
 import { FaqList } from "@/components/faq-list";

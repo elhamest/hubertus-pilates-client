@@ -42,7 +42,7 @@
   height: 40px;
   background-color: transparent;
   border-radius: 50%;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--dawn-fog);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

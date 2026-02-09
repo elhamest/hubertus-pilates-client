@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--dawn-fog);
   transition: all 0.3s ease;
   cursor: pointer;
   flex-shrink: 0;

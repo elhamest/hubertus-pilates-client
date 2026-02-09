@@ -15,12 +15,8 @@
   text-align: center;
 }
 
-/* .container {
-  padding: 0 !important;
-} */
-
 .viewAll {
-  text-align: left;
+  text-align: center;
 }
 .viewAll a {
   margin: 5px;
@@ -33,7 +29,8 @@
   text-decoration: none;
   width: auto;
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--dawn-fog);
+  background-color: rgba(241, 241, 241, 0.8);
 }
 
 .viewAll:hover a {
