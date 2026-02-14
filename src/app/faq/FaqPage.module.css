@@ -1,5 +1,7 @@
 .faqPageWrapper {
   background-color: var(--faq-background);
+  display: flex;
+  flex-direction: column;
 }
 .noResults {
   text-align: center;
@@ -17,6 +19,15 @@
   height: 100%;
   z-index: 1;
   opacity: 0.9;
+  height: 15vw;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.faqBannerBackground svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the SVG covers the area properly */
 }
 
 .bannerWrapper {
@@ -36,8 +47,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 15vw;
-  min-height: 250px;
 }
 
 @keyframes gradientMove {
@@ -56,6 +65,7 @@
   /* position: absolute;
   top: 50%;
   z-index: 2; */
+  width: 100%;
   position: relative; /* Change from absolute to relative */
   z-index: 2;
   transform: none; /* Remove transform */

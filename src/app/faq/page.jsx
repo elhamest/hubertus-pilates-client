@@ -96,25 +96,25 @@ const FaqPage = ({ locale = "fa" }) => {
         </div>
       </div>
 
-      <Container>
-        <div className={`pageHeight pageWrapper`}>
-          {isSearching && filteredFaqs?.length === 0 && (
-            <div className={styles.noResults}>
-              {locale === "fa" ? "نتیجه‌ای یافت نشد" : "No results found"}
-            </div>
-          )}
-
-          <FaqList faqData={visibleFaqs} locale={locale} />
-
-          {hasMore && (
-            <div className={styles.loadMoreWrapper}>
-              <button onClick={handleLoadMore} className={styles.loadMore}>
-                {locale === "fa" ? "نمایش بیشتر" : "Load more"}
-              </button>
-            </div>
-          )}
+      {/* <Container> */}
+      {/* <div className={`pageHeight pageWrapper`}> */}
+      {isSearching && filteredFaqs?.length === 0 && (
+        <div className={styles.noResults}>
+          {locale === "fa" ? "نتیجه‌ای یافت نشد" : "No results found"}
         </div>
-      </Container>
+      )}
+
+      <FaqList faqData={visibleFaqs} locale={locale} />
+
+      {hasMore && (
+        <div className={styles.loadMoreWrapper}>
+          <button onClick={handleLoadMore} className={styles.loadMore}>
+            {locale === "fa" ? "نمایش بیشتر" : "Load more"}
+          </button>
+        </div>
+      )}
+      {/* </div> */}
+      {/* </Container> */}
     </div>
   );
 };
