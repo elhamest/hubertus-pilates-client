@@ -4,12 +4,13 @@ import { useState, useMemo } from "react";
 import { Container } from "@/components/UI/container";
 // import Breadcrumb from "@/components/UI/breadcrumb";
 import FaqBanner from "@/components/UI/svg/FaqBanner";
-import { generatePathToTitleMap } from "@/utils/pathMaps";
+// import { generatePathToTitleMap } from "@/utils/pathMaps";
 import { enFaq } from "@/data/en";
 import { faFaq } from "@/data/fa";
-import { FaqList } from "@/components/faq-list";
+import { FaqList } from "@/components/faq/faq-list";
 
 import styles from "./FaqPage.module.css";
+import FaqCategory from "@/components/faq/faq-category";
 
 const ITEMS_PER_PAGE = 8;
 
@@ -19,8 +20,11 @@ const FaqPage = ({ locale = "fa" }) => {
 
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const [searchValue, setSearchValue] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(0);
 
   const isSearching = !!searchValue.trim();
+
+  // const filteredByCategory = useMemo(()=>{if(selected)},[])
 
   const filteredFaqs = useMemo(() => {
     if (!searchValue.trim()) return [];
@@ -48,6 +52,10 @@ const FaqPage = ({ locale = "fa" }) => {
   const handleClearSearch = () => {
     setSearchValue("");
     setVisibleCount(ITEMS_PER_PAGE);
+  };
+
+  const handleSelectedCategory = (categoryId) => {
+    setSelectedCategory(categoryId);
   };
 
   return (
@@ -96,25 +104,30 @@ const FaqPage = ({ locale = "fa" }) => {
         </div>
       </div>
 
-      {/* <Container> */}
-      {/* <div className={`pageHeight pageWrapper`}> */}
-      {isSearching && filteredFaqs?.length === 0 && (
-        <div className={styles.noResults}>
-          {locale === "fa" ? "نتیجه‌ای یافت نشد" : "No results found"}
-        </div>
-      )}
+      <Container>
+        <FaqCategory
+          locale={locale}
+          onSelectCategory={handleSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
+        <div className={`pageHeight pageWrapper`}>
+          {isSearching && filteredFaqs?.length === 0 && (
+            <div className={styles.noResults}>
+              {locale === "fa" ? "نتیجه‌ای یافت نشد" : "No results found"}
+            </div>
+          )}
 
-      <FaqList faqData={visibleFaqs} locale={locale} />
+          <FaqList faqData={visibleFaqs} locale={locale} />
 
-      {hasMore && (
-        <div className={styles.loadMoreWrapper}>
-          <button onClick={handleLoadMore} className={styles.loadMore}>
-            {locale === "fa" ? "نمایش بیشتر" : "Load more"}
-          </button>
+          {hasMore && (
+            <div className={styles.loadMoreWrapper}>
+              <button onClick={handleLoadMore} className={styles.loadMore}>
+                {locale === "fa" ? "نمایش بیشتر" : "Load more"}
+              </button>
+            </div>
+          )}
         </div>
-      )}
-      {/* </div> */}
-      {/* </Container> */}
+      </Container>
     </div>
   );
 };

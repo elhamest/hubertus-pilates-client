@@ -563,7 +563,8 @@ export const faTestimonials = {
   ],
 };
 
-export const faqCategories = [
+export const faFaqCategories = [
+  { id: 0, title: "همه دسته بندی ها" },
   { id: 1, title: "محصولات و ویژگی‌های دستگاه" },
   { id: 2, title: "فنرها و قطعات" },
   { id: 3, title: "خرید و ارسال" },

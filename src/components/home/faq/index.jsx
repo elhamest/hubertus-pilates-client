@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { enFaq } from "../../../data/en";
 import { faFaq } from "../../../data/fa";
-import { FaqList } from "@/components/faq-list";
+import { FaqList } from "@/components/faq/faq-list";
 
 import styles from "./Faq.module.css";
 

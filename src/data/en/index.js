@@ -547,6 +547,15 @@ export const enTestimonials = {
   ],
 };
 
+export const enFaqCategories = [
+  { id: 0, title: "All Categories" },
+  { id: 1, title: "Products and Device Features" },
+  { id: 2, title: "Springs and Parts" },
+  { id: 3, title: "Purchase and Shipping" },
+  { id: 4, title: "Installation, Maintenance and Training" },
+  { id: 5, title: "Services and Support" },
+];
+
 export const enFaq = [
   {
     question:

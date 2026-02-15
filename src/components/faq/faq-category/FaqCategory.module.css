@@ -1,0 +1,20 @@
+.categoryWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.categoryButton {
+  background-color: var(--platinum-gray);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all var(--transition-400);
+}
+
+.categoryButton:hover,
+.categoryButton.active {
+  background-color: var(--primary-color);
+  color: var(--always-white);
+}
