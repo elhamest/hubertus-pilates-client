@@ -1,6 +1,7 @@
 # Build the static site and upload it to the ParsPack host (hubertuspilates.ir) by FTP.
 # Needs 3 repository secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
 # And SUPPORT_EMAIL (secret or variable): the address that gets the contact form messages.
+# The FTP account root is /home/hubeir/domains/hubertuspilates.ir/ ("Domain" type), so the site folder is public_html/.
 # lftp is used because it reconnects and retries when the host drops the FTP connection.
 name: Deploy to hubertuspilates.ir
 
@@ -73,7 +74,7 @@ jobs:
           # Show where the FTP login starts and what is there, to check the upload folder.
           pwd
           cls -1 --sort=name
-          cls -1 --sort=name domains/hubertuspilates.ir/
-          mirror --reverse --verbose --parallel=1 out/ domains/hubertuspilates.ir/public_html/
+          cls -1 --sort=name public_html/
+          mirror --reverse --verbose --parallel=1 out/ public_html/
           bye
           LFTP
