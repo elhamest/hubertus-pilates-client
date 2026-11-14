@@ -14,25 +14,32 @@ import styles from "./FaqPage.module.css";
 
 const ITEMS_PER_PAGE = 8;
 
+// Make Persian text easy to compare: Arabic ي/ك become Persian ی/ک,
+// half-spaces and extra spaces become one space, and case is ignored.
+const normalize = (text) =>
+  text
+    .replace(/[يى]/g, "ی")
+    .replace(/ك/g, "ک")
+    .replace(/[\u200c\s]+/g, " ")
+    .trim()
+    .toLowerCase();
+
 const FaqPage = ({ locale = "fa" }) => {
   const pathToTitleMap = generatePathToTitleMap(locale);
   const faqData = locale === "fa" ? faFaq : enFaq;
 
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const [searchValue, setSearchValue] = useState("");
-  const [isSearching, setIsSearching] = useState(false);
+  const [query, setQuery] = useState(""); // the text we searched for
+
+  const isSearching = query !== "";
 
   const filteredFaqs = useMemo(() => {
-    if (!searchValue.trim()) return [];
-
-    const keyword = searchValue.toLowerCase();
-
-    return faqData.filter(
-      (item) =>
-        item.question.toLowerCase().includes(keyword) ||
-        item.answer.toLowerCase().includes(keyword)
+    if (!isSearching) return [];
+    return faqData.filter((item) =>
+      normalize(`${item.question} ${item.answer}`).includes(query)
     );
-  }, [searchValue, faqData]);
+  }, [query, isSearching, faqData]);
 
   const visibleFaqs = isSearching
     ? filteredFaqs
@@ -44,13 +51,20 @@ const FaqPage = ({ locale = "fa" }) => {
     setVisibleCount((prev) => prev + ITEMS_PER_PAGE);
   };
 
-  const handleSearch = () => {
-    setIsSearching(!!searchValue.trim());
+  // Runs on the search button and on the Enter key (form submit)
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setQuery(normalize(searchValue));
+  };
+
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
+    if (!e.target.value.trim()) setQuery(""); // empty box shows all again
   };
 
   const handleClearSearch = () => {
     setSearchValue("");
-    setIsSearching(false);
+    setQuery("");
     setVisibleCount(ITEMS_PER_PAGE);
   };
 
@@ -66,16 +80,17 @@ const FaqPage = ({ locale = "fa" }) => {
             {locale === "fa" ? "سوالات متداول" : "Frequently Asked Questions"}
           </div>
 
-          <div className={styles.searchWrapper}>
+          <form className={styles.searchWrapper} onSubmit={handleSearch}>
             <div className={styles.searchInputWrapper}>
               <input
                 type="text"
                 name="search"
+                enterKeyHint="search"
                 value={searchValue}
                 placeholder={
                   locale === "fa" ? "جستجو در سوالات..." : "Search FAQs..."
                 }
-                onChange={(e) => setSearchValue(e.target.value)}
+                onChange={handleChange}
                 className={styles.searchInput}
               />
 
@@ -91,7 +106,7 @@ const FaqPage = ({ locale = "fa" }) => {
               )}
             </div>
 
-            <button onClick={handleSearch} className={styles.searchButton}>
+            <button type="submit" className={styles.searchButton}>
               <span className={styles.desktopSearch}>
                 {locale === "fa" ? "جستجو" : "Search"}
               </span>
@@ -104,9 +119,15 @@ const FaqPage = ({ locale = "fa" }) => {
                 />
               </span>
             </button>
-          </div>
+          </form>
 
-          <FaqList faqData={visibleFaqs} locale={locale} />
+          {isSearching && filteredFaqs.length === 0 ? (
+            <div className={styles.noFaq}>
+              {locale === "fa" ? "سوالی پیدا نشد" : "No questions found"}
+            </div>
+          ) : (
+            <FaqList key={query} faqData={visibleFaqs} locale={locale} />
+          )}
 
           {hasMore && (
             <div className={styles.loadMoreWrapper}>
