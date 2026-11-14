@@ -14,7 +14,14 @@ export const metadata = {
   appleWebApp: { capable: true, title: faConstants.pageTitle, statusBarStyle: "default" },
 };
 
-export const viewport = { themeColor: "#86508e" };
+// maximumScale 1 stops mobile zoom while scrolling
+export const viewport = {
+  themeColor: "#86508e",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 const vazirMatn = localFont({
   src: "./fonts/Vazirmatn[wght].woff2",
