@@ -55,6 +55,10 @@ jobs:
           set net:reconnect-interval-base 5
           set net:reconnect-interval-max 30
           set net:timeout 30
+          # Show where the FTP login starts and what is there, to check the upload folder.
+          pwd
+          cls -1 --sort=name
+          cls -1 --sort=name domains/hubertuspilates.ir/
           mirror --reverse --verbose --parallel=1 out/ domains/hubertuspilates.ir/public_html/
           bye
           LFTP
