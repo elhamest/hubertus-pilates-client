@@ -1,8 +1,9 @@
 // Simple service worker for offline use.
-// Pages: try the network first, use the cache when offline.
-// Other files (JS, CSS, images, fonts): use the cache first.
+// Files in /_next/static/ have a hash in the name and never change: use the cache first.
+// Everything else (pages, images, data): try the network first, use the cache when offline.
+// So a new deploy is seen at once, and old files are never stuck.
 // Change the version to clear old caches after a big change.
-const CACHE = "hubertus-v1";
+const CACHE = "hubertus-v2";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.add("/")));
@@ -22,17 +23,19 @@ self.addEventListener("fetch", (event) => {
   const request = event.request;
   if (request.method !== "GET" || new URL(request.url).origin !== self.location.origin) return;
 
-  if (request.mode === "navigate") {
+  if (new URL(request.url).pathname.startsWith("/_next/static/")) {
     event.respondWith(
-      fetch(request)
-        .then((response) => saveCopy(request, response))
-        .catch(() => caches.match(request).then((cached) => cached || caches.match("/")))
+      caches.match(request).then((cached) => cached || fetch(request).then((response) => saveCopy(request, response)))
     );
     return;
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => cached || fetch(request).then((response) => saveCopy(request, response)))
+    fetch(request)
+      .then((response) => saveCopy(request, response))
+      .catch(() =>
+        caches.match(request).then((cached) => cached || (request.mode === "navigate" ? caches.match("/") : undefined))
+      )
   );
 });
 

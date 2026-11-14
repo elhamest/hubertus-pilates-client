@@ -167,19 +167,17 @@
 }
 
 /* For dark mode pagination */
-@media (prefers-color-scheme: dark) {
-  .circleButton .navigatorSvg path {
-    fill: var(--pure-white);
-  }
-  .circleButton {
-    border-color: #4b5563;
-  }
+:global(.dark) .circleButton .navigatorSvg path {
+  fill: var(--pure-white);
+}
+:global(.dark) .circleButton {
+  border-color: #4b5563;
+}
 
-  .pagination :global(.swiper-pagination-bullet) {
-    background: rgba(0, 0, 0, 0.5);
-  }
+:global(.dark) .pagination :global(.swiper-pagination-bullet) {
+  background: rgba(0, 0, 0, 0.5);
+}
 
-  .pagination :global(.swiper-pagination-bullet-active) {
-    background: #000;
-  }
+:global(.dark) .pagination :global(.swiper-pagination-bullet-active) {
+  background: #000;
 }

@@ -46,10 +46,8 @@
   border: 1px solid var(--silver-chalice);
 }
 
-@media (prefers-color-scheme: dark) {
-  .headerIndicators button svg {
-    stroke: var(--pure-white);
-  }
+:global(.dark) .headerIndicators button svg {
+  stroke: var(--pure-white);
 }
 
 .mainSliderPagination [class*="swiper-pagination-bullet"] {

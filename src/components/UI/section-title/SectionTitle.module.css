@@ -38,13 +38,6 @@
   color: var(--accent-color-blue);
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .children {
-    color: var(--accentColorGray);
-  }
-}
-
 @media (min-width: 768px) {
   .title {
     font-size: 28px;

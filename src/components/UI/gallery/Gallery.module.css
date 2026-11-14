@@ -113,21 +113,19 @@
 }
 
 /* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  .navigatorSvg path {
-    fill: var(--pure-white);
-  }
+:global(.dark) .navigatorSvg path {
+  fill: var(--pure-white);
+}
 
-  .leftButton,
-  .rightButton {
-    border-color: #4b5563;
-  }
+:global(.dark) .leftButton,
+:global(.dark) .rightButton {
+  border-color: #4b5563;
+}
 
-  .leftButton:hover,
-  .rightButton:hover {
-    background-color: var(--primary-color-dark);
-    border-color: var(--primary-color-dark);
-  }
+:global(.dark) .leftButton:hover,
+:global(.dark) .rightButton:hover {
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
 }
 
 @media (max-width: 480px) {
