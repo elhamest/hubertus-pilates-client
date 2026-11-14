@@ -1,0 +1,41 @@
+schema: spec-driven
+
+context: |
+  Static Next.js 15 site (output: export) on GitHub Pages. No backend, no database, no API.
+  Content lives in src/data/fa/index.js and public/locales/fa/common.js; changes ship by editing those files.
+  The site is Persian only, RTL. English files exist but are not wired; do not assume English is live.
+  Keep solutions simple (KISS, YAGNI). JavaScript only (no TypeScript). Styling with CSS Modules.
+  There are no automated tests; verify with `npm run build` and `npm run lint`.
+  The project owner prefers simple English words in artifacts.
+  Read docs/ARCHITECTURE.md before planning a change.
+
+# Project context (optional)
+# Add only constraints that should guide OpenSpec artifacts and workflows.
+# Include constraints an agent cannot infer by reading the code.
+# Keep general project documentation and discoverable codebase facts out.
+# Example:
+#   context: |
+#     Designs and tasks must cover Windows, macOS, and Linux
+#     Write all artifacts in Spanish
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
