@@ -467,7 +467,7 @@ export const enPersons = [
       "Holder of multiple national and international patents in machinery",
       "Silver medal winner at Switzerland Inventions Competition",
     ],
-    image: "img/persons/shahrokh-zarei.webp",
+    image: "/img/persons/shahrokh-zarei.webp",
   },
   {
     name: "Shahin Zarei",
@@ -476,7 +476,7 @@ export const enPersons = [
       "Civil engineer with years of experience in amusement ride manufacturing",
       "Specialized in executive and operational aspects of construction projects",
     ],
-    image: "img/persons/shahin-zarei.webp",
+    image: "/img/persons/shahin-zarei.webp",
   },
 ];
 

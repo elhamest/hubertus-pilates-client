@@ -480,7 +480,7 @@ export const faPersons = [
       "دارای چندین ثبت اختراع ملی و بین‌المللی در حوزه ماشین‌آلات",
       "برنده مدال نقره مسابقات اختراعات سوئیس",
     ],
-    image: "img/persons/shahrokh-zarei.webp",
+    image: "/img/persons/shahrokh-zarei.webp",
   },
   {
     name: "مهندس شاهین زرعی",
@@ -489,7 +489,7 @@ export const faPersons = [
       "کارشناس عمران با چندین سال تجربه تولید",
       "متخصص در کارهای اجرایی و عملیاتی پروژه‌های عمرانی",
     ],
-    image: "img/persons/shahin-zarei.webp",
+    image: "/img/persons/shahin-zarei.webp",
   },
 ];
 
