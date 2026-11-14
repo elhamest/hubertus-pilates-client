@@ -17,21 +17,19 @@ export const metadata = {
 export const viewport = { themeColor: "#86508e" };
 
 const vazirMatn = localFont({
-  src: "./fonts/Vazirmatn-Regular.woff2",
-  variable: "--fonr-vazir-matn",
-  wright: "100 900",
+  src: "./fonts/Vazirmatn[wght].woff2",
+  weight: "100 900",
 });
 
-export default function RootLayout({ children, params }) {
-  // lang={params.locale || "fa"} dir={params.locale === "fa" ? "rtl" : "ltr"} suppressHydrationWarning
+export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <head></head>
 
       <body className={vazirMatn.className}>
         <ThemeProvider>
-          <Header locale={params.locale} />
-          <Layout locale={params.locale || "fa"}>{children}</Layout>
+          <Header />
+          <Layout locale="fa">{children}</Layout>
           <PopupWidget />
           <Footer />
           <ServiceWorkerRegister />

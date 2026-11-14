@@ -56,7 +56,7 @@ export function Footer() {
                   <span className={styles.srOnly}>Instagram</span>
                 </a>
                 <a
-                  href="https://wa.me/+989149191831"
+                  href="https://wa.me/989149191831"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -77,7 +77,7 @@ export function Footer() {
       <div className={styles.copyright}>
         Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
         <a
-          href="http://hubertuspilates.com/"
+          href="https://hubertuspilates.com/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.copyrightLink}

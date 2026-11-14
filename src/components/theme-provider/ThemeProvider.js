@@ -17,6 +17,7 @@ export function ThemeProvider({ children }) {
       // Use stored theme
       setTheme(storedTheme);
       document.documentElement.classList.toggle("dark", storedTheme === "dark");
+      document.documentElement.classList.toggle("light", storedTheme === "light");
     } else {
       // Check system preference
       const prefersDark = window.matchMedia(
