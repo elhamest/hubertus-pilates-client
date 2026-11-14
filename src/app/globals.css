@@ -125,6 +125,16 @@ body {
   padding: 0;
   color: var(--foreground);
   background-color: var(--background);
+  /* Visitors can not select page text or images (looks cleaner) */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Form fields must stay selectable and typeable */
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .animateFadeInUp {
