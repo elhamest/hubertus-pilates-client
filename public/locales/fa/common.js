@@ -22,6 +22,11 @@ export const faConstants = {
   howWeCanHelp: "چگونه می توانیم به شما کمک کنیم؟",
   weUsuallyRespondInAFewHours: "ما معمولا در چند ساعت پاسخ می دهیم",
   sendMessage: "ارسال پیام",
+  messageSent: "پیام شما ارسال شد. به زودی پاسخ می دهیم.",
+  messageNotSent:
+    "ارسال پیام انجام نشد. لطفا دوباره تلاش کنید یا با ما تماس تلفنی بگیرید.",
+  nameTooLong: "نام حداکثر ۸۰ حرف باشد",
+  messageTooLong: "پیام حداکثر ۵۰۰۰ حرف باشد",
   collectionGalleryTitle: "تجهیزات پیلاتس ما",
   allCollectionsTitle: "همه تجهیزات",
   viewMore: "مشاهده بیشتر",
