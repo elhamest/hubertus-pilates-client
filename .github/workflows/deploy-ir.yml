@@ -9,9 +9,11 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+# A new push stops the running deploy, so only the newest commit is uploaded.
+# (The next run uploads all files again, so a stopped upload is fixed by it.)
 concurrency:
   group: "deploy-ir"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
