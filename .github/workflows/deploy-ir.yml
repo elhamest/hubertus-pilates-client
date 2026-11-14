@@ -1,5 +1,6 @@
 # Build the static site and upload it to the ParsPack host (hubertuspilates.ir) by FTP.
 # Needs 3 repository secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+# And SUPPORT_EMAIL (secret or variable): the address that gets the contact form messages.
 # lftp is used because it reconnects and retries when the host drops the FTP connection.
 name: Deploy to hubertuspilates.ir
 
@@ -26,6 +27,18 @@ jobs:
       - run: npm ci
 
       - run: npx next build
+
+      # The contact form PHP script reads the support email from this file.
+      # The address stays in GitHub secrets, never in the repo.
+      - name: Write contact form config
+        env:
+          SUPPORT_EMAIL: ${{ secrets.SUPPORT_EMAIL || vars.SUPPORT_EMAIL }}
+        run: |
+          if [ -z "$SUPPORT_EMAIL" ]; then
+            echo "::warning::SUPPORT_EMAIL secret is empty, the contact form will not send email."
+          else
+            printf "<?php return '%s';\n" "$SUPPORT_EMAIL" > out/api/contact-config.php
+          fi
 
       - name: Upload to host by FTP
         env:

@@ -1,33 +1,41 @@
 "use client";
 import React, { useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { faConstants } from "../../../public/locales/fa/common";
 
 import styles from "./PopupWidget.module.css";
+
+// The PHP script on the .ir host sends the email (both .com and .ir use it).
+const CONTACT_URL = "https://hubertuspilates.ir/api/contact.php";
 
 export function PopupWidget() {
   const {
     register,
     handleSubmit,
     reset,
-    control,
     formState: { errors, isSubmitting },
   } = useForm({
     mode: "onTouched",
   });
 
   const [isOpen, setIsOpen] = useState(false);
+  const [status, setStatus] = useState(null); // "success" | "error" | null
 
-  const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
-
-  const onSubmit = (data) => {
-    const mailtoUrl = `mailto:info@hubertuspilates.com?subject=${encodeURIComponent(
-      `${userName} sent a message from Hubertus site`
-    )}&body=${encodeURIComponent(
-      `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`
-    )}`;
-    window.location.href = mailtoUrl;
-    reset();
+  const onSubmit = async (data) => {
+    setStatus(null);
+    try {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+      formData.append("botcheck", data.botcheck ? "1" : ""); // bots tick it
+      const response = await fetch(CONTACT_URL, { method: "POST", body: formData });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      setStatus("success");
+      reset();
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -91,7 +99,10 @@ export function PopupWidget() {
                 placeholder={faConstants.enterYourName}
                 {...register("name", {
                   required: "لطفا نام خود را وارد کنید",
-                  maxLength: 80,
+                  maxLength: {
+                    value: 80,
+                    message: faConstants.nameTooLong,
+                  },
                 })}
                 className={errors.name ? styles.inputError : styles.input}
               />
@@ -132,6 +143,10 @@ export function PopupWidget() {
                 id="message"
                 {...register("message", {
                   required: "لطفا پیام خود را وارد کنید",
+                  maxLength: {
+                    value: 5000,
+                    message: faConstants.messageTooLong,
+                  },
                 })}
                 placeholder={faConstants.enterYourMessage}
                 className={
@@ -178,6 +193,17 @@ export function PopupWidget() {
                 )}
               </button>
             </div>
+
+            {status === "success" && (
+              <div className={styles.successMessage}>
+                {faConstants.messageSent}
+              </div>
+            )}
+            {status === "error" && (
+              <div className={styles.errorMessage}>
+                {faConstants.messageNotSent}
+              </div>
+            )}
           </form>
         </div>
       </div>

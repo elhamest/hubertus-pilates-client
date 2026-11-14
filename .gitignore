@@ -36,3 +36,4 @@ yarn-error.log*
 .vercel
 
 
+/public/api/contact-config.php
