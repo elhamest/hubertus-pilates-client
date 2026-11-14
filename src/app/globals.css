@@ -70,48 +70,7 @@
   --transition-400: 0.4s ease;
 }
 
-/* Automatic system dark mode */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: #22272e;
-    --foreground: #e2e8f0;
-    --header-color: #212830f2;
-    --card-color: #212830;
-    --footer-color: #151b23;
-
-    --primary-color: #9f7aea;
-    --primary-color-dark: #805ad5;
-    --primary-color-light: #b794f4;
-    --earth-brown: #d69e2e;
-    --accent-gold: #ecc94b;
-    --brown-light: #cbd5e0;
-    --brown-dark: #e2e8f0;
-    --brown-medium: #a0aec0;
-    --sea-green: #48bb78;
-    --lapis-lazuli: #3182ce;
-    --moon-stone: #63b3ed;
-    --rich-black: #f7fafc;
-    --slate-gray: #cbd5e0;
-    --silver-chalice: #a0aec0;
-    --platinum-gray: #4a5568;
-    --text-color: #90cdf4;
-    --dusty-gray: #718096;
-    --gray-700: #9198a1;
-    --gray-800: #2d3748;
-    --off-white: #1a202c;
-    --pure-white: #2d3748;
-    --always-white: #fff;
-
-    --accent-teal: #38b2ac;
-    --success-green: #48bb78;
-    --accent-color-blue: #d1d7e0;
-
-    --faq-background: #1e2228;
-    --faq-card: #1a1e24;
-    --faq-card-hover: #25282e;
-  }
-}
-/* Manual dark mode override */
+/* Dark theme: the "dark" class on <html> is set by THEME_SCRIPT (ThemeProvider.js) */
 .dark {
   --background: #22272e;
   --foreground: #e2e8f0;

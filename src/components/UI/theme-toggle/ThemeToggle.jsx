@@ -6,25 +6,10 @@ import styles from "./ThemeToggle.module.css";
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
-  // Add debug logging
-  const handleToggle = () => {
-    // console.log("Before toggle - Current theme:", theme);
-    // console.log("Before toggle - localStorage:", localStorage.getItem("theme"));
-    toggleTheme();
-    // Check after a short delay
-    // setTimeout(() => {
-    //   console.log(
-    //     "After toggle - localStorage:",
-    //     localStorage.getItem("theme")
-    //   );
-    //   console.log("HTML class:", document.documentElement.className);
-    // }, 100);
-  };
-
   return (
     <div className={styles.themeChanger}>
       <button
-        onClick={handleToggle}
+        onClick={toggleTheme}
         className={`${styles.button} ${
           theme === "dark" ? styles.lightButton : styles.darkButton
         }`}

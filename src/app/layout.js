@@ -1,4 +1,4 @@
-import { ThemeProvider } from "../components/theme-provider/ThemeProvider";
+import { ThemeProvider, THEME_SCRIPT } from "../components/theme-provider/ThemeProvider";
 import localFont from "next/font/local";
 import { Footer } from "@/components/UI/footer";
 import { PopupWidget } from "@/components/popup-widget";
@@ -24,7 +24,9 @@ const vazirMatn = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <head></head>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
 
       <body className={vazirMatn.className}>
         <ThemeProvider>
