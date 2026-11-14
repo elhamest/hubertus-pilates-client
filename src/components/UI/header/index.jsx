@@ -12,7 +12,6 @@ import { faNavigations } from "../../../data/fa";
 import { enNavigations } from "../../../data/en";
 
 import styles from "./Header.module.css";
-import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
 
 const Header = ({ locale = "fa" }) => {
   const pathname = usePathname();

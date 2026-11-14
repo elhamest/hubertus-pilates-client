@@ -42,6 +42,8 @@ export default async function ProductPage({ params, locale = "fa" }) {
     );
   }
 
+  const description = founded.item.detail?.desc || founded.item.desc;
+
   return (
     <Container>
       {pathToTitleMap && (
@@ -54,10 +56,8 @@ export default async function ProductPage({ params, locale = "fa" }) {
           <div className={styles.textContainer}>
             <h1>{founded?.item?.title}</h1>
 
-            {founded?.item?.desc && (
-              <p className={styles.productDescription}>
-                {founded?.item?.detail?.desc}
-              </p>
+            {description && (
+              <p className={styles.productDescription}>{description}</p>
             )}
 
             <div className={styles.featureBox}>

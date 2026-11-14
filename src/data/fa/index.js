@@ -337,7 +337,6 @@ export const faProductCollections = [
       },
     ],
   },
-  ,
   {
     title: "صندلی ها و کمان ها",
     image: cChairsBarrelsImg,

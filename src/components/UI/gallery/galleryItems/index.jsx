@@ -11,7 +11,7 @@ function GalleryItems({ items, customClass }) {
           key={index}
           style={{ width: "100%" }} // Additional inline style for safety
         >
-          <Link href={item?.path} style={{ display: "block", height: "100%" }}>
+          <Link href={`/${item?.path}`} style={{ display: "block", height: "100%" }}>
             <div className={styles.cardContent}>
               <div className={styles.imageContainer}>
                 <Image

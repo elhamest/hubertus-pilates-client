@@ -16,7 +16,7 @@ export function Collection({ items }) {
         return (
           <div key={index} className={styles.collection}>
             <Link
-              href={`${currentPath}/${item?.slug}`}
+              href={`${currentPath.replace(/\/$/, "")}/${item?.slug}`}
               className={styles.collectionLink}
             >
               <div className={styles.imageWrapper}>

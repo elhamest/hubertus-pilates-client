@@ -337,7 +337,6 @@ export const enProductCollections = [
       },
     ],
   },
-  ,
   {
     title: "صندلی ها و کمان ها",
     image: cChairsBarrelsImg,
