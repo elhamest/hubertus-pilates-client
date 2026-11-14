@@ -40,6 +40,19 @@ jobs:
             printf "<?php return '%s';\n" "$SUPPORT_EMAIL" > out/api/contact-config.php
           fi
 
+      # The live site does not change after upload. Check that the FTP host is
+      # the same server the domain points to. Prints only IPs, never the secret name.
+      - name: Compare FTP host and site IP
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          host="${FTP_SERVER#ftp://}"; host="${host%%/*}"; host="${host%%:*}"
+          ftp_ip=$(getent ahostsv4 "$host" | awk 'NR==1{print $1}')
+          site_ip=$(getent ahostsv4 hubertuspilates.ir | awk 'NR==1{print $1}')
+          echo "FTP host IP: $ftp_ip"
+          echo "Site IP:     $site_ip"
+          if [ "$ftp_ip" = "$site_ip" ]; then echo "Same server."; else echo "::warning::FTP host and site are on different servers."; fi
+
       - name: Upload to host by FTP
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
