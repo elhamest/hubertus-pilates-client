@@ -84,6 +84,9 @@ export function Footer() {
         >
           Hubertus Pilates.
         </a>
+        <div className={styles.version}>
+          v{process.env.NEXT_PUBLIC_APP_VERSION} ({process.env.NEXT_PUBLIC_COMMIT_SHA})
+        </div>
       </div>
     </div>
   );
