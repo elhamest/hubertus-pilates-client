@@ -1,6 +1,7 @@
 # Build the static site and upload it to the ParsPack host (hubertuspilates.ir) by FTP.
 # Needs 3 repository secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
-# And SUPPORT_EMAIL (secret or variable): the address that gets the contact form messages.
+# And SUPPORT_EMAIL (secret or variable): the address that gets the contact form messages,
+# and SMTP_PASSWORD: the password of the no-reply@hubertuspilates.ir mailbox the form sends from.
 # The FTP account root is /home/hubeir/domains/hubertuspilates.ir/ ("Domain" type), so the site folder is public_html/.
 # lftp is used because it reconnects and retries when the host drops the FTP connection.
 name: Deploy to hubertuspilates.ir
@@ -31,17 +32,27 @@ jobs:
 
       - run: npx next build
 
-      # The contact form PHP script reads the support email from this file.
-      # The address stays in GitHub secrets, never in the repo.
+      # The contact form PHP script reads its settings from this file: the support
+      # email, and the password of the no-reply@hubertuspilates.ir mailbox it sends from.
+      # They stay in GitHub secrets, never in the repo. Base64 keeps any quote in them safe.
       - name: Write contact form config
         env:
           SUPPORT_EMAIL: ${{ secrets.SUPPORT_EMAIL || vars.SUPPORT_EMAIL }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: |
           if [ -z "$SUPPORT_EMAIL" ]; then
             echo "::warning::SUPPORT_EMAIL secret is empty, the contact form will not send email."
-          else
-            printf "<?php return '%s';\n" "$SUPPORT_EMAIL" > out/api/contact-config.php
+            exit 0
           fi
+          if [ -z "$SMTP_PASSWORD" ]; then
+            echo "::warning::SMTP_PASSWORD secret is empty, the contact form falls back to PHP mail(), which does not deliver."
+          fi
+          config=$(node -e 'process.stdout.write(Buffer.from(JSON.stringify({
+            to: process.env.SUPPORT_EMAIL,
+            smtp_user: "no-reply@hubertuspilates.ir",
+            smtp_pass: process.env.SMTP_PASSWORD || "",
+          })).toString("base64"))')
+          printf "<?php return json_decode(base64_decode('%s'), true);\n" "$config" > out/api/contact-config.php
 
       - name: Upload to host by FTP
         env:

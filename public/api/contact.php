@@ -1,8 +1,9 @@
 <?php
 // Contact form endpoint for hubertuspilates.com and hubertuspilates.ir.
-// It sends the form to the support email by PHP mail().
-// The support email is in contact-config.php. The deploy job writes that
-// file from the SUPPORT_EMAIL GitHub secret. It is not in the repo.
+// It sends the form to the support email over SMTP, logged in as the
+// no-reply@hubertuspilates.ir mailbox (PHP mail() does not leave this host).
+// contact-config.php holds the support email and the mailbox password. The
+// deploy job writes that file from GitHub secrets. It is not in the repo.
 
 $allowedOrigins = [
     'https://hubertuspilates.com',
@@ -51,21 +52,113 @@ if (
     answer(400, false);
 }
 
-$to = @include __DIR__ . '/contact-config.php';
-if (!is_string($to) || !filter_var($to, FILTER_VALIDATE_EMAIL)) {
+$config = @include __DIR__ . '/contact-config.php';
+if (is_string($config)) {
+    $config = ['to' => $config]; // Old config: only the address.
+}
+if (!is_array($config)) {
+    $config = [];
+}
+$to = $config['to'] ?? '';
+if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
     answer(500, false);
 }
 
-$from = 'no-reply@hubertuspilates.ir';
+$from = $config['smtp_user'] ?? 'no-reply@hubertuspilates.ir';
 $subject = '=?UTF-8?B?' . base64_encode("پیام جدید از سایت هوبرتوس: $name") . '?=';
 $body = "نام: $name\nایمیل: $email\n\nپیام:\n$message\n";
-$headers = implode("\r\n", [
+$headers = [
     'From: Hubertus Pilates <' . $from . '>',
     'Reply-To: ' . $email,
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: 8bit',
-]);
+    'Content-Transfer-Encoding: base64',
+];
 
-$sent = mail($to, $subject, $body, $headers, '-f' . $from);
+if (!empty($config['smtp_pass'])) {
+    $sent = smtp_send(
+        $config['smtp_host'] ?? 'localhost',
+        (int)($config['smtp_port'] ?? 465),
+        $from,
+        $config['smtp_pass'],
+        $to,
+        $subject,
+        $headers,
+        $body
+    );
+} else {
+    $sent = mail($to, $subject, chunk_split(base64_encode($body)), implode("\r\n", $headers), '-f' . $from);
+}
 answer($sent ? 200 : 500, $sent);
+
+// Send one email over SMTP with SSL and AUTH LOGIN. Returns true on success.
+// On failure it writes the reason to the PHP error log.
+function smtp_send($host, $port, $user, $pass, $to, $subject, $headers, $body)
+{
+    // The server talks to itself, so its certificate name does not match "localhost".
+    $context = stream_context_create(['ssl' => [
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true,
+    ]]);
+    $fp = @stream_socket_client("ssl://$host:$port", $errno, $errstr, 15, STREAM_CLIENT_CONNECT, $context);
+    if (!$fp) {
+        error_log("contact.php: SMTP connect to $host:$port failed: $errstr ($errno)");
+        return false;
+    }
+    stream_set_timeout($fp, 15);
+
+    $steps = [
+        [null, 220],
+        ['EHLO hubertuspilates.ir', 250],
+        ['AUTH LOGIN', 334],
+        [base64_encode($user), 334],
+        [base64_encode($pass), 235],
+        ["MAIL FROM:<$user>", 250],
+        ["RCPT TO:<$to>", 250],
+        ['DATA', 354],
+    ];
+    foreach ($steps as $i => [$command, $expected]) {
+        if ($command !== null) {
+            fwrite($fp, $command . "\r\n");
+        }
+        $reply = smtp_reply($fp);
+        if ((int)substr($reply, 0, 3) !== $expected) {
+            // Do not log the password step.
+            $what = $i === 4 ? 'password' : ($command ?? 'greeting');
+            error_log("contact.php: SMTP step '$what' failed: " . trim($reply));
+            fclose($fp);
+            return false;
+        }
+    }
+
+    $message = implode("\r\n", array_merge([
+        'Date: ' . date('r'),
+        'To: ' . $to,
+        'Subject: ' . $subject,
+        'Message-ID: <' . bin2hex(random_bytes(12)) . '@hubertuspilates.ir>',
+    ], $headers)) . "\r\n\r\n" . chunk_split(base64_encode($body));
+    // Base64 lines never start with ".", so no dot-stuffing is needed.
+    fwrite($fp, $message . ".\r\n");
+    $reply = smtp_reply($fp);
+    fwrite($fp, "QUIT\r\n");
+    fclose($fp);
+    if ((int)substr($reply, 0, 3) !== 250) {
+        error_log('contact.php: SMTP message not accepted: ' . trim($reply));
+        return false;
+    }
+    return true;
+}
+
+// Read one SMTP reply. A reply can have many lines; the last one has a space after the code.
+function smtp_reply($fp)
+{
+    $reply = '';
+    while (($line = fgets($fp, 515)) !== false) {
+        $reply .= $line;
+        if (strlen($line) < 4 || $line[3] === ' ') {
+            break;
+        }
+    }
+    return $reply;
+}
