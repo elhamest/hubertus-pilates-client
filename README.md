@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Hosting and deploy
+
+How the two sites (hubertuspilates.com and hubertuspilates.ir) are deployed, which GitHub secrets they need, and how to change the email, passwords, FTP account or host: see [docs/DEPLOY.md](docs/DEPLOY.md).
+
 ## Getting Started
 
 First, run the development server:
