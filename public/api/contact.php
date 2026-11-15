@@ -23,15 +23,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-function answer($code, $ok)
+function answer($code, $ok, $extra = [])
 {
     http_response_code($code);
-    echo json_encode(['ok' => $ok]);
+    echo json_encode(['ok' => $ok] + $extra);
     exit;
 }
 
+// Which way the form sends email: "smtp" (the no-reply mailbox) or "mail"
+// (PHP mail(), which does not deliver on this host). Shown in the answers,
+// so a simple browser visit shows if the SMTP password reached the server.
+function mailer_name($config)
+{
+    return is_array($config) && !empty($config['smtp_pass']) ? 'smtp' : 'mail';
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    answer(405, false);
+    answer(405, false, ['mailer' => mailer_name(@include __DIR__ . '/contact-config.php')]);
 }
 
 // Honeypot: people do not see this field, bots fill it. Say "ok" and do nothing.
@@ -89,7 +97,7 @@ if (!empty($config['smtp_pass'])) {
 } else {
     $sent = mail($to, $subject, chunk_split(base64_encode($body)), implode("\r\n", $headers), '-f' . $from);
 }
-answer($sent ? 200 : 500, $sent);
+answer($sent ? 200 : 500, $sent, ['mailer' => mailer_name($config)]);
 
 // Send one email over SMTP with SSL and AUTH LOGIN. Returns true on success.
 // On failure it writes the reason to the PHP error log.
