@@ -138,6 +138,8 @@ If an email could not be delivered, a "Mail delivery failed" message usually app
    - `public/api/contact.php`: the list `$allowedOrigins` (the sites that may use the form),
      and the domain in `no-reply@...` and `EHLO ...`.
    - `.github/workflows/deploy-ir.yml`: `smtp_user` in the "Write contact form config" step.
+   The script connects to the mail server at `localhost`, port `465` (SSL). If the new host uses
+   another server or port, add `smtp_host` / `smtp_port` to that same config step.
 6. Push to `main`. Then do the checks in section 5.
 
 ---
@@ -147,16 +149,22 @@ If an email could not be delivered, a "Mail delivery failed" message usually app
 **Quick checks after a deploy**
 
 - Footer on both sites shows the newest commit.
-- Open `https://hubertuspilates.ir/api/contact.php` in a browser. It should show `{"ok":false}`
-  (this means the script runs; it only accepts form posts).
-- Send a test message from the form and check that it arrives.
+- Open `https://hubertuspilates.ir/api/contact.php` in a browser. It should show
+  `{"ok":false,"info":"smtp"}`. This means the script runs (it only accepts form posts) and the
+  mailbox password reached the server. If it shows `"info":"mail"`, the `SMTP_PASSWORD` secret
+  was empty during the last deploy: set it and run the deploy again.
+- Send a test message from the form and check that it arrives in the `SUPPORT_EMAIL` inbox
+  **and** in the `no-reply` Inbox in Roundcube.
+  When you test, type a visitor email that is **not** the `SUPPORT_EMAIL` address. Gmail may
+  hold back a message whose "reply to" is the same Gmail address as the receiver.
 
 | Problem | What it usually means | What to do |
 |---|---|---|
 | The deploy is green, but the .ir site does not change (old footer). | The FTP account uploads into the wrong folder. | Check the FTP account type and folder (section 3, "Make a new FTP account"). |
 | The .ir deploy fails at the FTP step with `530` or "Login failed". | Wrong FTP username or password. | Make `FTP_USERNAME` / `FTP_PASSWORD` match the account in the panel. |
 | The form shows an error message. | `contact.php` is missing on the server (a `404`), or the server had an error. | Open the `contact.php` link above. If it says "not found", the upload folder is wrong. |
-| The form says "sent", but no email arrives. | 1) The email is in spam. 2) `SMTP_PASSWORD` is missing or wrong. | Check spam (mark it "Not spam"). In GitHub Actions, open the last .ir deploy > step "Write contact form config": a yellow warning means a secret is empty. Check the PHP error log in the hosting panel for lines that start with `contact.php: SMTP`. |
+| The form says "sent", but no email arrives. | 1) The email is in spam. 2) The test used the `SUPPORT_EMAIL` address as the visitor email. 3) The mail server accepted it, but Gmail delays or drops it. | Check spam (mark it "Not spam"). Check the copy in the `no-reply` Inbox in Roundcube. To see the server answer: in the browser press F12 > **Network**, send the form, click `contact.php` > **Response**. `"smtp: 250 OK id=..."` means the host's mail server accepted it; give that id to ParsPack support and ask them to check the mail (Exim) log. |
+| The form shows an error after sending. | The SMTP login failed (wrong `SMTP_PASSWORD`) or the mail server refused. | Make `SMTP_PASSWORD` match the `no-reply` mailbox password and run the deploy again. The PHP error log in the hosting panel has lines that start with `contact.php: SMTP`. |
 | The .ir site shows an old page after a deploy. | The browser keeps an old copy. | Press Ctrl+Shift+R (hard refresh). |
 
 ---

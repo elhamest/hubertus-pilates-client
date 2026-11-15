@@ -10,6 +10,7 @@ The contact form SHALL send the message from the site, without opening an email 
 - WHEN a visitor sends a name, a valid email and a message
 - THEN the support email gets a mail with the name, the visitor's email and the message
 - AND Reply-To is the visitor's email
+- AND a hidden copy goes to the `no-reply@hubertuspilates.ir` Inbox on the host
 - AND the form shows "پیام شما ارسال شد"
 
 #### Scenario: Send fails
@@ -22,7 +23,7 @@ The contact form SHALL send the message from the site, without opening an email 
 
 ### Requirement: Support email from a secret
 
-The support email SHALL come from the GitHub secret (or variable) `SUPPORT_EMAIL` and SHALL NOT be in the repo.
+The support email SHALL come from the GitHub secret (or variable) `SUPPORT_EMAIL`, and the sending mailbox password from the secret `SMTP_PASSWORD`. Neither SHALL be in the repo.
 
 #### Scenario: Change the address
 - WHEN the secret is changed and the `.ir` deploy runs again
