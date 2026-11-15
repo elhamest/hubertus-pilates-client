@@ -2,6 +2,7 @@
 // Contact form endpoint for hubertuspilates.com and hubertuspilates.ir.
 // It sends the form to the support email over SMTP, logged in as the
 // no-reply@hubertuspilates.ir mailbox (PHP mail() does not leave this host).
+// A hidden copy also stays in the no-reply Inbox on the host.
 // contact-config.php holds the support email and the mailbox password. The
 // deploy job writes that file from GitHub secrets. It is not in the repo.
 
@@ -133,8 +134,13 @@ function smtp_send($host, $port, $user, $pass, $to, $subject, $headers, $body)
         [base64_encode($pass), 235],
         ["MAIL FROM:<$user>", 250],
         ["RCPT TO:<$to>", 250],
-        ['DATA', 354],
     ];
+    // Hidden copy (BCC) to the sending mailbox, so the message stays on the host
+    // when Gmail is not reachable. Only an extra RCPT, no Bcc header.
+    if (strtolower($to) !== strtolower($user)) {
+        $steps[] = ["RCPT TO:<$user>", 250];
+    }
+    $steps[] = ['DATA', 354];
     foreach ($steps as $i => [$command, $expected]) {
         if ($command !== null) {
             fwrite($fp, $command . "\r\n");

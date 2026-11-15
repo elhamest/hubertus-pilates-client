@@ -12,6 +12,7 @@
 - To: the address in `api/contact-config.php` (`<?php return 'x@y.com';`). The file prints nothing if someone opens it in a browser.
 - From: `no-reply@hubertuspilates.ir` (also the envelope sender with `-f`).
 - Reply-To: the visitor's email, so "Reply" in Gmail answers the visitor.
+- Copy on the host: a hidden copy (an extra SMTP `RCPT TO`, no `Bcc` header) goes to the `no-reply@hubertuspilates.ir` Inbox, so messages can be read in Roundcube when Gmail is not reachable.
 - Body: name, email and message, plain UTF-8 text.
 
 ## Checks

@@ -36,6 +36,8 @@ There are two websites. Both come from the same code in this repository.
   `public/api/contact.php`. Only the .ir host can run PHP, so both sites use it.
 - The script sends an email to the **support address**. It sends it by logging in to the
   mail server of the .ir host as the mailbox `no-reply@hubertuspilates.ir`.
+- A hidden copy of every form message also stays in the **Inbox of `no-reply@hubertuspilates.ir`**
+  on the host. So the messages can still be read in Roundcube when Gmail cannot be reached.
 - Why a mailbox login? On this host, the simple PHP `mail()` function says "sent" but the
   email never leaves the server. Logging in as a real mailbox (SMTP) works.
 - The support address and the mailbox password are **not** in the code. During the .ir
@@ -106,9 +108,10 @@ Its folder must be `/home/hubeir/domains/hubertuspilates.ir/`.
 
 Then set `FTP_USERNAME` and `FTP_PASSWORD` in GitHub and run the deploy.
 
-### Read the emails that the site sent (or errors about them)
+### Read the form messages on the host (or errors about them)
 
 Webmail: `https://hubertuspilates.ir/roundcube` — log in as `no-reply@hubertuspilates.ir`.
+The Inbox has a copy of every contact form message (useful when Gmail is not reachable).
 If an email could not be delivered, a "Mail delivery failed" message usually appears in this inbox.
 
 ---
