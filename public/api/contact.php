@@ -23,10 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-function answer($code, $ok, $extra = [])
+// $info is a short note for checking problems (how the mail was sent).
+function answer($code, $ok, $info = null)
 {
     http_response_code($code);
-    echo json_encode(['ok' => $ok] + $extra);
+    echo json_encode($info === null ? ['ok' => $ok] : ['ok' => $ok, 'info' => $info]);
     exit;
 }
 
@@ -38,8 +39,13 @@ function mailer_name($config)
     return is_array($config) && !empty($config['smtp_pass']) ? 'smtp' : 'mail';
 }
 
+// Always read the newest config file, not an old cached copy.
+if (function_exists('opcache_invalidate')) {
+    @opcache_invalidate(__DIR__ . '/contact-config.php', true);
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    answer(405, false, ['mailer' => mailer_name(@include __DIR__ . '/contact-config.php')]);
+    answer(405, false, mailer_name(@include __DIR__ . '/contact-config.php'));
 }
 
 // Honeypot: people do not see this field, bots fill it. Say "ok" and do nothing.
@@ -84,6 +90,7 @@ $headers = [
 ];
 
 if (!empty($config['smtp_pass'])) {
+    $via = 'smtp';
     $sent = smtp_send(
         $config['smtp_host'] ?? 'localhost',
         (int)($config['smtp_port'] ?? 465),
@@ -95,11 +102,13 @@ if (!empty($config['smtp_pass'])) {
         $body
     );
 } else {
+    $via = 'mail';
     $sent = mail($to, $subject, chunk_split(base64_encode($body)), implode("\r\n", $headers), '-f' . $from);
 }
-answer($sent ? 200 : 500, $sent, ['mailer' => mailer_name($config)]);
+// For SMTP, $sent is the server answer (it has the mail queue id).
+answer($sent ? 200 : 500, (bool) $sent, $via . ($sent === true || !$sent ? '' : ': ' . $sent));
 
-// Send one email over SMTP with SSL and AUTH LOGIN. Returns true on success.
+// Send one email over SMTP with SSL and AUTH LOGIN. Returns the server answer on success, false on failure.
 // On failure it writes the reason to the PHP error log.
 function smtp_send($host, $port, $user, $pass, $to, $subject, $headers, $body)
 {
@@ -155,7 +164,7 @@ function smtp_send($host, $port, $user, $pass, $to, $subject, $headers, $body)
         error_log('contact.php: SMTP message not accepted: ' . trim($reply));
         return false;
     }
-    return true;
+    return trim($reply);
 }
 
 // Read one SMTP reply. A reply can have many lines; the last one has a space after the code.
