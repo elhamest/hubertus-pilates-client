@@ -155,3 +155,24 @@ If an email could not be delivered, a "Mail delivery failed" message usually app
 | The form shows an error message. | `contact.php` is missing on the server (a `404`), or the server had an error. | Open the `contact.php` link above. If it says "not found", the upload folder is wrong. |
 | The form says "sent", but no email arrives. | 1) The email is in spam. 2) `SMTP_PASSWORD` is missing or wrong. | Check spam (mark it "Not spam"). In GitHub Actions, open the last .ir deploy > step "Write contact form config": a yellow warning means a secret is empty. Check the PHP error log in the hosting panel for lines that start with `contact.php: SMTP`. |
 | The .ir site shows an old page after a deploy. | The browser keeps an old copy. | Press Ctrl+Shift+R (hard refresh). |
+
+---
+
+## 6. Good to know
+
+**Domain, DNS and SSL of the .ir site**
+
+- The name servers of `hubertuspilates.ir` are `ns1.parspack.co` to `ns4.parspack.co`.
+  So DNS records (A, MX, TXT) are changed in the ParsPack panel.
+- Email records SPF, DKIM and DMARC are already set and work. Do not remove them,
+  or form emails go to spam.
+- HTTPS uses a free Let's Encrypt certificate from the hosting panel
+  (DirectAdmin > **SSL Certificates**). It renews by itself. On a new host, turn it on
+  there for the domain (and `www`), or the browser shows a security warning.
+
+**Images and links in the code: always start with `/`**
+
+- Write `/img/logo.png`, never `img/logo.png` or `./img/logo.png`.
+- The site builds every page as a folder (`trailingSlash: true` in `next.config.js`).
+  A path without `/` at the start works on the home page, but breaks on pages like
+  `/collections/reformers/`, because the browser looks for the image inside that folder.
